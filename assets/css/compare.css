@@ -1,4 +1,4 @@
-/* Compare Homes (property_intel_builder) */
+/* Compare Homes */
 .cmp-hero .lede{margin-left:0}
 .cmp-sec{padding-top:36px}
 .cmp-bar{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) auto;gap:14px;align-items:end;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:16px 18px;margin-bottom:18px}

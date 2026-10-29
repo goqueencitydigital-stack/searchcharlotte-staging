@@ -27,3 +27,41 @@
  .dots{gap:16px}.dots button{position:relative}
  .dots button::after{content:"";position:absolute;inset:-18px -8px}
 }
+
+/* Mobile header + hero cleanup */
+@media (max-width:760px){
+  .nav{gap:10px;height:64px}
+  .brand{gap:8px;min-width:0}
+  .brand .logo{height:34px}
+  .brand .bhhs{height:30px;width:30px}
+  .nav-right{gap:8px}
+  .nav-right .btn,.nav-right [data-pp-bell]{display:none}
+  .nav-right .pp-link{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;display:inline-grid;place-items:center}
+  .nav-right .pp-link svg{width:20px;height:20px}
+  .mobile-panel{inset:64px 0 0 0}
+
+  .hero{min-height:0;padding-bottom:0}
+  .hero-media{position:relative;inset:auto;order:2;height:230px;margin-top:22px;background-position:center 60%}
+  .hero-media::before{background:linear-gradient(180deg,var(--sand) 0%,rgba(242,233,224,0) 28%)}
+  .hero-media::after{display:none}
+  .hero-inner{order:1;padding-top:28px}
+  .hero h1{font-size:clamp(34px,10.5vw,44px);line-height:.98}
+  .hero p.sub{display:block;background:none;padding:0;margin:12px auto 18px;max-width:30ch;font-size:16px;line-height:1.45;color:#3a2c22}
+  .hero .searchbar{box-shadow:0 1px 0 var(--line),0 6px 20px rgba(30,20,13,.08)}
+  .hero .searchbar input{font-size:16px;min-width:0}
+  .hero-quick{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+  .hero-quick a{background:#fff;backdrop-filter:none;border:1px solid var(--line);border-radius:12px;font-size:14px;font-weight:600;padding:10px 8px;text-align:center;line-height:1.2}
+  .hero-credit{bottom:8px}
+}
+@media (max-width:760px){
+  .d-xl{font-size:clamp(28px,8.4vw,36px);line-height:1}
+  .d-lg{font-size:clamp(24px,7vw,30px)}
+  .display{overflow-wrap:break-word;hyphens:manual}
+  .panel{padding-left:16px;padding-right:16px}
+  .ac-launch{height:48px;bottom:max(12px,env(safe-area-inset-bottom));right:12px;opacity:.96}
+}
+@media (max-width:760px){
+  .qlinks{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:8px;margin-right:calc(-1 * var(--gutter,16px));padding-right:var(--gutter,16px);scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity}
+  .qlinks::-webkit-scrollbar{display:none}
+  .qlinks a{flex:0 0 auto;white-space:nowrap;scroll-snap-align:start}
+}

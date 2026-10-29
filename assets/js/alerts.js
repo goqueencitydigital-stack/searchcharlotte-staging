@@ -1,5 +1,5 @@
 /* Smart Property Alerts — shared module (Passport + alerts.html).
-   Schema (agreed with Deal Radar / property_intel_builder) sc_alerts: [{id,type,label,criteria,channels:{email,sms,inapp},frequency,created,active,source,contact?}]
+   Schema (agreed with Deal Radar) sc_alerts: [{id,type,label,criteria,channels:{email,sms,inapp},frequency,created,active,source,contact?}]
    Preview: nothing is emailed or texted. Production: Showcase IDX Search Subscriptions handle email for new/price-change
    listing alerts; SMS + in-app + extra types need the Passport backend (see FEATURE-EXPANSION.md). */
 (function(){'use strict';

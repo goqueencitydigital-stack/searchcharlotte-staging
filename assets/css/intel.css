@@ -1,4 +1,4 @@
-/* Property X-Ray + True Cost to Own + shared intel components (property_intel_builder). Prefixes: xr- (X-Ray), ix- (intel). */
+/* Property X-Ray + True Cost to Own + shared intel components. Prefixes: xr- (X-Ray), ix- (intel). */
 .pd-actions{flex-wrap:wrap}
 .ix-toggle[aria-pressed="true"]{background:var(--ink);color:#fff}
 .xr-sig{background:#F6EBD5!important}

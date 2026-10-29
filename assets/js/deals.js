@@ -1,4 +1,4 @@
-/* Deal Radar + Deal Alerts (property_intel_builder).
+/* Deal Radar + Deal Alerts.
    SC.alertsUI.builder(el, {preset})  -> alert builder (writes SC.db 'sc_alerts' using the shared Passport schema)
    SC.alertsUI.manage(el, {source})   -> manage list: pause/resume (unsubscribe), delete, test in-app
    SC.alertsUI.matches(alert)         -> sample listings matching an alert's criteria */

@@ -1,5 +1,5 @@
 /* AI Renovation Visualizer (preview).
-   Sample concepts in assets/img/reno/ were generated in advance with an image model from the site's own sample photos
+   Sample concepts in assets/img/reno/ are pre-rendered sample concepts based on the site sample photos
    (kitchen-dark, buy-home, sell-home) and watermarked. Uploads stay client-side; live generation needs a backend image API
    (POST /api/reno {image, style} -> watermarked concept), with rate limits and the same disclosure. */
 (function(){'use strict';

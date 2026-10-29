@@ -1,4 +1,4 @@
-/* Search Charlotte — listing photo mosaic + full-screen photo viewer (property_intel_builder).
+/* Search Charlotte — listing photo mosaic + full-screen photo viewer.
    Public API:
      SC.gallery.photos(listing)            -> ['assets/img/x.webp', ...]
      SC.gallery.mosaic(el, listing)        -> renders desktop 1 + 2x2 mosaic / mobile swipe carousel into el

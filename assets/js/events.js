@@ -1,4 +1,4 @@
-/* What's Happening in Charlotte (local_life_builder). Data: assets/data/events.json (verified on official pages). */
+/* What's Happening in Charlotte. Data: assets/data/events.json (verified on official pages). */
 (function(){
 const SC=window.SC, ll=SC.ll, {$,$$,esc}=SC;
 const CAT_COLOR={concerts:'#4A2445',sports:'#163B35',holiday:'#a2352b',festival:'#C99A4B',theater:'#5A3D2B',arts:'#2f5d8a',markets:'#4f7a28',community:'#1E140D'};

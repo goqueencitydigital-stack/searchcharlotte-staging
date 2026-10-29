@@ -1,4 +1,4 @@
-/* Property page: photo mosaic, Home Match, Property X-Ray tabs, tour/question forms (property_intel_builder). */
+/* Property page: photo mosaic, Home Match, Property X-Ray tabs, tour/question forms. */
 (function(){const SC=window.SC; const {D,$,$$,card,esc,short,fmt,track}=SC;
 const id=new URLSearchParams(location.search).get('id'); const l=D.listings.find(x=>x.id===id)||D.listings[0];
 const h=D.hoods.find(x=>x.slug===l.hood)||{name:l.hoodName,slug:l.hood,blurb:''};
@@ -170,7 +170,7 @@ const t0=fromHash(); select(t0||'overview',false,false); if(t0) setTimeout(()=>$
 addEventListener('hashchange',()=>{const t=fromHash(); if(t){select(t,false,false); $('#xray').scrollIntoView({behavior:'smooth'});}});
 document.addEventListener('click',e=>{const a=e.target.closest('a[href="#true-cost"],a[href="#calculator"]'); if(a){e.preventDefault(); select('costs',false,false); $('#xray').scrollIntoView({behavior:'smooth'});}});
 
-/* ---------- Ask about this home (mounted by ai_search_builder's module when present) ---------- */
+/* ---------- Ask about this home ---------- */
 const askMount=()=>{if(SC.askHome&&SC.askHome.mount&&!askMount.done){askMount.done=1; SC.askHome.mount(document.getElementById('ask-home'),l);}};
 askMount(); addEventListener('load',askMount);
 

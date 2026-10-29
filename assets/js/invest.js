@@ -1,4 +1,4 @@
-/* Investor Mode — rental property estimates (property_intel_builder).
+/* Investor Mode — rental property estimates.
    All math is deterministic and shown on the page. Reference defaults come from
    assets/data/cost-assumptions.json (verified, with source URLs). Rent and operating
    percentages are user assumptions; nothing here is a rent estimate or appraisal. */

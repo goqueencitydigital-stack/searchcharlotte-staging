@@ -1,4 +1,4 @@
-/* Moving to Charlotte Concierge (local_life_builder). Objective-fit ranking only: budget, commute, POI distance, home features. Storage: SC.db 'sc_reloc'. */
+/* Moving to Charlotte Concierge. Objective-fit ranking only: budget, commute, POI distance, home features. Storage: SC.db 'sc_reloc'. */
 (function(){
 const SC=window.SC, ll=SC.ll, {$,$$,esc,fmt}=SC;
 const FEATURES={'walkable':'Walkable streets','light-rail':'Near light rail','greenway':'Greenway access','lake-access':'Lake access','golf':'Golf nearby','new-construction':'New construction','historic':'Historic homes','acreage':'Room for acreage','near-uptown':'Close to Uptown','near-airport':'Close to the airport','high-rise':'High-rise living','nightlife':'Nightlife'};

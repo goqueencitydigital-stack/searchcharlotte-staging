@@ -1,4 +1,4 @@
-/* Listing photo mosaic + full-screen viewer (property_intel_builder) */
+/* Listing photo mosaic + full-screen viewer */
 .gx-mosaic{position:relative;border-radius:var(--radius-lg);overflow:hidden}
 .gx-grid{display:grid;gap:6px;height:min(540px,52vw);grid-template-columns:2fr 1fr 1fr;grid-template-rows:1fr 1fr}
 .gx-tile{padding:0;border:0;background:#ddd5ca;overflow:hidden;cursor:zoom-in;position:relative;min-height:0}

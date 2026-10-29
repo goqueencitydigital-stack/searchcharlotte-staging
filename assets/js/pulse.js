@@ -1,4 +1,4 @@
-/* Charlotte Market Pulse dashboard (local_life_builder). Data: assets/data/market-pulse.json (published Canopy figures only). */
+/* Charlotte Market Pulse dashboard. Data: assets/data/market-pulse.json (published Canopy figures only). */
 (function(){
 const SC=window.SC, ll=SC.ll, {$,$$,esc}=SC;
 const ORDER=['median_sale_price','closed_sales','new_listings','pending_sales','inventory','months_supply','dom','list_to_close_days','pct_orig_list_price','avg_sale_price'];

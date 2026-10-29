@@ -1,4 +1,4 @@
-/* Compare Homes (property_intel_builder). Reads ?ids=a,b,c or SC.compare(); saves to SC.db 'sc_comparisons'. */
+/* Compare Homes. Reads ?ids=a,b,c or SC.compare(); saves to SC.db 'sc_comparisons'. */
 (function(){'use strict';
 const SC=window.SC; const {D,$,$$,esc,fmt,short,track}=SC;
 const qs=new URLSearchParams(location.search); const shared=qs.get('ids');

@@ -1,4 +1,4 @@
-/* Search Charlotte Home Match — preferences drawer + score UI (property_intel_builder).
+/* Search Charlotte Home Match — preferences drawer + score UI.
    SC.matchPrefs.open()            -> opens the reusable preferences drawer (edits SC.prefs live via SC.setPrefs)
    SC.matchUI.mount(el, listing)   -> score ring + "Why this home matches" / "Potential compromises" + methodology
    SC.matchUI.ring(score, size)    -> SVG ring markup

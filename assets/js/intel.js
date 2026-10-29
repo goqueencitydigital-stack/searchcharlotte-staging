@@ -1,4 +1,4 @@
-/* Search Charlotte — property intelligence shared helpers + True Cost to Own (property_intel_builder).
+/* Search Charlotte — property intelligence shared helpers + True Cost to Own.
    SC.intel.jur(listing, A)          -> tax jurisdiction {label, per100, sources}
    SC.intel.costParams(listing, A)   -> parameters for SC.trueCost from saved cost prefs + verified defaults
    SC.intel.donut(parts, size)       -> SVG donut markup, parts [{v,c,label}]

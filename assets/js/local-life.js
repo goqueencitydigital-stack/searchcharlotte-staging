@@ -1,4 +1,4 @@
-/* Shared helpers for Market Pulse, Events, Relocation Concierge and Seller Command Center (local_life_builder).
+/* Shared helpers for Market Pulse, Events, Relocation Concierge and Seller Command Center.
    Namespace: SC.ll. Depends on site.js + core.js. No storage other than SC.db. */
 (function(){
 const SC=window.SC; if(!SC) return;
