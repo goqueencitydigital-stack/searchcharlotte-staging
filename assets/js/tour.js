@@ -1,4 +1,4 @@
-/* Tour Day — route planning + showing requests (preview).
+/* Tour Day, route planning + showing requests (preview).
    Drive times: SC.drive() straight-line × 1.35 circuity estimate. Order: nearest-neighbor from the start, improved with 2-opt.
    Production: Google Maps Platform Routes API (computeRouteMatrix / computeRoutes) for traffic-aware legs; showing requests
    go to the agent, who books via ShowingTime (or the listing's showing service) and confirms back to Passport. */
@@ -59,12 +59,12 @@ const plan=()=>{const el=$('#td-plan');
   if(!ids.length){el.innerHTML=''; drawMap({stops:[]}); after(); return;}
   if(!optimized||order.length!==ids.length||!order.every(id=>ids.includes(id))){if(optimized||order.length!==ids.length) optimize();}
   const sch=schedule(), s=startPt(), req=savedTour&&savedTour.status;
-  el.innerHTML=`<div class="pp-h" style="margin-bottom:6px"><div><h2 class="display d-md">Your route</h2><p>${optimized?'Ordered for the shortest estimated total drive from your start (nearest-neighbor + 2-opt).':'Custom order — tap “Optimize route” to reorder for the shortest drive.'}</p></div></div>
+  el.innerHTML=`<div class="pp-h" style="margin-bottom:6px"><div><h2 class="display d-md">Your route</h2><p>${optimized?'Ordered for the shortest estimated total drive from your start (nearest-neighbor + 2-opt).':'Custom order. Tap “Optimize route” to reorder for the shortest drive.'}</p></div></div>
    <div class="td-sum"><div><b>${order.length}</b><small>Homes</small></div><div><b>${dur(sch.drive)}</b><small>Est. driving · ${sch.miles} mi</small></div><div><b>${dur(sch.show)}</b><small>At homes</small></div><div><b>${hm(sch.end)}</b><small>Est. finish</small></div></div>
    <div class="td-start"><span class="td-pin start" style="width:28px;height:28px;display:grid;place-items:center">S</span><span>Start <b>${esc(s.name)}</b> at ${hm(sch.startMin)}</span></div>
    <ol class="td-stops" aria-label="Tour stops in order">${sch.stops.map((st,i)=>`<li><div class="td-leg">≈ ${st.leg.minutes} min · ${st.leg.miles} mi drive (estimate)</div>
      <div class="td-stop"><span class="td-num">${i+1}</span><img src="assets/img/${st.l.img}.webp" alt="" width="72" height="56" loading="lazy">
-      <div><h3><a href="listing.html?id=${st.l.id}">${esc(st.l.address)}</a></h3><p>${fmt(st.l.price)} · ${esc(SC.facts(st.l))}</p><p class="eta">Arrive ≈ ${hm(st.arrive)} · leave ≈ ${hm(st.depart)}</p>${req?`<span class="td-status">Requested — not confirmed until an agent confirms</span>`:''}</div>
+      <div><h3><a href="listing.html?id=${st.l.id}">${esc(st.l.address)}</a></h3><p>${fmt(st.l.price)} · ${esc(SC.facts(st.l))}</p><p class="eta">Arrive ≈ ${hm(st.arrive)} · leave ≈ ${hm(st.depart)}</p>${req?`<span class="td-status">Requested, not confirmed until an agent confirms</span>`:''}</div>
       <div class="td-mv no-print"><button type="button" data-mv="-1" data-i="${i}" aria-label="Move ${esc(st.l.address)} earlier" ${i===0?'disabled':''}>${icon.up}</button><button type="button" data-mv="1" data-i="${i}" aria-label="Move ${esc(st.l.address)} later" ${i===sch.stops.length-1?'disabled':''}>${icon.down}</button></div></div></li>`).join('')}</ol>
    <p class="form-note" style="margin-top:10px">Drive times are estimates: straight-line distance × 1.35 road factor at about 30 mph in town and 45 mph beyond 10 miles, plus 3 minutes per leg. Traffic, parking and lockbox access aren't included.</p>
    <div class="pp-card no-print" style="margin-top:16px" id="td-req"></div>
@@ -73,7 +73,7 @@ const plan=()=>{const el=$('#td-plan');
     <p class="print-only form-note">Printed from SearchCharlotte.com Tour Day. Times are estimates and showings are not confirmed until an agent confirms. Sample listing data in this preview.</p></div>`;
   requestForm(sch); drawMap(sch); after();};
 const requestForm=sch=>{const box=$('#td-req'); const u=SC.user()||{}; const done=savedTour&&savedTour.status;
-  if(done){box.innerHTML=`<h3>Showing request sent (preview)</h3><p>Every stop is <strong>requested — not confirmed until an agent confirms</strong>. ${esc(SC.RESPONSE_GOAL)}</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><a class="btn btn-sm btn-outline" href="passport.html#tours">View in Passport</a><button class="btn btn-sm btn-outline" type="button" data-new-tour>Plan another tour</button></div>`; return;}
+  if(done){box.innerHTML=`<h3>Showing request sent (preview)</h3><p>Every stop is <strong>requested, not confirmed until an agent confirms</strong>. ${esc(SC.RESPONSE_GOAL)}</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><a class="btn btn-sm btn-outline" href="passport.html#tours">View in Passport</a><button class="btn btn-sm btn-outline" type="button" data-new-tour>Plan another tour</button></div>`; return;}
   box.innerHTML=`<h3>Request these showings</h3><p>We'll ask each listing for your times. Nothing is booked until an agent confirms with you.</p>
    <form class="form" data-lead="tour_request" style="margin-top:12px" novalidate>
     <div class="row"><div class="field"><label for="tr-n">Name</label><input id="tr-n" name="name" required autocomplete="name" value="${esc([u.first,u.last].filter(Boolean).join(' '))}"></div><div class="field"><label for="tr-p">Phone</label><input id="tr-p" name="phone" type="tel" autocomplete="tel" value="${esc(u.phone||'')}"></div></div>
@@ -84,9 +84,9 @@ const requestForm=sch=>{const box=$('#td-req'); const u=SC.user()||{}; const don
     <p class="form-note">Requests aren't appointments. At launch your agent schedules through ShowingTime (or each listing's showing service) and confirms each stop.</p>
     <div class="form-ok">Request recorded (preview).</div></form>`;
   SC.leadForm($('form',box),d=>{const sc=schedule(); const t={id:SC.uid('tour'),date:$('#td-date').value,start:$('#td-time').value,end:hm(sc.end),dur:+$('#td-dur').value,startId:start==='geo'?'office':start,startLabel:'From '+startPt().name.replace(/ \(.*/,''),stops:order.slice(),
-      stopStatus:Object.fromEntries(order.map(id=>[id,'requested'])),status:'Requested — not confirmed until an agent confirms',contact:{name:d.name,email:d.email,phone:d.phone},notes:d.notes,flex:d.flex,created:new Date().toISOString()};
+      stopStatus:Object.fromEntries(order.map(id=>[id,'requested'])),status:'Requested, not confirmed until an agent confirms',contact:{name:d.name,email:d.email,phone:d.phone},notes:d.notes,flex:d.flex,created:new Date().toISOString()};
     db.update('sc_tours',[],a=>[t,...a]); savedTour=t; history.replaceState(null,'','tour.html?tour='+t.id);
-    SC.notify('Tour request recorded (preview)',`${t.stops.length} homes on ${t.date} — not confirmed until an agent confirms.`,'tour.html?tour='+t.id);
+    SC.notify('Tour request recorded (preview)',`${t.stops.length} homes on ${t.date}, not confirmed until an agent confirms.`,'tour.html?tour='+t.id);
     track('tour_request',{stops:t.stops.length,date:t.date}); plan(); return 'keep';});};
 const after=()=>{const el=$('#td-after'); if(!order.length){el.innerHTML=''; return;} const notes=db.get('sc_notes',{}), rat=db.get('sc_ratings',{});
   el.innerHTML=`<div class="pp-card" style="margin-top:28px"><div class="pp-h" style="margin-bottom:4px"><div><h2 class="display d-md">After the tour</h2><p>Rate each home and jot down what you noticed while it's fresh. Notes save to your Passport.</p></div></div>
@@ -97,9 +97,9 @@ const after=()=>{const el=$('#td-after'); if(!order.length){el.innerHTML=''; ret
 /* ---------- ICS + share ---------- */
 const ics=()=>{const sch=schedule(), d=$('#td-date').value.replace(/-/g,''); const t=m=>{m=Math.round(m); return String(Math.floor(m/60)).padStart(2,'0')+String(m%60).padStart(2,'0')+'00';};
   const esc2=s=>String(s).replace(/[\\,;]/g,m=>'\\'+m).replace(/\n/g,'\\n');
-  const desc='TENTATIVE — requested showing window, not confirmed until a Search Charlotte agent confirms.\n\n'+sch.stops.map((s,i)=>`${i+1}. ${s.l.address}, ${s.l.city} NC — arrive about ${hm(s.arrive)}`).join('\n')+'\n\nTimes are estimates. Questions: 704-458-1843';
+  const desc='TENTATIVE, requested showing window, not confirmed until a Search Charlotte agent confirms.\n\n'+sch.stops.map((s,i)=>`${i+1}. ${s.l.address}, ${s.l.city} NC, arrive about ${hm(s.arrive)}`).join('\n')+'\n\nTimes are estimates. Questions: 704-458-1843';
   const body=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//SearchCharlotte//Tour Day//EN','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT','UID:'+(savedTour?savedTour.id:SC.uid('tour'))+'@searchcharlotte.com','DTSTAMP:'+new Date().toISOString().replace(/[-:]/g,'').slice(0,15)+'Z',
-    'DTSTART:'+d+'T'+t(sch.startMin),'DTEND:'+d+'T'+t(sch.end),'SUMMARY:'+esc2('Tour Day (tentative — not confirmed)'),'STATUS:TENTATIVE','TRANSP:TRANSPARENT','LOCATION:'+esc2(sch.stops[0]?sch.stops[0].l.address+', '+sch.stops[0].l.city+' NC':''),'DESCRIPTION:'+esc2(desc),'END:VEVENT','END:VCALENDAR'].join('\r\n');
+    'DTSTART:'+d+'T'+t(sch.startMin),'DTEND:'+d+'T'+t(sch.end),'SUMMARY:'+esc2('Tour Day (tentative, not confirmed)'),'STATUS:TENTATIVE','TRANSP:TRANSPARENT','LOCATION:'+esc2(sch.stops[0]?sch.stops[0].l.address+', '+sch.stops[0].l.city+' NC':''),'DESCRIPTION:'+esc2(desc),'END:VEVENT','END:VCALENDAR'].join('\r\n');
   const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([body],{type:'text/calendar'})); a.download='tour-day-tentative.ics'; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove();},500); track('tour_ics_download',{});};
 const shareURL=()=>{const p=new URLSearchParams({ids:order.join(','),start:start==='geo'?'office':start,date:$('#td-date').value,t:$('#td-time').value,dur:$('#td-dur').value}); return location.origin+location.pathname+'?'+p.toString();};
 
@@ -117,9 +117,9 @@ let nt; document.addEventListener('input',e=>{const box=e.target.closest('[data-
 $('#td-opt').addEventListener('click',()=>{optimize(); plan(); SC.toast('Route optimized'); track('tour_optimize',{stops:ids.length});});
 ['#td-time','#td-dur','#td-date'].forEach(s=>$(s).addEventListener('change',()=>plan()));
 startSel.addEventListener('change',()=>{start=startSel.value; optimize(); plan();});
-$('#td-geo').addEventListener('click',()=>{const note=$('#td-geo-note'); if(!navigator.geolocation){note.textContent='Location isn\'t available in this browser — choose a starting point instead.'; return;}
+$('#td-geo').addEventListener('click',()=>{const note=$('#td-geo-note'); if(!navigator.geolocation){note.textContent='Location isn\'t available in this browser, choose a starting point instead.'; return;}
   note.textContent='Asking your browser for permission…';
   navigator.geolocation.getCurrentPosition(p=>{geo=[p.coords.latitude,p.coords.longitude]; start='geo'; paintStarts(); optimize(); plan(); note.textContent='Using your current location for the first drive (kept on this device only).'; track('tour_geolocation',{granted:true});},
-    err=>{note.textContent=err.code===1?'Location permission was declined — choose a starting point from the list instead.':'Couldn\'t get your location — choose a starting point instead.'; track('tour_geolocation',{granted:false});},{timeout:10000,maximumAge:300000});});
+    err=>{note.textContent=err.code===1?'Location permission was declined: choose a starting point from the list instead.':'Couldn\'t get your location, choose a starting point instead.'; track('tour_geolocation',{granted:false});},{timeout:10000,maximumAge:300000});});
 picker(); if(ids.length&&!savedTour) optimize(); plan();
 })();

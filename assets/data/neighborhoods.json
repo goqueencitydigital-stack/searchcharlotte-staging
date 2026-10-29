@@ -485,7 +485,7 @@
       "lat": 35.2306,
       "lng": -80.8185,
       "coord_precision": "approx",
-      "tagline": "Historic in-town Charlotte neighborhood near NoDa—not the City of Belmont",
+      "tagline": "Historic in-town Charlotte neighborhood near NoDa, not the City of Belmont",
       "overview": [
         "Belmont is a historic neighborhood just northeast of Uptown Charlotte, between Villa Heights and the Plaza Midwood area. It should not be confused with the separate City of Belmont in Gaston County, roughly 12 miles west. Belmont developed in the early 20th century, and its grid of small lots still reflects that era.",
         "Housing is a mix of early-1900s cottages and bungalows, many renovated, and newer infill homes and townhomes that have been built on vacant or redeveloped lots. The neighborhood is close to Optimist Hall, the Parkwood LYNX Blue Line station, and the restaurants of Plaza Midwood and NoDa. Uptown is a short drive or bike ride away. Most addresses fall in ZIP code 28205, with some in 28206. Buyers should expect a mix of renovated originals and new construction on the same block, which can widen the range of prices and lot sizes."
@@ -534,7 +534,7 @@
           "a": "Yes. The LYNX Blue Line's Parkwood station is nearby."
         }
       ],
-      "idx_note": "MLS ‘Belmont’ results mix the City of Belmont (Gaston County) with this neighborhood—always use a polygon or ZIP filter (28205/28206) inside Charlotte city limits.",
+      "idx_note": "MLS ‘Belmont’ results mix the City of Belmont (Gaston County) with this neighborhood, always use a polygon or ZIP filter (28205/28206) inside Charlotte city limits.",
       "sources": [
         {
           "title": "OpenStreetMap – approximate center point",
@@ -758,7 +758,7 @@
         },
         {
           "q": "Is Blakeney in Charlotte or Union County?",
-          "a": "The Blakeney area is in Charlotte (Mecklenburg County), but Union County is close by—verify the county on each listing."
+          "a": "The Blakeney area is in Charlotte (Mecklenburg County), but Union County is close by, verify the county on each listing."
         },
         {
           "q": "Is Blakeney near the light rail?",
@@ -942,7 +942,7 @@
       "tagline": "Wooded south Charlotte neighborhoods along the Carmel Road corridor",
       "overview": [
         "Carmel refers to the residential area along Carmel Road in south Charlotte, between the SouthPark/Quail Hollow area and Pineville-Matthews Road (NC 51). Carmel Country Club, a private club with golf, is one of the area's long-standing landmarks, and the surrounding subdivisions date mostly from the 1960s through the 1990s.",
-        "Housing leans toward single-family homes on generous wooded lots, including brick ranches, two-story traditionals, and some larger custom homes, along with a smaller number of townhomes. The McMullen Creek Greenway passes through the broader area, and shopping centers on NC 51 and Carmel Road handle daily needs. SouthPark is a short drive north. The area is in ZIP code 28226, and like most of south Charlotte, it is car-oriented. Because the area spans many separate subdivisions, HOA arrangements vary—some neighborhoods have voluntary associations and others have mandatory ones."
+        "Housing leans toward single-family homes on generous wooded lots, including brick ranches, two-story traditionals, and some larger custom homes, along with a smaller number of townhomes. The McMullen Creek Greenway passes through the broader area, and shopping centers on NC 51 and Carmel Road handle daily needs. SouthPark is a short drive north. The area is in ZIP code 28226, and like most of south Charlotte, it is car-oriented. Because the area spans many separate subdivisions, HOA arrangements vary, some neighborhoods have voluntary associations and others have mandatory ones."
       ],
       "housing_styles": [
         "1960s–1990s brick ranches and two-story homes",
@@ -985,7 +985,7 @@
           "a": "No. Carmel is not served by LYNX rail."
         }
       ],
-      "idx_note": "‘Carmel’ appears in many subdivision names (Carmel Country Club, Carmel Park, etc.)—use a polygon for the area.",
+      "idx_note": "‘Carmel’ appears in many subdivision names (Carmel Country Club, Carmel Park, etc.). Use a polygon for the area.",
       "sources": [
         {
           "title": "OpenStreetMap – approximate center point",
@@ -2137,7 +2137,7 @@
           "a": "Charlotte-Mecklenburg Schools assigns schools by address; use the CMS school locator (cms.k12.nc.us) to confirm assignments for a specific home."
         }
       ],
-      "idx_note": "‘Idlewild’ is a road-based area name, not a single subdivision—use a polygon.",
+      "idx_note": "‘Idlewild’ is a road-based area name, not a single subdivision. Use a polygon.",
       "sources": [
         {
           "title": "OpenStreetMap – approximate center point",
@@ -2350,10 +2350,10 @@
         },
         {
           "q": "What does LoSo stand for?",
-          "a": "Lower South End—the area south of South End around York Road and South Boulevard."
+          "a": "Lower South End: the area south of South End around York Road and South Boulevard."
         }
       ],
-      "idx_note": "‘LoSo’ is a marketing name, not an MLS subdivision—use a polygon.",
+      "idx_note": "‘LoSo’ is a marketing name, not an MLS subdivision. Use a polygon.",
       "sources": [
         {
           "title": "OpenStreetMap – approximate center point",
@@ -3095,7 +3095,7 @@
           "a": "Northlake Mall continues to operate at 6801 Northlake Mall Drive; check the mall website for current store listings."
         }
       ],
-      "idx_note": "‘Northlake’ is an area name, not one subdivision—use a polygon.",
+      "idx_note": "‘Northlake’ is an area name, not one subdivision. Use a polygon.",
       "sources": [
         {
           "title": "OpenStreetMap – approximate center point",
@@ -3701,7 +3701,7 @@
           "a": "It neighbors Cotswold and Foxcroft, between the Cotswold and SouthPark areas."
         }
       ],
-      "idx_note": "Name is shared with other ‘Providence’ communities—use a polygon to avoid mismatches (e.g., 28270 Providence Plantation).",
+      "idx_note": "Name is shared with other ‘Providence’ communities. Use a polygon to avoid mismatches (e.g., 28270 Providence Plantation).",
       "sources": [
         {
           "title": "OpenStreetMap – approximate center point",
@@ -4283,7 +4283,7 @@
           "a": "A walking and biking path that runs alongside the LYNX Blue Line through South End."
         }
       ],
-      "idx_note": "South End is not a subdivision—search by polygon; condo listings use their building names.",
+      "idx_note": "South End is not a subdivision, search by polygon; condo listings use their building names.",
       "sources": [
         {
           "title": "OpenStreetMap – approximate center point",
@@ -4416,7 +4416,7 @@
           "a": "SouthPark Mall opened in 1970."
         }
       ],
-      "idx_note": "SouthPark is an area, not a subdivision—use a polygon around the mall district.",
+      "idx_note": "SouthPark is an area, not a subdivision. Use a polygon around the mall district.",
       "sources": [
         {
           "title": "OpenStreetMap – approximate center point",
@@ -4547,7 +4547,7 @@
           "a": "No. The area is not served by LYNX rail."
         }
       ],
-      "idx_note": "Steele Creek is an area name—use a polygon or ZIP codes 28273/28278.",
+      "idx_note": "Steele Creek is an area name. Use a polygon or ZIP codes 28273/28278.",
       "sources": [
         {
           "title": "OpenStreetMap – approximate center point",
@@ -4667,7 +4667,7 @@
           "a": "Mostly 1950s–1960s brick ranches and split-levels."
         }
       ],
-      "idx_note": "‘Starmount’ works as an MLS subdivision name (also ‘Starmount Forest’ nearby—avoid mixing).",
+      "idx_note": "‘Starmount’ works as an MLS subdivision name (also ‘Starmount Forest’ nearby, avoid mixing).",
       "sources": [
         {
           "title": "OpenStreetMap – approximate center point",
@@ -4786,7 +4786,7 @@
           "a": "Bank of America Stadium and Truist Field."
         }
       ],
-      "idx_note": "Third Ward is not a subdivision—use a polygon; condo listings use building names.",
+      "idx_note": "Third Ward is not a subdivision. Use a polygon; condo listings use building names.",
       "sources": [
         {
           "title": "OpenStreetMap – approximate center point",
@@ -4911,7 +4911,7 @@
           "a": "The University of North Carolina at Charlotte."
         }
       ],
-      "idx_note": "University City is an area name—use a polygon or ZIP 28262.",
+      "idx_note": "University City is an area name. Use a polygon or ZIP 28262.",
       "sources": [
         {
           "title": "OpenStreetMap – approximate center point",
@@ -5400,7 +5400,7 @@
           "a": "First, Second, Third, and Fourth Wards, divided by Trade and Tryon Streets."
         }
       ],
-      "idx_note": "Uptown is not a subdivision—use a polygon; condo listings use building names.",
+      "idx_note": "Uptown is not a subdivision. Use a polygon; condo listings use building names.",
       "sources": [
         {
           "title": "OpenStreetMap – approximate center point",
@@ -5526,7 +5526,7 @@
           "a": "The Spectrum Center."
         }
       ],
-      "idx_note": "First Ward is not a subdivision—use a polygon.",
+      "idx_note": "First Ward is not a subdivision. Use a polygon.",
       "sources": [
         {
           "title": "OpenStreetMap – approximate center point",
@@ -5652,7 +5652,7 @@
           "a": "Yes. Uptown LYNX Blue Line stations are within walking distance."
         }
       ],
-      "idx_note": "Fourth Ward is not a subdivision—use a polygon.",
+      "idx_note": "Fourth Ward is not a subdivision. Use a polygon.",
       "sources": [
         {
           "title": "OpenStreetMap – approximate center point",
@@ -5781,7 +5781,7 @@
           "a": "The LYNX Blue Line runs along the western edge on South Boulevard; most of South Charlotte is car-oriented."
         }
       ],
-      "idx_note": "Area label only—use a polygon or a set of ZIP codes for IDX searches.",
+      "idx_note": "Area label only. Use a polygon or a set of ZIP codes for IDX searches.",
       "sources": [
         {
           "title": "OpenStreetMap – approximate center point",
@@ -6163,7 +6163,7 @@
           "a": "No. I-77 is the main route between Lake Norman and Charlotte."
         }
       ],
-      "idx_note": "Lake Norman is an area, not a subdivision—use a polygon or filter by city and waterfront.",
+      "idx_note": "Lake Norman is an area, not a subdivision. Use a polygon or filter by city and waterfront.",
       "sources": [
         {
           "title": "OpenStreetMap – approximate center point",

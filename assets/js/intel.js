@@ -1,4 +1,4 @@
-/* Search Charlotte — property intelligence shared helpers + True Cost to Own.
+/* Search Charlotte, property intelligence shared helpers + True Cost to Own.
    SC.intel.jur(listing, A)          -> tax jurisdiction {label, per100, sources}
    SC.intel.costParams(listing, A)   -> parameters for SC.trueCost from saved cost prefs + verified defaults
    SC.intel.donut(parts, size)       -> SVG donut markup, parts [{v,c,label}]
@@ -48,7 +48,7 @@ async function mount(el,l){
   const sl=(k,label,min,max,step,val,unit,note)=>`<div class="ix-sl"><div class="ix-sl-h"><label for="${uid}-${k}">${label}</label><output id="${uid}-${k}-o" for="${uid}-${k}"></output></div><input type="range" id="${uid}-${k}" data-k="${k}" min="${min}" max="${max}" step="${step}" value="${val}" data-unit="${unit}">${note?`<small>${note}</small>`:''}</div>`;
   const outHtml=(p,r)=>{const parts=['pi','tax','ins','pmi','hoa','maint','util','commute'].map(k=>({k,v:r[k],c:COLORS[k],label:LABELS[k]})); return `      <p class="eyebrow">Estimated monthly cost to own</p>
       <p class="ix-total" aria-live="polite">${money(r.total)}<span>/mo</span></p>
-      <p class="ix-flag">Estimate — not a lender quote or Loan Estimate</p>
+      <p class="ix-flag">Estimate, not a lender quote or Loan Estimate</p>
       <div class="ix-donut-row">${donut(parts,170)}<ul class="ix-legend">${parts.map(x=>`<li class="${x.v>0?'':'is-zero'}"><i style="background:${x.c}"></i>${x.label}<b>${money(x.v)}</b></li>`).join('')}</ul></div>
       <div class="ix-cash"><div><span>Down payment</span><b>${money(r.down)}</b></div><div><span>Est. closing costs (${p.closingPct}%)</span><b>${money(r.closing)}</b></div><div class="tot"><span>Est. cash to close</span><b>${money(r.cashToClose)}</b></div><div><span>Loan amount</span><b>${money(r.loan)}</b></div><div><span>First-month principal / interest</span><b>${money(r.principal)} / ${money(r.interest)}</b></div></div>
       ${p._dest?`<p class="form-note">Commute: about ${p._drive.miles} mi each way to ${esc(p._dest.name)} (estimate) × 2 × ${p._workdays} days × ${Math.round(p._mileage*1000)/10}¢/mi IRS rate as a full driving-cost proxy.</p>`:''}`;};
@@ -56,11 +56,11 @@ async function mount(el,l){
     el.innerHTML=`<div class="ix-cost">
      <div class="ix-cost-in">
       ${sl('downPct','Down payment',0,50,1,p.downPct,'%')}
-      ${sl('rate','Interest rate',3,10,0.01,p.rate,'%rate',`Default ${A.rate.value}% — ${esc(A.rate.label)}`)}
+      ${sl('rate','Interest rate',3,10,0.01,p.rate,'%rate',`Default ${A.rate.value}%, ${esc(A.rate.label)}`)}
       <div class="ix-sl"><div class="ix-sl-h"><span>Loan term</span></div><div class="seg" role="group" aria-label="Loan term">${[30,20,15].map(y=>`<button type="button" data-years="${y}" aria-pressed="${p.years===y}">${y} years</button>`).join('')}</div></div>
       ${sl('insYr','Homeowners insurance',600,9000,25,p.insYr,'$yr',`Default ${money(A.insurance.value)}/yr NC average`)}
       ${sl('maintPct','Maintenance reserve',0.5,4,0.25,p.maintPct,'%val','Fannie Mae rule of thumb: 1%–4% of value per year')}
-      ${sl('utilMo','Utilities',0,900,10,p.utilMo,'$mo','Your estimate — ask for 12-month utility history')}
+      ${sl('utilMo','Utilities',0,900,10,p.utilMo,'$mo','Your estimate. Ask for 12-month utility history')}
       ${sl('closingPct','Closing costs',2,5,0.25,p.closingPct,'%','Typical NC range 2%–5% of price')}
       ${p.downPct<20?sl('pmiRate','PMI rate',0.3,1.5,0.05,p.pmiRate,'%loan','Typical 0.46%–1.50% of loan per year'):''}
       <div class="ix-sl"><div class="ix-sl-h"><label for="${uid}-tax">Property tax rate (per $100)</label></div><input class="ix-num" id="${uid}-tax" type="number" step="0.0001" min="0" value="${p.taxRate}" data-tax><small>${esc(j.label)}: ${j.per100}${j.county!=null?` (county ${j.county} + municipal ${j.city})`:''}</small></div>
@@ -72,14 +72,14 @@ async function mount(el,l){
      <details class="ix-src"><summary>Assumptions, method &amp; sources</summary><ul>
       <li>Principal &amp; interest: standard amortization on the loan amount. Property tax: rate × list price ÷ 12 (bills use the county assessed value). ${esc(A.tax.note)}</li>
       ${(j.sources||[]).map(s=>`<li>Tax rate: ${srcLine(s)}</li>`).join('')}
-      <li>Mortgage rate: ${srcLine(A.rate)} — ${esc(A.rate.note)}</li>
+      <li>Mortgage rate: ${srcLine(A.rate)}, ${esc(A.rate.note)}</li>
       <li>Insurance: ${srcLine(A.insurance)}; also ${A.insurance.alt.map(srcLine).join('; ')}. ${esc(A.insurance.note)}</li>
       <li>Closing costs: ${srcLine(A.closing)}. ${esc(A.closing.note)}</li>
       <li>Maintenance: ${srcLine(A.maintenance)}. ${esc(A.maintenance.note)}</li>
       <li>PMI: ${srcLine(A.pmi)}. ${esc(A.pmi.note)}</li>
       <li>Commute: ${srcLine(A.mileage)}. ${esc(A.mileage.note)} Drive distance is an estimate (straight-line × 1.35).</li>
       <li>Utilities: ${esc(A.utilities.note)}</li>
-      <li>HOA: from the listing (sample data). Listing price and HOA are sample data — live MLS data via Showcase IDX at launch.</li></ul>
+      <li>HOA: from the listing (sample data). Listing price and HOA are sample data, live MLS data via Showcase IDX at launch.</li></ul>
       <p class="form-note">Updated when the assumptions file is refreshed (rates weekly from Freddie Mac PMMS; tax rates each July 1). Talk to a licensed lender for a Loan Estimate.</p></details>`;
     labels();
     drawCmp(A);};

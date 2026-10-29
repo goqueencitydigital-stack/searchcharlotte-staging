@@ -9,7 +9,7 @@
 <link rel="icon" href="assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=ae887d1d">
+<link rel="stylesheet" href="assets/css/site.css?v=9f82724d">
 <link rel="stylesheet" href="assets/css/agent-connect.css?v=6ab136ed">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script>document.documentElement.classList.add('js')</script>
@@ -37,12 +37,12 @@
         <div class="dd-menu mega">
           <div><p class="mega-h">Find your home</p><a href="ai.html">Search Charlotte AI<small>Describe it, we'll search it</small></a><a href="lifestyle.html">Live Where You Love<small>Search by what's nearby</small></a><a href="visual.html">Find Homes Like This<small>Search by photo</small></a><a href="deals.html">Deal Radar<small>Price drops &amp; opportunities</small></a><a href="compare.html">Compare Homes</a><a href="invest.html">Investor Mode</a></div>
           <div><p class="mega-h">Plan &amp; tour</p><a href="tour.html">Tour Day<small>Plan a showing route</small></a><a href="party.html">Search Party<small>Shop homes together</small></a><a href="reels.html">Property Reels</a><a href="renovate.html">Renovation Visualizer</a><a href="relocate.html">Moving to Charlotte</a><a href="seller.html">Seller Command Center</a></div>
-          <div><p class="mega-h">Know Charlotte</p><a href="pulse.html">Market Pulse<small>Monthly verified market data</small></a><a href="events.html">What's Happening<small>Charlotte events calendar</small></a><a href="explore.html">Explore Charlotte</a><a href="neighborhoods.html">Neighborhood Explorer</a><a href="communities.html">All 438 Communities</a><a href="guides/index.html">Neighborhood Guides</a><a href="resources/index.html">Resources &amp; Calculators</a></div>
+          <div><p class="mega-h">Know Charlotte</p><a href="pulse.html">Market Pulse<small>Monthly verified market data</small></a><a href="events.html">Events &amp; Concerts<small>Updated daily: shows, games, festivals</small></a><a href="explore.html">Explore Charlotte</a><a href="neighborhoods.html">Neighborhood Explorer</a><a href="communities.html">All 438 Communities</a><a href="guides/index.html">Neighborhood Guides</a><a href="resources/index.html">Resources &amp; Calculators</a></div>
         </div>
       </div>
     </nav>
     <a class="brand" href="index.html" aria-label="SearchCharlotte.com home">
-      <img class="logo" src="assets/img/logo-black.png" alt="SearchCharlotte.com — Your Home Is Here" width="250" height="100">
+      <img class="logo" src="assets/img/logo-black.png" alt="SearchCharlotte.com, Your Home Is Here" width="250" height="100">
       <img class="bhhs" src="assets/img/bhhs.png" alt="Berkshire Hathaway HomeServices" width="46" height="46">
     </a>
     <nav class="nav-right" aria-label="Secondary">
@@ -64,21 +64,20 @@
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
     </nav>
   </div>
-  <div class="mobile-panel" id="mobile-panel">
-    <a href="search.html">Search Homes</a>
-    <a href="neighborhoods.html">Neighborhoods</a>
-    <div class="sub"><a href="neighborhood.html?n=south-charlotte">South Charlotte</a><a href="neighborhood.html?n=union-county">Union County</a><a href="neighborhood.html?n=mint-hill">Mint Hill</a><a href="neighborhood.html?n=lake-norman">Lake Norman</a></div>
-    <a href="buy.html">Buy a Home</a>
-    <a href="sell.html">Sell a Home</a>
-    <a href="explore.html">Explore Charlotte</a>
-    <a href="market.html">Market Insights</a>
-    <a href="passport.html">My Passport</a>
-    <p class="mp-h">Discover</p>
-    <div class="sub"><a href="ai.html">Search Charlotte AI</a><a href="lifestyle.html">Live Where You Love</a><a href="deals.html">Deal Radar</a><a href="compare.html">Compare Homes</a><a href="tour.html">Tour Day</a><a href="party.html">Search Party</a><a href="reels.html">Property Reels</a><a href="pulse.html">Market Pulse</a><a href="events.html">What's Happening</a><a href="relocate.html">Moving to Charlotte</a><a href="seller.html">Seller Command Center</a><a href="invest.html">Investor Mode</a><a href="guides/index.html">Neighborhood Guides</a></div>
-    <a href="about.html">About &amp; Team</a>
-    <a href="search.html?saved=1">Saved Homes</a>
-    <a href="contact.html">Contact Us</a>
-    <p style="margin-top:20px"><a class="btn btn-block" href="tel:+17044581843" style="border:0;color:#fff">Call or text 704-458-1843</a></p>
+  <div class="mobile-panel" id="mobile-panel" role="dialog" aria-label="Site menu">
+    <nav class="mp-nav" aria-label="Mobile">
+    <a class="mp-top" href="search.html">Search Homes</a>
+    <details class="mp-g"><summary>Neighborhoods<svg class="mp-chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="mp-sub"><a href="neighborhoods.html">All neighborhoods &amp; towns</a><a href="neighborhood.html?n=south-charlotte">South Charlotte</a><a href="neighborhood.html?n=union-county">Union County</a><a href="neighborhood.html?n=mint-hill">Mint Hill</a><a href="neighborhood.html?n=lake-norman">Lake Norman</a><a href="neighborhood.html?n=uptown">Uptown</a><a href="communities.html">All 438 communities</a></div></details>
+    <details class="mp-g"><summary>Buy &amp; Sell<svg class="mp-chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="mp-sub"><a href="buy.html">Buy a Home</a><a href="sell.html">Sell a Home</a><a href="seller.html#cma">Home Valuation</a><a href="seller.html">Seller Command Center</a><a href="invest.html">Investor Mode</a></div></details>
+    <details class="mp-g"><summary>Search Tools<svg class="mp-chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="mp-sub"><a href="ai.html">Search Charlotte AI</a><a href="lifestyle.html">Live Where You Love</a><a href="deals.html">Deal Radar</a><a href="compare.html">Compare Homes</a><a href="tour.html">Tour Day</a><a href="party.html">Search Party</a><a href="reels.html">Property Reels</a></div></details>
+    <details class="mp-g"><summary>Explore Charlotte<svg class="mp-chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="mp-sub"><a href="explore.html">Things to Do</a><a href="guides/index.html">Neighborhood Guides</a><a href="relocate.html">Moving to Charlotte</a><a href="events.html">Events &amp; Concerts</a><a href="pulse.html">Market Pulse</a><a href="market.html">Market Insights</a></div></details>
+    <details class="mp-g"><summary>About<svg class="mp-chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="mp-sub"><a href="about.html">About &amp; Team</a><a href="about.html#team">Find an Agent</a><a href="contact.html">Contact Us</a></div></details>
+    </nav>
+    <div class="mp-quick"><a href="passport.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>My Passport</a><a href="search.html?saved=1"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>Saved Homes</a></div>
+    <div class="mp-contact">
+      <a class="mp-call" href="tel:+17044581843"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call or text 704-458-1843</a>
+      <a class="mp-mail" href="mailto:john@searchcharlotte.com">john@searchcharlotte.com</a>
+    </div>
   </div>
 </header>
 <main id="main">
@@ -159,7 +158,7 @@
   <div class="why-grid">
     <div><strong>Every MLS listing</strong><span>Live Canopy MLS data, updated throughout the day</span></div>
     <div><strong>Search your way</strong><span>Map, draw, list, or just describe what you want</span></div>
-    <div><strong>No pressure</strong><span>Browse freely — sign up only to save and get alerts</span></div>
+    <div><strong>No pressure</strong><span>Browse freely: sign up only to save and get alerts</span></div>
     <div><strong>Real people</strong><span>Call or text a local agent at 704-458-1843</span></div>
   </div>
   <a class="btn btn-light" href="about.html" style="margin-top:28px">Learn More About Us</a>
@@ -211,7 +210,7 @@
     <div>
       <p class="eyebrow">Search Charlotte AI</p>
       <h2 id="ai-h" class="display d-lg">Tell us what you're looking for</h2>
-      <p style="font-size:14px;max-width:46ch">Describe your ideal home in plain English. We'll turn it into MLS search filters you can adjust — and point you to neighborhood guides that fit.</p>
+      <p style="font-size:14px;max-width:46ch">Describe your ideal home in plain English. We'll turn it into MLS search filters you can adjust, and point you to neighborhood guides that fit.</p>
       <div class="chips" style="margin-top:14px">
         <button class="chip" type="button" data-example>“4 bedroom home in Ballantyne under $650,000”</button>
         <button class="chip" type="button" data-example>“Townhomes near South End under $500K”</button>
@@ -262,7 +261,7 @@
     <div>
       <p class="eyebrow">Neighborhood finder</p>
       <h2 id="quiz-h" class="display d-lg">Find your perfect neighborhood</h2>
-      <p style="font-size:14px;max-width:44ch">Five quick questions about budget, home type, commute and lifestyle. Suggestions are based only on housing and amenity facts — never on who lives there.</p>
+      <p style="font-size:14px;max-width:44ch">Five quick questions about budget, home type, commute and lifestyle. Suggestions are based only on housing and amenity facts, never on who lives there.</p>
     </div>
     <form class="quiz" id="quiz">
       <fieldset><legend>1. Home budget</legend><div class="opts">
@@ -299,7 +298,7 @@
     <div>
       <p class="eyebrow">For sellers</p>
       <h2 id="val-h" class="display d-lg">Wondering what your Charlotte home is worth?</h2>
-      <p style="font-size:14px">Get a pricing analysis prepared by a Search Charlotte agent using recent comparable sales — not an automated guess. Most requests are answered within one business day.</p>
+      <p style="font-size:14px">Get a pricing analysis prepared by a Search Charlotte agent using recent comparable sales, not an automated guess. Most requests are answered within one business day.</p>
       <form class="searchbar" style="margin:18px 0 0;max-width:520px" action="sell.html#valuation">
         <label class="sr-only" for="v-addr">Property address</label>
         <input id="v-addr" name="address" placeholder="Enter your home address" required>
@@ -338,7 +337,7 @@
         <div class="faq-item"><button aria-expanded="false">How much down payment do I need to buy a home in Charlotte?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></button><div class="ans"><div>It depends on the loan. Some conventional loans allow as little as 3% down, FHA loans can start at 3.5%, and VA and USDA loans may require no down payment for eligible buyers. Your lender will confirm what you qualify for.</div></div></div>
         <div class="faq-item"><button aria-expanded="false">How long does it take to buy a home in Charlotte?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></button><div class="ans"><div>Searching can take days or months. Once you're under contract, a financed purchase typically closes in about 30–45 days. In North Carolina, the due-diligence period is when you complete inspections and appraisal.</div></div></div>
         <div class="faq-item"><button aria-expanded="false">What are closing costs when buying a home?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></button><div class="ans"><div>Buyers usually pay lender fees, title insurance, attorney fees (North Carolina closings are handled by an attorney), recording fees and prepaid taxes and insurance. Your lender's Loan Estimate lists the exact figures.</div></div></div>
-        <div class="faq-item"><button aria-expanded="false">Which Charlotte neighborhoods are best for home buyers?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></button><div class="ans"><div>The best fit depends on your budget, commute and the lifestyle you want — walkable streets in Dilworth and South End, larger lots in Mint Hill and Union County, or lake living around Lake Norman. Try the neighborhood finder above or browse our <a href="neighborhoods.html" style="text-decoration:underline">neighborhood guides</a>.</div></div></div>
+        <div class="faq-item"><button aria-expanded="false">Which Charlotte neighborhoods are best for home buyers?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></button><div class="ans"><div>The best fit depends on your budget, commute and the lifestyle you want, walkable streets in Dilworth and South End, larger lots in Mint Hill and Union County, or lake living around Lake Norman. Try the neighborhood finder above or browse our <a href="neighborhoods.html" style="text-decoration:underline">neighborhood guides</a>.</div></div></div>
       </div>
     </div>
     <img class="faq-img" src="assets/img/areas/hero-skyline.webp" alt="Charlotte skyline" loading="lazy">
@@ -362,7 +361,7 @@
   <p>Whether you're buying, selling, or searching for the perfect home in Charlotte, we're ready to help you move forward with confidence.</p>
   <div class="actions"><a class="btn btn-ghost btn-sm" href="search.html">Search Homes</a><a class="btn btn-ghost btn-sm" href="contact.html">Talk To An Expert</a></div>
 </section>
-<link rel="stylesheet" href="assets/css/mobile.css?v=9b88ea98">
+<link rel="stylesheet" href="assets/css/mobile.css?v=0be1add1">
 </main>
 <footer class="site-footer">
   <div class="wrap" style="max-width:1280px">
@@ -375,7 +374,7 @@
           </div>
         </div>
         <div><h4>Explore</h4><ul><li><a href="buy.html">Buy a Home</a></li><li><a href="sell.html">Sell a Home</a></li><li><a href="about.html#team">Find an Agent</a></li><li><a href="search.html">Featured Listings</a></li><li><a href="neighborhoods.html">Charlotte Neighborhoods</a></li><li><a href="communities.html">All Communities</a></li></ul></div>
-        <div><h4>Resources</h4><ul><li><a href="seller.html#cma">Home Valuation</a></li><li><a href="market.html">Market Insights</a></li><li><a href="mortgage-calculator/index.html">Mortgage Calculator</a></li><li><a href="guides/index.html">Neighborhood Guides</a></li><li><a href="pulse.html">Market Pulse</a></li><li><a href="events.html">Charlotte Events</a></li><li><a href="resources/index.html">Resources</a></li><li><a href="buy.html">Buyer Resources</a></li><li><a href="sell.html">Seller Resources</a></li><li><a href="buy.html#faq">FAQs</a></li></ul></div>
+        <div><h4>Resources</h4><ul><li><a href="seller.html#cma">Home Valuation</a></li><li><a href="market.html">Market Insights</a></li><li><a href="mortgage-calculator/index.html">Mortgage Calculator</a></li><li><a href="guides/index.html">Neighborhood Guides</a></li><li><a href="pulse.html">Market Pulse</a></li><li><a href="events.html">Events &amp; Concerts</a></li><li><a href="resources/index.html">Resources</a></li><li><a href="buy.html">Buyer Resources</a></li><li><a href="sell.html">Seller Resources</a></li><li><a href="buy.html#faq">FAQs</a></li></ul></div>
         <div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="agents/index.html">Our Team</a></li><li><a href="photo-credits.html">Photo Credits</a></li><li><a href="index.html#trust">Testimonials</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="contact.html?topic=careers">Careers</a></li></ul></div>
         <div><h4>Contact Info</h4><ul><li><a href="tel:+17044581843">Phone: (704) 458-1843</a></li><li><a href="mailto:john@searchcharlotte.com">Email: john@searchcharlotte.com</a></li><li>6801 Morrison Blvd, Suite 101<br>Charlotte, NC 28211</li></ul></div>
       </div>
@@ -389,10 +388,10 @@
 </footer>
 <div class="toast" role="status" aria-live="polite"></div>
 <script src="assets/js/img-hd.js?v=b416ac40"></script>
-<script src="assets/js/data.js?v=58f14f9e"></script>
-<script src="assets/js/site.js?v=c20feacd"></script>
-<script src="assets/js/core.js?v=a6e1b51f"></script>
-<script src="assets/js/agent-connect.js?v=9eed57ce"></script>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="assets/js/home.js?v=eef15439"></script><script src="assets/js/ai.js?v=000c5eb3"></script><script>SC.ai&&SC.ai.mountLauncher(document.getElementById('home-ai'),{examples:[]});document.querySelectorAll('[data-example]').forEach(b=>b.addEventListener('click',()=>location.href='ai.html?q='+encodeURIComponent(b.textContent.replace(/[“”]/g,''))));</script>
+<script src="assets/js/data.js?v=3d6b078b"></script>
+<script src="assets/js/site.js?v=96860fc1"></script>
+<script src="assets/js/core.js?v=2cd0cc99"></script>
+<script src="assets/js/agent-connect.js?v=b04e2984"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="assets/js/home.js?v=3327bb16"></script><script src="assets/js/ai.js?v=70872246"></script><script>SC.ai&&SC.ai.mountLauncher(document.getElementById('home-ai'),{examples:[]});document.querySelectorAll('[data-example]').forEach(b=>b.addEventListener('click',()=>location.href='ai.html?q='+encodeURIComponent(b.textContent.replace(/[“”]/g,''))));</script>
 </body>
 </html>

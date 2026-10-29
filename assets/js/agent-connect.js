@@ -1,11 +1,11 @@
-/* Search Charlotte — Instant Agent Connection + Passport notification bell (global include).
+/* Search Charlotte, Instant Agent Connection + Passport notification bell (global include).
    Preview: requests are recorded only in this browser tab (SC.db 'sc_messages'); nothing is sent.
    Production: POST to the lead endpoint → Showcase IDX lead + Lead Routing Settings → assigned agent email/CRM. */
 (function(){'use strict';
 const SC=window.SC; if(!SC||SC.agentConnect) return; const {$,$$,esc,track}=SC;
 
 /* ---------- Team (from SearchCharlotte.com team roster; photos supplied by client) ---------- */
-SC.OFFICE={name:'SearchCharlotte — Berkshire Hathaway HomeServices Carolinas Realty',addr:'6801 Morrison Blvd, Suite 101, Charlotte, NC 28211',
+SC.OFFICE={name:'SearchCharlotte, Berkshire Hathaway HomeServices Carolinas Realty',addr:'6801 Morrison Blvd, Suite 101, Charlotte, NC 28211',
   phone:'704-458-1843',tel:'+17044581843',lat:35.15199,lng:-80.82601,
   geoSource:{name:'U.S. Census Bureau Geocoder (address-range match)',url:'https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=6801+Morrison+Blvd,+Charlotte,+NC+28211&benchmark=Public_AR_Current&format=json',retrieved:'2026-10-28'}};
 SC.TEAM=[
@@ -15,8 +15,8 @@ SC.TEAM=[
   {id:'331312',slug:'stephanie-horai',name:'Stephanie Horai',title:'Search Charlotte team'}];
 SC.agentPhoto=a=>`assets/img/team/${a.id}.webp`;
 SC.assignedAgent=()=>SC.TEAM[0]; /* production: lead.assigned_agent from Showcase IDX */
-SC.RESPONSE_GOAL='We reply during business hours, typically same day. This is a goal, not a guarantee — for anything urgent, call or text.';
-/* Proposed routing — shown to users; configured at launch in Showcase IDX Lead Routing Settings + the lead endpoint. */
+SC.RESPONSE_GOAL='We reply during business hours, typically same day. This is a goal, not a guarantee, for anything urgent, call or text.';
+/* Proposed routing, shown to users; configured at launch in Showcase IDX Lead Routing Settings + the lead endpoint. */
 SC.ROUTING=[
   ['Buying, showings & property questions','Your assigned agent (John Siddons by default)'],
   ['Selling & home valuation','John Siddons, Lead Broker'],
@@ -56,7 +56,7 @@ const ACTIONS=[
 let panel, launcher, ctx={};
 const u=()=>SC.user()||{};
 const listingOpts=sel=>{const ids=[...new Set([ctx.listingId,...SC.saved(),...SC.tourList()].filter(Boolean))];
-  return `<option value="">${ids.length?'Choose a home (optional)':'No saved homes yet — add details below'}</option>`+ids.map(id=>{const l=SC.listing(id); return l?`<option value="${l.id}" ${l.id===sel?'selected':''}>${esc(l.address)}, ${esc(l.city)} (sample)</option>`:'';}).join('');};
+  return `<option value="">${ids.length?'Choose a home (optional)':'No saved homes yet. Add details below'}</option>`+ids.map(id=>{const l=SC.listing(id); return l?`<option value="${l.id}" ${l.id===sel?'selected':''}>${esc(l.address)}, ${esc(l.city)} (sample)</option>`:'';}).join('');};
 const contactFields=pre=>{const x=u(); return `<div class="row"><div class="field"><label for="${pre}-n">Name</label><input id="${pre}-n" name="name" required autocomplete="name" value="${esc([x.first,x.last].filter(Boolean).join(' '))}"></div>
   <div class="field"><label for="${pre}-p">Phone</label><input id="${pre}-p" name="phone" type="tel" autocomplete="tel" value="${esc(x.phone||'')}"></div></div>
   <div class="field"><label for="${pre}-e">Email</label><input id="${pre}-e" name="email" type="email" required autocomplete="email" value="${esc(x.email||'')}"></div>`;};
@@ -98,7 +98,7 @@ const show=k=>{const b=$('.ac-body',panel), t=$('.ac-title',panel), bk=$('.ac-ba
   if(!k||k==='home'){b.innerHTML=home(); t.textContent='Talk to Search Charlotte'; bk.hidden=true;}
   else if(k==='agent'){b.innerHTML=agentView(); t.textContent='Your agent'; bk.hidden=false;}
   else {const a=ACTIONS.find(x=>x.k===k); b.innerHTML=formFor(k); t.textContent=a.t; bk.hidden=false;
-    const f=$('form',b); SC.leadForm(f,d=>{const rec={id:SC.uid('msg'),kind:k,data:d,listingId:d.listing||ctx.listingId||'',to:SC.assignedAgent().name,ts:new Date().toISOString(),status:'Recorded in preview — not sent',from:'me'};
+    const f=$('form',b); SC.leadForm(f,d=>{const rec={id:SC.uid('msg'),kind:k,data:d,listingId:d.listing||ctx.listingId||'',to:SC.assignedAgent().name,ts:new Date().toISOString(),status:'Recorded in preview: not sent',from:'me'};
       SC.db.update('sc_messages',[],a=>[...a,rec].slice(-200));
       SC.notify(a.t+' recorded (preview)', 'Not sent in preview. At launch this routes to '+SC.assignedAgent().name+'.','passport.html#advisor');
       track('agent_connect_submit',{action:k,listing_id:rec.listingId});});}
@@ -120,7 +120,7 @@ SC.agentConnect={
 };
 document.addEventListener('click',e=>{const b=e.target.closest('[data-agent-connect]'); if(!b) return; e.preventDefault(); SC.agentConnect.open({action:b.dataset.agentConnect||'home',listingId:b.dataset.listing||'',source:'button'});});
 
-/* ---------- Notification bell (SC.passport.bell(el) — mount anywhere, e.g. header) ---------- */
+/* ---------- Notification bell (SC.passport.bell(el), mount anywhere, e.g. header) ---------- */
 SC.passport=SC.passport||{};
 SC.passport.bell=el=>{if(!el) return; el.classList.add('pp-bell');
   el.innerHTML=`<button type="button" class="pp-bell-btn" aria-haspopup="true" aria-expanded="false">${I.bell}<span class="pp-bell-n" hidden></span><span class="sr-only">Notifications</span></button><div class="pp-bell-pop" hidden></div>`;

@@ -1,4 +1,4 @@
-/* Search Charlotte — shared platform core (loaded on every page after site.js).
+/* Search Charlotte, shared platform core (loaded on every page after site.js).
    Everything here is deterministic and transparent. Listing "extras" (style, history, features)
    are DEMO values derived from the sample listings, flagged with demo:true, and replaced by
    Showcase IDX / Canopy MLS fields at launch. */
@@ -40,7 +40,7 @@ SC.extras=l=>{if(l._x) return l._x; const h=hash(l.id); const today=new Date('20
     originalPrice:hist.find(x=>x.event==='Listed for sale').price,
     roofYear:(h%3===0)?null:Math.max(l.year,2026-(h%22)),hvacYear:(h%4===0)?null:Math.max(l.year,2026-(h%15)),
     fenced:feats.includes('Fenced backyard'),stories:l.type==='Condo'?1:1+(h%3?1:0),
-    incentive:l.flag==='New Construction'&&h%2===0?'Builder incentive advertised in listing remarks (demo) — confirm terms with the builder':null,
+    incentive:l.flag==='New Construction'&&h%2===0?'Builder incentive advertised in listing remarks (demo). Confirm terms with the builder':null,
     openHouse:/Open House/.test(l.flag||'')?l.flag.replace('Open House ',''):null};
   return l._x;};
 SC.listing=id=>D.listings.find(l=>l.id===String(id));
@@ -91,17 +91,17 @@ SC.defaultPrefs={budgetMax:null,budgetMin:null,beds:null,baths:null,sqftMin:null
 SC.prefs=()=>Object.assign({},SC.defaultPrefs,SC.db.get('sc_prefs',{}));
 SC.setPrefs=p=>{SC.db.set('sc_prefs',Object.assign(SC.prefs(),p)); track('home_match_prefs_update',{});};
 SC.hasPrefs=()=>{const p=SC.prefs(); return !!(p.budgetMax||p.beds||p.baths||p.sqftMin||p.types.length||p.styles.length||p.areas.length||p.commute||p.lifestyle.length||Object.values(p.mustHave).some(Boolean));};
-/* Home Match: weighted share of criteria met. Only objective listing facts and the user's own choices are used —
+/* Home Match: weighted share of criteria met. Only objective listing facts and the user's own choices are used, 
    never protected characteristics, demographics, school ratings or crime proxies. Returns null when no prefs set. */
 SC.match=(l,p=SC.prefs(),amen=null)=>{const x=SC.extras(l); const C=[];
   const add=(w,ok,yes,no,partial)=>C.push({w,ok:ok===true?1:ok===false?0:ok,yes,no,partial});
   if(p.budgetMax){const r=l.price/p.budgetMax; add(3,r<=1?1:r<=1.05?0.5:0,`Within your ${short(p.budgetMax)} budget`,`${short(l.price-p.budgetMax)} over your budget`);}
   if(p.budgetMin) add(1,l.price>=p.budgetMin,`Above your ${short(p.budgetMin)} minimum`,`Below your price range`);
-  if(p.beds) add(2,l.beds>=p.beds?1:l.beds===p.beds-1?0.4:0,`${l.beds} bedrooms (you want ${p.beds}+)`,`${l.beds} bedrooms — fewer than your ${p.beds}`);
-  if(p.baths) add(1.5,l.baths>=p.baths?1:l.baths>=p.baths-0.5?0.5:0,`${l.baths} baths meets your ${p.baths}+`,`${l.baths} baths — fewer than your ${p.baths}`);
-  if(p.sqftMin) add(1.5,l.sqft>=p.sqftMin?1:l.sqft>=p.sqftMin*0.9?0.5:0,`${l.sqft.toLocaleString()} sq ft (target ${p.sqftMin.toLocaleString()}+)`,`${l.sqft.toLocaleString()} sq ft — smaller than your ${p.sqftMin.toLocaleString()}`);
+  if(p.beds) add(2,l.beds>=p.beds?1:l.beds===p.beds-1?0.4:0,`${l.beds} bedrooms (you want ${p.beds}+)`,`${l.beds} bedrooms, fewer than your ${p.beds}`);
+  if(p.baths) add(1.5,l.baths>=p.baths?1:l.baths>=p.baths-0.5?0.5:0,`${l.baths} baths meets your ${p.baths}+`,`${l.baths} baths, fewer than your ${p.baths}`);
+  if(p.sqftMin) add(1.5,l.sqft>=p.sqftMin?1:l.sqft>=p.sqftMin*0.9?0.5:0,`${l.sqft.toLocaleString()} sq ft (target ${p.sqftMin.toLocaleString()}+)`,`${l.sqft.toLocaleString()} sq ft, smaller than your ${p.sqftMin.toLocaleString()}`);
   if(p.acresMin) add(1,l.acres>=p.acresMin?1:l.acres>=p.acresMin*0.75?0.5:0,`${l.acres} acre lot meets your ${p.acresMin}+`,`Smaller lot than preferred (${l.acres} vs ${p.acresMin} acres)`);
-  if(p.types.length) add(1.5,p.types.includes(l.type),`${l.type} — a home type you chose`,`${l.type} isn't a home type you selected`);
+  if(p.types.length) add(1.5,p.types.includes(l.type),`${l.type}, a home type you chose`,`${l.type} isn't a home type you selected`);
   if(p.styles.length) add(1,p.styles.includes(x.style),`${x.style} style, one of your favorites`,`${x.style} style isn't on your list`);
   if(p.areas.length) add(2,p.areas.includes(l.hood),`In ${l.hoodName}, a preferred area`,`Outside your preferred areas`);
   const m=p.mustHave||{};
@@ -113,7 +113,7 @@ SC.match=(l,p=SC.prefs(),amen=null)=>{const x=SC.extras(l); const C=[];
   if(m.primaryOnMain) add(0.75,x.features.includes('Primary on main'),'Primary bedroom on the main level','Primary bedroom not listed on main');
   if(p.hoaMax!=null&&p.hoaMax!=='') add(1,l.hoa<=p.hoaMax?1:l.hoa<=p.hoaMax*1.25?0.5:0,l.hoa?`HOA $${l.hoa}/mo, within your limit`:'No HOA fee listed',`Higher HOA than preferred ($${l.hoa}/mo)`);
   if(p.yearMin) add(0.75,l.year>=p.yearMin,`Built ${l.year}`,`Built ${l.year}, older than ${p.yearMin}`);
-  if(p.commute&&p.commute.lat){const d=SC.drive([l.lat,l.lng],[p.commute.lat,p.commute.lng]); add(2,d.minutes<=p.commute.maxMin?1:d.minutes<=p.commute.maxMin*1.2?0.5:0,`About ${d.minutes} min to ${p.commute.label} (estimate)`,`About ${d.minutes} min to ${p.commute.label} — longer than your ${p.commute.maxMin} min`);}
+  if(p.commute&&p.commute.lat){const d=SC.drive([l.lat,l.lng],[p.commute.lat,p.commute.lng]); add(2,d.minutes<=p.commute.maxMin?1:d.minutes<=p.commute.maxMin*1.2?0.5:0,`About ${d.minutes} min to ${p.commute.label} (estimate)`,`About ${d.minutes} min to ${p.commute.label}, longer than your ${p.commute.maxMin} min`);}
   if(p.lifestyle&&p.lifestyle.length&&amen){const a=amen[l.id]||{}; p.lifestyle.forEach(r=>{const v=a[r.cat]; if(!v) return; const n=(r.maxMi||1)<=1?v[0]:v[1]; const need=r.min||1; add(1,n>=need?1:n>0?0.5:0,`${n} ${SC.poi.label(r.cat).toLowerCase()} within ${r.maxMi<=1?1:3} mi`,`Only ${n} ${SC.poi.label(r.cat).toLowerCase()} within ${r.maxMi<=1?1:3} mi (you wanted ${need})`);});}
   if(!C.length) return null;
   const W=C.reduce((s,c)=>s+c.w,0), S=C.reduce((s,c)=>s+c.w*c.ok,0);
@@ -124,7 +124,7 @@ SC.matchBadge=(l,amen)=>{const r=SC.match(l,undefined,amen); if(!r) return ''; c
 
 /* ---------- True Cost to Own ---------- */
 SC.costAssumptions=fetch('assets/data/cost-assumptions.json').then(r=>r.ok?r.json():null).catch(()=>null);
-SC.trueCost=(l,a)=>{ /* a: {downPct,rate,years,taxRate,insYr,pmiRate,maintPct,utilMo,commuteMo,closingPct} — all user-adjustable */
+SC.trueCost=(l,a)=>{ /* a: {downPct,rate,years,taxRate,insYr,pmiRate,maintPct,utilMo,commuteMo,closingPct}, all user-adjustable */
   const down=l.price*a.downPct/100, loan=l.price-down, r=a.rate/100/12, n=a.years*12;
   const pi=r===0?loan/n:loan*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
   const firstInt=loan*r, firstPrin=pi-firstInt;
@@ -154,10 +154,10 @@ SC.dealSignals=l=>{const x=SC.extras(l), s=[];
   return s;};
 
 /* ---------- Voice input (Web Speech API, optional) ---------- */
-SC.voice=(input,onDone)=>{const R=window.SpeechRecognition||window.webkitSpeechRecognition; if(!R){SC.toast('Voice search isn\'t supported in this browser — type your search instead'); input.focus(); return null;}
+SC.voice=(input,onDone)=>{const R=window.SpeechRecognition||window.webkitSpeechRecognition; if(!R){SC.toast('Voice search isn\'t supported in this browser, type your search instead'); input.focus(); return null;}
   const r=new R(); r.lang='en-US'; r.interimResults=true; r.maxAlternatives=1;
   r.onresult=e=>{input.value=[...e.results].map(x=>x[0].transcript).join(' '); if(e.results[e.results.length-1].isFinal&&onDone) onDone(input.value);};
-  r.onerror=e=>SC.toast(e.error==='not-allowed'?'Microphone permission was declined — you can type instead':'Didn\'t catch that — try again or type');
+  r.onerror=e=>SC.toast(e.error==='not-allowed'?'Microphone permission was declined: you can type instead':'Didn\'t catch that. Try again or type');
   try{r.start(); track('voice_search_start',{});}catch(e){} return r;};
 document.addEventListener('click',e=>{const b=e.target.closest('[data-voice]'); if(!b) return; e.preventDefault(); const inp=document.getElementById(b.dataset.voice); if(!inp) return;
   b.classList.add('listening'); const r=SC.voice(inp,v=>{b.classList.remove('listening'); const f=inp.closest('form'); f&&f.requestSubmit();}); if(r) r.onend=()=>b.classList.remove('listening'); else b.classList.remove('listening');});

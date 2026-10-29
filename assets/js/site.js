@@ -1,4 +1,4 @@
-/* Search Charlotte — shared interactions (preview build). */
+/* Search Charlotte, shared interactions (preview build). */
 (function(){
 'use strict';
 const D = window.SC_DATA || {listings:[],hoods:[]};
@@ -142,7 +142,7 @@ $$('[data-calc]').forEach(c=>{const g=n=>parseFloat($(`[name=${n}]`,c).value)||0
     if(!used){used=true; track('mortgage_calc_use',{});}};
   c.addEventListener('input',run); run(); used=false;});
 
-/* Guided natural-language search (rule-based; produces filters only — never listings) */
+/* Guided natural-language search (rule-based; produces filters only, never listings) */
 SC.parseQuery=text=>{const t=' '+text.toLowerCase()+' '; const f={};
   const num=s=>{s=s.replace(/[,$\s]/g,''); let m=parseFloat(s); if(/m$/.test(s)) m*=1e6; else if(/k$/.test(s)) m*=1e3; else if(m<10000) m*=1000; return Math.round(m);};
   let m=t.match(/(\d+)\s*(?:\+\s*)?(?:bed|br|bedroom)/); if(m) f.beds=+m[1];
@@ -169,7 +169,7 @@ $$('form[data-ai]').forEach(f=>{const out=$('[data-ai-out]',f.parentElement);
     const hoodLinks=(fl.lifestyle||[]).length? D.hoods.filter(h=>/walk|park|greenway|rail|dining|restaurants|shops|breweries/i.test(h.blurb)).slice(0,3):[];
     out.innerHTML=`<div class="ai-result">
       <p class="eyebrow">I understood</p>
-      <div class="chips" style="margin:8px 0 14px">${chips.length?chips.map(c=>`<span class="chip is-active">${esc(c)}</span>`).join(''):'<span class="chip">No specific filters found — try adding a budget, bedrooms or an area</span>'}</div>
+      <div class="chips" style="margin:8px 0 14px">${chips.length?chips.map(c=>`<span class="chip is-active">${esc(c)}</span>`).join(''):'<span class="chip">No specific filters found. Try adding a budget, bedrooms or an area</span>'}</div>
       ${unsupported.length?`<p class="form-note">“${unsupported.join(', ')}” will be applied as a Showcase IDX amenity filter on the live site; it isn't part of this preview's sample data.</p>`:''}
       ${hoodLinks.length?`<p style="font-size:13.5px;margin:10px 0 6px">Neighborhood guides that match the lifestyle you described:</p><div class="chips">${hoodLinks.map(h=>`<a class="chip" href="neighborhood.html?n=${h.slug}">${esc(h.name)}</a>`).join('')}</div>`:''}
       <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px"><a class="btn" href="search.html?${qs}">See matching homes</a><a class="btn btn-outline" href="contact.html?topic=buyer">Talk to an agent</a></div>
@@ -182,4 +182,10 @@ document.addEventListener('click',e=>{const b=e.target.closest('.card-act[data-c
  const id=b.dataset.compare||b.dataset.tour;const r=b.dataset.compare?SC.toggleCompare(id):SC.toggleTour(id);
  const on=b.dataset.compare?SC.compare().includes(id):SC.tourList().includes(id);
  document.querySelectorAll(`.card-act[data-${b.dataset.compare?'compare':'tour'}="${id}"]`).forEach(x=>x.setAttribute('aria-pressed',on));
- if(on&&SC.toast) SC.toast(b.dataset.compare?'Added to Compare — <a href="compare.html">view</a>':'Added to Tour Day — <a href="tour.html">plan route</a>');},true);
+ if(on&&SC.toast) SC.toast(b.dataset.compare?'Added to Compare: <a href="compare.html">view</a>':'Added to Tour Day: <a href="tour.html">plan route</a>');},true);
+/* Mobile menu accordions: one section open at a time; close menu after navigating */
+(()=>{const P=document.getElementById('mobile-panel'); if(!P) return;
+ P.querySelectorAll('details.mp-g').forEach(d=>d.addEventListener('toggle',()=>{if(d.open) P.querySelectorAll('details.mp-g[open]').forEach(o=>o!==d&&(o.open=false));}));
+ P.addEventListener('click',e=>{const a=e.target.closest('a'); if(!a) return; P.classList.remove('open'); document.body.style.overflow=''; const t=document.querySelector('.nav-toggle'); t&&t.setAttribute('aria-expanded','false');});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&P.classList.contains('open')){P.classList.remove('open');document.body.style.overflow='';const t=document.querySelector('.nav-toggle');t&&(t.setAttribute('aria-expanded','false'),t.focus());}});
+})();

@@ -1,4 +1,4 @@
-/* Search Charlotte — listing photo mosaic + full-screen photo viewer.
+/* Search Charlotte, listing photo mosaic + full-screen photo viewer.
    Public API:
      SC.gallery.photos(listing)            -> ['assets/img/x.webp', ...]
      SC.gallery.mosaic(el, listing)        -> renders desktop 1 + 2x2 mosaic / mobile swipe carousel into el
@@ -25,7 +25,7 @@ function mosaic(el,l){
   const P=photos(l), n=P.length, show=P.slice(0,5);
   el.classList.add('gx-mosaic','gx-n'+Math.min(n,5));
   el.innerHTML=`<div class="gx-grid">${show.map((src,i)=>`<button type="button" class="gx-tile" data-gx="${i}" aria-label="Open photo ${i+1} of ${n}"><img src="${src}" alt="${esc(alt(l,i,n))}" ${i?'loading="lazy"':'fetchpriority="high"'} decoding="async"></button>`).join('')}</div>
-   <div class="gx-swipe" role="region" aria-roledescription="carousel" aria-label="Listing photos — swipe to browse">
+   <div class="gx-swipe" role="region" aria-roledescription="carousel" aria-label="Listing photos: swipe to browse">
      <div class="gx-track" tabindex="0">${P.map((src,i)=>`<button type="button" class="gx-slide" data-gx="${i}" aria-label="Open photo ${i+1} of ${n}"><img src="${src}" alt="${esc(alt(l,i,n))}" ${i?'loading="lazy"':''} decoding="async"></button>`).join('')}</div>
      <span class="gx-count" aria-live="polite"><span data-gx-cur>1</span> / ${n}</span>
    </div>
@@ -78,7 +78,7 @@ function build(){
 }
 const syncSave=()=>{const b=V.querySelector('[data-gx-save]'), on=SC.saved().includes(L.id); b.setAttribute('aria-pressed',on); b.querySelector('span').textContent=on?'Saved':'Save'; b.setAttribute('aria-label',on?'Remove from saved homes':'Save this home');};
 function renderList(){const n=P.length;
-  V.querySelector('[data-gx-list]').innerHTML=`<p class="gx-sample-note">Sample photos — live listing photos via Showcase IDX at launch</p><div class="gx-cols">${P.map((src,i)=>`<button type="button" class="gx-li ${i%3===0?'wide':''}" data-gx-i="${i}" aria-label="View photo ${i+1} of ${n}"><img src="${src}" alt="${esc(alt(L,i,n))}" loading="lazy" decoding="async"></button>`).join('')}</div>`;
+  V.querySelector('[data-gx-list]').innerHTML=`<p class="gx-sample-note">Sample photos: live listing photos via Showcase IDX at launch</p><div class="gx-cols">${P.map((src,i)=>`<button type="button" class="gx-li ${i%3===0?'wide':''}" data-gx-i="${i}" aria-label="View photo ${i+1} of ${n}"><img src="${src}" alt="${esc(alt(L,i,n))}" loading="lazy" decoding="async"></button>`).join('')}</div>`;
   V.querySelector('[data-gx-thumbs]').innerHTML=P.map((src,i)=>`<button type="button" role="listitem" data-gx-i="${i}" aria-label="Photo ${i+1}"><img src="${src}" alt="" loading="lazy"></button>`).join('');}
 function go(i){const n=P.length; idx=(i+n)%n; if(mode==='photo') history.replaceState(history.state,'','#photo-'+(idx+1)); paintPhoto();}
 function paintPhoto(){const n=P.length, img=V.querySelector('[data-gx-img]');
@@ -90,7 +90,7 @@ function paintPhoto(){const n=P.length, img=V.querySelector('[data-gx-img]');
 function setMode(m){mode=m; const lb=V.querySelector('[data-gx-lb]'), li=V.querySelector('[data-gx-list]');
   lb.hidden=m!=='photo'; li.hidden=m==='photo'; V.classList.toggle('is-photo',m==='photo');
   V.querySelector('[data-gx-back]').setAttribute('aria-label',m==='photo'?'Back to all photos':'Close photo viewer');
-  V.setAttribute('aria-label',m==='photo'?`Photo viewer — ${L.address}`:`All photos — ${L.address}`);
+  V.setAttribute('aria-label',m==='photo'?`Photo viewer: ${L.address}`:`All photos: ${L.address}`);
   if(m==='photo'){paintPhoto(); V.querySelector('[data-gx-next]').focus({preventScroll:true});}
   else {V.querySelector('[data-gx-sub]').textContent=`${P.length} photos · Sample photos`; V.querySelector('[data-gx-close]').focus({preventScroll:true});}}
 function show(){if(!V.hidden) return; lastFocus=document.activeElement; V.hidden=false; scrollY0=scrollY; document.documentElement.classList.add('gx-lock'); requestAnimationFrame(()=>V.classList.add('open'));}

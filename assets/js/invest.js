@@ -1,4 +1,4 @@
-/* Investor Mode — rental property estimates.
+/* Investor Mode, rental property estimates.
    All math is deterministic and shown on the page. Reference defaults come from
    assets/data/cost-assumptions.json (verified, with source URLs). Rent and operating
    percentages are user assumptions; nothing here is a rent estimate or appraisal. */
@@ -7,13 +7,13 @@ const SC=window.SC, {D,$,esc,fmt,track}=SC;
 const form=$('#iv-form'); if(!form) return;
 const out=$('#iv-out'), sel=$('#iv-listing');
 const money=n=>(n<0?'−':'')+'$'+Math.round(Math.abs(n)).toLocaleString();
-const pct=(n,d=1)=>isFinite(n)?n.toFixed(d)+'%':'—';
+const pct=(n,d=1)=>isFinite(n)?n.toFixed(d)+'%':'N/A';
 const homes=D.listings.filter(l=>l.type!=='Land'&&l.beds);
 sel.insertAdjacentHTML('beforeend',homes.map(l=>`<option value="${l.id}">${esc(l.address)}, ${esc(l.city)} · ${fmt(l.price)} · ${l.beds} bd</option>`).join(''));
 
 let A=null, cur=null, home=null;
 const KEYS=['price','down','rate','term','closing','rehab','rent','otherInc','vacancy','taxRate','ins','hoa','maint','mgmt','capex','otherExp','rentGrowth','expGrowth','appr'];
-/* Placeholders that are NOT sourced data — labeled as such in the UI. */
+/* Placeholders that are NOT sourced data, labeled as such in the UI. */
 const ASSUME={vacancy:5,mgmt:8,capex:5,otherExp:0,otherInc:0,rehab:0,rentGrowth:3,expGrowth:3,appr:3,down:25};
 const fmr=beds=>{const b=A&&A.rent&&A.rent.byBeds; if(!b) return null; const k=Math.min(Math.max(beds|0,0),4); return {k,v:b[k]};};
 const jurFor=l=>SC.intel?SC.intel.jur(l||{city:'Charlotte'},A):{label:'Mecklenburg County + City of Charlotte (FY2027)',per100:0.7857,sources:[]};
@@ -50,10 +50,10 @@ const write=s=>KEYS.forEach(k=>{const el=form.querySelector(`[data-k="${k}"]`); 
 
 function refs(){
   const f=fmr(home?home.beds:3); const R=A&&A.rent; const j=jurFor(home);
-  $('#iv-ref-loan').innerHTML=A?`Rate default: ${esc(A.rate.label)} (${A.rate.value}%) — <a href="${A.rate.url}" target="_blank" rel="noopener">Freddie Mac PMMS</a>, retrieved ${A.rate.retrieved}, updated weekly. Investment-property loans usually price higher than owner-occupied rates; use your lender's quote. Closing default ${A.closing.value}% (typical NC range ${A.closing.low}–${A.closing.high}%, <a href="${A.closing.url}" target="_blank" rel="noopener">Churchill Mortgage</a>).`:'';
+  $('#iv-ref-loan').innerHTML=A?`Rate default: ${esc(A.rate.label)} (${A.rate.value}%), <a href="${A.rate.url}" target="_blank" rel="noopener">Freddie Mac PMMS</a>, retrieved ${A.rate.retrieved}, updated weekly. Investment-property loans usually price higher than owner-occupied rates; use your lender's quote. Closing default ${A.closing.value}% (typical NC range ${A.closing.low}–${A.closing.high}%, <a href="${A.closing.url}" target="_blank" rel="noopener">Churchill Mortgage</a>).`:'';
   const tbl=R?`<table class="iv-fmr"><caption>HUD FY2026 Fair Market Rent, ${esc(R.area.split(' (')[0])}</caption><tr>${['Studio','1 BR','2 BR','3 BR','4 BR'].map((t,i)=>`<th scope="col"${f&&f.k===i?' class="on"':''}>${t}</th>`).join('')}</tr><tr>${[0,1,2,3,4].map(i=>`<td${f&&f.k===i?' class="on"':''}>$${R.byBeds[i].toLocaleString()}</td>`).join('')}</tr></table>`:'';
-  $('#iv-ref-rent').innerHTML=`${tbl}<p>Reference only. Fair Market Rents are 40th-percentile gross rents (rent plus utilities) that HUD publishes annually for housing programs — they are not a market-rent estimate for this home. The rent field starts at the FMR for ${f?(f.k?f.k+' bedrooms':'a studio'):'the bedroom count'}${home&&home.beds>4?' (homes with 5+ bedrooms use the 4 BR figure here)':''}; replace it with a rent you have verified from leased comparables or a local property manager. Source: <a href="${R?R.url:'#'}" target="_blank" rel="noopener">HUD User FY2026 FMR schedule</a>, retrieved ${R?R.retrieved:''}, updated each fiscal year. Live rental comps from Canopy MLS leased data are planned for launch.</p>`;
-  $('#iv-ref-exp').innerHTML=A?`Tax default: ${esc(j.label)}, ${j.per100} per $100 — applied to the price as a stand-in for assessed value; special district and fire fees not included. Insurance default: NC average homeowners premium (${money(A.insurance.value)}/yr, <a href="${A.insurance.url}" target="_blank" rel="noopener">NerdWallet</a>); a landlord (dwelling fire) policy is priced differently — get a quote. Maintenance default ${A.maintenance.value}% of value per year (low end of the 1–4% range from <a href="${A.maintenance.url}" target="_blank" rel="noopener">Fannie Mae</a>). Vacancy ${ASSUME.vacancy}%, management ${ASSUME.mgmt}% and reserves ${ASSUME.capex}% are placeholders, not sourced figures — set your own. All references retrieved ${A.retrieved}.`:'';
+  $('#iv-ref-rent').innerHTML=`${tbl}<p>Reference only. Fair Market Rents are 40th-percentile gross rents (rent plus utilities) that HUD publishes annually for housing programs, they are not a market-rent estimate for this home. The rent field starts at the FMR for ${f?(f.k?f.k+' bedrooms':'a studio'):'the bedroom count'}${home&&home.beds>4?' (homes with 5+ bedrooms use the 4 BR figure here)':''}; replace it with a rent you have verified from leased comparables or a local property manager. Source: <a href="${R?R.url:'#'}" target="_blank" rel="noopener">HUD User FY2026 FMR schedule</a>, retrieved ${R?R.retrieved:''}, updated each fiscal year. Live rental comps from Canopy MLS leased data are planned for launch.</p>`;
+  $('#iv-ref-exp').innerHTML=A?`Tax default: ${esc(j.label)}, ${j.per100} per $100, applied to the price as a stand-in for assessed value; special district and fire fees not included. Insurance default: NC average homeowners premium (${money(A.insurance.value)}/yr, <a href="${A.insurance.url}" target="_blank" rel="noopener">NerdWallet</a>); a landlord (dwelling fire) policy is priced differently. Get a quote. Maintenance default ${A.maintenance.value}% of value per year (low end of the 1–4% range from <a href="${A.maintenance.url}" target="_blank" rel="noopener">Fannie Mae</a>). Vacancy ${ASSUME.vacancy}%, management ${ASSUME.mgmt}% and reserves ${ASSUME.capex}% are placeholders, not sourced figures, set your own. All references retrieved ${A.retrieved}.`:'';
 }
 
 const kpi=(t,v,note,tone)=>`<div class="iv-kpi${tone?' '+tone:''}"><span>${t}</span><b>${v}</b>${note?`<small>${note}</small>`:''}</div>`;
@@ -61,7 +61,7 @@ function render(){
   cur=read(); const r=calc(cur), y=r.y1; refs();
   const cfTone=y.cf>=0?'pos':'neg', dsTone=!isFinite(r.dscr)?'':r.dscr>=1?'pos':'neg';
   const rows=[['Property tax',y.tax],['Insurance',y.ins],['HOA',y.hoa],['Maintenance',y.maint],['Management',y.mgmt],['Capital reserves',y.capex],['Other expenses',y.other]].filter(x=>x[1]>0);
-  $('#iv-mini').innerHTML=`<span>Estimate</span><b class="${cfTone}">${money(y.cf/12)}/mo</b><span>Cap ${pct(r.cap,1)} · CoC ${pct(r.coc,1)} · DSCR ${isFinite(r.dscr)?r.dscr.toFixed(2):'—'}</span>`;
+  $('#iv-mini').innerHTML=`<span>Estimate</span><b class="${cfTone}">${money(y.cf/12)}/mo</b><span>Cap ${pct(r.cap,1)} · CoC ${pct(r.coc,1)} · DSCR ${isFinite(r.dscr)?r.dscr.toFixed(2):'N/A'}</span>`;
   out.innerHTML=`<div class="iv-card">
     <p class="iv-label">Estimate · Year 1${home?` · <a href="listing.html?id=${home.id}">${esc(home.address)}</a>`:''}</p>
     <div class="iv-kpis">${kpi('Monthly cash flow',money(y.cf/12),money(y.cf)+' per year',cfTone)}${kpi('Cap rate',pct(r.cap,2),'NOI ÷ price')}${kpi('Cash-on-cash',pct(r.coc,1),'Cash flow ÷ '+money(r.cash)+' invested')}${kpi('DSCR',isFinite(r.dscr)?r.dscr.toFixed(2):'No loan','NOI ÷ debt service',dsTone)}</div>
@@ -74,7 +74,7 @@ function render(){
       <tr><th scope="row">Debt service (${money(r.mo)}/mo P&amp;I on ${money(r.loan)})</th><td>${money(-r.ds)}</td></tr>
       <tr class="tot ${cfTone}"><th scope="row">Annual cash flow</th><td>${money(y.cf)}</td></tr>
     </tbody></table>
-    <p class="iv-be">Break-even rent at these assumptions: <b>${isFinite(r.breakEven)&&r.breakEven>0?money(r.breakEven)+'/mo':'—'}</b>. Cash invested: ${money(cur.price*cur.down/100)} down + ${money(cur.price*cur.closing/100)} closing${cur.rehab?` + ${money(cur.rehab)} repairs`:''}.</p>
+    <p class="iv-be">Break-even rent at these assumptions: <b>${isFinite(r.breakEven)&&r.breakEven>0?money(r.breakEven)+'/mo':'N/A'}</b>. Cash invested: ${money(cur.price*cur.down/100)} down + ${money(cur.price*cur.closing/100)} closing${cur.rehab?` + ${money(cur.rehab)} repairs`:''}.</p>
   </div>
   <div class="iv-card">
     <h2 class="iv-h3">5-year projection <small>estimate based on your growth assumptions</small></h2>
@@ -82,7 +82,7 @@ function render(){
     <tbody>${r.proj.map(p=>`<tr><th scope="row">${p.y}</th><td>${money(p.noi)}</td><td class="${p.cf>=0?'pos':'neg'}">${money(p.cf)}</td><td>${money(p.cum)}</td><td>${money(p.value)}</td><td>${money(p.balance)}</td><td>${money(p.equity)}</td></tr>`).join('')}</tbody></table></div>
     <p class="form-note">Value and equity are end-of-year figures from your value-change assumption; they exclude selling costs, income taxes and depreciation. Not a forecast or appraisal.</p>
   </div>
-  <p class="iv-flag">Estimate — not investment, tax, legal or lending advice. Verify rent, taxes, insurance and loan terms before you buy.</p>`;
+  <p class="iv-flag">Estimate, not investment, tax, legal or lending advice. Verify rent, taxes, insurance and loan terms before you buy.</p>`;
 }
 
 /* ---------- Scenarios (SC.db 'sc_investor') ---------- */
@@ -115,7 +115,7 @@ $('#iv-reset').addEventListener('click',()=>{write(defaults(home)); render();});
 
 function sources(){if(!A) return; const j=jurFor(home);
   const items=[[A.rate.source,A.rate.url,'weekly'],[A.rent.source,A.rent.url,'annually (federal fiscal year)'],...j.sources.map(s=>[s.name,s.url,'annually (fiscal-year budget)']),[A.insurance.source,A.insurance.url,'periodically'],[A.closing.source,A.closing.url,'periodically'],[A.maintenance.source,A.maintenance.url,'periodically']];
-  $('#iv-sources').innerHTML=`<h3 class="iv-h3">Reference data sources</h3><ul>${items.map(([n,u,p])=>`<li><a href="${u}" target="_blank" rel="noopener">${esc(n)}</a><small>Retrieved ${A.retrieved} · updated ${p}</small></li>`).join('')}</ul><p class="form-note">Sample listings are demo data — live MLS data via Showcase IDX at launch. Investor Mode never uses demographic or protected-class information.</p>`;}
+  $('#iv-sources').innerHTML=`<h3 class="iv-h3">Reference data sources</h3><ul>${items.map(([n,u,p])=>`<li><a href="${u}" target="_blank" rel="noopener">${esc(n)}</a><small>Retrieved ${A.retrieved} · updated ${p}</small></li>`).join('')}</ul><p class="form-note">Sample listings are demo data, live MLS data via Showcase IDX at launch. Investor Mode never uses demographic or protected-class information.</p>`;}
 
 SC.costAssumptions.then(a=>{A=a; const id=new URLSearchParams(location.search).get('id'); pickHome(id&&homes.some(l=>l.id===id)?id:''); renderScen();});
 SC.invest={calc,defaults};

@@ -1,4 +1,4 @@
-/* Search Charlotte AI — conversational search (preview).
+/* Search Charlotte AI, conversational search (preview).
    Deterministic in-browser parser: words -> search filters. It never creates listings; every home shown comes
    from SC.D.listings (SAMPLE data). Production: a server-side LLM with function calling constrained to the
    Showcase IDX search API parameters, with this parser kept as the offline/fallback path.
@@ -46,7 +46,7 @@ const MINWORDS={ten:10,fifteen:15,twenty:20,'twenty-five':25,thirty:30,'forty-fi
 
 /* ---------- parser ---------- */
 AI.parse=(text,ctx={})=>{
-  const raw=String(text||''); let t=' '+raw.toLowerCase().replace(/[’‘]/g,"'").replace(/[–—]/g,'-').replace(/\s+/g,' ')+' ';
+  const raw=String(text||''); let t=' '+raw.toLowerCase().replace(/[’‘]/g,"'").replace(/[–, ]/g,'-').replace(/\s+/g,' ')+' ';
   const P={set:{},unset:[],add:{},reset:false,intents:[],notes:[],skip:null,raw};
   const cut=m=>{t=t.replace(m,' ');};
   if(/\b(start over|start again|reset|clear (?:all|everything|my search|the search|filters)|new search|begin again|from scratch)\b/.test(t)){P.reset=true; t=t.replace(/\b(start over|start again|reset|clear (?:all|everything|my search|the search|filters)|new search|begin again|from scratch)\b/g,' ');}
@@ -106,7 +106,7 @@ AI.parse=(text,ctx={})=>{
   if(!P.set.budgetMax){m=t.match(new RegExp('\\$\\s*(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?)\\s*(k|mm|m|mil|million|thousand)?\\b')) || t.match(/\b(\d+(?:\.\d+)?)\s*(k|million|mil|m)\b(?!\s*(?:sq|square|acre|min))/);
     if(m){const v=priceOf(m[1],m[2],true,false); if(v){P.set.budgetMax=v; cut(m[0]);}}}
   if(/\b(luxury|high[- ]end|upscale|estate homes?|luxurious)\b/.test(t)&&!P.set.budgetMin&&!(ctx.criteria&&ctx.criteria.budgetMin)){P.set.budgetMin=1000000; P.set.luxury=true;
-    P.notes.push('I\'m defining “luxury” as a price floor of $1M for this search — that is the only thing the word changes. Want a different floor?'); P.luxuryAsk=true;}
+    P.notes.push('I\'m defining “luxury” as a price floor of $1M for this search, that is the only thing the word changes. Want a different floor?'); P.luxuryAsk=true;}
   if(/\b(cheaper|less expensive|lower price|more affordable)\b/.test(t)&&ctx.criteria&&ctx.criteria.budgetMax&&!P.set.budgetMax){P.set.budgetMax=Math.round(ctx.criteria.budgetMax*0.9/5000)*5000; P.notes.push(`I lowered your top price 10% to ${short(P.set.budgetMax)}.`);}
 
   /* size */
@@ -118,7 +118,7 @@ AI.parse=(text,ctx={})=>{
   m=t.match(/\b(\d+(?:\.\d+)?|half|quarter|an?|one|two|three|five|ten)\s*(?:-|\s)?(?:an?\s+)?acres?\b/); if(m){P.set.acresMin=m[1]==='half'?0.5:m[1]==='quarter'?0.25:wn(m[1]); cut(m[0]);}
   else if(/\b(big|large|huge|spacious|bigger|larger|private|room for a) (?:back)?(?:yard|lot|garden)s?\b|\bbig backyard\b|\broom to (?:garden|spread out|play)\b|\bland for\b/.test(t)){
     const cur=(ctx.criteria&&ctx.criteria.acresMin)||0; P.set.acresMin=/bigger|larger/.test(t)&&cur?+(cur*1.5).toFixed(2):Math.max(cur,0.4);
-    P.notes.push(`I'm reading “${(t.match(/(big|large|huge|spacious|bigger|larger|private) (?:back)?(?:yard|lot|garden)s?|big backyard|room to [a-z]+/)||['a bigger yard'])[0]}” as a lot of at least ${P.set.acresMin} acres — adjust anytime.`);}
+    P.notes.push(`I'm reading “${(t.match(/(big|large|huge|spacious|bigger|larger|private) (?:back)?(?:yard|lot|garden)s?|big backyard|room to [a-z]+/)||['a bigger yard'])[0]}” as a lot of at least ${P.set.acresMin} acres, adjust anytime.`);}
   else if(/\bacreage\b/.test(t)) P.set.acresMin=1;
 
   /* types & styles */
@@ -147,7 +147,7 @@ AI.parse=(text,ctx={})=>{
   /* lifestyle */
   const life=[]; const walk=/\bwalk(?:able|ing distance| to)\b/.test(t);
   for(const [cat,re,min] of LIFE) if(re.test(t)) life.push({cat,maxMi:1,min});
-  if(walk&&!life.length){life.push({cat:'restaurants',maxMi:1,min:5},{cat:'cafes',maxMi:1,min:1},{cat:'grocery',maxMi:1,min:1}); P.notes.push('“Walkable” here means counts of restaurants, coffee shops and grocery stores within 1 mile (OpenStreetMap data) — not a walk score.');}
+  if(walk&&!life.length){life.push({cat:'restaurants',maxMi:1,min:5},{cat:'cafes',maxMi:1,min:1},{cat:'grocery',maxMi:1,min:1}); P.notes.push('“Walkable” here means counts of restaurants, coffee shops and grocery stores within 1 mile (OpenStreetMap data): not a walk score.');}
   if(life.length) P.set.lifestyle=life;
   if(/\b(cheapest|lowest price|least expensive)\b/.test(t)) P.set.sort='price-asc'; else if(/\b(biggest|largest|most space)\b/.test(t)) P.set.sort='sqft-desc'; else if(/\b(newest|most recent)\b/.test(t)) P.set.sort='year-desc';
   return P;};
@@ -272,7 +272,7 @@ const nextQuestion=(rel)=>{const c=S.c, sk=S.skipped;
   if(!c.budgetMax&&!c.budgetMin&&!sk.includes('budget')) return {ask:'budget',q:'What\'s the most you\'d like to spend?',chips:[{label:'Up to $400K',send:'up to $400k'},{label:'Up to $600K',send:'up to $600k'},{label:'Up to $850K',send:'up to $850k'},{label:'Up to $1.5M',send:'up to $1.5m'},{label:'Not sure yet',send:'not sure'}]};
   if(!c.areas.length&&!c.commute&&!c.near&&!sk.includes('area')) return rel?
     {ask:'area',q:'Where will you commute to most often? I\'ll compare areas by estimated drive time.',chips:[{label:'Uptown',send:'work in Uptown'},{label:'SouthPark Mall',send:'work near SouthPark Mall'},{label:'Ballantyne',send:'work in Ballantyne'},{label:'The airport',send:'work at the airport'},{label:'Work from home',send:'not sure'}]}:
-    {ask:'area',q:'Any part of town in mind — or a place you\'ll drive to often?',chips:[{label:'South Charlotte',send:'in South Charlotte'},{label:'Lake Norman',send:'in Lake Norman'},{label:'Within 20 min of Uptown',send:'within 20 minutes of Uptown'},{label:'Near SouthPark Mall',send:'within 15 minutes of SouthPark Mall'},{label:'Anywhere',send:'anywhere'}]};
+    {ask:'area',q:'Any part of town in mind, or a place you\'ll drive to often?',chips:[{label:'South Charlotte',send:'in South Charlotte'},{label:'Lake Norman',send:'in Lake Norman'},{label:'Within 20 min of Uptown',send:'within 20 minutes of Uptown'},{label:'Near SouthPark Mall',send:'within 15 minutes of SouthPark Mall'},{label:'Anywhere',send:'anywhere'}]};
   if(c.beds==null&&!(c.types.length===1&&c.types[0]==='Land')&&!sk.includes('beds')) return {ask:'beds',q:'How many bedrooms do you need?',chips:[{label:'2+',send:'2 beds'},{label:'3+',send:'3 beds'},{label:'4+',send:'4 beds'},{label:'5+',send:'5 beds'},{label:'Any',send:'any'}]};
   return null;};
 
@@ -288,14 +288,14 @@ const respond=(text)=>{const prevC=S.c, prevCount=AI.count(prevC), hadCriteria=!
   const changed=JSON.stringify(prevC)!==JSON.stringify(S.c);
   const R=AI.run(S.c), n=R.matches.length;
   /* fair housing */
-  if(ints.includes('fairhousing')) html+=`<p class="sca-fh">I can't search, rank or describe areas by safety, school ratings or who lives there — fair housing rules keep this search to the home and objective facts like price, features, drive time and nearby places. For school assignments, check the school district's official lookup, and for crime data, the local police department's public maps.</p>`;
+  if(ints.includes('fairhousing')) html+=`<p class="sca-fh">I can't search, rank or describe areas by safety, school ratings or who lives there, fair housing rules keep this search to the home and objective facts like price, features, drive time and nearby places. For school assignments, check the school district's official lookup, and for crime data, the local police department's public maps.</p>`;
   if(!changed&&!ints.length&&!P.skip&&!P.notes.length){
     html+=`<p>I didn't find search details in that. Try a budget, bedrooms, an area, a feature like a pool, or a drive-time limit.</p>`; say('bot',html); setQuick(['Under $700K','3+ bedrooms','Within 20 minutes of Uptown','Help']); return;}
   /* what changed */
   if(changed){const was=AI.describe(prevC).map(d=>d.label), now=AI.describe(S.c).map(d=>d.label);
     const added=now.filter(x=>!was.includes(x)), removed=was.filter(x=>!now.includes(x));
     if(hadCriteria&&!P.reset){ const parts=[]; if(added.length) parts.push('added '+added.map(a=>`<b>${esc(a)}</b>`).join(', ')); if(removed.length) parts.push('removed '+removed.map(a=>`<b>${esc(a)}</b>`).join(', '));
-      html+=`<p>Updated — ${parts.join('; ')}.</p>`;
+      html+=`<p>Updated, ${parts.join('; ')}.</p>`;
       if(prevCount!==n) html+=`<p class="sca-delta">${n<prevCount?'That narrows':'That opens up'} matches from <b>${prevCount}</b> to <b>${n}</b>.</p>`;}
     else html+=`<p>Searching for ${now.map(a=>`<b>${esc(a)}</b>`).join(' · ')}.</p>`;}
   P.notes.forEach(x=>html+=`<p class="sca-note">${esc(x)}</p>`);
@@ -304,20 +304,20 @@ const respond=(text)=>{const prevC=S.c, prevCount=AI.count(prevC), hadCriteria=!
   const relKeys=['budgetMax','budgetMin','commute','beds','types','lifestyle'], relChanged=relKeys.some(k=>JSON.stringify(prevC[k])!==JSON.stringify(S.c[k]));
   const rel=ints.includes('relocate')||(!!S.c.relocFrom&&relChanged);
   if(rel&&(S.c.budgetMax||S.c.commute)){const recs=AI.recommendHoods(S.c);
-    html+=`<p>${S.c.relocFrom&&ints.includes('relocate')?`Welcome from ${esc(S.c.relocFrom)}. `:''}Here are areas worth a look, compared only on objective inputs — sample listing prices vs. your budget${S.c.commute?', estimated drive time':''}${AMEN&&S.c.lifestyle.length?', nearby place counts':''} and home types:</p>`;
+    html+=`<p>${S.c.relocFrom&&ints.includes('relocate')?`Welcome from ${esc(S.c.relocFrom)}. `:''}Here are areas worth a look, compared only on objective inputs, sample listing prices vs. your budget${S.c.commute?', estimated drive time':''}${AMEN&&S.c.lifestyle.length?', nearby place counts':''} and home types:</p>`;
     html+=recs.length?`<ol class="sca-recs">${recs.map(r=>`<li><a href="neighborhood.html?n=${r.hood.slug}">${esc(r.hood.name)}</a><span>${r.why.map(esc).join(' · ')}</span></li>`).join('')}</ol><p class="sca-note">Based on the preview's sample listings, not market statistics. Live version uses Showcase IDX active-listing counts.</p>`
       :`<p>None of the sample areas have listings within that budget yet. Try a higher budget or a different home type.</p>`;}
   /* results summary */
   const intentOnly=!changed&&ints.some(i=>['save','tour','prefs','fairhousing'].includes(i));
   if(!AI.isEmpty(S.c)&&!intentOnly){
     if(n){html+=`<p>I found <b>${plural(n,'sample listing')}</b> that ${n===1?'matches':'match'} everything. They're ${matchMedia('(max-width:980px)').matches?'below':'on the right'}, best fit first.</p>`;}
-    else{html+=`<p><b>No sample listings match all of that.</b> I won't make any up.${R.near.length?` ${plural(R.near.length,'home')} miss${R.near.length===1?'es':''} by one requirement — I've listed those as close matches.`:''}</p>`;}
+    else{html+=`<p><b>No sample listings match all of that.</b> I won't make any up.${R.near.length?` ${plural(R.near.length,'home')} miss${R.near.length===1?'es':''} by one requirement, I've listed those as close matches.`:''}</p>`;}
     const tr=AI.tradeoffs(S.c); if(tr.length&&n<8) html+=`<p class="sca-trade"><span>Tradeoffs</span>${tr.map(x=>esc(x.label)).join('<br>')}</p>`;
   }
   /* intents */
   if(ints.includes('save')) setTimeout(openSave,200);
   if(ints.includes('prefs')) usePrefs();
-  if(ints.includes('tour')) html+=`<p>Tap <b>Add to Tour Day</b> on any home, then open <a href="tour.html">Tour Day</a> to request showings. Requests are confirmed by a Search Charlotte agent — nothing is booked automatically.</p>`;
+  if(ints.includes('tour')) html+=`<p>Tap <b>Add to Tour Day</b> on any home, then open <a href="tour.html">Tour Day</a> to request showings. Requests are confirmed by a Search Charlotte agent, nothing is booked automatically.</p>`;
   /* one follow-up */
   const q=P.luxuryAsk?{ask:'luxury',q:'Which price floor fits “luxury” for you?',chips:[{label:'$1M+',send:'over $1m'},{label:'$1.5M+',send:'over $1.5m'},{label:'$2M+',send:'over $2m'},{label:'$3M+',send:'over $3m'}]}:nextQuestion(rel);
   if(q){html+=`<p class="sca-q">${esc(q.q)}</p>`; S.lastAsk=q.ask; setQuick(q.chips);}
@@ -361,7 +361,7 @@ chipsEl.addEventListener('click',e=>{const b=e.target.closest('[data-rm]'); if(!
 
 /* ---------- actions ---------- */
 function usePrefs(){SC.setPrefs(AI.toPrefs(S.c)); SC.toast('Saved as your Home Match preferences'); track('ai_use_as_prefs',{}); renderResults();
-  say('bot',`<p>Done — these criteria are now your Home Match preferences, so homes across the site show a match score. Adjust them anytime in <a href="passport.html">Passport</a>.</p>`);}
+  say('bot',`<p>Done, these criteria are now your Home Match preferences, so homes across the site show a match score. Adjust them anytime in <a href="passport.html">Passport</a>.</p>`);}
 $('#sca-prefs').addEventListener('click',usePrefs);
 $('#sca-reset').addEventListener('click',()=>{say('user','Start over'); respond('start over');});
 const saveM=$('#sca-save');
@@ -377,7 +377,7 @@ $('#sv-form').addEventListener('submit',e=>{e.preventDefault(); const f=e.target
   SC.db.update('sc_searches',[],a=>[entry,...a].slice(0,50));
   if(entry.alert.inapp) SC.notify('Search saved: '+entry.name,'Matching sample listings will show here. Live alerts run through Showcase IDX at launch.','ai.html');
   track('save_search',{source:'ai',email:!!entry.alert.email,sms:!!entry.alert.sms,inapp:entry.alert.inapp,frequency:entry.alert.frequency});
-  f.classList.add('sent'); f.querySelector('[type=submit]').disabled=true; say('bot',`<p>Saved “${esc(entry.name)}”. ${entry.alert.email||entry.alert.sms||entry.alert.inapp?'Alert preferences are stored with it; you can change or turn them off in <a href="passport.html">Passport</a>.':'No alerts are on — you can add them later in Passport.'}</p>`); persist();});
+  f.classList.add('sent'); f.querySelector('[type=submit]').disabled=true; say('bot',`<p>Saved “${esc(entry.name)}”. ${entry.alert.email||entry.alert.sms||entry.alert.inapp?'Alert preferences are stored with it; you can change or turn them off in <a href="passport.html">Passport</a>.':'No alerts are on: you can add them later in Passport.'}</p>`); persist();});
 
 /* ---------- composer ---------- */
 form.addEventListener('submit',e=>{e.preventDefault(); const v=input.value.trim(); if(!v) return; input.value=''; say('user',esc(v)); setQuick([]);
@@ -394,13 +394,13 @@ input.addEventListener('input',()=>{input.style.height='auto'; input.style.heigh
 const starters=$('#sca-starters'); const hideStarters=()=>{if(S.msgs.length) starters.hidden=true;};
 new MutationObserver(hideStarters).observe(thread,{childList:true});
 /* ---------- start ---------- */
-const personal=SC.personalized(); $('#sca-memory').innerHTML=personal?'Personalization is on — this chat and your criteria are remembered in your <a href="passport.html">Passport</a>. <button type="button" id="sca-forget" class="sca-link">Forget this chat</button>'
+const personal=SC.personalized(); $('#sca-memory').innerHTML=personal?'Personalization is on: this chat and your criteria are remembered in your <a href="passport.html">Passport</a>. <button type="button" id="sca-forget" class="sca-link">Forget this chat</button>'
   :'This chat isn\'t saved. <a href="passport.html">Turn on personalization in Passport</a> to have Search Charlotte AI remember your criteria.';
 const forget=$('#sca-forget'); if(forget) forget.addEventListener('click',()=>{SC.db.set('sc_chat',null); location.reload();});
 const saved=personal?SC.db.get('sc_chat',null):null;
 if(saved&&saved.msgs&&saved.msgs.length){S.c=Object.assign(AI.empty(),saved.c); S.skipped=saved.skipped||[]; S.msgs=saved.msgs; saved.msgs.forEach(m=>say(m.role,m.html,{noStore:true}));
-  say('bot','<p>Welcome back — I kept your criteria from last time. Keep refining, or say “start over”.</p>',{noStore:true}); setQuick(['Show me what\'s new','Start over']);}
-else{say('bot',`<p>Hi, I'm Search Charlotte AI. Tell me about the home you want — budget, size, style, the areas you like or how far you'll drive — and I'll turn it into a search of listings.</p><p class="sca-note">In this preview I search 65 sample listings.</p>`,{noStore:true});
+  say('bot','<p>Welcome back: I kept your criteria from last time. Keep refining, or say “start over”.</p>',{noStore:true}); setQuick(['Show me what\'s new','Start over']);}
+else{say('bot',`<p>Hi, I'm Search Charlotte AI. Tell me about the home you want, budget, size, style, the areas you like or how far you'll drive, and I'll turn it into a search of listings.</p><p class="sca-note">In this preview I search 65 sample listings.</p>`,{noStore:true});
   setQuick([]);}
 renderResults();
 const q0=new URLSearchParams(location.search).get('q'); if(q0){input.value=q0; form.requestSubmit(); history.replaceState(null,'','ai.html');}

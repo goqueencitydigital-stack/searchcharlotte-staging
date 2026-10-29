@@ -3,7 +3,9 @@
 const SC=window.SC, ll=SC.ll, {$,$$,esc}=SC;
 const CAT_COLOR={concerts:'#4A2445',sports:'#163B35',holiday:'#a2352b',festival:'#C99A4B',theater:'#5A3D2B',arts:'#2f5d8a',markets:'#4f7a28',community:'#1E140D'};
 const DOW=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-let E=[], META, AREAS=[], st={q:'',from:'',to:'',area:'',cats:new Set(),view:'list',calMonth:'2026-11'}, map, layer;
+const _t=new Date(); const TODAY=new Date(_t.getTime()-_t.getTimezoneOffset()*6e4).toISOString().slice(0,10);
+let MONTHS=[];
+let E=[], META, AREAS=[], st={q:'',from:'',to:'',area:'',cats:new Set(),view:'list',calMonth:TODAY.slice(0,7)}, map, layer;
 
 const uptown=SC.lmk('uptown');
 function bucket(near){const a=near[0].a; const d=SC.miles([uptown.lat,uptown.lng],[a.lat,a.lng]);
@@ -24,28 +26,29 @@ const dateRange=e=>e.date_text?esc(e.date_text):(e.start===e.end?ll.date(e.start
 function ics(e){
   const d=s=>s.replace(/-/g,''); const endP=new Date(e.end+'T12:00:00'); endP.setDate(endP.getDate()+1); const end=endP.toISOString().slice(0,10).replace(/-/g,'');
   const body=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//SearchCharlotte//Events//EN','BEGIN:VEVENT','UID:'+e.id+'@searchcharlotte.com','DTSTAMP:20261028T120000Z','DTSTART;VALUE=DATE:'+d(e.start),'DTEND;VALUE=DATE:'+end,
-    'SUMMARY:'+e.title.replace(/[,;]/g,' '),'LOCATION:'+(e.venue+', '+e.address).replace(/[,;]/g,' '),'DESCRIPTION:'+((e.time||'')+' — confirm details at '+e.url).replace(/[,;]/g,' '),'URL:'+e.url,'END:VEVENT','END:VCALENDAR'].join('\r\n');
+    'SUMMARY:'+e.title.replace(/[,;]/g,' '),'LOCATION:'+(e.venue+', '+e.address).replace(/[,;]/g,' '),'DESCRIPTION:'+((e.time||'')+' confirm details at '+e.url).replace(/[,;]/g,' '),'URL:'+e.url,'END:VEVENT','END:VCALENDAR'].join('\r\n');
   return 'data:text/calendar;charset=utf-8,'+encodeURIComponent(body);
 }
 function evCard(e){
-  const s=new Date(e.start+'T12:00:00'), ongoing=e.start<'2026-11-01';
+  const s=new Date(e.start+'T12:00:00'), ongoing=e.start<TODAY;
   const near=e._near.slice(0,2);
-  return `<article class="ll-ev" id="ev-${esc(e.id)}">
+  const tm=e.feed==='ticketmaster';
+  return `<article class="ll-ev${e.img?' has-img':''}" id="ev-${esc(e.id)}">${e.img?`<a class="ll-ev-img" href="${esc(e.url)}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="${esc(e.img)}" alt="" loading="lazy" decoding="async"></a>`:''}
   <div class="ll-ev-date" aria-hidden="true"><span>${ongoing?'Now':ll.MON[s.getMonth()]}</span><b>${ongoing?'On':s.getDate()}</b><small>${ongoing?'view':DOW[s.getDay()]}</small></div>
-  <div><p style="margin:0 0 6px"><span class="ll-badge" style="color:${CAT_COLOR[e.category]||'#4A2445'}">${esc(META.categories[e.category]||e.category)}</span>${e.recurring?`<span class="ll-badge">${esc(e.recurring)}</span>`:''}${e.dates_approximate?'<span class="ll-badge warn">Dates approximate</span>':''}</p>
+  <div><p style="margin:0 0 6px"><span class="ll-badge" style="color:${CAT_COLOR[e.category]||'#4A2445'}">${esc(META.categories[e.category]||e.category)}</span>${e.recurring?`<span class="ll-badge">${esc(e.recurring)}</span>`:''}${e.genre?`<span class="ll-badge">${esc(e.genre)}</span>`:''}${e.status?`<span class="ll-badge warn">${esc(e.status[0].toUpperCase()+e.status.slice(1))}</span>`:''}${e.dates_approximate?'<span class="ll-badge warn">Dates approximate</span>':''}</p>
   <h3>${esc(e.title)}</h3>
   <p class="ll-ev-meta"><b>${dateRange(e)}</b>${e.time?' · '+esc(e.time):''}<br>${esc(e.venue)} · ${esc(e.address)}</p>
   <p class="ll-ev-desc">${esc(e.description)}</p>
-  <div class="ll-ev-links"><a href="${esc(e.url)}" target="_blank" rel="noopener" data-track="event_official">Official event page</a>
+  <div class="ll-ev-links"><a href="${esc(e.url)}" target="_blank" rel="noopener" data-track="${tm?'event_tickets':'event_official'}">${tm?'Get tickets':'Official event page'}</a>
   ${near.map(n=>`<a href="${ll.hoodUrl(n.a.slug)}">${esc(n.a.name)} guide <span class="na">(${n.mi.toFixed(1)} mi)</span></a>`).join('')}
   <a href="${ll.homesUrl(near[0].a.slug)}" data-track="event_homes">Homes near this venue</a>
   <a href="${ics(e)}" download="${esc(e.id)}.ics">Add to calendar</a></div>
-  <p class="ll-ev-src">Checked ${ll.date(e.verified_on)} on ${esc(e.source_name)}. Times and dates can change; confirm with the organizer before you go.</p></div></article>`;
+  <p class="ll-ev-src">${tm?`Listing from Ticketmaster, refreshed ${ll.date(e.verified_on)}.`:`Checked ${ll.date(e.verified_on)} on ${esc(e.source_name)}.`} Times and dates can change; confirm with the organizer before you go.</p></div></article>`;
 }
 function renderList(list){
   if(!list.length){$('#ev-list').innerHTML='<p class="ll-empty">No events match these filters. Try a wider date range or clear a category.</p>'; return;}
   let out='', cur='';
-  for(const e of list){const m=e.start<'2026-11-01'?'On view now':ll.ymLong(e.start.slice(0,7)); if(m!==cur){cur=m; out+=`<h2 class="ll-month-h">${m}</h2>`;} out+=evCard(e);}
+  for(const e of list){const m=e.start<TODAY?'On view now':ll.ymLong(e.start.slice(0,7)); if(m!==cur){cur=m; out+=`<h2 class="ll-month-h">${m}</h2>`;} out+=evCard(e);}
   $('#ev-list').innerHTML=out;
 }
 function renderMap(list){
@@ -61,14 +64,14 @@ function renderMap(list){
 }
 function renderCal(list){
   const [y,m]=st.calMonth.split('-').map(Number); const first=new Date(y,m-1,1), days=new Date(y,m,0).getDate();
-  const months=['2026-11','2026-12','2027-01','2027-02'], i=months.indexOf(st.calMonth);
+  const months=MONTHS, i=months.indexOf(st.calMonth);
   const long=list.filter(e=>isLong(e)&&e.start<=st.calMonth+'-31'&&e.end>=st.calMonth+'-01');
   const short=list.filter(e=>!isLong(e));
   let g=DOW.map(d=>`<div class="dow">${d}</div>`).join('');
   for(let k=0;k<first.getDay();k++) g+='<div class="ll-day out" aria-hidden="true"></div>';
   for(let d=1;d<=days;d++){const ds=`${st.calMonth}-${String(d).padStart(2,'0')}`; const evs=short.filter(e=>e.start<=ds&&e.end>=ds);
     g+=`<div class="ll-day"><span class="dn">${d}</span>${evs.slice(0,3).map(e=>`<button type="button" data-goto="${esc(e.id)}" aria-label="${esc(e.title)}, ${ll.dateShort(ds)}" style="border-left:3px solid ${CAT_COLOR[e.category]}">${esc(e.title)}</button>`).join('')}${evs.length>3?`<div class="more">+${evs.length-3} more</div>`:''}</div>`;}
-  $('#ev-calwrap').innerHTML=`<div class="ll-cal-nav"><button class="btn btn-sm btn-outline" type="button" data-cal="-1" ${i<=0?'disabled':''}>Previous</button><h3>${ll.ymLong(st.calMonth)}</h3><button class="btn btn-sm btn-outline" type="button" data-cal="1" ${i>=3?'disabled':''}>Next</button></div>
+  $('#ev-calwrap').innerHTML=`<div class="ll-cal-nav"><button class="btn btn-sm btn-outline" type="button" data-cal="-1" ${i<=0?'disabled':''}>Previous</button><h3>${ll.ymLong(st.calMonth)}</h3><button class="btn btn-sm btn-outline" type="button" data-cal="1" ${i>=months.length-1?'disabled':''}>Next</button></div>
    <div class="ll-cal" role="grid" aria-label="${ll.ymLong(st.calMonth)} events">${g}</div>
    ${long.length?`<h3 class="ll-month-h" style="font-size:16px">Ongoing this month</h3><ul class="ll-list">${long.map(e=>`<li><button type="button" class="ll-lnk" data-goto="${esc(e.id)}">${esc(e.title)}</button><small>${dateRange(e)} · ${esc(e.venue)}</small></li>`).join('')}</ul>`:''}`;
   $$('#ev-calwrap [data-cal]').forEach(b=>b.addEventListener('click',()=>{st.calMonth=months[i+(+b.dataset.cal)]; renderCal(filtered());}));
@@ -85,13 +88,21 @@ function goto(id){st.view='list'; $$('.ll-views button').forEach(b=>b.setAttribu
 
 Promise.all([ll.events(),ll.areas()]).then(([d,areas])=>{
   META=d.meta; AREAS=areas;
-  E=d.events.map(e=>{e._near=ll.nearest(AREAS,e.lat,e.lng,3); e._bucket=bucket(e._near); return e;}).sort((a,b)=>(a.start<'2026-11-01'?'0':a.start).localeCompare(b.start<'2026-11-01'?'0':b.start)||a.title.localeCompare(b.title));
-  $('#ev-asof').textContent=`${E.length} events · Every listing checked on its official page ${ll.date(META.retrieved)} · Next review: first business day of each month`;
+  E=d.events.map(e=>{e._near=ll.nearest(AREAS,e.lat,e.lng,3); e._bucket=bucket(e._near); return e;}).sort((a,b)=>(a.start<TODAY?'0':a.start).localeCompare(b.start<TODAY?'0':b.start)||a.title.localeCompare(b.title));
+  E=E.filter(e=>(e.end||e.start)>=TODAY);
+  const lastM=E.reduce((m,e)=>e.start>m?e.start:m,TODAY).slice(0,7); MONTHS=[]; {let [y,m]=TODAY.slice(0,7).split('-').map(Number); for(let k=0;k<18;k++){const ym=`${y}-${String(m).padStart(2,'0')}`; MONTHS.push(ym); if(ym>=lastM) break; m++; if(m>12){m=1;y++;}}}
+  const upd=META.updated?new Date(META.updated):null;
+  $('#ev-asof').innerHTML=`<span class="ev-live"><i></i>Updated daily</span> · ${E.length} upcoming events${upd?` · Last refreshed ${ll.date(new Date(upd.getTime()-upd.getTimezoneOffset()*6e4).toISOString().slice(0,10))}`:''}`;
+  ['ev-from','ev-to'].forEach(id=>{const el=$('#'+id); if(el){el.min=TODAY; el.max=MONTHS[MONTHS.length-1]+'-31';}});
+  const iso=d=>new Date(d.getTime()-d.getTimezoneOffset()*6e4).toISOString().slice(0,10);
+  const R={today:()=>[TODAY,TODAY],weekend:()=>{const d=new Date(TODAY+'T12:00:00'), w=d.getDay(); const sun=new Date(d); sun.setDate(d.getDate()+((7-w)%7)); if(w===0||w>=5) return [TODAY,iso(sun)]; const fri=new Date(d); fri.setDate(d.getDate()+(5-w)); return [iso(fri),iso(sun)];},week:()=>{const d=new Date(TODAY+'T12:00:00'); d.setDate(d.getDate()+6); return [TODAY,iso(d)];},month:()=>{const d=new Date(TODAY+'T12:00:00'); d.setDate(d.getDate()+30); return [TODAY,iso(d)];}};
+  const qr=$('#ev-range'); if(qr){qr.innerHTML=[['','Any date'],['today','Today'],['weekend','This weekend'],['week','Next 7 days'],['month','Next 30 days']].map(([k,l])=>`<button type="button" class="chip" data-r="${k}" aria-pressed="${!k}">${l}</button>`).join('');
+   qr.addEventListener('click',ev=>{const b=ev.target.closest('[data-r]'); if(!b) return; const k=b.dataset.r; [st.from,st.to]=k?R[k]():['','']; $('#ev-from').value=st.from; $('#ev-to').value=st.to; $$('#ev-range .chip').forEach(x=>x.setAttribute('aria-pressed',x===b)); render(); SC.track('events_range',{range:k||'any'});});}
   $('#ev-cats').innerHTML=`<button type="button" class="chip" data-c="">All</button>`+Object.entries(META.categories).filter(([k])=>E.some(e=>e.category===k)).map(([k,v])=>`<button type="button" class="chip" data-c="${k}">${esc(v)}</button>`).join('');
   const buckets=[...new Set(E.map(e=>e._bucket))].sort();
   $('#ev-area').innerHTML+=buckets.map(b=>`<option>${esc(b)}</option>`).join('');
   $('#ev-workflow').innerHTML=`<p>${esc(META.verification)}</p><p>${esc(META.editorial_workflow)}</p><p class="ll-src">${esc(META.coordinates)}</p>`;
-  $('#ev-excluded').innerHTML=META.excluded.map(x=>{const [t,...r]=x.split(' — '); return `<li><b>${esc(t)}</b><small>${esc(r.join(' — '))}</small></li>`;}).join('');
+  $('#ev-excluded').innerHTML=(META.excluded||[]).map(x=>{const k=x.indexOf(': '), t=k>0?x.slice(0,k):x, r=k>0?x.slice(k+2):''; return `<li><b>${esc(t)}</b><small>${esc(r)}</small></li>`;}).join('');
   const q=new URLSearchParams(location.search);
   st.q=q.get('q')||''; st.from=q.get('from')||''; st.to=q.get('to')||''; st.area=buckets.includes(q.get('area'))?q.get('area'):'';
   (q.get('cat')||'').split(',').filter(c=>META.categories[c]).forEach(c=>st.cats.add(c));

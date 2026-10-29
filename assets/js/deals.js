@@ -26,7 +26,7 @@ function feed(){const list=$('#dr-list'); if(!list) return;
     R.sort(S[sort]);
     $('#dr-count').textContent=`${R.length} sample home${R.length===1?'':'s'} with matching signals`;
     list.innerHTML=R.length?R.map(({l,s})=>`<div class="dr-item">${SC.card(l)}<ul class="dr-sl">${s.map(x=>`<li class="dr-s dr-${x.k}"><b>${esc(x.label)}</b>${x.detail?`<span>${esc(x.detail)}</span>`:''}</li>`).join('')}</ul></div>`).join('')
-      :`<div class="empty"><h3>No homes match these filters</h3><p>Try more signals or a wider area — or set an alert below and we'll watch for you.</p><a class="btn btn-sm" href="#alerts">Create a deal alert</a></div>`;
+      :`<div class="empty"><h3>No homes match these filters</h3><p>Try more signals or a wider area, or set an alert below and we'll watch for you.</p><a class="btn btn-sm" href="#alerts">Create a deal alert</a></div>`;
     if(map){layer.clearLayers(); const pts=[]; R.forEach(({l,s})=>{pts.push([l.lat,l.lng]); window.L.marker([l.lat,l.lng],{icon:window.L.divIcon({className:'pin',html:`<span>${short(l.price)}</span>`,iconSize:null}),title:l.address}).bindPopup(`<b>${esc(l.address)}</b><br>${fmt(l.price)}<br>${s.map(x=>esc(x.label)).join(' · ')}<br><a href="listing.html?id=${l.id}">View home</a>`).addTo(layer);}); if(pts.length) map.fitBounds(pts,{padding:[30,30],maxZoom:14});}
   };
   const initMap=()=>{if(map||!window.L) return; map=window.L.map('dr-map',{scrollWheelZoom:false}).setView([35.2,-80.84],10); window.L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:19}).addTo(map); layer=window.L.layerGroup().addTo(map);};
@@ -55,7 +55,7 @@ function builder(el,opts={}){const p=opts.preset||{}; const u=SC.user()||{}; con
    </div>
    <fieldset class="dr-ch"><legend>Send alerts by</legend>
     <label class="consent"><input type="checkbox" data-c="inapp" checked> In-app notifications on SearchCharlotte.com</label>
-    <label class="consent"><input type="checkbox" data-c="email"> Email — I agree to receive deal alert emails from SearchCharlotte. Unsubscribe anytime from any email or from Manage alerts.</label>
+    <label class="consent"><input type="checkbox" data-c="email"> Email, I agree to receive deal alert emails from SearchCharlotte. Unsubscribe anytime from any email or from Manage alerts.</label>
     <div class="field" data-show="email" hidden><label for="${id}-em">Email</label><input id="${id}-em" type="email" autocomplete="email" value="${esc(u.email||'')}"></div>
     <label class="consent"><input type="checkbox" data-c="sms"> Text messages (SMS)</label>
     <div data-show="sms" hidden><div class="field"><label for="${id}-ph">Mobile number</label><input id="${id}-ph" type="tel" autocomplete="tel" value="${esc(u.phone||'')}"></div>

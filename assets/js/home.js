@@ -8,7 +8,7 @@ feat.innerHTML='<div class="skeleton" style="aspect-ratio:.82"></div>'.repeat(4)
 $$('[data-feat]').forEach(b=>b.addEventListener('click',()=>{$$('[data-feat]').forEach(x=>x.setAttribute('aria-pressed',x===b)); render(b.dataset.feat); SC.track('featured_filter',{filter:b.dataset.feat});}));
 /* counts */
 $$('[data-count]').forEach(s=>{const [a,b]=s.dataset.count.split('-').map(Number); s.textContent=D.listings.filter(l=>l.price>=a&&l.price<=b).length;});
-/* quiz — factual criteria only */
+/* quiz, factual criteria only */
 const traits={uptown:['walkable','light-rail','near-uptown'],"south-end":['walkable','light-rail','near-uptown','greenway'],dilworth:['walkable','greenway','near-uptown'],"myers-park":['greenway'],eastover:['greenway'],elizabeth:['walkable','greenway','near-uptown'],"plaza-midwood":['walkable','near-uptown'],noda:['walkable','light-rail'],southpark:['walkable','greenway'],ballantyne:['greenway','space'],"south-charlotte":['space','greenway'],"mint-hill":['space'],"union-county":['space'],"lake-norman":['lake','space']};
 const zone={uptown:['uptown','south-end','dilworth','elizabeth','plaza-midwood','noda','myers-park','eastover'],south:['southpark','ballantyne','south-charlotte','union-county','myers-park'],north:['lake-norman','noda'],remote:D.hoods.map(h=>h.slug)};
 const q=$('#quiz'); q&&q.addEventListener('submit',e=>{e.preventDefault(); const fd=new FormData(q); const budget=+fd.get('budget')*1000, ht=fd.get('htype'), cm=fd.get('commute'), want=fd.getAll('want');

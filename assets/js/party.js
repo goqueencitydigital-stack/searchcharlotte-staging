@@ -1,4 +1,4 @@
-/* Search Party — collaborative search preview. Storage: SC.db 'sc_party' {parties:[...],active,viewingAs}.
+/* Search Party, collaborative search preview. Storage: SC.db 'sc_party' {parties:[...],active,viewingAs}.
    Production: Showcase IDX Friends & Family (invite by email, reactions, private vs agent-visible comments) is the
    system of record; voting/shortlist/shared-tour layers come from the Passport API reading the same group. */
 (function(){'use strict';
@@ -23,7 +23,7 @@ const createView=()=>{const u=SC.user()||{}; const s=S();
     <label class="pp-check"><input type="checkbox" name="demo" checked><span>Add two simulated members and four sample homes so I can try it</span></label>${SC.honeypot}
     <button class="btn btn-block" type="submit">Create party</button><div class="form-ok">Party created.</div></form>
    ${s.parties.length?`<p class="form-note" style="margin-top:12px">You have ${s.parties.length} other part${s.parties.length>1?'ies':'y'}: ${s.parties.map(p=>`<button class="pp-link" type="button" data-open-party="${p.id}">${esc(p.name)}</button>`).join(', ')}</p>`:''}</div>
-   <div><div class="pp-feat">${[['React','Love, like, maybe or not for us — one tap per home'],['Comment','Keep the conversation on the home, not in a group text'],['Vote','Reactions add up into a ranked shortlist'],['Tour & compare','Send the shortlist to Tour Day or Compare Homes'],['Invite your agent','Optional agent access, and agent-visible comments'],['Private by default','Comments stay in your party unless you share them']].map(([a,b])=>`<div><strong>${a}</strong><span>${b}</span></div>`).join('')}</div>
+   <div><div class="pp-feat">${[['React','Love, like, maybe or not for us, one tap per home'],['Comment','Keep the conversation on the home, not in a group text'],['Vote','Reactions add up into a ranked shortlist'],['Tour & compare','Send the shortlist to Tour Day or Compare Homes'],['Invite your agent','Optional agent access, and agent-visible comments'],['Private by default','Comments stay in your party unless you share them']].map(([a,b])=>`<div><strong>${a}</strong><span>${b}</span></div>`).join('')}</div>
     <p class="form-note" style="margin-top:14px">At launch this runs on Showcase IDX's Friends & Family search: members are invited by email and each creates their own account on SearchCharlotte.com.</p></div></div>`;
   SC.leadForm($('#sp-new'),d=>{const owner={id:SC.uid('m'),name:d.me.trim(),role:'Organizer',color:COLORS[0]}; const members=[owner];
     const p={id:SC.uid('party'),name:d.pname.trim(),created:new Date().toISOString(),members,homes:[],reactions:{},comments:{},agentAccess:false};
@@ -39,7 +39,7 @@ const homeCard=(p,id,rank)=>{const l=SC.listing(id); if(!l) return ''; const m=m
    <div class="bd"><div><h3><a href="listing.html?id=${id}">${esc(l.address)}</a></h3><div class="facts">${fmt(l.price)} · ${esc(SC.facts(l))}</div></div>
     <div class="sp-react" role="group" aria-label="Your reaction as ${esc(m.name)}">${RX.map(([k,lab])=>`<button type="button" data-rx="${k}" aria-pressed="${mine===k}">${lab}</button>`).join('')}</div>
     <div class="sp-tally">${tally||'<span>No reactions yet</span>'}</div>
-    <div class="sp-com" aria-label="Comments">${C.map(c=>{const a=p.members.find(x=>x.id===c.mid)||{name:c.mid==='agent'?SC.assignedAgent().name:'Member'}; return `<div class="sp-c ${c.agent?'agent':''}"><b>${esc(a.name)}</b>${c.agent?' · visible to agent':''} — ${esc(c.text)} <small style="color:var(--muted)">${rel(c.ts)}</small></div>`;}).join('')}</div>
+    <div class="sp-com" aria-label="Comments">${C.map(c=>{const a=p.members.find(x=>x.id===c.mid)||{name:c.mid==='agent'?SC.assignedAgent().name:'Member'}; return `<div class="sp-c ${c.agent?'agent':''}"><b>${esc(a.name)}</b>${c.agent?' · visible to agent':''}, ${esc(c.text)} <small style="color:var(--muted)">${rel(c.ts)}</small></div>`;}).join('')}</div>
     <form class="sp-cf" data-cf><label class="sr-only" for="cf-${id}">Comment on ${esc(l.address)}</label><input type="text" id="cf-${id}" name="c" placeholder="Comment as ${esc(m.name.split(' ')[0])}…" maxlength="400" autocomplete="off"><button class="btn btn-sm" type="submit">Post</button></form>
     ${p.agentAccess?`<label class="pp-check" style="padding:0;font-size:12.5px"><input type="checkbox" data-agentvis> Make my next comment visible to ${esc(SC.assignedAgent().name)}</label>`:''}
     <button class="pp-link" type="button" data-rm-home style="justify-self:start;font-size:12px;color:var(--muted)">Remove from party</button></div></article>`;};
@@ -52,7 +52,7 @@ const partyView=()=>{const p=party(), m=me(), s=S(); const R=ranked(p); const ho
    <div class="sp-bar" style="margin-bottom:22px"><span class="lbl" style="margin:0">Viewing as</span><div class="sp-members" role="group" aria-label="Switch member (preview simulation)">${p.members.map(x=>`<button type="button" class="sp-mem" data-as="${x.id}" aria-pressed="${x.id===m.id}">${av(x,28)}<span>${esc(x.name)} <small>${esc(x.role)}${x.invited?' · invite not sent (preview)':''}</small></span></button>`).join('')}</div>
     <button class="btn btn-sm btn-outline" type="button" data-modal="m-invite">Invite someone</button></div>
    <div class="sp-layout"><div>
-    <div class="pp-h"><div><h2 class="display d-md">Shared homes</h2><p>${p.homes.length} home${p.homes.length===1?'':'s'} · reacting as <strong>${esc(m.name)}</strong>. Sample data — live MLS data via Showcase IDX at launch.</p></div>
+    <div class="pp-h"><div><h2 class="display d-md">Shared homes</h2><p>${p.homes.length} home${p.homes.length===1?'':'s'} · reacting as <strong>${esc(m.name)}</strong>. Sample data: live MLS data via Showcase IDX at launch.</p></div>
      <div class="seg" role="group" aria-label="Sort homes" style="min-width:220px"><button type="button" data-sort="votes" aria-pressed="${sort==='votes'}">Most votes</button><button type="button" data-sort="recent" aria-pressed="${sort==='recent'}">Recently added</button></div></div>
     ${pool.length?`<div class="chips" style="margin-bottom:16px" aria-label="Add from your saved homes">${pool.slice(0,8).map(id=>{const l=SC.listing(id); return `<button type="button" class="chip" data-add-home="${id}">+ ${esc(l.address)}</button>`;}).join('')}</div>`:''}
     ${p.homes.length?`<div class="sp-homes">${homes.map(id=>homeCard(p,id,sort==='votes'?R.findIndex(x=>x.id===id)+1:0)).join('')}</div>`:`<div class="empty"><h3>No homes in this party yet</h3><p>Save homes from the search and add them here, or add a few sample homes.</p><div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap"><button class="btn btn-sm" type="button" data-add-samples>Add 4 sample homes</button><a class="btn btn-sm btn-outline" href="search.html">Search homes</a></div></div>`}
@@ -83,13 +83,13 @@ document.addEventListener('click',e=>{const p=party();
 });
 document.addEventListener('change',e=>{const p=party(); if(!p) return;
   if(e.target.matches('[data-switch-party]')){if(e.target.value==='__new'){W(s=>{s.active=null;}); render();} else {W(s=>{s.active=e.target.value; s.viewingAs=s.parties.find(x=>x.id===s.active).members[0].id;}); render();}}
-  if(e.target.matches('[data-agent-access]')){W(s=>{s.parties.find(x=>x.id===p.id).agentAccess=e.target.checked;}); track('search_party_agent_access',{on:e.target.checked}); SC.toast(e.target.checked?'Agent access on (preview — nothing is shared)':'Agent access off'); render();}});
+  if(e.target.matches('[data-agent-access]')){W(s=>{s.parties.find(x=>x.id===p.id).agentAccess=e.target.checked;}); track('search_party_agent_access',{on:e.target.checked}); SC.toast(e.target.checked?'Agent access on (preview, nothing is shared)':'Agent access off'); render();}});
 document.addEventListener('submit',e=>{const f=e.target.closest('[data-cf]'); if(!f) return; e.preventDefault(); const p=party(), m=me(); const t=f.c.value.trim(); if(!t) return; const card=f.closest('[data-home]'), id=card.dataset.home; const vis=$('[data-agentvis]',card); const agent=!!(vis&&vis.checked);
   W(s=>{const pp=s.parties.find(x=>x.id===p.id); (pp.comments[id]=pp.comments[id]||[]).push({mid:m.id,text:t,ts:new Date().toISOString(),agent});}); track('search_party_comment',{listing_id:id,agent_visible:agent});
   if(agent) SC.notify('Comment shared with your agent (preview)','Not sent in preview. At launch an agent-visible comment emails your assigned agent.','party.html');
   render(); const inp=$(`#cf-${id}`); inp&&inp.focus({preventScroll:true});});
 $('#inv-form').addEventListener('submit',e=>{e.preventDefault(); const f=e.target; if(!f.checkValidity()){f.reportValidity(); return;} const p=party(); if(!p) return;
   W(s=>{const pp=s.parties.find(x=>x.id===p.id); pp.members.push({id:SC.uid('m'),name:f.name.value.trim(),email:f.email.value.trim(),role:'Member',color:COLORS[pp.members.length%COLORS.length],invited:true,simulated:true});});
-  track('search_party_invite',{}); f.reset(); $('#m-invite').classList.remove('open'); SC.toast('Member added — invite not sent in preview'); render();});
+  track('search_party_invite',{}); f.reset(); $('#m-invite').classList.remove('open'); SC.toast('Member added: invite not sent in preview'); render();});
 render();
 })();

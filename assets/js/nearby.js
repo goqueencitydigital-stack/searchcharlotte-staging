@@ -1,4 +1,4 @@
-/* "What's nearby" local explorer — every OpenStreetMap place within a radius, by category, with map.
+/* "What's nearby" local explorer, every OpenStreetMap place within a radius, by category, with map.
    SC.nearby.mount(el,{lat,lng,radius,name,polygon,mapId,static:[...]}) */
 (function(){'use strict';const SC=window.SC,{esc,track}=SC;
 const ORDER=['restaurants','cafes','bars','grocery','shopping','parks','trails','venues','golf','water','fitness','transit','health','schools','services'];
@@ -22,7 +22,7 @@ SC.nearby={mount(el,o){
   const renderCats=()=>{const P=pool(); const n={}; P.forEach(p=>n[p.cat]=(n[p.cat]||0)+1);
     const cats=ORDER.filter(c=>n[c]); if(!cat||!n[cat]) cat=cats[0]||null;
     $('.nb-cats').innerHTML=cats.map(c=>`<button role="tab" type="button" aria-selected="${c===cat}" data-cat="${c}" style="--c:${COLORS[c]}">${svg(c)}<span>${esc(SC.poi.label(c))}</span><b>${n[c]}</b></button>`).join('');
-    $('.nb-sub').textContent=P.length?`${P.length.toLocaleString()} named places within ${radius} mi — restaurants, groceries, parks, venues, shopping and more.`:`No mapped places within ${radius} mi yet. Try a wider radius.`;};
+    $('.nb-sub').textContent=P.length?`${P.length.toLocaleString()} named places within ${radius} mi, restaurants, groceries, parks, venues, shopping and more.`:`No mapped places within ${radius} mi yet. Try a wider radius.`;};
   const renderList=()=>{const ql=q.toLowerCase(); const P=pool().filter(p=>p.cat===cat&&(!ql||(p.name+' '+(p.x.cu||'')+' '+p.sub).toLowerCase().includes(ql)));
     $('.nb-list').innerHTML=P.slice(0,shown).map((p,i)=>`<li data-i="${i}"><span class="nb-ic" style="--c:${COLORS[p.cat]}">${svg(p.cat)}</span><div><strong>${p.x.w?`<a href="${esc(p.x.w)}" target="_blank" rel="noopener nofollow">${esc(p.name)}</a>`:esc(p.name)}</strong><small>${esc(cap(p.x.cu||p.sub))}${p.x.a?' · '+esc(p.x.a):''}</small></div><span class="nb-d">${p.mi.toFixed(1)} mi<small>${time(p.mi)}</small></span></li>`).join('')||'<li class="nb-empty">Nothing matches that filter.</li>';
     const more=$('.nb-more'); more.hidden=P.length<=shown; more.textContent=`Show ${Math.min(40,P.length-shown)} more of ${P.length}`;

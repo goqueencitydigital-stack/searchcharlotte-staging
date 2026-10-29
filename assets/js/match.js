@@ -1,10 +1,10 @@
-/* Search Charlotte Home Match — preferences drawer + score UI.
+/* Search Charlotte Home Match, preferences drawer + score UI.
    SC.matchPrefs.open()            -> opens the reusable preferences drawer (edits SC.prefs live via SC.setPrefs)
    SC.matchUI.mount(el, listing)   -> score ring + "Why this home matches" / "Potential compromises" + methodology
    SC.matchUI.ring(score, size)    -> SVG ring markup
    SC.matchUI.method()             -> methodology HTML (weights)
    Any element with [data-match-prefs] opens the drawer. Re-renders on document 'sc:change' (key sc_prefs).
-   Scores use only objective listing facts and the user's own choices — never protected characteristics. */
+   Scores use only objective listing facts and the user's own choices, never protected characteristics. */
 (function(){'use strict';
 const SC=window.SC; const {D,esc,short,fmt,track}=SC;
 let amen={}; (SC.amenities||Promise.resolve({})).then(a=>{amen=a||{}; document.dispatchEvent(new CustomEvent('sc:amenities'));});
@@ -14,7 +14,7 @@ const method=()=>`<p><strong>How Home Match works.</strong> Each preference you 
  <ul class="hm-weights">${WEIGHTS.map(([n,w])=>`<li><span>${n}</span><b>×${w}</b></li>`).join('')}</ul>
  <p>Home Match uses only objective home facts (price, size, features, location you chose), estimated drive times and OpenStreetMap amenity counts. It never uses protected characteristics, demographics, school ratings, crime data or any proxy for them. Listing facts are sample data in this preview; drive times are estimates (straight-line × 1.35 at 30–45 mph).</p>`;
 const ring=(score,size=120)=>{const r=(size-14)/2, c=2*Math.PI*r, v=score==null?0:score, cls=v>=85?'hi':v>=65?'mid':'lo';
-  return `<svg class="hm-ring ${cls}" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" role="img" aria-label="${score==null?'No score yet':score+'% Home Match'}"><circle cx="${size/2}" cy="${size/2}" r="${r}" fill="none" stroke-width="10" class="hm-ring-bg"/><circle cx="${size/2}" cy="${size/2}" r="${r}" fill="none" stroke-width="10" stroke-linecap="round" class="hm-ring-fg" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-v/100)}" transform="rotate(-90 ${size/2} ${size/2})"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" class="hm-ring-t">${score==null?'—':score+'%'}</text></svg>`;};
+  return `<svg class="hm-ring ${cls}" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" role="img" aria-label="${score==null?'No score yet':score+'% Home Match'}"><circle cx="${size/2}" cy="${size/2}" r="${r}" fill="none" stroke-width="10" class="hm-ring-bg"/><circle cx="${size/2}" cy="${size/2}" r="${r}" fill="none" stroke-width="10" stroke-linecap="round" class="hm-ring-fg" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-v/100)}" transform="rotate(-90 ${size/2} ${size/2})"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" class="hm-ring-t">${score==null?'N/A':score+'%'}</text></svg>`;};
 
 /* ---------- Score panel ---------- */
 function mount(el,l){
@@ -26,7 +26,7 @@ function mount(el,l){
       <div class="hm-lists"><div><h4>Why this home matches</h4>${r.matches.length?`<ul class="hm-yes">${r.matches.map(m=>`<li>${esc(m)}</li>`).join('')}</ul>`:'<p class="hm-p">None of your criteria are fully met yet.</p>'}</div>
       <div><h4>Potential compromises</h4>${r.compromises.length?`<ul class="hm-no">${r.compromises.map(m=>`<li>${esc(m)}</li>`).join('')}</ul>`:'<p class="hm-p">No compromises on the criteria you set.</p>'}</div></div>
       <div class="hm-btns"><button class="btn btn-sm btn-outline" type="button" data-match-prefs>Edit preferences</button>${methodBtn()}</div>
-      <p class="form-note">Estimate based on sample listing data and your preferences — not advice about any neighborhood or its residents.</p></div>`;};
+      <p class="form-note">Estimate based on sample listing data and your preferences, not advice about any neighborhood or its residents.</p></div>`;};
   draw();
   document.addEventListener('sc:change',e=>{if(e.detail.key==='sc_prefs'||e.detail.key==='*') draw();});
   document.addEventListener('sc:amenities',draw);
@@ -74,7 +74,7 @@ function html(){const p=SC.prefs(), m=p.mustHave||{};
 const lifeRow=(r,i)=>`<div class="hm-life" data-i="${i}"><select aria-label="Amenity type" data-lf="cat">${LIFE.map(c=>`<option value="${c}" ${r.cat===c?'selected':''}>${esc(SC.poi.label(c))}</option>`).join('')}</select><label class="hm-life-n">at least <input type="number" min="1" max="50" value="${r.min||1}" aria-label="Minimum count" data-lf="min"></label><select aria-label="Within distance" data-lf="maxMi"><option value="1" ${(r.maxMi||1)<=1?'selected':''}>within 1 mi</option><option value="3" ${r.maxMi>1?'selected':''}>within 3 mi</option></select><button type="button" class="hm-life-x" aria-label="Remove rule" data-lf-x>×</button></div>`;
 function live(){const p=SC.prefs(); const box=dr.querySelector('[data-hm-live]'); if(!SC.hasPrefs()&&!p.hoaMax&&!p.yearMin&&!p.acresMin&&!p.budgetMin){box.textContent='Set any preference to start scoring the 65 sample homes.'; return;}
   const s=D.listings.map(l=>SC.match(l,p,amen)).filter(Boolean).map(r=>r.score); const hi=s.filter(x=>x>=85).length, mid=s.filter(x=>x>=65&&x<85).length;
-  box.innerHTML=`<b>${hi}</b> strong and <b>${mid}</b> good matches among ${s.length} sample homes — updates as you edit.`;}
+  box.innerHTML=`<b>${hi}</b> strong and <b>${mid}</b> good matches among ${s.length} sample homes, updates as you edit.`;}
 function save(patch){SC.setPrefs(patch); live();}
 function wire(){
   dr.addEventListener('input',e=>{const t=e.target;

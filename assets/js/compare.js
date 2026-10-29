@@ -23,18 +23,18 @@ function rowsFor(H){const lm=SC.lmk(lmk);
     return {l,x,c,p,d,m,a:amen[l.id]||{}};});
   const R=[
     ['Price',o=>o.l.price,'min',o=>fmt(o.l.price)],
-    ['Bedrooms',o=>o.l.type==='Land'?null:o.l.beds,'max',o=>o.l.type==='Land'?'—':o.l.beds],
-    ['Bathrooms',o=>o.l.type==='Land'?null:o.l.baths,'max',o=>o.l.type==='Land'?'—':o.l.baths],
-    ['Living area',o=>o.l.sqft||null,'max',o=>o.l.sqft?o.l.sqft.toLocaleString()+' sq ft':'—'],
+    ['Bedrooms',o=>o.l.type==='Land'?null:o.l.beds,'max',o=>o.l.type==='Land'?'N/A':o.l.beds],
+    ['Bathrooms',o=>o.l.type==='Land'?null:o.l.baths,'max',o=>o.l.type==='Land'?'N/A':o.l.baths],
+    ['Living area',o=>o.l.sqft||null,'max',o=>o.l.sqft?o.l.sqft.toLocaleString()+' sq ft':'N/A'],
     ['Lot size',o=>o.l.acres,'max',o=>o.l.acres+' acres'],
-    ['Year built',o=>o.l.year||null,'max',o=>o.l.year||'—'],
-    ['Price per sq ft',o=>SC.ppsf(o.l),'min',o=>SC.ppsf(o.l)?'$'+SC.ppsf(o.l):'—'],
+    ['Year built',o=>o.l.year||null,'max',o=>o.l.year||'N/A'],
+    ['Price per sq ft',o=>SC.ppsf(o.l),'min',o=>SC.ppsf(o.l)?'$'+SC.ppsf(o.l):'N/A'],
     ['Est. monthly cost',o=>o.c.total,'min',o=>`${money(o.c.total)}<small>estimate · P&amp;I ${money(o.c.pi)}</small>`],
     ['Est. cash to close',o=>o.c.cashToClose,'min',o=>money(o.c.cashToClose)],
     ['HOA dues',o=>o.l.hoa||0,'min',o=>o.l.hoa?'$'+o.l.hoa+'/mo':'None listed'],
     ['Est. property tax',o=>o.c.tax*12,'min',o=>`${money(o.c.tax*12)}/yr<small>${o.p.taxRate} per $100 · ${esc(o.l.city)}</small>`],
     [`Drive to ${lm.name}`,o=>o.d.minutes,'min',o=>`~${o.d.minutes} min<small>${o.d.miles} mi · estimate</small>`],
-    ...AMEN.map(k=>[`${SC.POI_CATS[k]} within 1 mi`,o=>o.a[k]?o.a[k][0]:null,'max',o=>o.a[k]?`${o.a[k][0]}<small>nearest ${o.a[k][2]} mi</small>`:'—']),
+    ...AMEN.map(k=>[`${SC.POI_CATS[k]} within 1 mi`,o=>o.a[k]?o.a[k][0]:null,'max',o=>o.a[k]?`${o.a[k][0]}<small>nearest ${o.a[k][2]} mi</small>`:'N/A']),
     ['Days on market',o=>o.l.dom,null,o=>o.l.dom],
     ['Price history (demo)',o=>null,null,o=>{const ch=o.l.price-o.x.originalPrice; return `${o.x.priceCuts?`${o.x.priceCuts} price cut${o.x.priceCuts>1?'s':''}, ${short(-ch)} below original`:'No price changes'}${o.x.backOnMarket?' · back on market':''}<small>listed ${o.x.listed}</small>`;}],
     ['Home Match',o=>o.m?o.m.score:null,'max',o=>o.m?`<span class="match-badge ${o.m.score>=85?'hi':o.m.score>=65?'mid':'lo'}">${o.m.score}% Match</span>`:'<button class="xr-link" type="button" data-match-prefs>Set preferences</button>'],
@@ -43,7 +43,7 @@ function rowsFor(H){const lm=SC.lmk(lmk);
 
 function summary(v,lm){const out=[]; if(v.length<2) return out; const by=(f,dir)=>[...v].filter(o=>f(o)!=null).sort((a,b)=>dir*(f(a)-f(b)));
   const n=o=>esc(o.l.address);
-  const pr=by(o=>o.l.price,1); out.push(`<b>${n(pr[0])}</b> has the lowest list price — ${short(pr[pr.length-1].l.price-pr[0].l.price)} less than ${n(pr[pr.length-1])}.`);
+  const pr=by(o=>o.l.price,1); out.push(`<b>${n(pr[0])}</b> has the lowest list price, ${short(pr[pr.length-1].l.price-pr[0].l.price)} less than ${n(pr[pr.length-1])}.`);
   const sq=by(o=>o.l.sqft||null,-1); if(sq.length>1) out.push(`<b>${n(sq[0])}</b> is the largest at ${sq[0].l.sqft.toLocaleString()} sq ft, ${Math.round((sq[0].l.sqft/sq[sq.length-1].l.sqft-1)*100)}% more than ${n(sq[sq.length-1])}.`);
   const pp=by(o=>SC.ppsf(o.l),1); if(pp.length>1) out.push(`Lowest asking price per sq ft: <b>${n(pp[0])}</b> at $${SC.ppsf(pp[0].l)} vs. $${SC.ppsf(pp[pp.length-1].l)} for the highest.`);
   const mc=by(o=>o.c.total,1); out.push(`Estimated monthly cost ranges from ${money(mc[0].c.total)} (<b>${n(mc[0])}</b>) to ${money(mc[mc.length-1].c.total)}, a gap of ${money(mc[mc.length-1].c.total-mc[0].c.total)} per month under the same assumptions.`);
@@ -62,7 +62,7 @@ function render(){bar();
   if(H.length<2){main.innerHTML=`<div class="empty cmp-empty"><h3>${H.length?'Add one more home to compare':'Choose homes to compare'}</h3><p>Use the Compare button on any property page or card, or add sample listings with the picker above.</p>${H.length?`<div class="cmp-one">${SC.card(H[0])}</div>`:''}<a class="btn btn-sm" href="search.html">Browse homes</a></div>`; return;}
   const lm=SC.lmk(lmk); const {v,R}=rowsFor(H);
   const sum=summary(v,lm);
-  main.innerHTML=`<div class="cmp-sum"><p class="eyebrow">Key differences</p><ul>${sum.map(s=>`<li>${s}</li>`).join('')}</ul><p class="form-note">Summary generated from listing data (sample) and the estimates below — no AI or editorial judgment.</p></div>
+  main.innerHTML=`<div class="cmp-sum"><p class="eyebrow">Key differences</p><ul>${sum.map(s=>`<li>${s}</li>`).join('')}</ul><p class="form-note">Summary generated from listing data (sample) and the estimates below, no AI or editorial judgment.</p></div>
    <div class="cmp-scroll" role="region" aria-label="Comparison table" tabindex="0"><table class="cmp-table" style="--n:${H.length}"><caption class="sr-only">Side-by-side comparison of ${H.length} homes</caption>
    <thead><tr><th scope="col" class="cmp-lab"><span class="sr-only">Feature</span></th>${v.map(o=>`<th scope="col"><div class="cmp-home"><a href="listing.html?id=${o.l.id}" class="cmp-img"><img src="assets/img/${o.l.img}.webp" alt="" loading="lazy"></a><a href="listing.html?id=${o.l.id}" class="cmp-addr">${esc(o.l.address)}</a><span class="cmp-sub">${esc(o.l.hoodName)} · ${esc(o.l.type)}</span><button type="button" class="cmp-x" data-rm="${o.l.id}" aria-label="Remove ${esc(o.l.address)} from comparison">Remove</button></div></th>`).join('')}</tr></thead>
    <tbody>${R.map(([label,val,best,show])=>{const vals=v.map(val); const nums=vals.filter(x=>x!=null); let bi=new Set();

@@ -1,4 +1,4 @@
-/* Smart Property Alerts — shared module (Passport + alerts.html).
+/* Smart Property Alerts, shared module (Passport + alerts.html).
    Schema (agreed with Deal Radar) sc_alerts: [{id,type,label,criteria,channels:{email,sms,inapp},frequency,created,active,source,contact?}]
    Preview: nothing is emailed or texted. Production: Showcase IDX Search Subscriptions handle email for new/price-change
    listing alerts; SMS + in-app + extra types need the Passport backend (see FEATURE-EXPANSION.md). */
@@ -16,7 +16,7 @@ const describe=a=>{const c=a.criteria||{}, p=[];
   if(c.min&&c.max) p.push(short(+c.min)+'–'+short(+c.max)); else if(c.max) p.push('up to '+short(+c.max)); else if(c.min) p.push('from '+short(+c.min));
   if(c.signals&&c.signals.length) p.push(c.signals.join(', '));
   return p.length?p.join(' · '):(a.type==='market_report'?'Charlotte market reports':'All Charlotte-area listings');};
-/* Which sample listings this alert would currently surface (demo — live alerts evaluate the MLS feed via Showcase IDX). */
+/* Which sample listings this alert would currently surface (demo, live alerts evaluate the MLS feed via Showcase IDX). */
 const matches=a=>{const c=a.criteria||{}; let L=D.listings;
   if(c.listingId) L=L.filter(l=>l.id===c.listingId);
   const h=c.hood||c.q; if(h&&D.hoods.some(x=>x.slug===h)) L=L.filter(l=>l.hood===h);
@@ -32,9 +32,9 @@ const matches=a=>{const c=a.criteria||{}; let L=D.listings;
   else if(t==='market_report') L=[];
   return L;};
 const add=a=>{const rec=Object.assign({id:SC.uid('al'),type:'new_match',label:'',criteria:{},channels:{email:false,sms:false,inapp:true},frequency:'daily',created:new Date().toISOString(),active:true,source:'passport'},a);
-  if(!rec.label) rec.label=TYPES[rec.type]+' — '+describe(rec);
+  if(!rec.label) rec.label=TYPES[rec.type]+', '+describe(rec);
   SC.db.update('sc_alerts',[],x=>[rec,...x]); track('alert_create',{alert_type:rec.type,frequency:rec.frequency,email:rec.channels.email,sms:rec.channels.sms,source:rec.source});
-  SC.notify('Alert created: '+TYPES[rec.type],describe(rec)+' · '+FREQ[rec.frequency]+' (preview — no messages are sent)','alerts.html?id='+rec.id); return rec;};
+  SC.notify('Alert created: '+TYPES[rec.type],describe(rec)+' · '+FREQ[rec.frequency]+' (preview, no messages are sent)','alerts.html?id='+rec.id); return rec;};
 const update=(id,patch)=>save(list().map(a=>a.id===id?Object.assign({},a,patch,patch.channels?{channels:Object.assign({},a.channels,patch.channels)}:{}):a));
 const remove=id=>{save(list().filter(a=>a.id!==id)); track('alert_delete',{});};
 const consent=()=>(SC.user()||{}).consent||{};
@@ -52,7 +52,7 @@ const renderManager=(el,opt={})=>{const A=list(), c=consent(), u=SC.user();
       <label><input type="checkbox" data-al-ch="inapp" ${a.channels.inapp?'checked':''}> In-app</label>
       <label><input type="checkbox" data-al-ch="email" ${a.channels.email?'checked':''} ${c.email||a.contact&&a.contact.emailConsent?'':'disabled'}> Email</label>
       <label><input type="checkbox" data-al-ch="sms" ${a.channels.sms?'checked':''} ${(c.sms&&u&&u.phone)||a.contact&&a.contact.smsConsent?'':'disabled'}> Text (SMS)</label></fieldset></div>
-    ${!(c.email&&c.sms)?`<p class="form-note">${!c.email?'Email':''}${!c.email&&!c.sms?' and ':''}${!c.sms?'text':''} delivery needs your separate opt-in — turn it on in <a href="passport.html#privacy">Passport privacy settings</a>.</p>`:''}
+    ${!(c.email&&c.sms)?`<p class="form-note">${!c.email?'Email':''}${!c.email&&!c.sms?' and ':''}${!c.sms?'text':''} delivery needs your separate opt-in, turn it on in <a href="passport.html#privacy">Passport privacy settings</a>.</p>`:''}
     </article>`;}).join('')}</div>
     <div class="al-foot"><button type="button" class="btn btn-sm btn-outline" data-al-unsub-all>Unsubscribe from all alerts</button><p class="form-note">Preview: alerts are stored only in this browser tab and no email or text is sent. Every live alert email and text will include one-click unsubscribe; texts honor STOP and HELP.</p></div>`;
   if(!el._bound){el._bound=1; el.addEventListener('click',e=>{const it=e.target.closest('[data-alert]'); const id=it&&it.dataset.alert;
@@ -74,10 +74,10 @@ const renderSubscribe=(el,opt={})=>{const u=SC.user(), c=consent(), pre=opt.pres
    <div class="field"><label for="al-beds">Bedrooms</label><select id="al-beds" name="beds"><option value="">Any</option>${[1,2,3,4,5].map(b=>`<option value="${b}" ${+pre.beds===b?'selected':''}>${b}+</option>`).join('')}</select></div></div>
    <div class="field"><span class="lbl">Frequency</span><div class="seg" role="group" aria-label="Frequency">${Object.entries(FREQ).map(([k,v])=>`<button type="button" data-freq="${k}" aria-pressed="${k===(pre.frequency||'daily')}">${v}</button>`).join('')}</div><input type="hidden" name="frequency" value="${pre.frequency||'daily'}"></div>
    <fieldset class="al-chs"><legend>Where should alerts go?</legend>
-     <label class="pp-check"><input type="checkbox" name="inapp" checked><span><strong>In-app</strong> — Passport notification center</span></label>
-     <label class="pp-check"><input type="checkbox" name="email"><span><strong>Email</strong> — I agree to receive property alert emails from SearchCharlotte. Unsubscribe anytime.</span></label>
+     <label class="pp-check"><input type="checkbox" name="inapp" checked><span><strong>In-app</strong>: Passport notification center</span></label>
+     <label class="pp-check"><input type="checkbox" name="email"><span><strong>Email</strong>: I agree to receive property alert emails from SearchCharlotte. Unsubscribe anytime.</span></label>
      ${!u?`<div class="field al-email"><label for="al-em">Email address</label><input id="al-em" name="addr" type="email" autocomplete="email"></div>`:''}
-     <label class="pp-check"><input type="checkbox" name="sms"><span><strong>Text (SMS)</strong> — ${esc(SC.smsConsentText)}</span></label>
+     <label class="pp-check"><input type="checkbox" name="sms"><span><strong>Text (SMS)</strong>: ${esc(SC.smsConsentText)}</span></label>
      <div class="field al-phone"><label for="al-ph">Mobile number for texts</label><input id="al-ph" name="phone" type="tel" autocomplete="tel" value="${esc(u&&u.phone||'')}"></div>
    </fieldset>${SC.honeypot}
    <button class="btn" type="submit">Create alerts</button>

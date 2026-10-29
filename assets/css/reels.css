@@ -1,4 +1,4 @@
-/* Property Reels — vertical snap feed */
+/* Property Reels, vertical snap feed */
 body[data-page="reels"]{background:var(--espresso)}
 body[data-page="reels"] .site-footer{margin-top:0}
 .rl{position:relative;background:var(--espresso);color:#fff;--hdr:76px}

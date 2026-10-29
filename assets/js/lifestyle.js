@@ -1,4 +1,4 @@
-/* Live Where You Love — rank (sample) listings by nearby OpenStreetMap amenities + commute estimate. */
+/* Live Where You Love, rank (sample) listings by nearby OpenStreetMap amenities + commute estimate. */
 (function(){'use strict';const SC=window.SC,{D,$,$$,esc,fmt,short,track}=SC;
 const CATS=[['restaurants','Restaurants'],['cafes','Coffee shops'],['bars','Nightlife & breweries'],['grocery','Grocery'],['shopping','Shopping'],['parks','Parks'],['trails','Greenways'],['golf','Golf courses'],['water','Lakes & boating'],['venues','Entertainment & arts'],['fitness','Gyms & recreation'],['transit','Light rail & transit']];
 const COL={restaurants:'#B4472F',cafes:'#8A5A3C',bars:'#6B2C5C',grocery:'#2F7A4A',shopping:'#C99A4B',parks:'#3E7D3A',trails:'#5E8F4F',golf:'#1F6B4F',water:'#2B6A99',venues:'#4A2445',fitness:'#A2652B',transit:'#1E140D'};

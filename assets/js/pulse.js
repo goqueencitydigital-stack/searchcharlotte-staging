@@ -74,7 +74,7 @@ function table(){
   const ms=months().slice().reverse();
   $('#pl-table').innerHTML=`<caption class="sr-only">${esc(ll.areaName(P,st.area))} monthly values</caption><thead><tr><th>Month</th>${ks.map(k=>`<th>${esc(P.metrics[k].label)}</th>`).join('')}<th>Sources</th></tr></thead><tbody>`+
     ms.map(m=>{const cs=ks.map(k=>cell(st.area,m,k)); const srcs=[...new Map(cs.filter(Boolean).map(c=>[c.src.url,c.src])).values()];
-      return `<tr><td>${ll.ym(m)}</td>${cs.map((c,i)=>`<td class="n">${c?fmtV(ks[i],c.v):'<span class="na">Not published</span>'}</td>`).join('')}<td>${srcs.map(srcShort).join('<br>')||'—'}</td></tr>`;}).join('')+'</tbody>';
+      return `<tr><td>${ll.ym(m)}</td>${cs.map((c,i)=>`<td class="n">${c?fmtV(ks[i],c.v):'<span class="na">Not published</span>'}</td>`).join('')}<td>${srcs.map(srcShort).join('<br>')||'N/A'}</td></tr>`;}).join('')+'</tbody>';
 }
 let sortK='median_sale_price', sortDir=-1;
 function allAreas(){
@@ -85,7 +85,7 @@ function allAreas(){
   rows.sort((x,y)=>{if(sortK==='name') return sortDir*x.a.name.localeCompare(y.a.name); const a=x.c[idx]?x.c[idx].v:-Infinity,b=y.c[idx]?y.c[idx].v:-Infinity; return sortDir*(a-b);});
   const th=(k,l)=>`<th aria-sort="${sortK===k?(sortDir>0?'ascending':'descending'):'none'}"><button type="button" data-sort="${k}">${l}</button></th>`;
   $('#pl-all').innerHTML=`<thead><tr>${th('name','Area')}${ks.map(k=>th(k,P.metrics[k].label)).join('')}<th>Median YoY</th></tr></thead><tbody>`+
-    rows.map(r=>`<tr><td><button type="button" class="ll-lnk" data-area="${r.a.id}">${esc(r.a.name)}</button></td>${r.c.map((c,i)=>`<td class="n">${c?fmtV(ks[i],c.v):'<span class="na">Not published</span>'}</td>`).join('')}<td class="n">${r.y?`${r.y.pct>0?'+':''}${r.y.pct.toFixed(1)}%`:'<span class="na">—</span>'}</td></tr>`).join('')+'</tbody>';
+    rows.map(r=>`<tr><td><button type="button" class="ll-lnk" data-area="${r.a.id}">${esc(r.a.name)}</button></td>${r.c.map((c,i)=>`<td class="n">${c?fmtV(ks[i],c.v):'<span class="na">Not published</span>'}</td>`).join('')}<td class="n">${r.y?`${r.y.pct>0?'+':''}${r.y.pct.toFixed(1)}%`:'<span class="na">N/A</span>'}</td></tr>`).join('')+'</tbody>';
   const s=cell('region',m,'median_sale_price');
   $('#pl-all-src').innerHTML=`Source: ${s?srcShort(s.src):'Canopy'} (Canopy MLS data). Last updated ${ll.date(P.meta.retrieved)}.`;
   $$('#pl-all [data-sort]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.sort; sortDir=sortK===k?-sortDir:(k==='name'?1:-1); sortK=k; allAreas();}));

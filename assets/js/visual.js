@@ -1,4 +1,4 @@
-/* Find Homes Like This — visual search proof of concept.
+/* Find Homes Like This, visual search proof of concept.
    Client-side only: the image is read with FileReader and drawn to a canvas in this browser; it is never uploaded.
    Matching uses assets/data/visual-tags.json (hand-assigned tags for the site's own sample photos) + SC.extras style/features (DEMO).
    Production: licensed visual-search index (image embeddings) over authorized Canopy MLS photos, queried by a backend endpoint. */
@@ -33,7 +33,7 @@ function suggest(s){const t=new Set(), why=[]; const outdoor=s.green>0.1||s.blue
   if(outdoor&&s.light>0.12){t.add('White exterior'); why.push('large light, low-color areas');}
   if(!outdoor&&!unsure&&s.brightness>0.6&&s.sat<0.25){t.add('White kitchen'); why.push('bright, low-saturation interior');}
   if(!outdoor&&!unsure&&s.brightness<0.45&&s.warmth>0.06){t.add('Dark wood cabinets'); why.push('dark, warm tones');}
-  return {tags:[...t],why,room:outdoor?'Likely an exterior photo':unsure?'Couldn\'t tell if this is inside or outside — pick the details yourself':'Likely an interior photo'};}
+  return {tags:[...t],why,room:outdoor?'Likely an exterior photo':unsure?'Couldn\'t tell if this is inside or outside. Pick the details yourself':'Likely an interior photo'};}
 
 /* ---------- UI ---------- */
 const imgEl=$('#vs-img'), empty=$('#vs-empty'), drop=$('#vs-drop'), file=$('#vs-file');
@@ -41,13 +41,13 @@ function renderSignals(s,known){const el=$('#vs-signals');
   if(!s){el.innerHTML='<p class="vs-sub">Color signals unavailable for this image in this browser. You can still pick details below.</p>'; return;}
   el.innerHTML=`<div class="vs-sw">${s.top.map(c=>`<span style="background:${c.hex}" title="${c.hex} · ${c.pct}%"><i>${c.pct}%</i></span>`).join('')}</div>
    <dl class="vs-meters"><div><dt>Brightness</dt><dd><b style="width:${Math.round(s.brightness*100)}%"></b></dd></div><div><dt>Warmth</dt><dd><b style="width:${Math.round(Math.min(1,Math.max(0,(s.warmth+0.3)/0.6))*100)}%"></b></dd></div><div><dt>Greenery</dt><dd><b style="width:${Math.min(100,Math.round(s.green*250))}%"></b></dd></div></dl>
-   <p class="vs-sub">${known?'This is one of the site\'s sample photos, so its tags are known.':esc(suggest(s).room)+(suggest(s).why.length?' — '+esc(suggest(s).why.join(', ')):'')+'. Simple color math, not image recognition.'}</p>`;}
+   <p class="vs-sub">${known?'This is one of the site\'s sample photos, so its tags are known.':esc(suggest(s).room)+(suggest(s).why.length?', '+esc(suggest(s).why.join(', ')):'')+'. Simple color math, not image recognition.'}</p>`;}
 function renderTags(sug){const el=$('#vs-tags');
   el.innerHTML=GROUPS.map(([g,label])=>`<div class="vs-tg"><p>${label}</p><div class="chips">${V.tags.vocab[g].map(v=>`<button type="button" class="chip" aria-pressed="${V.sel.has(v)}" data-tag="${esc(v)}">${esc(v)}${sug&&sug.includes(v)?' <em>suggested</em>':''}</button>`).join('')}</div></div>`).join('');}
 function setImage(src,key){V.src=src; imgEl.hidden=false; empty.hidden=true; drop.classList.add('has-img'); imgEl.crossOrigin='anonymous';
   imgEl.onload=()=>{const s=analyze(imgEl); V.sig=s; const known=key&&V.tags.images[key];
     V.sel=new Set(known?GROUPS.flatMap(([g])=>known[g]):s?suggest(s).tags:[]);
-    renderSignals(s,!!known); renderTags(known?null:(s?suggest(s).tags:[])); $('#vs-sigsub').textContent=known?'Sample image analyzed in your browser.':'Analyzed in your browser — the photo was not uploaded.'; run();
+    renderSignals(s,!!known); renderTags(known?null:(s?suggest(s).tags:[])); $('#vs-sigsub').textContent=known?'Sample image analyzed in your browser.':'Analyzed in your browser: the photo was not uploaded.'; run();
     track('visual_search_image',{source:key?'sample':'upload'});};
   imgEl.src=src;}
 function run(){const area=$('#vs-area').value, max=+$('#vs-max').value||0, type=$('#vs-type').value; const S=[...V.sel];
@@ -56,7 +56,7 @@ function run(){const area=$('#vs-area').value, max=+$('#vs-max').value||0, type=
     let hit=0; const m=[]; S.forEach(v=>{if(T.has(v)){hit++; m.push(v);} else if((v==='Modern'&&T.has('Contemporary'))||(v==='Contemporary'&&T.has('Modern'))){hit+=0.5; m.push(v+' (close)');}});
     const tagScore=S.length?hit/S.length:0, pal=palSim(l); const score=Math.round((S.length?(V.sig?tagScore*0.8+pal*0.2:tagScore):pal)*100);
     return {l,score,m,miss:S.filter(v=>!T.has(v))};}).filter(r=>r.score>=30).sort((a,b)=>b.score-a.score||a.l.price-b.l.price).slice(0,12);
-  $('#vs-count').textContent=rows.length?`${rows.length} sample home${rows.length===1?'':'s'} with this look`+(S.length?'':' (by color only — tap details to sharpen)'):'No close matches';
+  $('#vs-count').textContent=rows.length?`${rows.length} sample home${rows.length===1?'':'s'} with this look`+(S.length?'':' (by color only. Tap details to sharpen)'):'No close matches';
   $('#vs-cards').innerHTML=rows.length?rows.map(r=>{let c=SC.card(r.l); c=c.replace('<div class="card-img">',`<div class="card-img"><span class="sca-badge"><span class="match-badge ${r.score>=80?'hi':r.score>=55?'mid':''}">${r.score}% look match</span></span>`);
     return `<div class="sca-item">${c}<p class="vs-why">${r.m.length?'Matches: '+r.m.map(esc).join(', '):'Similar colors'}${r.miss.length?`<br><span>Missing: ${r.miss.slice(0,3).map(esc).join(', ')}</span>`:''}</p></div>`;}).join('')
     :`<div class="empty" style="grid-column:1/-1"><h3>No sample listings share enough of these details</h3><p>Turn off a detail or two, widen the price, or choose “Anywhere”. Nothing is invented to fill the space.</p></div>`;}
@@ -68,7 +68,7 @@ fetch('assets/data/visual-tags.json').then(r=>r.json()).then(j=>{V.tags=j;
 $('#vs-samples').addEventListener('click',e=>{const b=e.target.closest('[data-img]'); if(!b) return; $$('.vs-sample').forEach(x=>x.setAttribute('aria-pressed',x===b)); setImage('assets/img/'+b.dataset.img+'.webp',b.dataset.img);});
 $('#vs-tags').addEventListener('click',e=>{const b=e.target.closest('[data-tag]'); if(!b) return; const v=b.dataset.tag; V.sel.has(v)?V.sel.delete(v):V.sel.add(v); b.setAttribute('aria-pressed',V.sel.has(v)); run(); track('visual_search_tag',{tag:v,on:V.sel.has(v)});});
 ['#vs-area','#vs-max','#vs-type'].forEach(s=>$(s).addEventListener('change',run));
-const readFile=f=>{if(!f||!/^image\//.test(f.type)){SC.toast('Choose an image file'); return;} if(f.size>15e6){SC.toast('That image is over 15 MB — try a smaller one'); return;}
+const readFile=f=>{if(!f||!/^image\//.test(f.type)){SC.toast('Choose an image file'); return;} if(f.size>15e6){SC.toast('That image is over 15 MB. Try a smaller one'); return;}
   const r=new FileReader(); r.onload=()=>{$$('.vs-sample').forEach(x=>x.setAttribute('aria-pressed',false)); setImage(r.result,null);}; r.readAsDataURL(f);};
 drop.addEventListener('click',()=>file.click()); drop.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault(); file.click();}});
 file.addEventListener('change',()=>readFile(file.files[0]));

@@ -79,7 +79,7 @@ function renderComps(){
   let L=(SC.D&&SC.D.listings||[]).map(l=>({l,mi:SC.miles([area.lat,area.lng],[l.lat,l.lng])}));
   L.sort((a,b)=>(beds?Math.abs(a.l.beds-beds)*0.6:0)+a.mi-((beds?Math.abs(b.l.beds-beds)*0.6:0)+b.mi));
   L=L.slice(0,6).sort((a,b)=>a.mi-b.mi);
-  $('#sl-comps tbody').innerHTML=L.map(({l,mi})=>`<tr><td><a href="listing.html?id=${encodeURIComponent(l.id)}">${esc(l.address)}</a><br><small class="form-note">${esc(l.hoodName||'')} · Sample</small></td><td>${esc(l.status)}</td><td>${SC.fmt(l.price)}</td><td>${l.beds}</td><td>${l.baths}</td><td>${l.sqft.toLocaleString('en-US')}</td><td>${l.sqft?'$'+Math.round(l.price/l.sqft):'—'}</td><td>${l.year||'—'}</td><td>${mi.toFixed(1)} mi</td></tr>`).join('');
+  $('#sl-comps tbody').innerHTML=L.map(({l,mi})=>`<tr><td><a href="listing.html?id=${encodeURIComponent(l.id)}">${esc(l.address)}</a><br><small class="form-note">${esc(l.hoodName||'')} · Sample</small></td><td>${esc(l.status)}</td><td>${SC.fmt(l.price)}</td><td>${l.beds}</td><td>${l.baths}</td><td>${l.sqft.toLocaleString('en-US')}</td><td>${l.sqft?'$'+Math.round(l.price/l.sqft):'N/A'}</td><td>${l.year||'N/A'}</td><td>${mi.toFixed(1)} mi</td></tr>`).join('');
   $('#sl-comps-note').textContent=`Sample listings nearest the center of ${area.name}${beds?`, favoring ${beds}-bedroom homes`:''}. A real CMA uses closed sales from the last 3–6 months, adjusted by an agent. Don't use these numbers to price your home.`;
 }
 

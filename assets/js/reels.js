@@ -1,4 +1,4 @@
-/* Property Reels — vertical snap-scroll feed. Ken Burns slides from the site's own sample images, the site's own
+/* Property Reels, vertical snap-scroll feed. Ken Burns slides from the site's own sample images, the site's own
    silent neighborhood reels (assets/video/reel-*.mp4, captions burned in) and one click-to-load YouTube video owned
    by the client (youtube-nocookie). No third-party media is loaded until the user taps play. */
 (function(){'use strict';
@@ -34,7 +34,7 @@ const rail=(it)=>{const l=it.l, saved=l&&SC.saved().includes(l.id), tour=l&&SC.t
 const html=(it,idx)=>{
  if(it.kind==='listing'){const l=it.l, g=l.gallery.slice(0,5);
   return `<article class="rl-item" id="r-${it.id}" data-i="${idx}" data-kind="listing" aria-label="${esc(l.address)}, ${fmt(l.price)}"><div class="rl-frame">
-   <div class="rl-slides">${g.map((img,k)=>`<div class="rl-slide ${k===0?'on':''}"><img src="assets/img/${img}.webp" alt="${esc(l.address)} — photo ${k+1} of ${g.length}" ${idx>1?'loading="lazy"':''} decoding="async"></div>`).join('')}</div>
+   <div class="rl-slides">${g.map((img,k)=>`<div class="rl-slide ${k===0?'on':''}"><img src="assets/img/${img}.webp" alt="${esc(l.address)}, photo ${k+1} of ${g.length}" ${idx>1?'loading="lazy"':''} decoding="async"></div>`).join('')}</div>
    <div class="rl-shade"></div><div class="rl-prog" aria-hidden="true">${g.map((_,k)=>`<i class="${k===0?'cur':''}"><b></b></i>`).join('')}</div>
    <button type="button" class="rl-tap prev" aria-label="Previous photo"></button><button type="button" class="rl-tap next" aria-label="Next photo"></button>
    <div class="rl-tag">${l.flag?`<span>${esc(l.flag)}</span>`:''}<span>${esc(l.hoodName)}</span></div>
@@ -42,7 +42,7 @@ const html=(it,idx)=>{
     <span class="rl-sample">Sample listing</span><div class="rl-cta"><button class="btn btn-sm" type="button" data-rl="showing">Request a showing</button><a class="btn btn-sm btn-ghost" href="listing.html?id=${l.id}">Details</a></div></div>
    ${rail(it)}</div></article>`;}
  if(it.kind==='local') return `<article class="rl-item" id="r-${it.id}" data-i="${idx}" data-kind="local" aria-label="${esc(it.title)}"><div class="rl-frame">
-   <video class="rl-video" muted loop playsinline preload="none" poster="${it.poster}" src="${it.src}" aria-label="${esc(it.title)} — silent video with burned-in captions"></video>
+   <video class="rl-video" muted loop playsinline preload="none" poster="${it.poster}" src="${it.src}" aria-label="${esc(it.title)}, silent video with burned-in captions"></video>
    <div class="rl-shade"></div><div class="rl-tag"><span>Local reel</span><span>Captions on video</span></div>
    <div class="rl-info"><div class="rl-addr" style="font-size:18px">${esc(it.title)}</div><div class="rl-facts">Search Charlotte original · no audio track</div>
     <div class="rl-cta"><a class="btn btn-sm" href="neighborhoods.html">Explore neighborhoods</a></div></div>${rail(it)}</div></article>`;
@@ -77,10 +77,10 @@ const go=d=>{const all=$$('.rl-item',feed); const i=Math.max(0,Math.min(all.leng
 const setAuto=on=>{st.auto=on; SC.db.set('sc_reels_prefs',{auto:st.auto,muted:st.muted}); const b=$('[data-rl-auto]'); b.setAttribute('aria-pressed',on); b.textContent=on?'Autoplay on':'Autoplay off';
   if(cur){cur.classList.toggle('playing',on); const v=$('video',cur); v&&(on?v.play().catch(()=>{}):v.pause()); schedule(cur);} track('reel_autoplay_toggle',{on});};
 const setMute=m=>{st.muted=m; SC.db.set('sc_reels_prefs',{auto:st.auto,muted:st.muted}); const b=$('[data-rl-mute]'); b.setAttribute('aria-pressed',m); b.textContent=m?'Sound off':'Sound on';
-  SC.toast(m?'Sound off':'Sound on — applies to the YouTube video; local reels have no audio'); track('reel_mute_toggle',{muted:m});};
+  SC.toast(m?'Sound off':'Sound on: applies to the YouTube video; local reels have no audio'); track('reel_mute_toggle',{muted:m});};
 setAuto(st.auto); $('[data-rl-mute]').setAttribute('aria-pressed',st.muted); $('[data-rl-mute]').textContent=st.muted?'Sound off':'Sound on';
 
-const share=async it=>{const url=location.origin+location.pathname+'#r-'+it.id; const title=it.l?`${it.l.address} — ${fmt(it.l.price)}`:it.title;
+const share=async it=>{const url=location.origin+location.pathname+'#r-'+it.id; const title=it.l?`${it.l.address}, ${fmt(it.l.price)}`:it.title;
   track('reel_share',{reel:it.id});
   if(navigator.share){try{await navigator.share({title,text:title+' on SearchCharlotte.com',url}); return;}catch(e){if(e&&e.name==='AbortError') return;}}
   try{await navigator.clipboard.writeText(url); SC.toast('Link copied');}catch(e){prompt('Copy this link',url);}};

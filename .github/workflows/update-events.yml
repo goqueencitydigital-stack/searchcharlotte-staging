@@ -1,0 +1,28 @@
+name: Update Charlotte events
+on:
+  schedule:
+    - cron: '0 10 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: update-events
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Refresh events feed
+        env:
+          TM_API_KEY: ${{ secrets.TM_API_KEY }}
+        run: python3 scripts/update_events.py
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- assets/data/events.json; then echo "No changes"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898599+github-actions[bot]@users.noreply.github.com"
+          git add assets/data/events.json
+          git commit -m "Daily events refresh"
+          git push
