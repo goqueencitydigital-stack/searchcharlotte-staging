@@ -29,7 +29,7 @@ function feed(){const list=$('#dr-list'); if(!list) return;
       :`<div class="empty"><h3>No homes match these filters</h3><p>Try more signals or a wider area, or set an alert below and we'll watch for you.</p><a class="btn btn-sm" href="#alerts">Create a deal alert</a></div>`;
     if(map){layer.clearLayers(); const pts=[]; R.forEach(({l,s})=>{pts.push([l.lat,l.lng]); window.L.marker([l.lat,l.lng],{icon:window.L.divIcon({className:'pin',html:`<span>${short(l.price)}</span>`,iconSize:null}),title:l.address}).bindPopup(`<b>${esc(l.address)}</b><br>${fmt(l.price)}<br>${s.map(x=>esc(x.label)).join(' · ')}<br><a href="listing.html?id=${l.id}">View home</a>`).addTo(layer);}); if(pts.length) map.fitBounds(pts,{padding:[30,30],maxZoom:14});}
   };
-  const initMap=()=>{if(map||!window.L) return; map=window.L.map('dr-map',{scrollWheelZoom:false}).setView([35.2,-80.84],10); window.L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:19}).addTo(map); layer=window.L.layerGroup().addTo(map);};
+  const initMap=()=>{if(map||!window.L) return; map=window.L.map('dr-map',{scrollWheelZoom:false}).setView([35.2,-80.84],10); window.scTiles().addTo(map); layer=window.L.layerGroup().addTo(map);};
   const wide=()=>matchMedia('(min-width:1100px)').matches;
   if(wide()){initMap();}
   $('#dr-sig-chips').addEventListener('click',e=>{const b=e.target.closest('[data-sig]'); if(!b) return; const k=b.dataset.sig; on.has(k)?on.delete(k):on.add(k); b.setAttribute('aria-pressed',on.has(k)); draw(); track('deal_radar_filter',{signal:k,on:on.has(k)});});

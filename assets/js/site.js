@@ -1,3 +1,18 @@
+
+/* Base map tiles: light gray canvas with labels. Each tile tries a second server, then OpenStreetMap, so the map never shows gaps. */
+window.scTiles=function(){
+  const L=window.L, P='/ArcGIS/rest/services/Canvas/World_Light_Gray_';
+  const T=L.TileLayer.extend({createTile(c,done){
+    const img=document.createElement('img'); img.alt=''; img.setAttribute('role','presentation');
+    const path=P+this.options.sc+'/MapServer/tile/'+c.z+'/'+c.y+'/'+c.x;
+    const urls=['https://server.arcgisonline.com'+path,'https://services.arcgisonline.com'+path];
+    if(this.options.sc==='Base') urls.push('https://tile.openstreetmap.org/'+c.z+'/'+c.x+'/'+c.y+'.png');
+    let n=0; img.onload=()=>done(null,img);
+    img.onerror=()=>{n++; if(n<urls.length) setTimeout(()=>{img.src=urls[n];},250*n); else done(new Error('tile unavailable'),img);};
+    img.src=urls[0]; return img;}});
+  const o={maxZoom:19,maxNativeZoom:16};
+  return L.layerGroup([new T('',Object.assign({sc:'Base',attribution:'Tiles &copy; Esri, HERE, Garmin &middot; &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'},o)),new T('',Object.assign({sc:'Reference',pane:'overlayPane'},o))]);
+};
 /* Search Charlotte, shared interactions (preview build). */
 (function(){
 'use strict';

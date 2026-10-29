@@ -42,7 +42,7 @@ const dur=m=>m>=60?`${Math.floor(m/60)} h ${m%60?m%60+' min':''}`.trim():m+' min
 
 /* ---------- map ---------- */
 let map=null, layer=null;
-const initMap=()=>{if(map||!window.L) return; map=L.map('td-map',{scrollWheelZoom:false}); L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map); layer=L.layerGroup().addTo(map); map.setView([35.2,-80.84],10);};
+const initMap=()=>{if(map||!window.L) return; map=L.map('td-map',{scrollWheelZoom:false}); window.scTiles().addTo(map); layer=L.layerGroup().addTo(map); map.setView([35.2,-80.84],10);};
 const drawMap=sch=>{initMap(); if(!map) return; layer.clearLayers(); const s=startPt(); const pts=[[s.lat,s.lng]];
   L.marker([s.lat,s.lng],{icon:L.divIcon({className:'',html:'<div class="td-pin start" aria-hidden="true">S</div>',iconSize:[28,28],iconAnchor:[14,14]}),title:'Start: '+s.name}).bindPopup('<strong>Start</strong><br>'+esc(s.name)).addTo(layer);
   sch.stops.forEach((st,i)=>{const p=[st.l.lat,st.l.lng]; const prev=pts[pts.length-1]; pts.push(p);

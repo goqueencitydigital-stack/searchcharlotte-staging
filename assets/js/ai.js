@@ -331,7 +331,7 @@ const pre=t=>{const m=t.match(/raise my budget (\d+)%/i); if(m&&S.c.budgetMax) r
 const res=$('#sca-results'), chipsEl=$('#sca-criteria'), cardsEl=$('#sca-cards'), countEl=$('#sca-count'), nearEl=$('#sca-near'), emptyEl=$('#sca-empty');
 let map=null, layer=null;
 const initMap=()=>{if(map||!window.L) return; map=L.map('sca-map',{scrollWheelZoom:false,zoomControl:true}).setView([35.2,-80.84],10);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap contributors'}).addTo(map); layer=L.layerGroup().addTo(map);};
+  window.scTiles().addTo(map); layer=L.layerGroup().addTo(map);};
 const pinIcon=(l)=>L.divIcon({className:'sca-pin',html:`<span>${short(l.price)}</span>`,iconSize:null});
 const itemHTML=(l,miss)=>{let card=SC.card(l); const badge=SC.hasPrefs()?SC.matchBadge(l,AMEN):'';
   const drive=S.c.commute?SC.drive([l.lat,l.lng],[S.c.commute.lat,S.c.commute.lng]):null;

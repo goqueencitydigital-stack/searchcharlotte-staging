@@ -48,7 +48,7 @@ const ll=SC.ll={
   reduced:()=>matchMedia('(prefers-reduced-motion: reduce)').matches,
   /* Leaflet map with OSM tiles + attribution */
   map:(el,center,zoom)=>{ if(!window.L) return null; const m=L.map(el,{scrollWheelZoom:false}).setView(center,zoom);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(m); return m;},
+    window.scTiles().addTo(m); return m;},
   dot:(color)=>window.L?L.divIcon({className:'ll-pin',html:`<span style="background:${color}"></span>`,iconSize:[18,18],iconAnchor:[9,9]}):null
 };
 })();

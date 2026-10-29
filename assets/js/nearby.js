@@ -37,7 +37,7 @@ SC.nearby={mount(el,o){
   $('.nb-tog input').addEventListener('change',e=>{localOnly=e.target.checked; go();});
   $('.nb-q').addEventListener('input',e=>{q=e.target.value; shown=40; renderList();});
   $('.nb-more').addEventListener('click',()=>{shown+=40; renderList();});
-  const initMap=()=>{if(map||!window.L) return; map=L.map($('.nb-map'),{scrollWheelZoom:false}); L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:19}).addTo(map);
+  const initMap=()=>{if(map||!window.L) return; map=L.map($('.nb-map'),{scrollWheelZoom:false}); window.scTiles().addTo(map);
     if(o.polygon&&o.polygon.length>2) L.polygon(o.polygon,{color:'#4A2445',weight:2,fillOpacity:.06}).addTo(map); else L.circleMarker([o.lat,o.lng],{radius:8,color:'#fff',weight:2,fillColor:'#1E140D',fillOpacity:1}).bindTooltip(esc(o.name)).addTo(map);
     layer=L.layerGroup().addTo(map);};
   const load=()=>SC.poi.near(o.lat,o.lng,Math.max(radius,radius0)).then(r=>{all=r; initMap(); fit(); go();});

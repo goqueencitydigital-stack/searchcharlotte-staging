@@ -97,7 +97,7 @@ INIT.location=async()=>{const el=$('#xp-location');
   $('[data-lists]',el).innerHTML=present.length?present.map(c=>`<div class="xr-list"><h4><i style="background:${COL[c]}"></i>${esc(SC.POI_CATS[c])} <small>${groups[c].length} within 1.5 mi</small></h4><ul>${groups[c].slice(0,5).map(p=>`<li><span>${esc(p.name)}${p.sub?` <small>${esc(p.sub)}</small>`:''}</span><b>${p.mi} mi</b></li>`).join('')}</ul></div>`).join(''):`<div class="empty"><h3>No mapped places within 1.5 miles</h3><p>OpenStreetMap has no places recorded here yet for these categories.</p></div>`;
   $('[data-tog]',el).innerHTML=present.map(c=>`<button type="button" class="chip" data-cat="${c}" aria-pressed="${on.has(c)}"><i style="background:${COL[c]}"></i>${esc(SC.POI_CATS[c])}</button>`).join('');
   const L=window.L; locMap=L.map('xr-map',{scrollWheelZoom:false}).setView([l.lat,l.lng],14);
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:19}).addTo(locMap);
+  window.scTiles().addTo(locMap);
   L.marker([l.lat,l.lng],{icon:L.divIcon({className:'pin',html:`<span>${short(l.price)}</span>`,iconSize:null}),title:l.address,zIndexOffset:1000}).addTo(locMap);
   const layers={}; present.forEach(c=>{layers[c]=L.layerGroup(groups[c].slice(0,40).map(p=>L.circleMarker([p.lat,p.lng],{radius:6,color:'#fff',weight:1.5,fillColor:COL[c],fillOpacity:.95}).bindTooltip(`${esc(p.name)} · ${p.mi} mi`))); if(on.has(c)) layers[c].addTo(locMap);});
   $('[data-tog]',el).addEventListener('click',e=>{const b=e.target.closest('[data-cat]'); if(!b) return; const c=b.dataset.cat, v=b.getAttribute('aria-pressed')!=='true'; b.setAttribute('aria-pressed',v); v?layers[c].addTo(locMap):locMap.removeLayer(layers[c]);});
@@ -131,7 +131,7 @@ INIT.environment=()=>{const el=$('#xp-environment'); const addr=`${l.address}, $
    <div class="xr-disc"><b>Important.</b> Flood maps show modeled hazard areas, not whether a specific structure has flooded or will flood. They don't replace a home inspection, a survey or elevation certificate, a flood insurance quote, or legal due diligence. Lenders require flood insurance for federally backed mortgages on structures in a Special Flood Hazard Area; anyone can buy it outside one. Pins in this preview are sample locations.</div>
    ${src('<a href="https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer" target="_blank" rel="noopener">FEMA National Flood Hazard Layer (NFHL) map service</a>, queried live','as FEMA publishes map revisions (LOMRs and new FIRMs)')}`;
   const L=window.L; envMap=L.map('xr-env-map',{scrollWheelZoom:false}).setView([l.lat,l.lng],15);
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:19}).addTo(envMap);
+  window.scTiles().addTo(envMap);
   const fz=SC.intel.femaLayer(); fz.addTo(envMap);
   L.marker([l.lat,l.lng],{icon:L.divIcon({className:'pin',html:`<span>${short(l.price)}</span>`,iconSize:null}),title:l.address}).addTo(envMap);
   $('[data-fema]',el).addEventListener('change',e=>e.target.checked?fz.addTo(envMap):envMap.removeLayer(fz));

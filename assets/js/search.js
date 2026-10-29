@@ -50,7 +50,7 @@ const syncControls=()=>{$$('[data-seg]').forEach(s=>$$('button',s).forEach(b=>b.
 let map,layer,markers={};
 if(window.L){map=L.map('map',{zoomControl:false}).setView([35.2,-80.84],10); L.control.zoom({position:'topright'}).addTo(map);
  const zc=()=>map.getContainer().classList.toggle('lowzoom',map.getZoom()<12); map.on('zoomend',zc); zc();
- L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:19}).addTo(map);
+ window.scTiles().addTo(map);
  layer=L.layerGroup().addTo(map);}
 const PER=12;
 const title=()=>{if(st.saved) return 'Your saved homes'; const h=D.hoods.find(x=>x.slug===st.q.toLowerCase()||x.name.toLowerCase()===st.q.toLowerCase()); const base=h?h.name+(h.city==='Charlotte'?' Charlotte NC':', NC'):st.q?(/^[a-z0-9]+(-[a-z0-9]+)+$|^[a-z]+$/.test(st.q)?st.q.split('-').map(w=>w[0].toUpperCase()+w.slice(1)).join(' '):st.q):'Charlotte NC';

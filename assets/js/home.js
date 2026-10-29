@@ -22,6 +22,6 @@ fetch('assets/data/market-insights.json').then(r=>r.ok?r.json():Promise.reject()
 .catch(()=>{$('#mkt-grid').innerHTML='<div class="mkt-empty">Market figures are loading from our verified source feed. See the <a href="market.html" style="text-decoration:underline">full market report</a>.</div>';});
 /* mini map */
 if(window.L&&$('#mini-map')){const m=L.map('mini-map',{zoomControl:false,attributionControl:true,dragging:false,scrollWheelZoom:false,doubleClickZoom:false,touchZoom:false,keyboard:false}).setView([35.2,-80.84],10);
- L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:19}).addTo(m);
+ window.scTiles().addTo(m);
  m.fitBounds(L.latLngBounds(D.listings.filter(l=>l.lat<35.3).map(l=>[l.lat,l.lng])).pad(.05)); D.listings.filter(l=>l.lat<35.3&&l.status==='Active').filter((l,i)=>i%2===0).forEach(l=>L.marker([l.lat,l.lng],{icon:L.divIcon({className:'pin',html:`<span>${short(l.price)}</span>`,iconSize:null})}).addTo(m));}
 })();

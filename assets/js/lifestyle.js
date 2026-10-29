@@ -13,7 +13,7 @@ renderCats(); sync();
 const listings=D.listings.filter(l=>l.status!=='Under Contract'); const placeCache={};
 const placesFor=l=>placeCache[l.id]||(placeCache[l.id]=SC.poi.near(l.lat,l.lng,5));
 let map,mk=L.layerGroup(),pl=L.layerGroup(),ring=L.layerGroup();
-map=L.map('lw-map',{scrollWheelZoom:false}).setView([35.2,-80.84],10); L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:19}).addTo(map); mk.addTo(map); pl.addTo(map); ring.addTo(map);
+map=L.map('lw-map',{scrollWheelZoom:false}).setView([35.2,-80.84],10); window.scTiles().addTo(map); mk.addTo(map); pl.addTo(map); ring.addTo(map);
 let run=0;
 async function update(){const my=++run; const cats=Object.entries(S.cats); const lm=S.dest?SC.lmk(S.dest):null;
  $('#lw-count').textContent='Checking places near each home…';
