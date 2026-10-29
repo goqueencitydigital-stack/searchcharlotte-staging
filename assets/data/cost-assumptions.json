@@ -1,5 +1,5 @@
 {
-  "_about": "Verified default assumptions for True Cost to Own, Compare Homes and Investor Mode. Every value is user-adjustable in the UI. Retrieved and checked 2026-10-28 by property_intel_builder. Rates per $100 of assessed value; NC assesses real property at 100% of appraised value (assessed value may differ from list price until the next revaluation).",
+  "_about": "Verified default assumptions for True Cost to Own, Compare Homes and Investor Mode. Every value is user-adjustable in the UI. Retrieved and checked 2026-10-28. Rates per $100 of assessed value; NC assesses real property at 100% of appraised value (assessed value may differ from list price until the next revaluation).",
   "retrieved": "2026-10-28",
   "tax": {
     "note": "Combined county + municipal general rate. Excludes special district, fire district and solid-waste fees, which vary by parcel. Bills use the county's assessed value, not the purchase price.",
