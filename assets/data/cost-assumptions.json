@@ -1,0 +1,59 @@
+{
+  "_about": "Verified default assumptions for True Cost to Own, Compare Homes and Investor Mode. Every value is user-adjustable in the UI. Retrieved and checked 2026-10-28 by property_intel_builder. Rates per $100 of assessed value; NC assesses real property at 100% of appraised value (assessed value may differ from list price until the next revaluation).",
+  "retrieved": "2026-10-28",
+  "tax": {
+    "note": "Combined county + municipal general rate. Excludes special district, fire district and solid-waste fees, which vary by parcel. Bills use the county's assessed value, not the purchase price.",
+    "byCity": {
+      "Charlotte": {"label": "Mecklenburg County + City of Charlotte (FY2027)", "county": 0.4927, "city": 0.2930, "per100": 0.7857, "assessmentRatio": 1.0,
+        "sources": [
+          {"name": "Mecklenburg County Assessor's Office — Tax Rates", "url": "https://tax.mecknc.gov/tax-bills-and-payments/tax-rates", "retrieved": "2026-10-28"},
+          {"name": "City of Charlotte — City Adopts Fiscal Year 2027 Budget (adopted June 8, 2026; 29.30 cents)", "url": "https://www.charlottenc.gov/City-News/City-of-Charlotte-Adopts-Fiscal-Year-2027-Budget", "retrieved": "2026-10-28"}]},
+      "Mint Hill": {"label": "Mecklenburg County + Town of Mint Hill (FY2027)", "county": 0.4927, "city": 0.2250, "per100": 0.7177, "assessmentRatio": 1.0,
+        "sources": [
+          {"name": "Mecklenburg County Assessor's Office — Tax Rates", "url": "https://tax.mecknc.gov/tax-bills-and-payments/tax-rates", "retrieved": "2026-10-28"},
+          {"name": "The Charlotte Observer — Mecklenburg town FY2027 property tax rates (Mint Hill 22.5 cents)", "url": "https://www.charlotteobserver.com/news/politics-government/article316090790.html", "retrieved": "2026-10-28"}]},
+      "Cornelius": {"label": "Mecklenburg County + Town of Cornelius (FY2027)", "county": 0.4927, "city": 0.1931, "per100": 0.6858, "assessmentRatio": 1.0,
+        "sources": [
+          {"name": "Mecklenburg County Assessor's Office — Tax Rates", "url": "https://tax.mecknc.gov/tax-bills-and-payments/tax-rates", "retrieved": "2026-10-28"},
+          {"name": "Town of Cornelius — FY2027 Adopted Budget (19.31 cents, adopted June 1, 2026)", "url": "https://cms2.revize.com/revize/cornelius/Finance/FY2027%20Adopted%20Budget%20Tennis%20&%20Pickleball.pdf", "retrieved": "2026-10-28"}]},
+      "Waxhaw": {"label": "Union County + Town of Waxhaw (FY2027)", "county": 0.4342, "city": 0.2900, "per100": 0.7242, "assessmentRatio": 1.0,
+        "sources": [
+          {"name": "Union County — FY2026-27 budget adopted (43.42 cents)", "url": "https://www.unioncountync.gov/Home/Components/News/News/3396/", "retrieved": "2026-10-28"},
+          {"name": "Town of Waxhaw — Tax Department (29 cents)", "url": "https://www.waxhaw.com/government/departments/tax", "retrieved": "2026-10-28"}]}
+    },
+    "counties": [
+      {"name": "Mecklenburg County, NC", "per100": 0.4927, "source": "NC Department of Revenue — County Property Tax Rates FY2026-2027", "url": "https://www.ncdor.gov/taxes-forms/property-tax/property-tax-rates/county-property-tax-rates-and-reappraisal-schedules/fiscal-year-2026-2027", "retrieved": "2026-10-28"},
+      {"name": "Union County, NC", "per100": 0.4342, "source": "NC Department of Revenue — County Property Tax Rates FY2026-2027", "url": "https://www.ncdor.gov/taxes-forms/property-tax/property-tax-rates/county-property-tax-rates-and-reappraisal-schedules/fiscal-year-2026-2027", "retrieved": "2026-10-28"},
+      {"name": "Cabarrus County, NC", "per100": 0.576, "source": "Cabarrus County — Commissioners adopt FY2026-27 budget", "url": "https://www.cabarruscounty.us/News/Cabarrus-commissioners-adopt-Fiscal-Year-2026-27-budget", "retrieved": "2026-10-28"},
+      {"name": "Iredell County, NC", "per100": 0.50, "source": "Iredell County — Tax Rates", "url": "https://iredellcountync.gov/382/Tax-Rates", "retrieved": "2026-10-28"}
+    ],
+    "yorkSC": {"name": "York County, SC", "note": "South Carolina assesses an owner-occupied legal residence at 4% of fair market value (6% for other residential property such as rentals), then applies local millage that varies by school and special district. Millage was not verified for this preview, so enter the rate from the York County tax estimator or your closing attorney.", "per100": null,
+      "sources": [
+        {"name": "S.C. Code of Laws §12-43-220 (assessment ratios)", "url": "https://www.scstatehouse.gov/code/t12c043.php", "retrieved": "2026-10-28"},
+        {"name": "SC Department of Revenue — Property tax exemptions", "url": "https://dor.sc.gov/property/property-tax-exemptions", "retrieved": "2026-10-28"}]}
+  },
+  "rate": {"value": 7.32, "label": "Freddie Mac PMMS average 30-year fixed rate, week of October 22, 2026", "fifteen": 6.68, "asOf": "2026-10-22", "source": "Freddie Mac Primary Mortgage Market Survey", "url": "https://www.freddiemac.com/pmms", "retrieved": "2026-10-28", "note": "National weekly average for borrowers with strong credit and 20% down; your rate depends on credit, points, loan type and lender."},
+  "insurance": {"value": 3025, "low": 2566, "high": 3025, "label": "North Carolina average homeowners premium", "source": "NerdWallet — Average cost of homeowners insurance in North Carolina ($400,000 dwelling coverage)", "url": "https://www.nerdwallet.com/insurance/homeowners/north-carolina-home-insurance", "retrieved": "2026-10-28",
+    "alt": [{"name": "LendingTree 2026 State of Home Insurance report, as reported by WWAY ($2,566/yr NC average)", "url": "https://www.wwaytv3.com/report-north-carolina-home-insurance-costs-up-nearly-47-since-2020/", "retrieved": "2026-10-28"},
+            {"name": "Forbes Advisor — Average cost of homeowners insurance ($350,000 dwelling)", "url": "https://www.forbes.com/financial-services/average-cost-homeowners-insurance/", "retrieved": "2026-10-28"}],
+    "note": "Statewide averages; premiums vary by coverage amount, roof age, deductible, claims history and insurer. Get a quote."},
+  "closing": {"value": 3, "low": 2, "high": 5, "label": "Typical NC buyer closing costs, % of price", "source": "Churchill Mortgage — Buying a home in North Carolina (2%–5% of the purchase price)", "url": "https://www.churchillmortgage.com/buying-a-home-in-north-carolina", "retrieved": "2026-10-28",
+    "alt": [{"name": "NetSheet.org — North Carolina buyer closing costs", "url": "https://www.netsheet.org/buyer-closing-costs/north-carolina.html", "retrieved": "2026-10-28"}],
+    "note": "Includes lender fees, attorney, title insurance, recording and prepaid items; excludes down payment. Your Loan Estimate gives actual figures."},
+  "maintenance": {"value": 1, "low": 1, "high": 4, "label": "Annual maintenance & repairs, % of home value", "source": "Fannie Mae — How to build your maintenance and repair budget (1%–4% of the home's value per year)", "url": "https://yourhome.fanniemae.com/own/how-build-your-maintenance-and-repair-budget", "retrieved": "2026-10-28",
+    "alt": [{"name": "State Farm — How to budget and save for home maintenance (1% rule)", "url": "https://www.statefarm.com/simple-insights/residence/how-to-budget-and-save-for-home-maintenance", "retrieved": "2026-10-28"}],
+    "note": "Rule of thumb. Older homes, pools and large lots typically run higher."},
+  "pmi": {"value": 0.8, "low": 0.46, "high": 1.5, "label": "Private mortgage insurance, % of loan per year (when down payment is under 20%)", "source": "Experian — How much does PMI cost? (Urban Institute range 0.46%–1.50%)", "url": "https://www.experian.com/blogs/ask-experian/how-much-does-private-mortgage-insurance-pmi-cost/", "retrieved": "2026-10-28",
+    "note": "Default 0.8% is an assumption within the cited range. Actual PMI depends on credit score, loan-to-value and insurer. FHA/VA loans use different mortgage insurance or funding fees."},
+  "mileage": {"value": 0.76, "prior": 0.725, "label": "IRS standard mileage rate (business), July 1 – Dec 31, 2026", "source": "IRS — Standard mileage rates (72.5¢ Jan 1–Jun 30, 2026; 76¢ Jul 1–Dec 31, 2026)", "url": "https://www.irs.gov/tax-professionals/standard-mileage-rates", "retrieved": "2026-10-28",
+    "note": "Used only as a proxy for the full per-mile cost of driving (fuel, wear, insurance, depreciation). Commuting is not deductible; this is not tax advice."},
+  "workdays": {"value": 21, "label": "Commute days per month (your assumption)"},
+  "utilities": {"value": 0, "label": "Utilities ($/mo) — enter your estimate", "note": "No verified average is used. Ask the seller or utility (Duke Energy, Charlotte Water, Piedmont Natural Gas) for 12-month history."},
+  "rent": {
+    "label": "HUD FY2026 Fair Market Rents — Charlotte-Concord-Gastonia, NC-SC HMFA",
+    "area": "Charlotte-Concord-Gastonia, NC-SC HMFA (includes Mecklenburg, Cabarrus, Gaston, Union and York SC counties)",
+    "byBeds": {"0": 1469, "1": 1538, "2": 1686, "3": 2076, "4": 2637},
+    "source": "HUD User — FY2026 Fair Market Rents schedule", "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2026/FY2026_FMR_Schedule.pdf", "info": "https://www.huduser.gov/portal/datasets/fmr.html", "retrieved": "2026-10-28",
+    "note": "FMRs are 40th-percentile gross rents (rent + utilities) used for housing programs — a conservative benchmark, not a market rent estimate for a specific home. Homes with 5+ bedrooms are shown against the 4BR figure. Lake Norman areas in Iredell County are outside this HMFA."
+  }
+}

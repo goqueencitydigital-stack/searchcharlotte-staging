@@ -1,0 +1,29 @@
+/* Mobile layer — loaded last on every page. Touch targets >= 44px, readable text, no iOS input zoom. */
+@media (max-width:760px){
+  .btn,.btn-sm,.chip,button.chip,a.chip,.seg button,.xr-tabs button,.tabs button,.cat-tabs button,.ll-tabs a,.pager button,
+  .sca-act,.sca-viewtog button,.ix-toggle,.hm-btns button,.ah-acts button,.cmp-ctl button,.rl-tg,.gx-all,.dots~button,
+  .hero-actions a,.hero-quick a,.areas-head a,.svc-body a,.calc-out a,.empty a,.pd-actions button,.ll-lnk{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+  .chips,.ah-chips,.cat-tabs,.dr-sigs-f,.tabs,.xr-tabs,.ll-tabs{gap:8px!important}
+  .ll-ev-links a,.qlinks a,.cm-az a,.xr-note a,.info a.more,.sell a,.market a{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+  .cm-az a{min-width:44px;justify-content:center}
+  button.fav{min-width:44px;min-height:44px}
+  .hm-info,.sca-mic,.sca-link{min-width:44px;min-height:44px}
+  input[type=checkbox],input[type=radio]{width:22px;height:22px;min-width:22px;flex:0 0 auto}
+  input[type=text],input[type=search],input[type=email],input[type=tel],input[type=number],input[type=date],input[type=time],input[type=password],input[type=url],select,textarea{font-size:16px!important;min-height:44px}
+  input.hp{min-height:0}
+  /* readable small text */
+  .card-body .ptype,.card-body .facts,.addr span{font-size:12.5px!important}
+  .card-row .status,.card-img .badge,.ll-badge,.rl-tag span,.reel-badge,.gx-sample,.xr-sig b,.xr-est,.verify,.ll-lock{font-size:12px!important}
+  .card-row .grid-mark{font-size:10.5px!important}
+  .mega-h,.mp-h{font-size:12.5px!important}
+  .img-credit,.img-credit a{font-size:11.5px!important}
+  .ll-ev-date span,.ll-ev-date small,.rl-rail button,.rl-rail a,.rl-sample,.rl-label,.who small,.chip small,.lyr small{font-size:12px!important}
+  .mls-disclaimer,.mls-disclaimer *{font-size:12px!important;line-height:1.5}
+  .rv-lab{font-size:11.5px!important}
+  .hero-credit{font-size:11.5px}
+}
+@media (max-width:760px){
+ .chip,.chips button,.ah-chips button{min-height:44px;display:inline-flex;align-items:center}
+ .dots{gap:16px}.dots button{position:relative}
+ .dots button::after{content:"";position:absolute;inset:-18px -8px}
+}

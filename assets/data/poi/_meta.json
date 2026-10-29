@@ -1,0 +1,24 @@
+{
+ "source": "OpenStreetMap contributors via Geofabrik extracts (north-carolina-latest, south-carolina-latest)",
+ "license": "ODbL 1.0 https://opendatacommons.org/licenses/odbl/",
+ "extracted": "2026-10-28",
+ "count": 11445,
+ "by_category": {
+  "water": 456,
+  "schools": 744,
+  "parks": 745,
+  "fitness": 317,
+  "services": 1263,
+  "shopping": 1934,
+  "health": 612,
+  "venues": 498,
+  "bars": 275,
+  "restaurants": 2863,
+  "grocery": 436,
+  "cafes": 490,
+  "transit": 58,
+  "golf": 69,
+  "trails": 685
+ },
+ "tiles": 131
+}

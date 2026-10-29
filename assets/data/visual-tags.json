@@ -1,0 +1,394 @@
+{
+ "_about": "Visual tags for the site's own generated/licensed sample photos in assets/img (proof of concept for Find Homes Like This). Tags were assigned by hand from each image; avg/brightness/warmth are computed from the pixels. Production replaces this with a licensed visual-search index over authorized Canopy MLS photos.",
+ "generated": "2026-10-28",
+ "vocab": {
+  "architecture": [
+   "Modern",
+   "Contemporary",
+   "Modern Farmhouse",
+   "Craftsman",
+   "Traditional",
+   "Transitional",
+   "Colonial",
+   "Tudor",
+   "Ranch",
+   "High-rise"
+  ],
+  "exterior": [
+   "Brick",
+   "Stucco",
+   "Siding",
+   "Board and batten",
+   "Stone accents",
+   "White exterior",
+   "Large windows",
+   "Glass"
+  ],
+  "kitchen": [
+   "White kitchen",
+   "Dark wood cabinets",
+   "Stone counters",
+   "Island seating",
+   "Pendant lighting",
+   "Wood floors"
+  ],
+  "outdoor": [
+   "Pool",
+   "Patio",
+   "Outdoor lounge",
+   "Front lawn",
+   "Front porch",
+   "Mature trees",
+   "Attached garage",
+   "Skyline view"
+  ]
+ },
+ "images": {
+  "budget-300": {
+   "architecture": [
+    "Modern Farmhouse"
+   ],
+   "exterior": [
+    "Board and batten",
+    "White exterior"
+   ],
+   "kitchen": [],
+   "outdoor": [
+    "Front lawn",
+    "Front porch",
+    "Mature trees"
+   ],
+   "room": "Exterior",
+   "avg": [
+    111,
+    105,
+    91
+   ],
+   "brightness": 0.411,
+   "warmth": 0.075
+  },
+  "budget-400": {
+   "architecture": [
+    "Transitional"
+   ],
+   "exterior": [],
+   "kitchen": [
+    "White kitchen",
+    "Island seating",
+    "Pendant lighting",
+    "Wood floors"
+   ],
+   "outdoor": [],
+   "room": "Kitchen",
+   "avg": [
+    171,
+    156,
+    138
+   ],
+   "brightness": 0.621,
+   "warmth": 0.129
+  },
+  "budget-500": {
+   "architecture": [
+    "Modern"
+   ],
+   "exterior": [
+    "Stucco",
+    "Stone accents",
+    "Large windows"
+   ],
+   "kitchen": [],
+   "outdoor": [
+    "Front lawn",
+    "Patio"
+   ],
+   "room": "Exterior",
+   "avg": [
+    109,
+    98,
+    89
+   ],
+   "brightness": 0.394,
+   "warmth": 0.079
+  },
+  "budget-750": {
+   "architecture": [
+    "Modern"
+   ],
+   "exterior": [
+    "Large windows",
+    "Stucco"
+   ],
+   "kitchen": [],
+   "outdoor": [
+    "Pool",
+    "Patio",
+    "Outdoor lounge",
+    "Mature trees"
+   ],
+   "room": "Exterior",
+   "avg": [
+    90,
+    91,
+    91
+   ],
+   "brightness": 0.357,
+   "warmth": -0.005
+  },
+  "kitchen-dark": {
+   "architecture": [
+    "Contemporary"
+   ],
+   "exterior": [],
+   "kitchen": [
+    "Dark wood cabinets",
+    "Island seating",
+    "Stone counters"
+   ],
+   "outdoor": [],
+   "room": "Kitchen",
+   "avg": [
+    151,
+    136,
+    129
+   ],
+   "brightness": 0.547,
+   "warmth": 0.087
+  },
+  "twilight-house": {
+   "architecture": [
+    "Traditional"
+   ],
+   "exterior": [
+    "Siding"
+   ],
+   "kitchen": [],
+   "outdoor": [
+    "Front lawn",
+    "Mature trees",
+    "Attached garage"
+   ],
+   "room": "Exterior",
+   "avg": [
+    85,
+    73,
+    61
+   ],
+   "brightness": 0.294,
+   "warmth": 0.097
+  },
+  "uptown": {
+   "architecture": [
+    "High-rise"
+   ],
+   "exterior": [
+    "Glass"
+   ],
+   "kitchen": [],
+   "outdoor": [
+    "Skyline view"
+   ],
+   "room": "Exterior",
+   "avg": [
+    130,
+    112,
+    108
+   ],
+   "brightness": 0.46,
+   "warmth": 0.089
+  },
+  "sell-home": {
+   "architecture": [
+    "Transitional"
+   ],
+   "exterior": [],
+   "kitchen": [],
+   "outdoor": [],
+   "room": "Living room",
+   "avg": [
+    137,
+    127,
+    114
+   ],
+   "brightness": 0.505,
+   "warmth": 0.09
+  },
+  "modern-dusk": {
+   "architecture": [
+    "Modern"
+   ],
+   "exterior": [
+    "Stucco",
+    "Large windows"
+   ],
+   "kitchen": [],
+   "outdoor": [
+    "Pool",
+    "Patio",
+    "Attached garage"
+   ],
+   "room": "Exterior",
+   "avg": [
+    171,
+    133,
+    91
+   ],
+   "brightness": 0.547,
+   "warmth": 0.316
+  },
+  "hero-pool": {
+   "architecture": [
+    "High-rise"
+   ],
+   "exterior": [],
+   "kitchen": [],
+   "outdoor": [
+    "Pool",
+    "Skyline view",
+    "Patio"
+   ],
+   "room": "Exterior",
+   "avg": [
+    146,
+    118,
+    82
+   ],
+   "brightness": 0.48,
+   "warmth": 0.249
+  },
+  "house-dusk": {
+   "architecture": [
+    "Transitional"
+   ],
+   "exterior": [
+    "Stucco",
+    "White exterior",
+    "Large windows"
+   ],
+   "kitchen": [],
+   "outdoor": [
+    "Front lawn",
+    "Attached garage"
+   ],
+   "room": "Exterior",
+   "avg": [
+    93,
+    86,
+    81
+   ],
+   "brightness": 0.344,
+   "warmth": 0.048
+  },
+  "brick-home": {
+   "architecture": [
+    "Traditional"
+   ],
+   "exterior": [
+    "Brick"
+   ],
+   "kitchen": [],
+   "outdoor": [
+    "Front lawn",
+    "Mature trees",
+    "Attached garage"
+   ],
+   "room": "Exterior",
+   "avg": [
+    107,
+    98,
+    78
+   ],
+   "brightness": 0.386,
+   "warmth": 0.113
+  },
+  "testimonial-home": {
+   "architecture": [
+    "Transitional"
+   ],
+   "exterior": [
+    "White exterior",
+    "Large windows"
+   ],
+   "kitchen": [],
+   "outdoor": [
+    "Front lawn",
+    "Attached garage"
+   ],
+   "room": "Exterior",
+   "avg": [
+    93,
+    87,
+    81
+   ],
+   "brightness": 0.345,
+   "warmth": 0.047
+  },
+  "unlock-aerial": {
+   "architecture": [
+    "Traditional"
+   ],
+   "exterior": [],
+   "kitchen": [],
+   "outdoor": [
+    "Mature trees"
+   ],
+   "room": "Aerial",
+   "avg": [
+    116,
+    100,
+    73
+   ],
+   "brightness": 0.399,
+   "warmth": 0.172
+  },
+  "buy-home": {
+   "architecture": [
+    "Craftsman",
+    "Tudor"
+   ],
+   "exterior": [
+    "Brick"
+   ],
+   "kitchen": [],
+   "outdoor": [
+    "Front lawn",
+    "Front porch",
+    "Mature trees"
+   ],
+   "room": "Exterior",
+   "avg": [
+    140,
+    151,
+    111
+   ],
+   "brightness": 0.561,
+   "warmth": 0.113
+  }
+ },
+ "samples": [
+  {
+   "img": "budget-300",
+   "label": "White modern farmhouse"
+  },
+  {
+   "img": "budget-750",
+   "label": "Modern home with pool"
+  },
+  {
+   "img": "buy-home",
+   "label": "Brick craftsman"
+  },
+  {
+   "img": "kitchen-dark",
+   "label": "Dark wood kitchen"
+  },
+  {
+   "img": "budget-400",
+   "label": "Bright white kitchen"
+  },
+  {
+   "img": "uptown",
+   "label": "High-rise skyline"
+  }
+ ]
+}

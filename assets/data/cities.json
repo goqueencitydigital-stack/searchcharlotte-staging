@@ -1,0 +1,2333 @@
+{
+  "generated": "2026-10-28",
+  "count": 20,
+  "cities": [
+    {
+      "slug": "matthews",
+      "name": "Matthews",
+      "county": "Mecklenburg",
+      "state": "NC",
+      "area": "Southeast Suburbs",
+      "zip_codes": [
+        "28105",
+        "28104"
+      ],
+      "lat": 35.1194,
+      "lng": -80.71,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 11,
+        "basis": "straight-line distance from town center coordinates to Uptown (35.2272, -80.8431); driving distance is longer",
+        "source": "https://en.wikipedia.org/wiki/Matthews,_North_Carolina"
+      },
+      "tagline": "A Mecklenburg County town with a walkable downtown and easy I-485 access",
+      "overview": [
+        "Matthews is a town in southeastern Mecklenburg County, bordering Charlotte, with a population of 29,435 at the 2020 census. Its compact downtown along Trade Street and John Street anchors community life with local shops and restaurants.",
+        "Housing ranges from older homes near downtown to subdivisions built from the 1980s onward and newer townhomes. Colonel Francis J. Beatty Park and the Four Mile Creek Greenway offer outdoor space. Independence Boulevard (US 74) and I-485 connect Matthews with Charlotte, Mint Hill, and Union County. Most of the town uses ZIP code 28105, and some Matthews mailing addresses (28104/28105) actually lie in Union County, so buyers should verify the jurisdiction and county on each listing."
+      ],
+      "housing_styles": [
+        "Older homes near downtown",
+        "1980s–2000s subdivisions",
+        "Townhomes",
+        "Newer construction"
+      ],
+      "dining": [
+        "Downtown Matthews restaurants (Trade St and John St)"
+      ],
+      "parks": [
+        "Colonel Francis J. Beatty Park",
+        "Four Mile Creek Greenway"
+      ],
+      "shopping": [
+        "Downtown Matthews shops",
+        "Shopping centers along US 74 and NC 51"
+      ],
+      "transportation": [
+        "I-485",
+        "Independence Blvd (US 74)",
+        "NC 51 (Matthews-Mint Hill Rd / Pineville-Matthews Rd)",
+        "Monroe Rd"
+      ],
+      "feature_tags": [
+        "walkable",
+        "greenway"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse"
+      ],
+      "faq": [
+        {
+          "q": "What county is Matthews in?",
+          "a": "Matthews is in Mecklenburg County, although some homes with Matthews mailing addresses are in Union County."
+        },
+        {
+          "q": "What ZIP code is Matthews?",
+          "a": "The town is mainly in ZIP code 28105; 28104 addresses are typically in Union County."
+        },
+        {
+          "q": "Is Matthews near the light rail?",
+          "a": "No. Matthews is not served by LYNX rail; US 74 and I-485 are the main routes."
+        }
+      ],
+      "idx_note": "Use City = Matthews plus a county filter; Matthews mailing addresses can fall outside town limits.",
+      "city": "Matthews",
+      "summary": "Matthews is a town in southeastern Mecklenburg County, bordering Charlotte, with a population of 29,435 at the 2020 census. Its compact downtown along Trade Street and John Street anchors community life with local shops and restaurants.",
+      "housing": "Typical housing: Older homes near downtown; 1980s–2000s subdivisions; Townhomes; Newer construction.",
+      "getting_around": "Main routes: I-485; Independence Blvd (US 74); NC 51 (Matthews-Mint Hill Rd / Pineville-Matthews Rd); Monroe Rd.",
+      "nearby": [
+        {
+          "name": "Downtown Matthews restaurants (Trade St and John St)",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Downtown Matthews shops",
+          "type": "shopping",
+          "note": "Shopping"
+        },
+        {
+          "name": "Shopping centers along US 74 and NC 51",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the Charlotte-Mecklenburg Schools (cms.k12.nc.us) school locator to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Matthews, NC (coordinates, county, background)",
+          "label": "Wikipedia – Matthews, NC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Matthews,_North_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        },
+        {
+          "title": "OpenStreetMap – Colonel Francis J. Beatty Regional Park",
+          "label": "OpenStreetMap – Colonel Francis J. Beatty Regional Park",
+          "url": "https://www.openstreetmap.org/way/511370173"
+        }
+      ],
+      "overview_word_count": 112,
+      "img": "areas/matthews",
+      "img_credit": {
+        "author": "Jon Platek",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Downtown_Matthews_NC_1.jpg",
+        "title": "Downtown Matthews NC 1.jpg",
+        "depicts": "Downtown Matthews"
+      }
+    },
+    {
+      "slug": "mint-hill",
+      "name": "Mint Hill",
+      "county": "Mecklenburg / Union",
+      "state": "NC",
+      "area": "Southeast Suburbs",
+      "zip_codes": [
+        "28227"
+      ],
+      "lat": 35.1783,
+      "lng": -80.6528,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 11,
+        "basis": "straight-line distance from town center coordinates to Uptown (35.2272, -80.8431); driving distance is longer",
+        "source": "https://en.wikipedia.org/wiki/Mint_Hill,_North_Carolina"
+      },
+      "tagline": "A suburban town on Charlotte's southeast edge with room to spread out",
+      "overview": [
+        "Mint Hill is a suburban town on Charlotte's southeast edge, mostly in Mecklenburg County with a small portion in Union County. Its population was 26,450 at the 2020 census, up from 22,722 in 2010. The town is close to the Cabarrus County line and has its own town government.",
+        "Housing is mainly single-family, from older homes on larger lots to newer subdivisions, with some townhomes and remaining acreage in the outer areas. Residents use I-485, Albemarle Road (NC 24/27), and Lawyers Road to reach Charlotte, and Matthews' shopping is a short drive south. Reedy Creek Nature Preserve and McAlpine Creek Park are nearby. Because Mint Hill is a separate municipality, property taxes include both county and town rates; homes in the Union County portion use Union County services, so verify the county on each listing."
+      ],
+      "housing_styles": [
+        "Older homes on larger lots",
+        "1990s–2020s subdivisions",
+        "Townhomes",
+        "Acreage"
+      ],
+      "dining": [
+        "Restaurants along Matthews-Mint Hill Rd and Lawyers Rd"
+      ],
+      "parks": [
+        "Reedy Creek Nature Preserve (nearby)",
+        "McAlpine Creek Park (nearby)"
+      ],
+      "shopping": [
+        "Shopping centers along Matthews-Mint Hill Rd"
+      ],
+      "transportation": [
+        "I-485",
+        "Albemarle Rd (NC 24/27)",
+        "Lawyers Rd",
+        "NC 51"
+      ],
+      "feature_tags": [
+        "acreage",
+        "new-construction"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse",
+        "Land"
+      ],
+      "faq": [
+        {
+          "q": "What county is Mint Hill in?",
+          "a": "Mostly Mecklenburg County, with a small portion in Union County."
+        },
+        {
+          "q": "What ZIP code is Mint Hill?",
+          "a": "Mint Hill mainly uses ZIP code 28227."
+        },
+        {
+          "q": "Is Mint Hill part of Charlotte?",
+          "a": "No. Mint Hill is its own incorporated town."
+        }
+      ],
+      "idx_note": "Use City = Mint Hill; check county field for the Union County portion.",
+      "city": "Mint Hill",
+      "summary": "Mint Hill is a suburban town on Charlotte's southeast edge, mostly in Mecklenburg County with a small portion in Union County. Its population was 26,450 at the 2020 census, up from 22,722 in 2010. The town is close to the Cabarrus County line and has its own town government.",
+      "housing": "Typical housing: Older homes on larger lots; 1990s–2020s subdivisions; Townhomes; Acreage.",
+      "getting_around": "Main routes: I-485; Albemarle Rd (NC 24/27); Lawyers Rd; NC 51.",
+      "nearby": [
+        {
+          "name": "Restaurants along Matthews-Mint Hill Rd and Lawyers Rd",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Shopping centers along Matthews-Mint Hill Rd",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the Charlotte-Mecklenburg Schools (cms.k12.nc.us) school locator to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Mint Hill, NC (coordinates, county, background)",
+          "label": "Wikipedia – Mint Hill, NC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Mint_Hill,_North_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        }
+      ],
+      "overview_word_count": 135,
+      "img": "areas/mint-hill",
+      "img_credit": {
+        "author": "Algorhythms",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Mint_Hill_City_Hall_%26_Fountain.jpg",
+        "title": "Mint Hill City Hall & Fountain.jpg",
+        "depicts": "Mint Hill Town Hall fountain"
+      }
+    },
+    {
+      "slug": "pineville",
+      "name": "Pineville",
+      "county": "Mecklenburg",
+      "state": "NC",
+      "area": "South Suburbs",
+      "zip_codes": [
+        "28134"
+      ],
+      "lat": 35.0864,
+      "lng": -80.8914,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 10,
+        "basis": "straight-line distance from town center coordinates to Uptown (35.2272, -80.8431); driving distance is longer",
+        "source": "https://en.wikipedia.org/wiki/Pineville,_North_Carolina"
+      },
+      "tagline": "A small south Mecklenburg town with big retail and quick access to the state line",
+      "overview": [
+        "Pineville is a small town at the southern tip of Mecklenburg County, between Charlotte and Fort Mill, South Carolina. Its population was 10,602 at the 2020 census, up from 7,479 in 2010. The town has a small historic downtown along Main Street and is best known regionally for Carolina Place mall and the retail corridors around it.",
+        "Housing includes older single-family homes near downtown, townhomes, and a large number of apartment communities. The LYNX Blue Line's southern terminus, I-485/South Boulevard station, is just north of town in Charlotte, and I-485, I-77, NC 51, and US 521 provide driving routes. Carowinds and the South Carolina line are minutes away. Pineville is a separate municipality with its own town services and tax rate, and many homes outside town limits also use the 28134 ZIP, so check jurisdiction carefully."
+      ],
+      "housing_styles": [
+        "Older homes near downtown",
+        "Townhomes",
+        "Apartments",
+        "1980s–2000s subdivisions"
+      ],
+      "dining": [
+        "Downtown Pineville restaurants (Main St)",
+        "Restaurants around Carolina Place"
+      ],
+      "parks": [
+        "Little Sugar Creek Greenway (southern section)"
+      ],
+      "shopping": [
+        "Carolina Place",
+        "Retail along NC 51 and South Blvd"
+      ],
+      "transportation": [
+        "I-485",
+        "I-77",
+        "NC 51",
+        "South Blvd (US 521)",
+        "LYNX Blue Line – I-485/South Blvd station (nearby)"
+      ],
+      "feature_tags": [
+        "light-rail"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse",
+        "Condo"
+      ],
+      "faq": [
+        {
+          "q": "What ZIP code is Pineville?",
+          "a": "Pineville uses ZIP code 28134, which also covers some areas outside town limits."
+        },
+        {
+          "q": "Is Pineville near the light rail?",
+          "a": "Yes. The LYNX Blue Line's I-485/South Boulevard station is just north of town."
+        },
+        {
+          "q": "What shopping is in Pineville?",
+          "a": "Carolina Place mall and the surrounding retail corridors."
+        }
+      ],
+      "idx_note": "Use City = Pineville, but confirm town limits; 28134 includes Charlotte addresses.",
+      "city": "Pineville",
+      "summary": "Pineville is a small town at the southern tip of Mecklenburg County, between Charlotte and Fort Mill, South Carolina. Its population was 10,602 at the 2020 census, up from 7,479 in 2010. The town has a small historic downtown along Main Street and is best known regionally for Carolina Place mall and the retail corridors around it.",
+      "housing": "Typical housing: Older homes near downtown; Townhomes; Apartments; 1980s–2000s subdivisions.",
+      "getting_around": "Main routes: I-485; I-77; NC 51; South Blvd (US 521); LYNX Blue Line – I-485/South Blvd station (nearby).",
+      "nearby": [
+        {
+          "name": "Downtown Pineville restaurants (Main St)",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Restaurants around Carolina Place",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Carolina Place",
+          "type": "shopping",
+          "note": "Shopping"
+        },
+        {
+          "name": "Retail along NC 51 and South Blvd",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the Charlotte-Mecklenburg Schools (cms.k12.nc.us) school locator to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Pineville, NC (coordinates, county, background)",
+          "label": "Wikipedia – Pineville, NC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Pineville,_North_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        },
+        {
+          "title": "OpenStreetMap – Carolina Place Mall",
+          "label": "OpenStreetMap – Carolina Place Mall",
+          "url": "https://www.openstreetmap.org/way/184145758"
+        },
+        {
+          "title": "Wikipedia – Lynx Blue Line",
+          "label": "Wikipedia – Lynx Blue Line",
+          "url": "https://en.wikipedia.org/wiki/Lynx_Blue_Line"
+        }
+      ],
+      "overview_word_count": 136,
+      "img": "areas/pineville",
+      "img_credit": {
+        "author": "Ken Lund from Reno, Nevada, USA",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:President_James_K._Polk_Birthplace,_Pineville,_North_Carolina_(33666981968).jpg",
+        "title": "President James K. Polk Birthplace, Pineville, North Carolina (33666981968).jpg",
+        "depicts": "President James K. Polk Birthplace State Historic Site"
+      }
+    },
+    {
+      "slug": "huntersville",
+      "name": "Huntersville",
+      "county": "Mecklenburg",
+      "state": "NC",
+      "area": "Lake Norman",
+      "zip_codes": [
+        "28078"
+      ],
+      "lat": 35.4061,
+      "lng": -80.8717,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 14,
+        "basis": "as stated by Wikipedia",
+        "source": "https://en.wikipedia.org/wiki/Huntersville,_North_Carolina"
+      },
+      "tagline": "North Mecklenburg's largest town, between Charlotte and Lake Norman",
+      "overview": [
+        "Huntersville is a suburban town in northern Mecklenburg County, about 14 miles north of Charlotte. With a 2020 census population of 61,376, it is one of the larger municipalities in North Carolina. The town stretches from the Charlotte line toward Lake Norman and Mountain Island Lake.",
+        "Housing includes master-planned communities, golf neighborhoods, townhomes, and some lakefront and lake-access homes. Birkdale Village is a popular open-air shopping and dining center, and Latta Nature Preserve offers trails, horseback riding, and Mountain Island Lake access. I-77 and I-485 are the main commuting routes, along with NC 73 and NC 115. Huntersville uses ZIP code 28078, and buyers should check whether a home is inside town limits or in unincorporated Mecklenburg County."
+      ],
+      "housing_styles": [
+        "Master-planned communities",
+        "Golf-course homes",
+        "Townhomes",
+        "Lake-access homes"
+      ],
+      "dining": [
+        "Birkdale Village restaurants",
+        "Downtown Huntersville dining"
+      ],
+      "parks": [
+        "Latta Nature Preserve",
+        "Mountain Island Lake access"
+      ],
+      "shopping": [
+        "Birkdale Village",
+        "Shopping along NC 73 and I-77"
+      ],
+      "transportation": [
+        "I-77",
+        "I-485",
+        "NC 73",
+        "NC 115"
+      ],
+      "feature_tags": [
+        "lake-access",
+        "golf",
+        "new-construction"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse",
+        "Condo"
+      ],
+      "faq": [
+        {
+          "q": "How far is Huntersville from Charlotte?",
+          "a": "About 14 miles north, according to Wikipedia."
+        },
+        {
+          "q": "What ZIP code is Huntersville?",
+          "a": "Huntersville uses ZIP code 28078."
+        },
+        {
+          "q": "Is Huntersville near the light rail?",
+          "a": "No. I-77 is the main commuter route."
+        }
+      ],
+      "idx_note": "Use City = Huntersville; subdivision names work well for master-planned communities.",
+      "city": "Huntersville",
+      "summary": "Huntersville is a suburban town in northern Mecklenburg County, about 14 miles north of Charlotte. With a 2020 census population of 61,376, it is one of the larger municipalities in North Carolina. The town stretches from the Charlotte line toward Lake Norman and Mountain Island Lake.",
+      "housing": "Typical housing: Master-planned communities; Golf-course homes; Townhomes; Lake-access homes.",
+      "getting_around": "Main routes: I-77; I-485; NC 73; NC 115.",
+      "nearby": [
+        {
+          "name": "Birkdale Village restaurants",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Downtown Huntersville dining",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Birkdale Village",
+          "type": "shopping",
+          "note": "Shopping"
+        },
+        {
+          "name": "Shopping along NC 73 and I-77",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the Charlotte-Mecklenburg Schools (cms.k12.nc.us) school locator to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Huntersville, NC (coordinates, county, background)",
+          "label": "Wikipedia – Huntersville, NC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Huntersville,_North_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        },
+        {
+          "title": "OpenStreetMap – Birkdale Village",
+          "label": "OpenStreetMap – Birkdale Village",
+          "url": "https://www.openstreetmap.org/way/833552644"
+        },
+        {
+          "title": "OpenStreetMap – Latta Nature Preserve",
+          "label": "OpenStreetMap – Latta Nature Preserve",
+          "url": "https://www.openstreetmap.org/relation/8067539"
+        }
+      ],
+      "overview_word_count": 118,
+      "img": "areas/huntersville",
+      "img_credit": {
+        "author": "Brett VA",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Birkdale_Village_Town_Center_Mixed_use_pan_(5488705081).jpg",
+        "title": "Birkdale Village Town Center Mixed use pan (5488705081).jpg",
+        "depicts": "Birkdale Village"
+      }
+    },
+    {
+      "slug": "cornelius",
+      "name": "Cornelius",
+      "county": "Mecklenburg",
+      "state": "NC",
+      "area": "Lake Norman",
+      "zip_codes": [
+        "28031"
+      ],
+      "lat": 35.4725,
+      "lng": -80.8814,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 17,
+        "basis": "straight-line distance from town center coordinates to Uptown (35.2272, -80.8431); driving distance is longer",
+        "source": "https://en.wikipedia.org/wiki/Cornelius,_North_Carolina"
+      },
+      "tagline": "A Lake Norman town with waterfront homes, marinas, and Jetton Park",
+      "overview": [
+        "Cornelius is a suburban town along Lake Norman in northern Mecklenburg County. Its population was 31,412 at the 2020 census, up from 24,866 in 2010. Much of the town's character comes from the lake, with marinas, waterfront neighborhoods, and lakeside parks.",
+        "Housing ranges from waterfront estates and lake-access communities to golf neighborhoods, townhomes, and condos. Jetton Park offers walking trails and lake views, and the town's small historic downtown sits along Catawba Avenue. I-77 provides access to Charlotte to the south and Mooresville to the north, and NC 73 and US 21 serve local trips. Cornelius uses ZIP code 28031. Waterfront buyers should verify dock permits and Duke Energy shoreline rules, which govern docks and shoreline changes on Lake Norman."
+      ],
+      "housing_styles": [
+        "Waterfront homes",
+        "Lake-access communities",
+        "Golf-course homes",
+        "Townhomes and condos"
+      ],
+      "dining": [
+        "Restaurants along Catawba Ave and near Exit 28"
+      ],
+      "parks": [
+        "Jetton Park",
+        "Lake Norman"
+      ],
+      "shopping": [
+        "Shopping along Catawba Ave and NC 73"
+      ],
+      "transportation": [
+        "I-77",
+        "NC 73",
+        "US 21",
+        "Catawba Ave"
+      ],
+      "feature_tags": [
+        "lake-access",
+        "golf"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse",
+        "Condo"
+      ],
+      "faq": [
+        {
+          "q": "What ZIP code is Cornelius?",
+          "a": "Cornelius uses ZIP code 28031."
+        },
+        {
+          "q": "Is Cornelius on Lake Norman?",
+          "a": "Yes. Cornelius is along Lake Norman in northern Mecklenburg County."
+        },
+        {
+          "q": "Is Cornelius near the light rail?",
+          "a": "No. I-77 is the main route to Charlotte."
+        }
+      ],
+      "idx_note": "Use City = Cornelius; add a waterfront filter for lake homes.",
+      "city": "Cornelius",
+      "summary": "Cornelius is a suburban town along Lake Norman in northern Mecklenburg County. Its population was 31,412 at the 2020 census, up from 24,866 in 2010. Much of the town's character comes from the lake, with marinas, waterfront neighborhoods, and lakeside parks.",
+      "housing": "Typical housing: Waterfront homes; Lake-access communities; Golf-course homes; Townhomes and condos.",
+      "getting_around": "Main routes: I-77; NC 73; US 21; Catawba Ave.",
+      "nearby": [
+        {
+          "name": "Restaurants along Catawba Ave and near Exit 28",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Shopping along Catawba Ave and NC 73",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the Charlotte-Mecklenburg Schools (cms.k12.nc.us) school locator to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Cornelius, NC (coordinates, county, background)",
+          "label": "Wikipedia – Cornelius, NC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Cornelius,_North_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        },
+        {
+          "title": "OpenStreetMap – Jetton Park",
+          "label": "OpenStreetMap – Jetton Park",
+          "url": "https://www.openstreetmap.org/way/236843906"
+        },
+        {
+          "title": "Wikipedia – Lake Norman",
+          "label": "Wikipedia – Lake Norman",
+          "url": "https://en.wikipedia.org/wiki/Lake_Norman"
+        }
+      ],
+      "overview_word_count": 120,
+      "img": "areas/cornelius",
+      "img_credit": {
+        "author": "LakeNormanMike",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Lake_Norman_-_Peninsula_Yacht_Club.jpg",
+        "title": "Lake Norman - Peninsula Yacht Club.jpg",
+        "depicts": "Peninsula Yacht Club Lake Norman Cornelius"
+      }
+    },
+    {
+      "slug": "davidson",
+      "name": "Davidson",
+      "county": "Mecklenburg / Iredell",
+      "state": "NC",
+      "area": "Lake Norman",
+      "zip_codes": [
+        "28036"
+      ],
+      "lat": 35.5006,
+      "lng": -80.8469,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 19,
+        "basis": "straight-line distance from town center coordinates to Uptown (35.2272, -80.8431); driving distance is longer",
+        "source": "https://en.wikipedia.org/wiki/Davidson,_North_Carolina"
+      },
+      "tagline": "A college town with a walkable Main Street on Lake Norman's eastern side",
+      "overview": [
+        "Davidson is a small town in Mecklenburg and Iredell counties, founded in 1837 with the establishment of Davidson College, a private liberal arts college. Its population was 15,106 at the 2020 census, up from 10,944 in 2010. Some nearby areas in Cabarrus County also use a Davidson mailing address but are outside town limits.",
+        "Downtown Davidson's Main Street, lined with shops, restaurants, and the college campus, is the heart of the town. Housing includes historic homes near downtown, traditional neighborhood developments with sidewalks and parks, townhomes, and some lake-access properties. I-77, NC 73, and NC 115 connect residents to Charlotte and Lake Norman. Davidson uses ZIP code 28036, and buyers should check whether a property is in town limits and which county it is in."
+      ],
+      "housing_styles": [
+        "Historic homes near downtown",
+        "Traditional neighborhood developments",
+        "Townhomes",
+        "Lake-access homes"
+      ],
+      "dining": [
+        "Main Street restaurants and cafes"
+      ],
+      "parks": [
+        "Davidson College campus and nearby town greenways",
+        "Lake Norman (nearby)"
+      ],
+      "shopping": [
+        "Downtown Davidson Main Street shops"
+      ],
+      "transportation": [
+        "I-77",
+        "NC 73",
+        "NC 115",
+        "Griffith St"
+      ],
+      "feature_tags": [
+        "walkable",
+        "historic",
+        "lake-access"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse"
+      ],
+      "faq": [
+        {
+          "q": "What ZIP code is Davidson?",
+          "a": "Davidson uses ZIP code 28036."
+        },
+        {
+          "q": "What college is in Davidson?",
+          "a": "Davidson College, founded in 1837."
+        },
+        {
+          "q": "What county is Davidson in?",
+          "a": "Davidson is in Mecklenburg and Iredell counties."
+        }
+      ],
+      "idx_note": "Use City = Davidson and check county (Mecklenburg/Iredell/Cabarrus) on listings.",
+      "city": "Davidson",
+      "summary": "Davidson is a small town in Mecklenburg and Iredell counties, founded in 1837 with the establishment of Davidson College, a private liberal arts college. Its population was 15,106 at the 2020 census, up from 10,944 in 2010. Some nearby areas in Cabarrus County also use a Davidson mailing address but are outside town limits.",
+      "housing": "Typical housing: Historic homes near downtown; Traditional neighborhood developments; Townhomes; Lake-access homes.",
+      "getting_around": "Main routes: I-77; NC 73; NC 115; Griffith St.",
+      "nearby": [
+        {
+          "name": "Main Street restaurants and cafes",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Downtown Davidson Main Street shops",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the Charlotte-Mecklenburg Schools (cms.k12.nc.us) school locator to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Davidson, NC (coordinates, county, background)",
+          "label": "Wikipedia – Davidson, NC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Davidson,_North_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        },
+        {
+          "title": "Davidson College – official site",
+          "label": "Davidson College – official site",
+          "url": "https://www.davidson.edu/"
+        }
+      ],
+      "overview_word_count": 125,
+      "img": "areas/davidson",
+      "img_credit": {
+        "author": "Dacoslett at English Wikipedia",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Chambers_Building,_Davidson_College_(Davidson,_North_Carolina).jpg",
+        "title": "Chambers Building, Davidson College (Davidson, North Carolina).jpg",
+        "depicts": "Chambers Building, Davidson College"
+      }
+    },
+    {
+      "slug": "belmont",
+      "name": "Belmont",
+      "county": "Gaston",
+      "state": "NC",
+      "area": "West Suburbs",
+      "zip_codes": [
+        "28012"
+      ],
+      "lat": 35.2211,
+      "lng": -81.04,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 11,
+        "basis": "straight-line distance from town center coordinates to Uptown (35.2272, -80.8431); driving distance is longer",
+        "source": "https://en.wikipedia.org/wiki/Belmont,_North_Carolina"
+      },
+      "tagline": "A small Gaston County city with a historic downtown near the Catawba River",
+      "overview": [
+        "Belmont is a small suburban city in Gaston County, about 9 miles east of Gastonia and just across the Catawba River from western Mecklenburg County. Its population was 15,010 at the 2020 census. The city should not be confused with the Belmont neighborhood inside Charlotte.",
+        "Belmont grew around a railroad stop and textile mills and is home to Belmont Abbey College. Its downtown along Main Street has local shops and restaurants. Housing includes historic mill-era homes, newer subdivisions, townhomes, and some waterfront homes on Lake Wylie and the Catawba River. Daniel Stowe Botanical Garden is in the Belmont area, and I-85 and NC 273 connect residents to Charlotte and the airport. Belmont uses ZIP code 28012."
+      ],
+      "housing_styles": [
+        "Historic mill-era homes",
+        "Newer subdivisions",
+        "Townhomes",
+        "Waterfront homes"
+      ],
+      "dining": [
+        "Downtown Belmont restaurants (Main St)"
+      ],
+      "parks": [
+        "Daniel Stowe Botanical Garden",
+        "Lake Wylie and Catawba River"
+      ],
+      "shopping": [
+        "Downtown Belmont shops"
+      ],
+      "transportation": [
+        "I-85",
+        "NC 273",
+        "NC 7",
+        "Wilkinson Blvd (US 74/29)"
+      ],
+      "feature_tags": [
+        "lake-access",
+        "historic",
+        "near-airport"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse"
+      ],
+      "faq": [
+        {
+          "q": "Is Belmont the same as the Belmont neighborhood in Charlotte?",
+          "a": "No. The City of Belmont is in Gaston County; the Belmont neighborhood is inside Charlotte."
+        },
+        {
+          "q": "What ZIP code is Belmont?",
+          "a": "Belmont uses ZIP code 28012."
+        },
+        {
+          "q": "What college is in Belmont?",
+          "a": "Belmont Abbey College."
+        }
+      ],
+      "idx_note": "Use City = Belmont AND County = Gaston to avoid mixing with the Charlotte neighborhood.",
+      "city": "Belmont",
+      "summary": "Belmont is a small suburban city in Gaston County, about 9 miles east of Gastonia and just across the Catawba River from western Mecklenburg County. Its population was 15,010 at the 2020 census. The city should not be confused with the Belmont neighborhood inside Charlotte.",
+      "housing": "Typical housing: Historic mill-era homes; Newer subdivisions; Townhomes; Waterfront homes.",
+      "getting_around": "Main routes: I-85; NC 273; NC 7; Wilkinson Blvd (US 74/29).",
+      "nearby": [
+        {
+          "name": "Downtown Belmont restaurants (Main St)",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Downtown Belmont shops",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the Gaston County Schools (gaston.k12.nc.us) school lookup to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Belmont, NC (coordinates, county, background)",
+          "label": "Wikipedia – Belmont, NC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Belmont,_North_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        },
+        {
+          "title": "OpenStreetMap – Daniel Stowe Botanical Garden",
+          "label": "OpenStreetMap – Daniel Stowe Botanical Garden",
+          "url": "https://www.openstreetmap.org/way/844059213"
+        }
+      ],
+      "overview_word_count": 116,
+      "img": "areas/belmont",
+      "img_credit": {
+        "author": "Indy beetle",
+        "license": "CC0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Main_Street,_Belmont_01.jpg",
+        "title": "Main Street, Belmont 01.jpg",
+        "depicts": "Main Street Belmont"
+      }
+    },
+    {
+      "slug": "mount-holly",
+      "name": "Mount Holly",
+      "county": "Gaston",
+      "state": "NC",
+      "area": "West Suburbs",
+      "zip_codes": [
+        "28120"
+      ],
+      "lat": 35.3142,
+      "lng": -81.0078,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 11,
+        "basis": "straight-line distance from town center coordinates to Uptown (35.2272, -80.8431); driving distance is longer",
+        "source": "https://en.wikipedia.org/wiki/Mount_Holly,_North_Carolina"
+      },
+      "tagline": "A Gaston County city on the Catawba River, close to the Whitewater Center",
+      "overview": [
+        "Mount Holly is a small suburban city in northeastern Gaston County, situated just west of the Catawba River, north of I-85, and south of NC 16. Its population was 17,703 at the 2020 census, up from 13,656 in 2010.",
+        "Housing includes older homes near downtown, newer subdivisions, townhomes, and some riverfront and lake-view homes. The U.S. National Whitewater Center is just across the Catawba River, and Mountain Island Lake is to the north. I-85 and NC 27/NC 273 connect residents to Charlotte and Belmont. Mount Holly uses ZIP code 28120. Buyers should check whether a property is inside city limits and review any riverfront restrictions."
+      ],
+      "housing_styles": [
+        "Older homes near downtown",
+        "Newer subdivisions",
+        "Townhomes",
+        "Riverfront and lake-view homes"
+      ],
+      "dining": [
+        "Downtown Mount Holly restaurants"
+      ],
+      "parks": [
+        "Catawba River",
+        "U.S. National Whitewater Center (nearby)"
+      ],
+      "shopping": [
+        "Downtown Mount Holly shops"
+      ],
+      "transportation": [
+        "I-85",
+        "NC 27",
+        "NC 273",
+        "NC 16 (nearby)"
+      ],
+      "feature_tags": [
+        "lake-access",
+        "near-airport"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse",
+        "Land"
+      ],
+      "faq": [
+        {
+          "q": "What ZIP code is Mount Holly?",
+          "a": "Mount Holly uses ZIP code 28120."
+        },
+        {
+          "q": "What county is Mount Holly in?",
+          "a": "Gaston County."
+        },
+        {
+          "q": "Is Mount Holly near the Whitewater Center?",
+          "a": "Yes. The U.S. National Whitewater Center is just across the Catawba River."
+        }
+      ],
+      "idx_note": "Use City = Mount Holly.",
+      "city": "Mount Holly",
+      "summary": "Mount Holly is a small suburban city in northeastern Gaston County, situated just west of the Catawba River, north of I-85, and south of NC 16. Its population was 17,703 at the 2020 census, up from 13,656 in 2010.",
+      "housing": "Typical housing: Older homes near downtown; Newer subdivisions; Townhomes; Riverfront and lake-view homes.",
+      "getting_around": "Main routes: I-85; NC 27; NC 273; NC 16 (nearby).",
+      "nearby": [
+        {
+          "name": "Downtown Mount Holly restaurants",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Downtown Mount Holly shops",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the Gaston County Schools (gaston.k12.nc.us) school lookup to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Mount Holly, NC (coordinates, county, background)",
+          "label": "Wikipedia – Mount Holly, NC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Mount_Holly,_North_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        },
+        {
+          "title": "OpenStreetMap – U.S. National Whitewater Center",
+          "label": "OpenStreetMap – U.S. National Whitewater Center",
+          "url": "https://www.openstreetmap.org/relation/16631279"
+        }
+      ],
+      "overview_word_count": 105,
+      "img": "areas/mount-holly",
+      "img_credit": {
+        "author": "RoxylovesHistory",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Historic_Downtown_Mount_Holly,_NC_-_9-20-2014.jpg",
+        "title": "Historic Downtown Mount Holly, NC - 9-20-2014.jpg",
+        "depicts": "Historic downtown Mount Holly"
+      }
+    },
+    {
+      "slug": "gastonia",
+      "name": "Gastonia",
+      "county": "Gaston",
+      "state": "NC",
+      "area": "West Suburbs",
+      "zip_codes": [
+        "28052",
+        "28054",
+        "28056"
+      ],
+      "lat": 35.2492,
+      "lng": -81.1856,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 19,
+        "basis": "straight-line distance from town center coordinates to Uptown (35.2272, -80.8431); driving distance is longer",
+        "source": "https://en.wikipedia.org/wiki/Gastonia,_North_Carolina"
+      },
+      "tagline": "Gaston County's largest city, with historic mill roots and access to Crowders Mountain",
+      "overview": [
+        "Gastonia is the county seat and most populous city of Gaston County, with a population of 80,411 at the 2020 census. It is a historic center of textile manufacturing and was the site of the 1929 Loray Mill Strike, a key event in the labor movement.",
+        "Today Gastonia's economy includes healthcare, education, and government as well as manufacturing. Housing ranges from historic mill homes and older neighborhoods to newer subdivisions and townhomes. Crowders Mountain State Park is a short drive west, and I-85 and US 74/29 connect residents to Charlotte. Gastonia uses ZIP codes 28052, 28054, and 28056."
+      ],
+      "housing_styles": [
+        "Historic mill homes",
+        "Older neighborhoods",
+        "Newer subdivisions",
+        "Townhomes"
+      ],
+      "dining": [
+        "Downtown Gastonia restaurants"
+      ],
+      "parks": [
+        "Crowders Mountain State Park (nearby)"
+      ],
+      "shopping": [
+        "Shopping along I-85 and US 74/29"
+      ],
+      "transportation": [
+        "I-85",
+        "US 74/29",
+        "US 321"
+      ],
+      "feature_tags": [
+        "historic"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse",
+        "Land"
+      ],
+      "faq": [
+        {
+          "q": "What ZIP codes are in Gastonia?",
+          "a": "Gastonia uses ZIP codes 28052, 28054, and 28056."
+        },
+        {
+          "q": "What county is Gastonia in?",
+          "a": "Gaston County; Gastonia is the county seat."
+        },
+        {
+          "q": "What state park is near Gastonia?",
+          "a": "Crowders Mountain State Park."
+        }
+      ],
+      "idx_note": "Use City = Gastonia.",
+      "city": "Gastonia",
+      "summary": "Gastonia is the county seat and most populous city of Gaston County, with a population of 80,411 at the 2020 census. It is a historic center of textile manufacturing and was the site of the 1929 Loray Mill Strike, a key event in the labor movement.",
+      "housing": "Typical housing: Historic mill homes; Older neighborhoods; Newer subdivisions; Townhomes.",
+      "getting_around": "Main routes: I-85; US 74/29; US 321.",
+      "nearby": [
+        {
+          "name": "Downtown Gastonia restaurants",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Shopping along I-85 and US 74/29",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the Gaston County Schools (gaston.k12.nc.us) school lookup to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Gastonia, NC (coordinates, county, background)",
+          "label": "Wikipedia – Gastonia, NC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Gastonia,_North_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        },
+        {
+          "title": "NC State Parks – Crowders Mountain State Park",
+          "label": "NC State Parks – Crowders Mountain State Park",
+          "url": "https://www.ncparks.gov/state-parks/crowders-mountain-state-park"
+        }
+      ],
+      "overview_word_count": 98,
+      "img": "areas/gastonia",
+      "img_credit": {
+        "author": "GastoniaHappening Jim Bob Willy",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Gastonia_Downtown_Aerial.jpg",
+        "title": "Gastonia Downtown Aerial.jpg",
+        "depicts": "Downtown Gastonia aerial"
+      }
+    },
+    {
+      "slug": "fort-mill",
+      "name": "Fort Mill",
+      "county": "York",
+      "state": "SC",
+      "area": "South Carolina Suburbs",
+      "zip_codes": [
+        "29715",
+        "29708"
+      ],
+      "lat": 34.9919,
+      "lng": -80.9386,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 17,
+        "basis": "straight-line distance from town center coordinates to Uptown (35.2272, -80.8431); driving distance is longer",
+        "source": "https://en.wikipedia.org/wiki/Fort_Mill,_South_Carolina"
+      },
+      "tagline": "A fast-growing York County, SC town just across the state line from Charlotte",
+      "overview": [
+        "Fort Mill is a town in York County, South Carolina, just south of the North Carolina line. Its population was 24,521 at the 2020 census. Some businesses and residents in Indian Land, in neighboring Lancaster County, share a Fort Mill mailing address, but the town boundary itself lies within York County.",
+        "Housing includes historic homes near downtown, large master-planned communities, newer subdivisions, and townhomes. The Anne Springs Close Greenway offers trails and nature programs, and Carowinds is nearby at the state line. I-77 and US 21 connect Fort Mill to Charlotte and Rock Hill. Fort Mill uses ZIP codes 29715 and 29708. Because Fort Mill is in South Carolina, property taxes, purchase contracts, and closing practices differ from North Carolina; see the SC buying note."
+      ],
+      "housing_styles": [
+        "Historic downtown homes",
+        "Master-planned communities",
+        "Newer subdivisions",
+        "Townhomes"
+      ],
+      "dining": [
+        "Downtown Fort Mill restaurants (Main St)"
+      ],
+      "parks": [
+        "Anne Springs Close Greenway"
+      ],
+      "shopping": [
+        "Shopping centers along US 21 and SC 160"
+      ],
+      "transportation": [
+        "I-77",
+        "US 21",
+        "SC 160",
+        "US 21 Bypass"
+      ],
+      "feature_tags": [
+        "greenway",
+        "new-construction"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse"
+      ],
+      "faq": [
+        {
+          "q": "What state is Fort Mill in?",
+          "a": "South Carolina (York County)."
+        },
+        {
+          "q": "What ZIP codes are in Fort Mill?",
+          "a": "Fort Mill uses ZIP codes 29715 and 29708."
+        },
+        {
+          "q": "Is buying in Fort Mill different from Charlotte?",
+          "a": "Yes. South Carolina has different property tax rules, contract forms, and closing practices; work with an SC-licensed agent and attorney."
+        }
+      ],
+      "idx_note": "Use City = Fort Mill AND State = SC; Indian Land homes may show Fort Mill addresses.",
+      "sc_buying_note": "Buying in South Carolina differs from North Carolina in a few ways: SC owner-occupants must apply to the county for the 4% legal residence property-tax assessment ratio (otherwise property is generally assessed at 6%), SC uses different purchase contract forms than the NC Offer to Purchase and Contract (which includes a non-refundable due diligence fee paid to the seller), and closings commonly involve an SC-licensed attorney. Work with an agent licensed in South Carolina and consult an SC attorney for specifics.",
+      "city": "Fort Mill",
+      "summary": "Fort Mill is a town in York County, South Carolina, just south of the North Carolina line. Its population was 24,521 at the 2020 census. Some businesses and residents in Indian Land, in neighboring Lancaster County, share a Fort Mill mailing address, but the town boundary itself lies within York County.",
+      "housing": "Typical housing: Historic downtown homes; Master-planned communities; Newer subdivisions; Townhomes.",
+      "getting_around": "Main routes: I-77; US 21; SC 160; US 21 Bypass.",
+      "nearby": [
+        {
+          "name": "Downtown Fort Mill restaurants (Main St)",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Shopping centers along US 21 and SC 160",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the York County school districts (e.g., Fort Mill Schools, Clover School District, Rock Hill Schools), depending on address to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Fort Mill, SC (coordinates, county, background)",
+          "label": "Wikipedia – Fort Mill, SC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Fort_Mill,_South_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        },
+        {
+          "title": "Anne Springs Close Greenway – official site",
+          "label": "Anne Springs Close Greenway – official site",
+          "url": "https://www.ascgreenway.org/"
+        },
+        {
+          "title": "York County, SC – 2025 Reassessment Guide (4% legal residence ratio)",
+          "label": "York County, SC – 2025 Reassessment Guide (4% legal residence ratio)",
+          "url": "https://www.yorkcountysc.gov/DocumentCenter/View/9476/2025-Reassessment-GuidePDF"
+        },
+        {
+          "title": "SC Department of Revenue – Property tax exemptions and assessment",
+          "label": "SC Department of Revenue – Property tax exemptions and assessment",
+          "url": "https://dor.sc.gov/property/property-tax-exemptions"
+        },
+        {
+          "title": "NC Real Estate Commission – Earnest Money and Due Diligence brochure",
+          "label": "NC Real Estate Commission – Earnest Money and Due Diligence brochure",
+          "url": "https://www.ncrec.gov/Brochures/EarnestMoneyBrochure.pdf"
+        }
+      ],
+      "overview_word_count": 125,
+      "img": "areas/fort-mill",
+      "img_credit": {
+        "author": "Photogeographer",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Fort_Mill_SC_2020.jpg",
+        "title": "Fort Mill SC 2020.jpg",
+        "depicts": "Main Street Fort Mill"
+      }
+    },
+    {
+      "slug": "tega-cay",
+      "name": "Tega Cay",
+      "county": "York",
+      "state": "SC",
+      "area": "South Carolina Suburbs",
+      "zip_codes": [
+        "29708"
+      ],
+      "lat": 35.0383,
+      "lng": -81.0033,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 16,
+        "basis": "straight-line distance from town center coordinates to Uptown (35.2272, -80.8431); driving distance is longer",
+        "source": "https://en.wikipedia.org/wiki/Tega_Cay,_South_Carolina"
+      },
+      "tagline": "A planned lakeside city on a Lake Wylie peninsula in York County, SC",
+      "overview": [
+        "Tega Cay is a planned city in York County, South Carolina, located on a peninsula along Lake Wylie, west of Fort Mill and north of Rock Hill. Its population was 12,832 at the 2020 census.",
+        "Housing is mainly single-family homes, including waterfront and lake-view properties, golf-course homes, and newer subdivisions. The city has parks and lake access points. I-77 and SC 160 connect residents to Charlotte and Fort Mill. Tega Cay uses ZIP code 29708. Because it is in South Carolina, property taxes, purchase contracts, and closing practices differ from North Carolina; see the SC buying note."
+      ],
+      "housing_styles": [
+        "Waterfront homes",
+        "Golf-course homes",
+        "Newer subdivisions"
+      ],
+      "dining": [
+        "Restaurants along SC 160"
+      ],
+      "parks": [
+        "Lake Wylie"
+      ],
+      "shopping": [
+        "Shopping along SC 160"
+      ],
+      "transportation": [
+        "I-77",
+        "SC 160",
+        "Gold Hill Rd"
+      ],
+      "feature_tags": [
+        "lake-access"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse"
+      ],
+      "faq": [
+        {
+          "q": "What state is Tega Cay in?",
+          "a": "South Carolina (York County)."
+        },
+        {
+          "q": "What ZIP code is Tega Cay?",
+          "a": "Tega Cay uses ZIP code 29708."
+        },
+        {
+          "q": "Is Tega Cay on a lake?",
+          "a": "Yes. Tega Cay is on a peninsula along Lake Wylie."
+        }
+      ],
+      "idx_note": "Use City = Tega Cay AND State = SC.",
+      "sc_buying_note": "Buying in South Carolina differs from North Carolina in a few ways: SC owner-occupants must apply to the county for the 4% legal residence property-tax assessment ratio (otherwise property is generally assessed at 6%), SC uses different purchase contract forms than the NC Offer to Purchase and Contract (which includes a non-refundable due diligence fee paid to the seller), and closings commonly involve an SC-licensed attorney. Work with an agent licensed in South Carolina and consult an SC attorney for specifics.",
+      "city": "Tega Cay",
+      "summary": "Tega Cay is a planned city in York County, South Carolina, located on a peninsula along Lake Wylie, west of Fort Mill and north of Rock Hill. Its population was 12,832 at the 2020 census.",
+      "housing": "Typical housing: Waterfront homes; Golf-course homes; Newer subdivisions.",
+      "getting_around": "Main routes: I-77; SC 160; Gold Hill Rd.",
+      "nearby": [
+        {
+          "name": "Restaurants along SC 160",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Shopping along SC 160",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the York County school districts (e.g., Fort Mill Schools, Clover School District, Rock Hill Schools), depending on address to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Tega Cay, SC (coordinates, county, background)",
+          "label": "Wikipedia – Tega Cay, SC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Tega_Cay,_South_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        },
+        {
+          "title": "York County, SC – 2025 Reassessment Guide (4% legal residence ratio)",
+          "label": "York County, SC – 2025 Reassessment Guide (4% legal residence ratio)",
+          "url": "https://www.yorkcountysc.gov/DocumentCenter/View/9476/2025-Reassessment-GuidePDF"
+        },
+        {
+          "title": "SC Department of Revenue – Property tax exemptions and assessment",
+          "label": "SC Department of Revenue – Property tax exemptions and assessment",
+          "url": "https://dor.sc.gov/property/property-tax-exemptions"
+        },
+        {
+          "title": "NC Real Estate Commission – Earnest Money and Due Diligence brochure",
+          "label": "NC Real Estate Commission – Earnest Money and Due Diligence brochure",
+          "url": "https://www.ncrec.gov/Brochures/EarnestMoneyBrochure.pdf"
+        }
+      ],
+      "overview_word_count": 97,
+      "img": "areas/tega-cay",
+      "img_credit": {
+        "author": "bobcapra",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Lake_Wylie_(14312970898).jpg",
+        "title": "Lake Wylie (14312970898).jpg",
+        "depicts": "Lake Wylie shoreline near Tega Cay"
+      }
+    },
+    {
+      "slug": "indian-trail",
+      "name": "Indian Trail",
+      "county": "Union",
+      "state": "NC",
+      "area": "Union County",
+      "zip_codes": [
+        "28079"
+      ],
+      "lat": 35.0997,
+      "lng": -80.5889,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 17,
+        "basis": "straight-line distance from town center coordinates to Uptown (35.2272, -80.8431); driving distance is longer",
+        "source": "https://en.wikipedia.org/wiki/Indian_Trail,_North_Carolina"
+      },
+      "tagline": "One of Union County's largest towns, with fast suburban growth off US 74",
+      "overview": [
+        "Indian Trail is a town in Union County, southeast of Charlotte. It has grown rapidly, from 1,942 residents in 1990 to 39,997 in 2020, due to its proximity to Charlotte and its appeal as a residential community for commuters.",
+        "Housing is mainly suburban single-family subdivisions and townhomes, many built since the 1990s, with some older homes and acreage. Shopping and services are concentrated along US 74 and Indian Trail Road. US 74 and the Monroe Expressway connect residents to Charlotte and Monroe. Indian Trail uses ZIP code 28079. Buyers should check whether a property is inside town limits."
+      ],
+      "housing_styles": [
+        "1990s–2020s subdivisions",
+        "Townhomes",
+        "Older homes",
+        "Acreage"
+      ],
+      "dining": [
+        "Restaurants along US 74 and Indian Trail Rd"
+      ],
+      "parks": [
+        "Town of Indian Trail parks"
+      ],
+      "shopping": [
+        "Shopping along US 74 and Indian Trail Rd"
+      ],
+      "transportation": [
+        "US 74",
+        "Monroe Expressway (US 74 Bypass)",
+        "Indian Trail Rd",
+        "Wesley Chapel Rd"
+      ],
+      "feature_tags": [
+        "new-construction"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse",
+        "Land"
+      ],
+      "faq": [
+        {
+          "q": "What ZIP code is Indian Trail?",
+          "a": "Indian Trail uses ZIP code 28079."
+        },
+        {
+          "q": "What county is Indian Trail in?",
+          "a": "Union County."
+        },
+        {
+          "q": "Is Indian Trail near the light rail?",
+          "a": "No. US 74 and the Monroe Expressway are the main routes."
+        }
+      ],
+      "idx_note": "Use City = Indian Trail.",
+      "city": "Indian Trail",
+      "summary": "Indian Trail is a town in Union County, southeast of Charlotte. It has grown rapidly, from 1,942 residents in 1990 to 39,997 in 2020, due to its proximity to Charlotte and its appeal as a residential community for commuters.",
+      "housing": "Typical housing: 1990s–2020s subdivisions; Townhomes; Older homes; Acreage.",
+      "getting_around": "Main routes: US 74; Monroe Expressway (US 74 Bypass); Indian Trail Rd; Wesley Chapel Rd.",
+      "nearby": [
+        {
+          "name": "Restaurants along US 74 and Indian Trail Rd",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Shopping along US 74 and Indian Trail Rd",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the Union County Public Schools (ucps.k12.nc.us) school lookup to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Indian Trail, NC (coordinates, county, background)",
+          "label": "Wikipedia – Indian Trail, NC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Indian_Trail,_North_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        }
+      ],
+      "overview_word_count": 98,
+      "img": "areas/indian-trail",
+      "img_credit": {
+        "author": "Abbeynball",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Indian_Trail_Town_Hall_copy.jpg",
+        "title": "Indian Trail Town Hall copy.jpg",
+        "depicts": "Indian Trail Town Hall"
+      }
+    },
+    {
+      "slug": "weddington",
+      "name": "Weddington",
+      "county": "Union",
+      "state": "NC",
+      "area": "Union County",
+      "zip_codes": [
+        "28104",
+        "28173"
+      ],
+      "lat": 35.02,
+      "lng": -80.7644,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 15,
+        "basis": "straight-line distance from town center coordinates to Uptown (35.2272, -80.8431); driving distance is longer",
+        "source": "https://en.wikipedia.org/wiki/Weddington,_North_Carolina"
+      },
+      "tagline": "A low-density Union County town known for larger lots and custom homes",
+      "overview": [
+        "Weddington is a suburban town in Union County, southeast of Charlotte. Its population was 13,181 at the 2020 census. The town is known for its low-density, largely residential character, with larger lots and many custom homes.",
+        "Housing includes custom homes on larger lots, upscale subdivisions, and some acreage. Shopping and services are nearby along Providence Road (NC 16) and in neighboring communities. Providence Road and NC 84 connect residents to south Charlotte. Weddington uses ZIP codes 28104 and 28173."
+      ],
+      "housing_styles": [
+        "Custom homes on larger lots",
+        "Upscale subdivisions",
+        "Acreage"
+      ],
+      "dining": [
+        "Restaurants along Providence Rd (NC 16)"
+      ],
+      "parks": [
+        "Local town parks"
+      ],
+      "shopping": [
+        "Shopping along Providence Rd (NC 16)"
+      ],
+      "transportation": [
+        "Providence Rd (NC 16)",
+        "NC 84",
+        "Weddington Rd"
+      ],
+      "feature_tags": [
+        "acreage"
+      ],
+      "home_types": [
+        "Single Family",
+        "Land"
+      ],
+      "faq": [
+        {
+          "q": "What ZIP codes are in Weddington?",
+          "a": "Weddington uses ZIP codes 28104 and 28173."
+        },
+        {
+          "q": "What county is Weddington in?",
+          "a": "Union County."
+        },
+        {
+          "q": "Is Weddington near the light rail?",
+          "a": "No. Providence Road and NC 84 are the main routes."
+        }
+      ],
+      "idx_note": "Use City = Weddington.",
+      "city": "Weddington",
+      "summary": "Weddington is a suburban town in Union County, southeast of Charlotte. Its population was 13,181 at the 2020 census. The town is known for its low-density, largely residential character, with larger lots and many custom homes.",
+      "housing": "Typical housing: Custom homes on larger lots; Upscale subdivisions; Acreage.",
+      "getting_around": "Main routes: Providence Rd (NC 16); NC 84; Weddington Rd.",
+      "nearby": [
+        {
+          "name": "Restaurants along Providence Rd (NC 16)",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Shopping along Providence Rd (NC 16)",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the Union County Public Schools (ucps.k12.nc.us) school lookup to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Weddington, NC (coordinates, county, background)",
+          "label": "Wikipedia – Weddington, NC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Weddington,_North_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        }
+      ],
+      "overview_word_count": 79,
+      "img": "areas/weddington",
+      "img_credit": {
+        "author": "Dclemens1971",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Thomas-Wrenn_House_(Weddington_Town_Hall)_01.jpg",
+        "title": "Thomas-Wrenn House (Weddington Town Hall) 01.jpg",
+        "depicts": "Thomas-Wrenn House (Weddington Town Hall)"
+      }
+    },
+    {
+      "slug": "waxhaw",
+      "name": "Waxhaw",
+      "county": "Union",
+      "state": "NC",
+      "area": "Union County",
+      "zip_codes": [
+        "28173"
+      ],
+      "lat": 34.9364,
+      "lng": -80.7439,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 21,
+        "basis": "straight-line distance from town center coordinates to Uptown (35.2272, -80.8431); driving distance is longer",
+        "source": "https://en.wikipedia.org/wiki/Waxhaw,_North_Carolina"
+      },
+      "tagline": "A historic Union County town with a downtown and fast-growing suburbs",
+      "overview": [
+        "Waxhaw is an incorporated town in Union County, south of Charlotte. Its population was 20,534 at the 2020 census, more than double its 2010 population. The town's name comes from the Waxhaw people, who lived in the area.",
+        "Waxhaw's historic downtown, with its shops and restaurants, is a focal point for the community. Housing includes historic homes near downtown, master-planned communities, newer subdivisions, and some acreage. Cane Creek Park, a large Union County park with a lake, is to the southeast. NC 16 and NC 75 connect residents to Charlotte and Monroe. Waxhaw uses ZIP code 28173."
+      ],
+      "housing_styles": [
+        "Historic downtown homes",
+        "Master-planned communities",
+        "Newer subdivisions",
+        "Acreage"
+      ],
+      "dining": [
+        "Downtown Waxhaw restaurants"
+      ],
+      "parks": [
+        "Cane Creek Park"
+      ],
+      "shopping": [
+        "Downtown Waxhaw shops"
+      ],
+      "transportation": [
+        "NC 16 (Providence Rd)",
+        "NC 75",
+        "NC 84"
+      ],
+      "feature_tags": [
+        "historic",
+        "new-construction",
+        "acreage"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse",
+        "Land"
+      ],
+      "faq": [
+        {
+          "q": "What ZIP code is Waxhaw?",
+          "a": "Waxhaw uses ZIP code 28173."
+        },
+        {
+          "q": "What county is Waxhaw in?",
+          "a": "Union County."
+        },
+        {
+          "q": "Is Waxhaw near the light rail?",
+          "a": "No. NC 16 is the main route to Charlotte."
+        }
+      ],
+      "idx_note": "Use City = Waxhaw.",
+      "city": "Waxhaw",
+      "summary": "Waxhaw is an incorporated town in Union County, south of Charlotte. Its population was 20,534 at the 2020 census, more than double its 2010 population. The town's name comes from the Waxhaw people, who lived in the area.",
+      "housing": "Typical housing: Historic downtown homes; Master-planned communities; Newer subdivisions; Acreage.",
+      "getting_around": "Main routes: NC 16 (Providence Rd); NC 75; NC 84.",
+      "nearby": [
+        {
+          "name": "Downtown Waxhaw restaurants",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Downtown Waxhaw shops",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the Union County Public Schools (ucps.k12.nc.us) school lookup to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Waxhaw, NC (coordinates, county, background)",
+          "label": "Wikipedia – Waxhaw, NC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Waxhaw,_North_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        },
+        {
+          "title": "OpenStreetMap – Cane Creek Park",
+          "label": "OpenStreetMap – Cane Creek Park",
+          "url": "https://www.openstreetmap.org/way/38586954"
+        }
+      ],
+      "overview_word_count": 97,
+      "img": "areas/waxhaw",
+      "img_credit": {
+        "author": "Jerrye & Roy Klotz, MD",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:WAXHAW_HISTORIC_DISTRICT,_UNION_COUNTY,_NC.jpg",
+        "title": "WAXHAW HISTORIC DISTRICT, UNION COUNTY, NC.jpg",
+        "depicts": "Waxhaw Historic District Main Street"
+      }
+    },
+    {
+      "slug": "harrisburg",
+      "name": "Harrisburg",
+      "county": "Cabarrus",
+      "state": "NC",
+      "area": "Northeast Suburbs",
+      "zip_codes": [
+        "28075"
+      ],
+      "lat": 35.3178,
+      "lng": -80.6517,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 12,
+        "basis": "straight-line distance from town center coordinates to Uptown (35.2272, -80.8431); driving distance is longer",
+        "source": "https://en.wikipedia.org/wiki/Harrisburg,_North_Carolina"
+      },
+      "tagline": "A Cabarrus County suburb near Charlotte Motor Speedway and University City",
+      "overview": [
+        "Harrisburg is a town in Cabarrus County, northeast of Charlotte, with a population of 18,967 at the 2020 census. It is close to Charlotte Motor Speedway, University City, and Concord.",
+        "Housing is mainly suburban single-family subdivisions and townhomes, many built since the 1990s, with some older homes and acreage. NC 49 and I-485 connect residents to Charlotte and University City, and Concord Mills is a short drive north. Harrisburg uses ZIP code 28075."
+      ],
+      "housing_styles": [
+        "1990s–2020s subdivisions",
+        "Townhomes",
+        "Older homes",
+        "Acreage"
+      ],
+      "dining": [
+        "Restaurants along NC 49"
+      ],
+      "parks": [
+        "Local town parks",
+        "Reedy Creek Nature Preserve (nearby)"
+      ],
+      "shopping": [
+        "Shopping along NC 49"
+      ],
+      "transportation": [
+        "NC 49",
+        "I-485",
+        "Rocky River Rd"
+      ],
+      "feature_tags": [
+        "new-construction"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse",
+        "Land"
+      ],
+      "faq": [
+        {
+          "q": "What ZIP code is Harrisburg?",
+          "a": "Harrisburg uses ZIP code 28075."
+        },
+        {
+          "q": "What county is Harrisburg in?",
+          "a": "Cabarrus County."
+        },
+        {
+          "q": "Is Harrisburg near Charlotte Motor Speedway?",
+          "a": "Yes. The speedway is a short drive north in Concord."
+        }
+      ],
+      "idx_note": "Use City = Harrisburg.",
+      "city": "Harrisburg",
+      "summary": "Harrisburg is a town in Cabarrus County, northeast of Charlotte, with a population of 18,967 at the 2020 census. It is close to Charlotte Motor Speedway, University City, and Concord.",
+      "housing": "Typical housing: 1990s–2020s subdivisions; Townhomes; Older homes; Acreage.",
+      "getting_around": "Main routes: NC 49; I-485; Rocky River Rd.",
+      "nearby": [
+        {
+          "name": "Restaurants along NC 49",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Shopping along NC 49",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the Cabarrus County Schools (cabarrus.k12.nc.us) or Kannapolis City Schools, depending on address to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Harrisburg, NC (coordinates, county, background)",
+          "label": "Wikipedia – Harrisburg, NC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Harrisburg,_North_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        }
+      ],
+      "overview_word_count": 73,
+      "img": "areas/harrisburg",
+      "img_credit": {
+        "author": "James Willamor",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Harrisburg_City_Hall_-_panoramio.jpg",
+        "title": "Harrisburg City Hall - panoramio.jpg",
+        "depicts": "Harrisburg Town Hall"
+      }
+    },
+    {
+      "slug": "concord",
+      "name": "Concord",
+      "county": "Cabarrus",
+      "state": "NC",
+      "area": "Northeast Suburbs",
+      "zip_codes": [
+        "28025",
+        "28027"
+      ],
+      "lat": 35.4103,
+      "lng": -80.5853,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 20,
+        "basis": "as stated by Wikipedia",
+        "source": "https://en.wikipedia.org/wiki/Concord,_North_Carolina"
+      },
+      "tagline": "Cabarrus County's seat, home to Charlotte Motor Speedway and Concord Mills",
+      "overview": [
+        "Concord is the county seat and most populous city of Cabarrus County, about 20 miles northeast of Uptown Charlotte. Its population was 105,240 at the 2020 census, making it the second-most populous city in the Charlotte metropolitan area.",
+        "Concord is home to Charlotte Motor Speedway and Concord Mills, two of the state's best-known attractions. Its historic downtown along Union Street has shops, restaurants, and historic homes. Housing ranges from historic homes to newer subdivisions and townhomes. I-85 and US 29 connect residents to Charlotte. Concord uses ZIP codes 28025 and 28027."
+      ],
+      "housing_styles": [
+        "Historic downtown homes",
+        "Newer subdivisions",
+        "Townhomes",
+        "Acreage"
+      ],
+      "dining": [
+        "Downtown Concord restaurants (Union St)"
+      ],
+      "parks": [
+        "Frank Liske Park"
+      ],
+      "shopping": [
+        "Concord Mills",
+        "Downtown Concord shops"
+      ],
+      "transportation": [
+        "I-85",
+        "US 29",
+        "NC 73"
+      ],
+      "feature_tags": [
+        "historic",
+        "new-construction"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse",
+        "Land"
+      ],
+      "faq": [
+        {
+          "q": "How far is Concord from Uptown Charlotte?",
+          "a": "About 20 miles northeast, according to Wikipedia."
+        },
+        {
+          "q": "What ZIP codes are in Concord?",
+          "a": "Concord uses ZIP codes 28025 and 28027."
+        },
+        {
+          "q": "What attractions are in Concord?",
+          "a": "Charlotte Motor Speedway and Concord Mills."
+        }
+      ],
+      "idx_note": "Use City = Concord.",
+      "city": "Concord",
+      "summary": "Concord is the county seat and most populous city of Cabarrus County, about 20 miles northeast of Uptown Charlotte. Its population was 105,240 at the 2020 census, making it the second-most populous city in the Charlotte metropolitan area.",
+      "housing": "Typical housing: Historic downtown homes; Newer subdivisions; Townhomes; Acreage.",
+      "getting_around": "Main routes: I-85; US 29; NC 73.",
+      "nearby": [
+        {
+          "name": "Downtown Concord restaurants (Union St)",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Concord Mills",
+          "type": "shopping",
+          "note": "Shopping"
+        },
+        {
+          "name": "Downtown Concord shops",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the Cabarrus County Schools (cabarrus.k12.nc.us) or Kannapolis City Schools, depending on address to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Concord, NC (coordinates, county, background)",
+          "label": "Wikipedia – Concord, NC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Concord,_North_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        },
+        {
+          "title": "Charlotte Motor Speedway – official site",
+          "label": "Charlotte Motor Speedway – official site",
+          "url": "https://www.charlottemotorspeedway.com/"
+        },
+        {
+          "title": "Simon – Concord Mills",
+          "label": "Simon – Concord Mills",
+          "url": "https://www.simon.com/mall/concord-mills"
+        }
+      ],
+      "overview_word_count": 91,
+      "img": "areas/concord",
+      "img_credit": {
+        "author": "AlexiusHoratius",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Downtown_Concord_NC_5.jpg",
+        "title": "Downtown Concord NC 5.jpg",
+        "depicts": "Downtown Concord"
+      }
+    },
+    {
+      "slug": "mooresville",
+      "name": "Mooresville",
+      "county": "Iredell",
+      "state": "NC",
+      "area": "Lake Norman",
+      "zip_codes": [
+        "28115",
+        "28117"
+      ],
+      "lat": 35.5847,
+      "lng": -80.8267,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 25,
+        "basis": "as stated by Wikipedia",
+        "source": "https://en.wikipedia.org/wiki/Mooresville,_North_Carolina"
+      },
+      "tagline": "Race City USA, on Lake Norman's northern shore",
+      "overview": [
+        "Mooresville is a town in southwestern Iredell County, about 25 miles north of Charlotte. Its population was 50,193 at the 2020 census, making it the most populous municipality in Iredell County.",
+        "Mooresville is known as Race City USA for the many NASCAR teams and racing businesses based there, and it is home to the corporate headquarters of Lowe's. Housing includes lakefront homes, golf communities, newer subdivisions, and townhomes. Lake Norman State Park is nearby in Troutman, and I-77 connects Mooresville to Charlotte. Mooresville uses ZIP codes 28115 and 28117."
+      ],
+      "housing_styles": [
+        "Lakefront homes",
+        "Golf communities",
+        "Newer subdivisions",
+        "Townhomes"
+      ],
+      "dining": [
+        "Downtown Mooresville restaurants (Main St)"
+      ],
+      "parks": [
+        "Lake Norman State Park (Troutman)",
+        "Lake Norman"
+      ],
+      "shopping": [
+        "Shopping along NC 150 and I-77"
+      ],
+      "transportation": [
+        "I-77",
+        "NC 150",
+        "US 21",
+        "NC 115"
+      ],
+      "feature_tags": [
+        "lake-access",
+        "golf",
+        "new-construction"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse",
+        "Condo",
+        "Land"
+      ],
+      "faq": [
+        {
+          "q": "How far is Mooresville from Charlotte?",
+          "a": "About 25 miles north, according to Wikipedia."
+        },
+        {
+          "q": "Why is Mooresville called Race City USA?",
+          "a": "Because many NASCAR teams and racing businesses are based there."
+        },
+        {
+          "q": "What ZIP codes are in Mooresville?",
+          "a": "Mooresville uses ZIP codes 28115 and 28117."
+        }
+      ],
+      "idx_note": "Use City = Mooresville.",
+      "city": "Mooresville",
+      "summary": "Mooresville is a town in southwestern Iredell County, about 25 miles north of Charlotte. Its population was 50,193 at the 2020 census, making it the most populous municipality in Iredell County.",
+      "housing": "Typical housing: Lakefront homes; Golf communities; Newer subdivisions; Townhomes.",
+      "getting_around": "Main routes: I-77; NC 150; US 21; NC 115.",
+      "nearby": [
+        {
+          "name": "Downtown Mooresville restaurants (Main St)",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Shopping along NC 150 and I-77",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the Iredell-Statesville Schools (iss.k12.nc.us) or Mooresville Graded School District (mgsd.k12.nc.us), depending on address to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Mooresville, NC (coordinates, county, background)",
+          "label": "Wikipedia – Mooresville, NC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Mooresville,_North_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        },
+        {
+          "title": "NC State Parks – Lake Norman State Park",
+          "label": "NC State Parks – Lake Norman State Park",
+          "url": "https://www.ncparks.gov/state-parks/lake-norman-state-park"
+        }
+      ],
+      "overview_word_count": 89,
+      "img": "areas/mooresville",
+      "img_credit": {
+        "author": "Cdtew at English Wikipedia",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Mooresville_Historic_District_(Main_Street).jpg",
+        "title": "Mooresville Historic District (Main Street).jpg",
+        "depicts": "Mooresville Historic District Main Street"
+      }
+    },
+    {
+      "slug": "monroe",
+      "name": "Monroe",
+      "county": "Union",
+      "state": "NC",
+      "area": "Union County",
+      "zip_codes": [
+        "28110",
+        "28112"
+      ],
+      "lat": 35.0033,
+      "lng": -80.5589,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 22,
+        "basis": "straight-line distance from town center coordinates to Uptown (35.2272, -80.8431); driving distance is longer",
+        "source": "https://en.wikipedia.org/wiki/Monroe,_North_Carolina"
+      },
+      "tagline": "Union County's seat, with a historic downtown and the Monroe Expressway",
+      "overview": [
+        "Monroe is a city and the county seat of Union County, southeast of Charlotte. Its population was 34,562 at the 2020 census. The city has a council-manager form of government.",
+        "Monroe's historic downtown, with its shops and restaurants, is a focal point for the community. Housing includes historic homes, older neighborhoods, newer subdivisions, and acreage. US 74 and the Monroe Expressway connect Monroe to Charlotte. Monroe uses ZIP codes 28110 and 28112."
+      ],
+      "housing_styles": [
+        "Historic homes",
+        "Older neighborhoods",
+        "Newer subdivisions",
+        "Acreage"
+      ],
+      "dining": [
+        "Downtown Monroe restaurants"
+      ],
+      "parks": [
+        "Local city parks"
+      ],
+      "shopping": [
+        "Downtown Monroe shops",
+        "Shopping along US 74"
+      ],
+      "transportation": [
+        "US 74",
+        "Monroe Expressway (US 74 Bypass)",
+        "NC 200",
+        "US 601"
+      ],
+      "feature_tags": [
+        "historic",
+        "acreage"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse",
+        "Land"
+      ],
+      "faq": [
+        {
+          "q": "What county is Monroe in?",
+          "a": "Union County; Monroe is the county seat."
+        },
+        {
+          "q": "What ZIP codes are in Monroe?",
+          "a": "Monroe uses ZIP codes 28110 and 28112."
+        },
+        {
+          "q": "Is Monroe near the light rail?",
+          "a": "No. US 74 and the Monroe Expressway are the main routes."
+        }
+      ],
+      "idx_note": "Use City = Monroe.",
+      "city": "Monroe",
+      "summary": "Monroe is a city and the county seat of Union County, southeast of Charlotte. Its population was 34,562 at the 2020 census. The city has a council-manager form of government.",
+      "housing": "Typical housing: Historic homes; Older neighborhoods; Newer subdivisions; Acreage.",
+      "getting_around": "Main routes: US 74; Monroe Expressway (US 74 Bypass); NC 200; US 601.",
+      "nearby": [
+        {
+          "name": "Downtown Monroe restaurants",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Downtown Monroe shops",
+          "type": "shopping",
+          "note": "Shopping"
+        },
+        {
+          "name": "Shopping along US 74",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the Union County Public Schools (ucps.k12.nc.us) school lookup to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Monroe, NC (coordinates, county, background)",
+          "label": "Wikipedia – Monroe, NC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Monroe,_North_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        }
+      ],
+      "overview_word_count": 72,
+      "img": "areas/monroe",
+      "img_credit": {
+        "author": "Indy beetle",
+        "license": "CC0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Monroe,_North_Carolina_03.jpg",
+        "title": "Monroe, North Carolina 03.jpg",
+        "depicts": "Downtown Monroe Main Street"
+      }
+    },
+    {
+      "slug": "lake-wylie",
+      "name": "Lake Wylie",
+      "county": "York",
+      "state": "SC",
+      "area": "South Carolina Suburbs",
+      "zip_codes": [
+        "29710"
+      ],
+      "lat": 35.1117,
+      "lng": -81.0625,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 15,
+        "basis": "straight-line distance from town center coordinates to Uptown (35.2272, -80.8431); driving distance is longer",
+        "source": "https://en.wikipedia.org/wiki/Lake_Wylie,_South_Carolina"
+      },
+      "tagline": "A York County, SC community on a peninsula along Lake Wylie",
+      "overview": [
+        "Lake Wylie is a census-designated place in York County, South Carolina, located on a peninsula along the shore of Lake Wylie. It is a suburb of Charlotte, and it is unincorporated, so services are provided by York County.",
+        "Housing includes waterfront homes, lake-access communities, golf neighborhoods, and newer subdivisions. SC 49 and the Buster Boyd Bridge connect residents to Charlotte's Steele Creek area. Lake Wylie uses ZIP code 29710. Because it is in South Carolina, property taxes, purchase contracts, and closing practices differ from North Carolina; see the SC buying note."
+      ],
+      "housing_styles": [
+        "Waterfront homes",
+        "Lake-access communities",
+        "Golf neighborhoods",
+        "Newer subdivisions"
+      ],
+      "dining": [
+        "Restaurants along SC 49 and SC 274"
+      ],
+      "parks": [
+        "Lake Wylie"
+      ],
+      "shopping": [
+        "Shopping along SC 49"
+      ],
+      "transportation": [
+        "SC 49 (Buster Boyd Bridge)",
+        "SC 274",
+        "SC 557"
+      ],
+      "feature_tags": [
+        "lake-access",
+        "golf"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse",
+        "Land"
+      ],
+      "faq": [
+        {
+          "q": "What state is Lake Wylie in?",
+          "a": "South Carolina (York County)."
+        },
+        {
+          "q": "What ZIP code is Lake Wylie?",
+          "a": "Lake Wylie uses ZIP code 29710."
+        },
+        {
+          "q": "Is Lake Wylie incorporated?",
+          "a": "No. Lake Wylie is a census-designated place served by York County."
+        }
+      ],
+      "idx_note": "Use ZIP 29710 or a polygon; Lake Wylie is not a municipality.",
+      "sc_buying_note": "Buying in South Carolina differs from North Carolina in a few ways: SC owner-occupants must apply to the county for the 4% legal residence property-tax assessment ratio (otherwise property is generally assessed at 6%), SC uses different purchase contract forms than the NC Offer to Purchase and Contract (which includes a non-refundable due diligence fee paid to the seller), and closings commonly involve an SC-licensed attorney. Work with an agent licensed in South Carolina and consult an SC attorney for specifics.",
+      "city": "Lake Wylie",
+      "summary": "Lake Wylie is a census-designated place in York County, South Carolina, located on a peninsula along the shore of Lake Wylie. It is a suburb of Charlotte, and it is unincorporated, so services are provided by York County.",
+      "housing": "Typical housing: Waterfront homes; Lake-access communities; Golf neighborhoods; Newer subdivisions.",
+      "getting_around": "Main routes: SC 49 (Buster Boyd Bridge); SC 274; SC 557.",
+      "nearby": [
+        {
+          "name": "Restaurants along SC 49 and SC 274",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Shopping along SC 49",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the York County school districts (e.g., Fort Mill Schools, Clover School District, Rock Hill Schools), depending on address to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Lake Wylie, SC (coordinates, county, background)",
+          "label": "Wikipedia – Lake Wylie, SC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Lake_Wylie,_South_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        },
+        {
+          "title": "York County, SC – 2025 Reassessment Guide (4% legal residence ratio)",
+          "label": "York County, SC – 2025 Reassessment Guide (4% legal residence ratio)",
+          "url": "https://www.yorkcountysc.gov/DocumentCenter/View/9476/2025-Reassessment-GuidePDF"
+        },
+        {
+          "title": "SC Department of Revenue – Property tax exemptions and assessment",
+          "label": "SC Department of Revenue – Property tax exemptions and assessment",
+          "url": "https://dor.sc.gov/property/property-tax-exemptions"
+        },
+        {
+          "title": "NC Real Estate Commission – Earnest Money and Due Diligence brochure",
+          "label": "NC Real Estate Commission – Earnest Money and Due Diligence brochure",
+          "url": "https://www.ncrec.gov/Brochures/EarnestMoneyBrochure.pdf"
+        }
+      ],
+      "overview_word_count": 91,
+      "img": "areas/lake-wylie",
+      "img_credit": {
+        "author": "Madhan Karthikeyan",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Lake_Wylie_(4626119648).jpg",
+        "title": "Lake Wylie (4626119648).jpg",
+        "depicts": "Lake Wylie sunset"
+      }
+    },
+    {
+      "slug": "indian-land",
+      "name": "Indian Land",
+      "county": "Lancaster",
+      "state": "SC",
+      "area": "South Carolina Suburbs",
+      "zip_codes": [
+        "29707"
+      ],
+      "lat": 35.0019,
+      "lng": -80.8567,
+      "coord_precision": "approx",
+      "distance_to_uptown": {
+        "miles": 16,
+        "basis": "straight-line distance from town center coordinates to Uptown (35.2272, -80.8431); driving distance is longer",
+        "source": "https://en.wikipedia.org/wiki/Indian_Land,_South_Carolina"
+      },
+      "tagline": "An unincorporated Lancaster County, SC community along US 521",
+      "overview": [
+        "Indian Land is an unincorporated community in the northern panhandle of Lancaster County, South Carolina, east of Fort Mill and west of Marvin and Waxhaw, North Carolina. It is part of the Charlotte metropolitan area and is assigned ZIP code 29707, although some residents share a Fort Mill mailing address.",
+        "Housing includes master-planned communities, newer subdivisions, townhomes, and some acreage. US 521 runs through the community, connecting it to Ballantyne and Charlotte to the north and Lancaster to the south. Indian Land does not have a downtown. Because it is in South Carolina, property taxes, purchase contracts, and closing practices differ from North Carolina; see the SC buying note."
+      ],
+      "housing_styles": [
+        "Master-planned communities",
+        "Newer subdivisions",
+        "Townhomes",
+        "Acreage"
+      ],
+      "dining": [
+        "Restaurants along US 521"
+      ],
+      "parks": [
+        "Local county parks"
+      ],
+      "shopping": [
+        "Shopping along US 521"
+      ],
+      "transportation": [
+        "US 521",
+        "SC 160",
+        "I-485 (nearby)"
+      ],
+      "feature_tags": [
+        "new-construction"
+      ],
+      "home_types": [
+        "Single Family",
+        "Townhouse",
+        "Land"
+      ],
+      "faq": [
+        {
+          "q": "What state is Indian Land in?",
+          "a": "South Carolina (Lancaster County)."
+        },
+        {
+          "q": "What ZIP code is Indian Land?",
+          "a": "Indian Land is assigned ZIP code 29707; some homes have Fort Mill addresses."
+        },
+        {
+          "q": "Is Indian Land incorporated?",
+          "a": "No. Indian Land is an unincorporated community served by Lancaster County."
+        }
+      ],
+      "idx_note": "Use ZIP 29707 or County = Lancaster; some listings show Fort Mill as city.",
+      "sc_buying_note": "Buying in South Carolina differs from North Carolina in a few ways: SC owner-occupants must apply to the county for the 4% legal residence property-tax assessment ratio (otherwise property is generally assessed at 6%), SC uses different purchase contract forms than the NC Offer to Purchase and Contract (which includes a non-refundable due diligence fee paid to the seller), and closings commonly involve an SC-licensed attorney. Work with an agent licensed in South Carolina and consult an SC attorney for specifics.",
+      "city": "Indian Land",
+      "summary": "Indian Land is an unincorporated community in the northern panhandle of Lancaster County, South Carolina, east of Fort Mill and west of Marvin and Waxhaw, North Carolina. It is part of the Charlotte metropolitan area and is assigned ZIP code 29707, although some residents share a Fort Mill mailing address.",
+      "housing": "Typical housing: Master-planned communities; Newer subdivisions; Townhomes; Acreage.",
+      "getting_around": "Main routes: US 521; SC 160; I-485 (nearby).",
+      "nearby": [
+        {
+          "name": "Restaurants along US 521",
+          "type": "eat-drink",
+          "note": "Dining"
+        },
+        {
+          "name": "Shopping along US 521",
+          "type": "shopping",
+          "note": "Shopping"
+        }
+      ],
+      "schools_note": "Public schools are assigned by address; use the Lancaster County School District (lancastercsd.com) to confirm. No ratings are provided here.",
+      "sources": [
+        {
+          "title": "Wikipedia – Indian Land, SC (coordinates, county, background)",
+          "label": "Wikipedia – Indian Land, SC (coordinates, county, background)",
+          "url": "https://en.wikipedia.org/wiki/Indian_Land,_South_Carolina"
+        },
+        {
+          "title": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "label": "U.S. Census Bureau TIGERweb – 2020 ZIP Code Tabulation Areas (point-in-polygon check at town center)",
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/7"
+        },
+        {
+          "title": "York County, SC – 2025 Reassessment Guide (4% legal residence ratio)",
+          "label": "York County, SC – 2025 Reassessment Guide (4% legal residence ratio)",
+          "url": "https://www.yorkcountysc.gov/DocumentCenter/View/9476/2025-Reassessment-GuidePDF"
+        },
+        {
+          "title": "SC Department of Revenue – Property tax exemptions and assessment",
+          "label": "SC Department of Revenue – Property tax exemptions and assessment",
+          "url": "https://dor.sc.gov/property/property-tax-exemptions"
+        },
+        {
+          "title": "NC Real Estate Commission – Earnest Money and Due Diligence brochure",
+          "label": "NC Real Estate Commission – Earnest Money and Due Diligence brochure",
+          "url": "https://www.ncrec.gov/Brochures/EarnestMoneyBrochure.pdf"
+        }
+      ],
+      "overview_word_count": 109,
+      "img": "areas/indian-land",
+      "img_credit": {
+        "author": "Mx. Granger",
+        "license": "CC0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:US_521_in_Indian_Land.jpg",
+        "title": "US 521 in Indian Land.jpg",
+        "depicts": "US 521 corridor Indian Land"
+      }
+    }
+  ]
+}

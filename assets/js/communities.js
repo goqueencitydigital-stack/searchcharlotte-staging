@@ -1,0 +1,10 @@
+(function(){const {$,$$,esc}=SC; const K={all:'All',homes:'Subdivisions',condos:'Condos',townhomes:'Townhomes',city:'Towns',zip:'ZIP codes',area:'Districts'};
+fetch('assets/data/communities.json').then(r=>r.json()).then(d=>{const A=d.communities; let kind='all';
+ $('#cm-kinds').innerHTML=Object.entries(K).map(([k,v])=>`<button class="chip${k==='all'?' is-active':''}" data-k="${k}" aria-pressed="${k==='all'}">${v} <small>${k==='all'?A.length:A.filter(x=>x.kind===k).length}</small></button>`).join('');
+ const render=()=>{const q=$('#cm-q').value.trim().toLowerCase(); const L=A.filter(x=>(kind==='all'||x.kind===kind)&&(!q||(x.name+' '+x.h1+' '+(x.parentName||'')+' '+(x.zip||'')+' '+x.city).toLowerCase().includes(q)));
+  const g={}; L.forEach(x=>{const ch=/^[a-z]/i.test(x.name)?x.name[0].toUpperCase():'#'; (g[ch]=g[ch]||[]).push(x);});
+  $('#cm-count').textContent=L.length+' communities';
+  $('#cm-az').innerHTML=Object.keys(g).sort().map(ch=>`<a href="#cm-${ch==='#'?'num':ch}">${ch}</a>`).join('');
+  $('#cm-list').innerHTML=Object.keys(g).sort().map(ch=>`<section class="cm-grp" id="cm-${ch==='#'?'num':ch}"><h2>${ch}</h2><ul>${g[ch].map(x=>`<li><a href="${x.slug}/index.html"><strong>${esc(x.name)}</strong><small>${esc(K[x.kind]==='Subdivisions'?'Homes':K[x.kind].replace(/s$/,''))} · ${esc(x.parentName||x.city)}${x.zip?' · '+x.zip:''}</small></a></li>`).join('')}</ul></section>`).join('')||'<p>No communities match that search.</p>';};
+ $('#cm-q').addEventListener('input',render); $('#cm-kinds').addEventListener('click',e=>{const b=e.target.closest('[data-k]'); if(!b) return; kind=b.dataset.k; $$('#cm-kinds .chip').forEach(x=>{x.classList.toggle('is-active',x===b); x.setAttribute('aria-pressed',x===b);}); render();});
+ render();});})();

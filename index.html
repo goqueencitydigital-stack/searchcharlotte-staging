@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Charlotte Homes for Sale & Neighborhood Guides | SearchCharlotte.com</title>
+<meta name="description" content="Search Charlotte homes for sale, explore neighborhoods like SouthPark, Dilworth and Ballantyne, and get local guidance from the SearchCharlotte team at BHHS Carolinas Realty.">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/agent-connect.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="home">
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <nav class="nav-left" aria-label="Primary">
+      <a class="nav-link" href="search.html">Search Homes</a>
+      <div class="dd">
+        <button aria-haspopup="true">Neighborhoods <svg viewBox="0 0 10 10"><path d="M1 3h8L5 8z" fill="currentColor"/></svg></button>
+        <div class="dd-menu">
+          <a href="neighborhoods.html">All neighborhoods &amp; towns</a>
+          <a href="neighborhood.html?n=south-charlotte">South Charlotte</a>
+          <a href="neighborhood.html?n=union-county">Union County</a>
+          <a href="neighborhood.html?n=mint-hill">Mint Hill</a>
+          <a href="neighborhood.html?n=lake-norman">Lake Norman</a>
+          <a href="neighborhood.html?n=uptown">Uptown</a>
+          <a href="communities.html">All 438 communities</a>
+        </div>
+      </div>
+      <div class="dd dd-mega">
+        <button aria-haspopup="true">Discover <svg viewBox="0 0 10 10"><path d="M1 3h8L5 8z" fill="currentColor"/></svg></button>
+        <div class="dd-menu mega">
+          <div><p class="mega-h">Find your home</p><a href="ai.html">Search Charlotte AI<small>Describe it, we'll search it</small></a><a href="lifestyle.html">Live Where You Love<small>Search by what's nearby</small></a><a href="visual.html">Find Homes Like This<small>Search by photo</small></a><a href="deals.html">Deal Radar<small>Price drops &amp; opportunities</small></a><a href="compare.html">Compare Homes</a><a href="invest.html">Investor Mode</a></div>
+          <div><p class="mega-h">Plan &amp; tour</p><a href="tour.html">Tour Day<small>Plan a showing route</small></a><a href="party.html">Search Party<small>Shop homes together</small></a><a href="reels.html">Property Reels</a><a href="renovate.html">Renovation Visualizer</a><a href="relocate.html">Moving to Charlotte</a><a href="seller.html">Seller Command Center</a></div>
+          <div><p class="mega-h">Know Charlotte</p><a href="pulse.html">Market Pulse<small>Monthly verified market data</small></a><a href="events.html">What's Happening<small>Charlotte events calendar</small></a><a href="explore.html">Explore Charlotte</a><a href="neighborhoods.html">Neighborhood Explorer</a><a href="communities.html">All 438 Communities</a><a href="guides/index.html">Neighborhood Guides</a><a href="resources/index.html">Resources &amp; Calculators</a></div>
+        </div>
+      </div>
+    </nav>
+    <a class="brand" href="index.html" aria-label="SearchCharlotte.com home">
+      <img class="logo" src="assets/img/logo-black.png" alt="SearchCharlotte.com — Your Home Is Here" width="250" height="100">
+      <img class="bhhs" src="assets/img/bhhs.png" alt="Berkshire Hathaway HomeServices" width="46" height="46">
+    </a>
+    <nav class="nav-right" aria-label="Secondary">
+      <div class="dd">
+        <button aria-haspopup="true">Services <svg viewBox="0 0 10 10"><path d="M1 3h8L5 8z" fill="currentColor"/></svg></button>
+        <div class="dd-menu">
+          <a href="buy.html">Buy a Home</a>
+          <a href="sell.html">Sell a Home</a>
+          <a href="seller.html#cma">Home Valuation</a>
+          <a href="market.html">Market Insights</a>
+          <a href="about.html#team">Find an Agent</a>
+        </div>
+      </div>
+      <a class="nav-link" href="about.html">About</a>
+      <span data-pp-bell></span>
+      <a class="pp-link" href="passport.html" title="My Passport" aria-label="My Passport"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></a>
+      <a class="idx-account" href="search.html?saved=1" title="Saved homes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg><span data-saved-count>0</span></a>
+      <a class="btn btn-sm" href="contact.html">Contact Us</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+    </nav>
+  </div>
+  <div class="mobile-panel" id="mobile-panel">
+    <a href="search.html">Search Homes</a>
+    <a href="neighborhoods.html">Neighborhoods</a>
+    <div class="sub"><a href="neighborhood.html?n=south-charlotte">South Charlotte</a><a href="neighborhood.html?n=union-county">Union County</a><a href="neighborhood.html?n=mint-hill">Mint Hill</a><a href="neighborhood.html?n=lake-norman">Lake Norman</a></div>
+    <a href="buy.html">Buy a Home</a>
+    <a href="sell.html">Sell a Home</a>
+    <a href="explore.html">Explore Charlotte</a>
+    <a href="market.html">Market Insights</a>
+    <a href="passport.html">My Passport</a>
+    <p class="mp-h">Discover</p>
+    <div class="sub"><a href="ai.html">Search Charlotte AI</a><a href="lifestyle.html">Live Where You Love</a><a href="deals.html">Deal Radar</a><a href="compare.html">Compare Homes</a><a href="tour.html">Tour Day</a><a href="party.html">Search Party</a><a href="reels.html">Property Reels</a><a href="pulse.html">Market Pulse</a><a href="events.html">What's Happening</a><a href="relocate.html">Moving to Charlotte</a><a href="seller.html">Seller Command Center</a><a href="invest.html">Investor Mode</a><a href="guides/index.html">Neighborhood Guides</a></div>
+    <a href="about.html">About &amp; Team</a>
+    <a href="search.html?saved=1">Saved Homes</a>
+    <a href="contact.html">Contact Us</a>
+    <p style="margin-top:20px"><a class="btn btn-block" href="tel:+17044581843" style="border:0;color:#fff">Call or text 704-458-1843</a></p>
+  </div>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero-media" role="img" aria-label="Uptown Charlotte skyline at sunset"></div>
+  <div class="wrap hero-inner">
+    <h1 id="hero-h" class="display d-hero">Find your next<br>home in Charlotte</h1>
+    <p class="sub">Search homes, explore neighborhoods, and get expert local guidance - all in one place.</p>
+    <form class="searchbar" data-search="hero" role="search">
+      <label class="sr-only" for="hero-q">Search location</label>
+      <input id="hero-q" name="q" type="search" placeholder="Enter an address, neighborhood, city, or ZIP code">
+      <button class="btn btn-sm" type="submit">Search</button>
+    </form>
+    <div class="hero-quick">
+      <a href="search.html?flag=New%20Listing">New listings</a><a href="search.html?view=map">Search the map</a><a href="#ai">Describe your dream home</a><a href="sell.html#valuation">What's my home worth?</a>
+    </div>
+  </div>
+  <a href="search.html" class="door" aria-label="Start your search"><img src="assets/img/door-hanger.webp" alt="" width="140" height="187"></a>
+</section>
+
+<section class="wrap lift" aria-labelledby="move-h">
+  <div class="panel center">
+    <h2 id="move-h" class="display d-xl reveal">Everything you need to<br>make your next move</h2>
+    <p class="lede">Whether you're buying, selling, or looking for expert guidance, we're here to help you move forward with confidence.</p>
+    <div class="svc-grid" style="text-align:left">
+      <article class="svc reveal"><div class="svc-img"><img src="assets/img/buy-home.webp" alt="Brick Tudor home with a teal front door" loading="lazy"><span class="mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 21V9l5-3v15zm6 0V4l6 4v13zm7 0V11l5 2v8z"/></svg></span><span class="tag">Charlotte</span></div>
+        <div class="svc-body"><h3>Buy a home</h3><p>Search every MLS listing across Charlotte, save favorites, and get alerts the moment a match hits the market.</p><a class="btn btn-sm" href="search.html">Start Your Search</a></div></article>
+      <article class="svc reveal"><div class="svc-img"><img src="assets/img/sell-home.webp" alt="Staged living room with neutral sofas" loading="lazy"><span class="mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 21V9l5-3v15zm6 0V4l6 4v13zm7 0V11l5 2v8z"/></svg></span><span class="tag">Charlotte</span></div>
+        <div class="svc-body"><h3>Sell a home</h3><p>Get a pricing analysis prepared by a local agent, a marketing plan, and a clear timeline from list to close.</p><a class="btn btn-sm" href="sell.html">Sell With Us</a></div></article>
+      <article class="svc reveal"><div class="svc-img"><img src="assets/img/find-agent.webp" alt="Agent shaking hands with clients at a table" loading="lazy"><span class="mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 21V9l5-3v15zm6 0V4l6 4v13zm7 0V11l5 2v8z"/></svg></span><span class="tag">Charlotte</span></div>
+        <div class="svc-body"><h3>Find an agent</h3><p>Work with a Search Charlotte REALTOR® who knows the streets, the builders and the offer dynamics in your area.</p><a class="btn btn-sm" href="about.html#team">Meet The Team</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section band-sand" aria-labelledby="pop-h">
+  <div class="wrap">
+    <div class="areas-head"><div><h2 id="pop-h" class="display d-lg">Popular home searches</h2><p style="margin:8px 0 0;font-size:13.5px">One tap to the searches Charlotte buyers run most. Each opens a saved MLS search.</p></div><a class="btn btn-sm" href="search.html">Open full search</a></div>
+    <div class="pop-grid">
+      <a class="pop reveal" href="search.html?flag=New%20Listing"><img src="assets/img/twilight-house.webp" alt="" loading="lazy"><span>New listings</span><small>Last 7 days</small></a>
+      <a class="pop reveal" href="search.html?min=1000000"><img src="assets/img/house-dusk.webp" alt="" loading="lazy"><span>Luxury homes</span><small>$1M and up</small></a>
+      <a class="pop reveal" href="search.html?max=500000"><img src="assets/img/budget-300.webp" alt="" loading="lazy"><span>Homes under $500K</span><small>All home types</small></a>
+      <a class="pop reveal" href="search.html?flag=New%20Construction"><img src="assets/img/budget-500.webp" alt="" loading="lazy"><span>New construction</span><small>Builder &amp; spec homes</small></a>
+      <a class="pop reveal" href="neighborhood.html?n=lake-norman"><img src="assets/img/areas/waterfront.webp" alt="" loading="lazy"><span>Waterfront homes</span><small>Lake Norman &amp; Lake Wylie</small></a>
+      <a class="pop reveal" href="search.html?type=Condo"><img src="assets/img/areas/modern-skyline.webp" alt="" loading="lazy"><span>Condos &amp; townhomes</span><small>Uptown, South End &amp; more</small></a>
+      <a class="pop reveal" href="search.html?q=pool"><img src="assets/img/budget-750.webp" alt="" loading="lazy"><span>Homes with pools</span><small>Amenity filter</small></a>
+      <a class="pop reveal" href="search.html?flag=Open%20House%20Sat%2011%E2%80%932"><img src="assets/img/kitchen-dark.webp" alt="" loading="lazy"><span>Open houses</span><small>This weekend</small></a>
+    </div>
+  </div>
+</section>
+
+<section class="section band-dark center" id="lifestyle" aria-labelledby="look-h">
+  <div class="wrap">
+    <h2 id="look-h" class="display d-xl" style="color:#F6EEDF">A local look at<br>Charlotte living</h2>
+    <p class="lede" style="color:#E9DFCF">Take a walk through one of Charlotte's established communities as we explore residential streets, nearby shopping, local businesses, neighborhood character, and what makes the area a great place to call home.</p>
+    <div class="video-frame">
+      <video preload="none" poster="assets/img/local-look-poster.jpg" playsinline><source src="assets/video/local-look.mp4" type="video/mp4"></video>
+      <button class="play" aria-label="Play video"><svg viewBox="0 0 24 24" fill="#141414"><path d="M7 4v16l13-8z"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<section class="band-dark" style="padding-bottom:56px" aria-labelledby="explore-h">
+  <div class="wrap">
+    <div class="panel">
+      <div class="areas-head">
+        <div><h2 id="explore-h" class="display d-xl" style="font-size:clamp(28px,3.8vw,46px)">Explore Charlotte, your way</h2><p style="margin:10px 0 0;font-size:13.5px">Every neighborhood has its own rhythm. Find the one that fits how you want to live.</p></div>
+        <a class="btn btn-sm" href="neighborhoods.html">View All Areas</a>
+      </div>
+      <div class="areas-grid" data-hood-cards="southpark,ballantyne,myers-park,dilworth,south-end,plaza-midwood,noda,elizabeth"></div>
+    </div>
+  </div>
+</section>
+
+<section class="doors" aria-labelledby="why-h">
+  <h2 id="why-h" class="display d-xl" style="font-size:clamp(30px,4vw,48px)">Local expertise.<br>A better way to move.</h2>
+  <p>Charlotte real estate is more than listings and numbers. It's about finding the right neighborhood, understanding the market, and making confident decisions at every step. We combine local market knowledge, modern search tools, and personal guidance to help buyers and sellers navigate Charlotte with clarity.</p>
+  <div class="why-grid">
+    <div><strong>Every MLS listing</strong><span>Live Canopy MLS data, updated throughout the day</span></div>
+    <div><strong>Search your way</strong><span>Map, draw, list, or just describe what you want</span></div>
+    <div><strong>No pressure</strong><span>Browse freely — sign up only to save and get alerts</span></div>
+    <div><strong>Real people</strong><span>Call or text a local agent at 704-458-1843</span></div>
+  </div>
+  <a class="btn btn-light" href="about.html" style="margin-top:28px">Learn More About Us</a>
+</section>
+
+<section class="section band-cream" aria-labelledby="homes-h">
+  <div class="wrap">
+    <div class="listing-head">
+      <div><h2 id="homes-h" class="display d-xl" style="font-size:clamp(28px,3.8vw,46px)">Homes you may like</h2><p style="margin:10px 0 0;font-size:13.5px">Explore homes selected around the way you want to live in Charlotte.</p></div>
+      <div class="chips" role="group" aria-label="Filter featured homes">
+        <button class="chip" aria-pressed="true" data-feat="all">All Homes</button>
+        <button class="chip" aria-pressed="false" data-feat="New Construction">New Construction</button>
+        <button class="chip" aria-pressed="false" data-feat="Open House Sat 11–2">Open Houses</button>
+        <button class="chip" aria-pressed="false" data-feat="Price Reduced">Price Reduced</button>
+      </div>
+    </div>
+    <div class="cards" id="featured" aria-live="polite"></div>
+    <p class="sample-note">Preview uses sample listings. At launch this row is a Showcase IDX hotsheet with live Canopy MLS data.</p>
+    <div style="display:flex;justify-content:flex-end;margin-top:20px"><a class="btn" href="search.html">View All Listings</a></div>
+  </div>
+</section>
+
+<section class="band-cream" style="padding-bottom:28px" aria-labelledby="map-h">
+  <div class="wrap">
+    <a class="map-promo" href="search.html?view=map">
+      <div class="map-promo-copy"><p class="eyebrow" style="color:#d9c9b3">Search by map</p><h2 id="map-h" class="display d-lg" style="color:#fff">Explore homes on the map</h2><p>Pan, zoom, or draw your own boundary around the streets you love. Results update as you move.</p><span class="btn btn-light">Explore Homes on the Map</span></div>
+      <div class="map-promo-art" id="mini-map" aria-hidden="true"></div>
+    </a>
+  </div>
+</section>
+
+<section class="band-cream" style="padding-block:28px 56px" aria-labelledby="unlock-h">
+  <div class="wrap">
+    <div class="unlock">
+      <div class="unlock-copy">
+        <h2 id="unlock-h" class="display">Unlock<br>your next<br>chapter</h2>
+        <p>Start your search today and find a home that fits your lifestyle, your goals, and your next chapter.</p>
+        <form class="searchbar" data-search="unlock" role="search"><label class="sr-only" for="u-q">Search location</label><input id="u-q" type="search" placeholder="Enter an address, neighborhood, city, or ZIP code"><button class="btn btn-sm" type="submit">Search</button></form>
+      </div>
+      <div class="unlock-media" role="img" aria-label="Aerial view of a tree-lined Charlotte neighborhood">
+        <div class="hanger"><strong>START YOUR<b>SEARCH</b></strong><small>Explore Available Homes And Discover The Right Place For Your Next Move.</small><a class="btn btn-sm btn-plum" href="search.html" style="color:#fff">Start Your Search</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section band-white" id="ai" aria-labelledby="ai-h">
+  <div class="wrap ai-wrap">
+    <div>
+      <p class="eyebrow">Search Charlotte AI</p>
+      <h2 id="ai-h" class="display d-lg">Tell us what you're looking for</h2>
+      <p style="font-size:14px;max-width:46ch">Describe your ideal home in plain English. We'll turn it into MLS search filters you can adjust — and point you to neighborhood guides that fit.</p>
+      <div class="chips" style="margin-top:14px">
+        <button class="chip" type="button" data-example>“4 bedroom home in Ballantyne under $650,000”</button>
+        <button class="chip" type="button" data-example>“Townhomes near South End under $500K”</button>
+        <button class="chip" type="button" data-example>“A house with a pool and a large yard”</button>
+        <button class="chip" type="button" data-example>“Relocating, want to be close to restaurants and parks”</button>
+      </div>
+    </div>
+    <div class="home-ai" id="home-ai"></div>
+  </div>
+  <div class="wrap"><div class="tools-row">
+    <a href="lifestyle.html"><b>Live Where You Love</b><span>Rank homes by the restaurants, parks and commute you care about</span></a>
+    <a href="deals.html"><b>Deal Radar</b><span>Price cuts, back-on-market homes and builder incentives</span></a>
+    <a href="tour.html"><b>Tour Day</b><span>Build a showing route and request tour times</span></a>
+    <a href="pulse.html"><b>Market Pulse</b><span>Monthly Charlotte numbers with sources and dates</span></a>
+  </div></div>
+</section>
+
+<section class="section band-sand" aria-labelledby="exp-h">
+  <div class="wrap">
+    <div class="areas-head"><div><p class="eyebrow">Explore Charlotte</p><h2 id="exp-h" class="display d-lg">Live like a local before you move</h2></div><a class="btn btn-sm" href="explore.html">Explore Charlotte</a></div>
+    <div class="life-grid">
+      <a class="life reveal" href="explore.html#eat-drink"><img src="assets/img/areas/south-end.webp" alt="" loading="lazy"><span>Best places to eat</span></a>
+      <a class="life reveal" href="explore.html#things-to-do"><img src="assets/img/areas/uptown.webp" alt="" loading="lazy"><span>Things to do</span></a>
+      <a class="life reveal" href="explore.html#outdoors"><img src="assets/img/areas/parks.webp" alt="" loading="lazy"><span>Parks &amp; outdoors</span></a>
+      <a class="life reveal" href="explore.html#sports"><img src="assets/img/areas/sports.webp" alt="" loading="lazy"><span>Sports &amp; events</span></a>
+      <a class="life reveal" href="explore.html#shopping"><img src="assets/img/areas/shopping.webp" alt="" loading="lazy"><span>Shopping</span></a>
+      <a class="life reveal" href="explore.html#living"><img src="assets/img/family.webp" alt="" loading="lazy"><span>Living in Charlotte</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--sand-2)" aria-labelledby="reels-h">
+  <div class="wrap center">
+    <h2 id="reels-h" class="display d-xl" style="font-size:clamp(28px,3.8vw,46px)">See Charlotte<br>through a local's eyes</h2>
+    <p class="lede">Get a closer look at Charlotte neighborhoods, homes, local hotspots, and real estate insights through our latest videos and Facebook reels.</p>
+    <div class="reels">
+      <div class="reel"><video src="assets/video/reel-1.mp4" poster="assets/img/reel-1.jpg" muted loop playsinline autoplay preload="none"></video><span class="reel-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg>Reel</span></div>
+      <div class="reel"><video src="assets/video/reel-2.mp4" poster="assets/img/reel-2.jpg" muted loop playsinline autoplay preload="none"></video><span class="reel-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg>Reel</span></div>
+      <div class="reel"><video src="assets/video/reel-3.mp4" poster="assets/img/reel-3.jpg" muted loop playsinline autoplay preload="none"></video><span class="reel-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg>Reel</span></div>
+      <div class="reel"><video src="assets/video/reel-4.mp4" poster="assets/img/reel-4.jpg" muted loop playsinline autoplay preload="none"></video><span class="reel-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg>Reel</span></div>
+    </div>
+    <a class="btn btn-sm" href="https://www.facebook.com/" style="margin-top:28px">Watch More Videos</a>
+  </div>
+</section>
+
+<section class="section band-white" aria-labelledby="quiz-h">
+  <div class="wrap quiz-wrap">
+    <div>
+      <p class="eyebrow">Neighborhood finder</p>
+      <h2 id="quiz-h" class="display d-lg">Find your perfect neighborhood</h2>
+      <p style="font-size:14px;max-width:44ch">Five quick questions about budget, home type, commute and lifestyle. Suggestions are based only on housing and amenity facts — never on who lives there.</p>
+    </div>
+    <form class="quiz" id="quiz">
+      <fieldset><legend>1. Home budget</legend><div class="opts">
+        <label><input type="radio" name="budget" value="500" required><span>Under $500K</span></label><label><input type="radio" name="budget" value="900"><span>$500K–$900K</span></label><label><input type="radio" name="budget" value="1500"><span>$900K–$1.5M</span></label><label><input type="radio" name="budget" value="9999"><span>$1.5M+</span></label></div></fieldset>
+      <fieldset><legend>2. Preferred home type</legend><div class="opts">
+        <label><input type="radio" name="htype" value="Single Family" required><span>House</span></label><label><input type="radio" name="htype" value="Townhouse"><span>Townhome</span></label><label><input type="radio" name="htype" value="Condo"><span>Condo</span></label><label><input type="radio" name="htype" value="any"><span>Open to all</span></label></div></fieldset>
+      <fieldset><legend>3. Commute focus</legend><div class="opts">
+        <label><input type="radio" name="commute" value="uptown" required><span>Uptown</span></label><label><input type="radio" name="commute" value="south"><span>South / Ballantyne</span></label><label><input type="radio" name="commute" value="north"><span>North / Lake Norman</span></label><label><input type="radio" name="commute" value="remote"><span>Remote / flexible</span></label></div></fieldset>
+      <fieldset><legend>4. What matters most nearby?</legend><div class="opts">
+        <label><input type="checkbox" name="want" value="walkable"><span>Walkable dining</span></label><label><input type="checkbox" name="want" value="greenway"><span>Parks &amp; greenways</span></label><label><input type="checkbox" name="want" value="light-rail"><span>Light rail</span></label><label><input type="checkbox" name="want" value="lake"><span>Lake access</span></label><label><input type="checkbox" name="want" value="space"><span>More yard / space</span></label></div></fieldset>
+      <button class="btn" type="submit">Show my matches</button>
+      <div id="quiz-out" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<section class="section" style="background:#F8F5F0" aria-labelledby="budget-h">
+  <div class="wrap center">
+    <h2 id="budget-h" class="display d-xl" style="font-size:clamp(28px,3.8vw,46px)">Find homes within your budget</h2>
+    <p class="lede" style="margin-bottom:0">Choose a price range to instantly explore homes that match your budget.</p>
+    <div class="budget-grid" id="budget-grid">
+      <article class="budget reveal"><h3>Under $300K</h3><img src="assets/img/budget-300.webp" alt="White farmhouse with porch lights" loading="lazy"><div class="count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11 12 3l9 8v10H3z"/></svg><span data-count="0-300000">0</span> Homes</div><a class="btn btn-sm btn-block" href="search.html?max=300000">Explore Homes</a></article>
+      <article class="budget reveal"><h3>$400K - $600K</h3><img src="assets/img/budget-400.webp" alt="Bright kitchen with island" loading="lazy"><div class="count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11 12 3l9 8v10H3z"/></svg><span data-count="400000-600000">0</span> Homes</div><a class="btn btn-sm btn-block" href="search.html?min=400000&max=600000">Explore Homes</a></article>
+      <article class="budget reveal"><h3>$600K - $1M</h3><img src="assets/img/budget-500.webp" alt="Modern two-story home at dusk" loading="lazy"><div class="count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11 12 3l9 8v10H3z"/></svg><span data-count="600000-1000000">0</span> Homes</div><a class="btn btn-sm btn-block" href="search.html?min=600000&max=1000000">Explore Homes</a></article>
+      <article class="budget reveal"><h3>$1M+</h3><img src="assets/img/budget-750.webp" alt="Contemporary home with pool" loading="lazy"><div class="count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11 12 3l9 8v10H3z"/></svg><span data-count="1000000-99999999">0</span> Homes</div><a class="btn btn-sm btn-block" href="search.html?min=1000000">Explore Homes</a></article>
+    </div>
+    <p class="sample-note" style="text-align:center">Counts reflect preview sample data. Live counts come from the Showcase IDX results-count widget.</p>
+  </div>
+</section>
+
+<section class="section band-sand" aria-labelledby="val-h">
+  <div class="wrap value-wrap">
+    <div class="value-media"><img src="assets/img/house-dusk.webp" alt="Charlotte home at dusk" loading="lazy"></div>
+    <div>
+      <p class="eyebrow">For sellers</p>
+      <h2 id="val-h" class="display d-lg">Wondering what your Charlotte home is worth?</h2>
+      <p style="font-size:14px">Get a pricing analysis prepared by a Search Charlotte agent using recent comparable sales — not an automated guess. Most requests are answered within one business day.</p>
+      <form class="searchbar" style="margin:18px 0 0;max-width:520px" action="sell.html#valuation">
+        <label class="sr-only" for="v-addr">Property address</label>
+        <input id="v-addr" name="address" placeholder="Enter your home address" required>
+        <button class="btn btn-sm" type="submit">Get my home value</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section band-white" aria-labelledby="mkt-h">
+  <div class="wrap">
+    <div class="areas-head"><div><p class="eyebrow">Market insights</p><h2 id="mkt-h" class="display d-lg">The Charlotte market, sourced</h2></div><a class="btn btn-sm btn-outline" href="market.html">Full market report</a></div>
+    <div class="mkt-grid" id="mkt-grid"></div>
+    <p class="form-note" id="mkt-src" style="margin-top:14px"></p>
+  </div>
+</section>
+
+<section class="section band-black trust" id="trust" aria-labelledby="trust-h" data-carousel>
+  <h2 id="trust-h" class="display d-xl center" style="font-size:clamp(28px,3.8vw,46px);margin-bottom:36px">Trusted by Charlotte<br>homeowners</h2>
+  <div class="trust-track">
+    <div class="trust-card"><img src="assets/img/testimonial-home.webp" alt="" loading="lazy"><div><div class="stat">#1</div><p>Consistently named Berkshire Hathaway HomeServices' #1 REALTOR® in North Carolina and Top 100 worldwide.</p><div class="who">John Siddons<small>Lead Broker, Search Charlotte</small></div></div></div>
+    <div class="trust-card"><img src="assets/img/brick-home.webp" alt="" loading="lazy"><div><div class="stat">Local</div><p>A team of top-producing REALTORS® based at 6801 Morrison Blvd in SouthPark, serving the full Charlotte metro.</p><div class="who">Search Charlotte Team<small>BHHS Carolinas Realty</small></div></div></div>
+    <div class="trust-card"><img src="assets/img/modern-dusk.webp" alt="" loading="lazy"><div><div class="stat">Both sides</div><p>Sellers get pricing and marketing built for top dollar; buyers get a negotiator who helps them win in competitive offers.</p><div class="who">Buyer &amp; seller representation<small>Charlotte · Union · York · Lake Norman</small></div></div></div>
+  </div>
+  <div class="dots" role="group" aria-label="Choose slide"></div>
+  <p class="center form-note" style="color:#aaa;margin-top:18px">Verified client reviews from Google and Zillow will be embedded here once review access is connected.</p>
+</section>
+
+<section class="section band-white" aria-labelledby="faq-h">
+  <div class="wrap faq-grid">
+    <div>
+      <h2 id="faq-h" class="display d-xl" style="font-size:clamp(30px,3.8vw,46px)">Frequently<br>asked questions</h2>
+      <p style="font-size:13px;margin:12px 0 0">Straight answers about buying a home in Charlotte.</p>
+      <div class="faq-list">
+        <div class="faq-item"><button aria-expanded="false">How do I start buying a home in Charlotte?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></button><div class="ans"><div>Get pre-approved with a lender so you know your budget, then set up a saved search for the areas you like. A Search Charlotte agent can tour homes with you, pull recent sales, and write your offer when you find the one.</div></div></div>
+        <div class="faq-item"><button aria-expanded="false">How much down payment do I need to buy a home in Charlotte?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></button><div class="ans"><div>It depends on the loan. Some conventional loans allow as little as 3% down, FHA loans can start at 3.5%, and VA and USDA loans may require no down payment for eligible buyers. Your lender will confirm what you qualify for.</div></div></div>
+        <div class="faq-item"><button aria-expanded="false">How long does it take to buy a home in Charlotte?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></button><div class="ans"><div>Searching can take days or months. Once you're under contract, a financed purchase typically closes in about 30–45 days. In North Carolina, the due-diligence period is when you complete inspections and appraisal.</div></div></div>
+        <div class="faq-item"><button aria-expanded="false">What are closing costs when buying a home?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></button><div class="ans"><div>Buyers usually pay lender fees, title insurance, attorney fees (North Carolina closings are handled by an attorney), recording fees and prepaid taxes and insurance. Your lender's Loan Estimate lists the exact figures.</div></div></div>
+        <div class="faq-item"><button aria-expanded="false">Which Charlotte neighborhoods are best for home buyers?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></button><div class="ans"><div>The best fit depends on your budget, commute and the lifestyle you want — walkable streets in Dilworth and South End, larger lots in Mint Hill and Union County, or lake living around Lake Norman. Try the neighborhood finder above or browse our <a href="neighborhoods.html" style="text-decoration:underline">neighborhood guides</a>.</div></div></div>
+      </div>
+    </div>
+    <img class="faq-img" src="assets/img/areas/hero-skyline.webp" alt="Charlotte skyline" loading="lazy">
+  </div>
+</section>
+
+<section class="section band-sand" aria-labelledby="guides-h">
+  <div class="wrap">
+    <div class="areas-head"><div><p class="eyebrow">Guides &amp; resources</p><h2 id="guides-h" class="display d-lg">Know before you move</h2></div><a class="btn btn-sm" href="buy.html">All guides</a></div>
+    <div class="guide-grid">
+      <a class="guide reveal" href="buy.html"><img src="assets/img/family.webp" alt="" loading="lazy"><small>Buyers</small><h3>First-time homebuyer's guide to Charlotte</h3></a>
+      <a class="guide reveal" href="sell.html"><img src="assets/img/sell-home.webp" alt="" loading="lazy"><small>Sellers</small><h3>How to price and sell your Charlotte home</h3></a>
+      <a class="guide reveal" href="explore.html#living"><img src="assets/img/areas/uptown.webp" alt="" loading="lazy"><small>Relocation</small><h3>Moving to Charlotte: the relocation checklist</h3></a>
+      <a class="guide reveal" href="buy.html#calculator"><img src="assets/img/kitchen-dark.webp" alt="" loading="lazy"><small>Finance</small><h3>Mortgage calculator &amp; closing-cost basics</h3></a>
+    </div>
+  </div>
+</section>
+
+<section class="final" aria-labelledby="final-h">
+  <h2 id="final-h" class="big"><span class="l1">Your next</span><span class="l2">move starts here</span></h2>
+  <p>Whether you're buying, selling, or searching for the perfect home in Charlotte, we're ready to help you move forward with confidence.</p>
+  <div class="actions"><a class="btn btn-ghost btn-sm" href="search.html">Search Homes</a><a class="btn btn-ghost btn-sm" href="contact.html">Talk To An Expert</a></div>
+</section>
+<link rel="stylesheet" href="assets/css/mobile.css">
+</main>
+<footer class="site-footer">
+  <div class="wrap" style="max-width:1280px">
+    <div class="foot">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a class="brand" href="index.html"><img class="logo" src="assets/img/logo-black.png" alt="SearchCharlotte.com" width="150" height="60"><img class="bhhs" src="assets/img/bhhs.png" alt="Berkshire Hathaway HomeServices" width="56" height="56"></a>
+          <p>Your trusted guide to Charlotte real estate.</p>
+          <div class="socials">
+          </div>
+        </div>
+        <div><h4>Explore</h4><ul><li><a href="buy.html">Buy a Home</a></li><li><a href="sell.html">Sell a Home</a></li><li><a href="about.html#team">Find an Agent</a></li><li><a href="search.html">Featured Listings</a></li><li><a href="neighborhoods.html">Charlotte Neighborhoods</a></li><li><a href="communities.html">All Communities</a></li></ul></div>
+        <div><h4>Resources</h4><ul><li><a href="seller.html#cma">Home Valuation</a></li><li><a href="market.html">Market Insights</a></li><li><a href="mortgage-calculator/index.html">Mortgage Calculator</a></li><li><a href="guides/index.html">Neighborhood Guides</a></li><li><a href="pulse.html">Market Pulse</a></li><li><a href="events.html">Charlotte Events</a></li><li><a href="resources/index.html">Resources</a></li><li><a href="buy.html">Buyer Resources</a></li><li><a href="sell.html">Seller Resources</a></li><li><a href="buy.html#faq">FAQs</a></li></ul></div>
+        <div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="agents/index.html">Our Team</a></li><li><a href="photo-credits.html">Photo Credits</a></li><li><a href="index.html#trust">Testimonials</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="contact.html?topic=careers">Careers</a></li></ul></div>
+        <div><h4>Contact Info</h4><ul><li><a href="tel:+17044581843">Phone: (704) 458-1843</a></li><li><a href="mailto:john@searchcharlotte.com">Email: john@searchcharlotte.com</a></li><li>6801 Morrison Blvd, Suite 101<br>Charlotte, NC 28211</li></ul></div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 Search Charlotte · Berkshire Hathaway HomeServices Carolinas Realty. All Rights Reserved.</span>
+        <nav><a href="legal.html#privacy">Privacy Policy</a>·<a href="legal.html#terms">Terms of Use</a>·<a href="legal.html#accessibility">Accessibility</a>·<a href="legal.html#fair-housing">Fair Housing</a></nav>
+      </div>
+      <p class="mls-disclaimer"><span class="eho"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 1 11h3v10h16V11h3zm-4 11h8v2H8zm0 4h8v2H8z"/></svg>Equal Housing Opportunity.</span> The data relating to real estate on this website derive in part from the Canopy MLS IDX program. Listings held by brokerage firms other than Berkshire Hathaway HomeServices Carolinas Realty are marked with the Canopy MLS IDX logo and information about them includes the name of the listing broker. Information is deemed reliable but not guaranteed. <strong>Preview note:</strong> listings shown in this preview are sample data; the live site loads real-time listings through Showcase IDX.</p>
+    </div>
+  </div>
+</footer>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/img-hd.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/agent-connect.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="assets/js/home.js"></script><script src="assets/js/ai.js"></script><script>SC.ai&&SC.ai.mountLauncher(document.getElementById('home-ai'),{examples:[]});document.querySelectorAll('[data-example]').forEach(b=>b.addEventListener('click',()=>location.href='ai.html?q='+encodeURIComponent(b.textContent.replace(/[“”]/g,''))));</script>
+</body>
+</html>

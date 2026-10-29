@@ -1,0 +1,947 @@
+{
+  "generated": "2026-10-28",
+  "note": "All area photos are from Wikimedia Commons under the licenses listed. Attribution required for CC BY / CC BY-SA. Images were resized/cropped to 3:2 (CC BY-SA adaptations are shared under the same license).",
+  "photos": [
+    {
+      "file": "areas/uptown",
+      "depicts": "Uptown skyline",
+      "nearest_alternative": false,
+      "author": "DaSon'e",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Charlotte,_N_Carolina.jpg",
+      "title": "Charlotte, N Carolina.jpg",
+      "used_for": [
+        "n-uptown",
+        "page-uptown",
+        "guide:best-things-to-do-in-uptown"
+      ]
+    },
+    {
+      "file": "areas/ballantyne",
+      "depicts": "",
+      "nearest_alternative": false,
+      "author": "City Dweller 2",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ballantyne_Arches_at_Ballantyne_Commons_Parkway_and_Johnston_Mid-April_2024.jpg",
+      "title": "Ballantyne Arches at Ballantyne Commons Parkway and Johnston Mid-April 2024.jpg",
+      "used_for": [
+        "n-ballantyne",
+        "guide:best-things-to-do-in-ballantyne"
+      ]
+    },
+    {
+      "file": "areas/ballantyne-east",
+      "depicts": "nearest: Ballantyne Stream Park",
+      "nearest_alternative": true,
+      "author": "City Dweller 2",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Stream_Park_and_Ballantyne_Hotel_Mid-April_2024.jpg",
+      "title": "Stream Park and Ballantyne Hotel Mid-April 2024.jpg",
+      "used_for": [
+        "n-ballantyne-east"
+      ]
+    },
+    {
+      "file": "areas/ballantyne-west",
+      "depicts": "nearest: Ballantyne Village",
+      "nearest_alternative": true,
+      "author": "Lori Bee",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ballantyne_Village.jpg",
+      "title": "Ballantyne Village.jpg",
+      "used_for": [
+        "n-ballantyne-west"
+      ]
+    },
+    {
+      "file": "areas/barclay-downs",
+      "depicts": "nearest: SouthPark Mall adjacent",
+      "nearest_alternative": true,
+      "author": "HangingCurve",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:SouthPark_Mall_entrance.jpg",
+      "title": "SouthPark Mall entrance.jpg",
+      "used_for": [
+        "n-barclay-downs"
+      ]
+    },
+    {
+      "file": "areas/beverly-woods",
+      "depicts": "nearest: Park Road Park",
+      "nearest_alternative": true,
+      "author": "Mx. Granger",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Park_Road_Park_1.jpg",
+      "title": "Park Road Park 1.jpg",
+      "used_for": [
+        "n-beverly-woods"
+      ]
+    },
+    {
+      "file": "areas/belmont-charlotte",
+      "depicts": "Belmont Mills building",
+      "nearest_alternative": false,
+      "author": "City Dweller 2",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Belmont_Mills_Late_March_2024.jpg",
+      "title": "Belmont Mills Late March 2024.jpg",
+      "used_for": [
+        "n-belmont-charlotte"
+      ]
+    },
+    {
+      "file": "areas/blakeney",
+      "depicts": "James A. Blakeney House historic landmark",
+      "nearest_alternative": false,
+      "author": "Dclemens1971",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:James_A._Blakeney_House_01.jpg",
+      "title": "James A. Blakeney House 01.jpg",
+      "used_for": [
+        "n-blakeney"
+      ]
+    },
+    {
+      "file": "areas/bradfield-farms",
+      "depicts": "nearest: Sherman Branch Regional Park",
+      "nearest_alternative": true,
+      "author": "28215",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sherman_Branch_Regional_Park_-_Winter_2010_-_panoramio.jpg",
+      "title": "Sherman Branch Regional Park - Winter 2010 - panoramio.jpg",
+      "used_for": [
+        "n-bradfield-farms"
+      ]
+    },
+    {
+      "file": "areas/carmel",
+      "depicts": "Carmel Baptist Church",
+      "nearest_alternative": false,
+      "author": "Dclemens1971",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Carmel_Baptist_Church_01.jpg",
+      "title": "Carmel Baptist Church 01.jpg",
+      "used_for": [
+        "n-carmel"
+      ]
+    },
+    {
+      "file": "areas/chantilly",
+      "depicts": "nearest: American Legion Memorial Stadium next to Chantilly",
+      "nearest_alternative": true,
+      "author": "Bobby Brandon",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:AmericanLegionMemorialStadiumMay2021.jpg",
+      "title": "AmericanLegionMemorialStadiumMay2021.jpg",
+      "used_for": [
+        "n-chantilly"
+      ]
+    },
+    {
+      "file": "areas/elizabeth",
+      "depicts": "Lamar and Eighth streetscape",
+      "nearest_alternative": false,
+      "author": "Nyttend",
+      "license": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lamar_and_Eighth_in_Elizabeth.jpg",
+      "title": "Lamar and Eighth in Elizabeth.jpg",
+      "used_for": [
+        "n-elizabeth",
+        "guide:best-things-to-do-in-elizabeth"
+      ]
+    },
+    {
+      "file": "areas/dilworth",
+      "depicts": "Dilworth Historic District",
+      "nearest_alternative": false,
+      "author": "Hitkiller666",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dilworth_Historic_District,_Charlotte.jpg",
+      "title": "Dilworth Historic District, Charlotte.jpg",
+      "used_for": [
+        "n-dilworth",
+        "guide:best-things-to-do-in-dilworth"
+      ]
+    },
+    {
+      "file": "areas/eastover",
+      "depicts": "Mint Museum Randolph",
+      "nearest_alternative": false,
+      "author": "Expedia",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mint_Museum_of_Art_Randolph_Front_With_Fountain.jpg",
+      "title": "Mint Museum of Art Randolph Front With Fountain.jpg",
+      "used_for": [
+        "n-eastover"
+      ]
+    },
+    {
+      "file": "areas/madison-park",
+      "depicts": "nearest: Park Road Park",
+      "nearest_alternative": true,
+      "author": "Mx. Granger",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Park_Road_Park_2.jpg",
+      "title": "Park Road Park 2.jpg",
+      "used_for": [
+        "n-madison-park"
+      ]
+    },
+    {
+      "file": "areas/mountain-island",
+      "depicts": "nearest: Latta Plantation on Mountain Island Lake",
+      "nearest_alternative": true,
+      "author": "Carol M. Highsmith",
+      "license": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Latta_Plantation,_Huntersville,_North_Carolina_LCCN2011631093.tif",
+      "title": "Latta Plantation, Huntersville, North Carolina LCCN2011631093.tif",
+      "used_for": [
+        "n-mountain-island"
+      ]
+    },
+    {
+      "file": "areas/myers-park",
+      "depicts": "Biltmore Drive Pharrsdale Myers Park",
+      "nearest_alternative": false,
+      "author": "Nyttend",
+      "license": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Biltmore_Drive_in_Pharrsdale.jpg",
+      "title": "Biltmore Drive in Pharrsdale.jpg",
+      "used_for": [
+        "n-myers-park",
+        "guide:best-things-to-do-in-myers-park"
+      ]
+    },
+    {
+      "file": "areas/noda",
+      "depicts": "NoDa mural 36th St station",
+      "nearest_alternative": false,
+      "author": "Washuotaku",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Novel_NoDa_Apartments_Mural.jpg",
+      "title": "Novel NoDa Apartments Mural.jpg",
+      "used_for": [
+        "n-noda",
+        "guide:best-things-to-do-in-noda"
+      ]
+    },
+    {
+      "file": "areas/optimist-park",
+      "depicts": "Highland Park Mill No. 1",
+      "nearest_alternative": false,
+      "author": "Nyttend",
+      "license": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Highland_Park_Mill_No._1.jpg",
+      "title": "Highland Park Mill No. 1.jpg",
+      "used_for": [
+        "n-optimist-park"
+      ]
+    },
+    {
+      "file": "areas/plaza-midwood",
+      "depicts": "Central Ave at Pecan St",
+      "nearest_alternative": false,
+      "author": "City Dweller 2",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Central_Ave_at_Pecan_St_looking_east_Early_April_2025.jpg",
+      "title": "Central Ave at Pecan St looking east Early April 2025.jpg",
+      "used_for": [
+        "n-plaza-midwood",
+        "guide:best-things-to-do-in-plaza-midwood"
+      ]
+    },
+    {
+      "file": "areas/piper-glen",
+      "depicts": "nearest: Big Rock Nature Preserve",
+      "nearest_alternative": true,
+      "author": "Lordgilman",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Big_Rock_Nature_Preserve_11.jpg",
+      "title": "Big Rock Nature Preserve 11.jpg",
+      "used_for": [
+        "n-piper-glen"
+      ]
+    },
+    {
+      "file": "areas/quail-hollow",
+      "depicts": "Quail Hollow Club course 2006 Wachovia Championship",
+      "nearest_alternative": false,
+      "author": "MCHart",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Wachovia_Championship_-_2006_-_Interesting_7th_Hole_Estate_at_Quail_Hollow_(139875534).jpg",
+      "title": "Wachovia Championship - 2006 - Interesting 7th Hole Estate at Quail Hollow (139875534).jpg",
+      "used_for": [
+        "n-quail-hollow"
+      ]
+    },
+    {
+      "file": "areas/sedgefield",
+      "depicts": "Sedgefield Neighborhood Park",
+      "nearest_alternative": false,
+      "author": "City Dweller 2",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sedgefield_Neighborhood_Park_basketball_court_Early_July_2025.jpg",
+      "title": "Sedgefield Neighborhood Park basketball court Early July 2025.jpg",
+      "used_for": [
+        "n-sedgefield"
+      ]
+    },
+    {
+      "file": "areas/southpark",
+      "depicts": "SouthPark Mall entrance",
+      "nearest_alternative": false,
+      "author": "HangingCurve",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:SouthPark_Mall_entrance.jpg",
+      "title": "SouthPark Mall entrance.jpg",
+      "used_for": [
+        "n-southpark",
+        "guide:best-things-to-do-in-southpark"
+      ]
+    },
+    {
+      "file": "areas/south-end",
+      "depicts": "South End aerial",
+      "nearest_alternative": false,
+      "author": "Patch23",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Southend110.jpg",
+      "title": "Southend110.jpg",
+      "used_for": [
+        "n-south-end",
+        "guide:best-things-to-do-in-south-end"
+      ]
+    },
+    {
+      "file": "areas/steele-creek",
+      "depicts": "Steele Creek Presbyterian Church",
+      "nearest_alternative": false,
+      "author": "Bagatar",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Steele_Creek_Presbyterian.jpg",
+      "title": "Steele Creek Presbyterian.jpg",
+      "used_for": [
+        "n-steele-creek",
+        "guide:best-things-to-do-in-steele-creek"
+      ]
+    },
+    {
+      "file": "areas/starmount",
+      "depicts": "nearest: Arrowood light rail station",
+      "nearest_alternative": true,
+      "author": "Mark Clifton",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Arrowood_Station_03.jpg",
+      "title": "Arrowood Station 03.jpg",
+      "used_for": [
+        "n-starmount"
+      ]
+    },
+    {
+      "file": "areas/third-ward",
+      "depicts": "Uptown aerial with Bank of America Stadium in Third Ward",
+      "nearest_alternative": false,
+      "author": "Precisionviews",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Uptown_Charlotte_2018_taking_by_DJI_Phantom_4_pro.jpg",
+      "title": "Uptown Charlotte 2018 taking by DJI Phantom 4 pro.jpg",
+      "used_for": [
+        "n-third-ward"
+      ]
+    },
+    {
+      "file": "areas/sports",
+      "depicts": "Bank of America Stadium skyline",
+      "nearest_alternative": false,
+      "author": "Carlos.dkfi",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bank_of_america_stadium_2023.jpg",
+      "title": "Bank of america stadium 2023.jpg",
+      "used_for": [
+        "page-sports"
+      ]
+    },
+    {
+      "file": "areas/university-city",
+      "depicts": "UNC Charlotte campus",
+      "nearest_alternative": false,
+      "author": "Stanton49",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:CRI_and_JRS.jpg",
+      "title": "CRI and JRS.jpg",
+      "used_for": [
+        "n-university-city",
+        "guide:best-things-to-do-in-university-city"
+      ]
+    },
+    {
+      "file": "areas/villa-heights",
+      "depicts": "Bishop John C. Kilgo House historic landmark",
+      "nearest_alternative": false,
+      "author": "RoxylovesHistory",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bishop_John_C._Kilgo_House,_Charlotte,_NC.jpg",
+      "title": "Bishop John C. Kilgo House, Charlotte, NC.jpg",
+      "used_for": [
+        "n-villa-heights"
+      ]
+    },
+    {
+      "file": "areas/wesley-heights",
+      "depicts": "Lela Ave streetscape",
+      "nearest_alternative": false,
+      "author": "City Dweller 2",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lela_Ave_Wesley_Heights_February_2024.jpg",
+      "title": "Lela Ave Wesley Heights February 2024.jpg",
+      "used_for": [
+        "n-wesley-heights"
+      ]
+    },
+    {
+      "file": "areas/wilmore",
+      "depicts": "South Tryon and Wilmore Centennial Park",
+      "nearest_alternative": false,
+      "author": "City Dweller 2",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:South_Tryon_and_Wilmore_Centennial_Park_At_Southend_January_2024.jpg",
+      "title": "South Tryon and Wilmore Centennial Park At Southend January 2024.jpg",
+      "used_for": [
+        "n-wilmore"
+      ]
+    },
+    {
+      "file": "areas/first-ward",
+      "depicts": "First Ward Park",
+      "nearest_alternative": false,
+      "author": "Algorhythms",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:First_Ward_Park_September_2022.jpg",
+      "title": "First Ward Park September 2022.jpg",
+      "used_for": [
+        "n-first-ward"
+      ]
+    },
+    {
+      "file": "areas/fourth-ward",
+      "depicts": "Fourth Ward Park skyline",
+      "nearest_alternative": false,
+      "author": "James Willamor",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Charlotte_from_4th_Ward_Park_-_panoramio.jpg",
+      "title": "Charlotte from 4th Ward Park - panoramio.jpg",
+      "used_for": [
+        "n-fourth-ward"
+      ]
+    },
+    {
+      "file": "areas/union-county",
+      "depicts": "Old Union County Courthouse Monroe",
+      "nearest_alternative": false,
+      "author": "Indy beetle",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Monroe,_North_Carolina_01.jpg",
+      "title": "Monroe, North Carolina 01.jpg",
+      "used_for": [
+        "n-union-county"
+      ]
+    },
+    {
+      "file": "areas/monroe",
+      "depicts": "Downtown Monroe Main Street",
+      "nearest_alternative": false,
+      "author": "Indy beetle",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Monroe,_North_Carolina_03.jpg",
+      "title": "Monroe, North Carolina 03.jpg",
+      "used_for": [
+        "c-monroe"
+      ]
+    },
+    {
+      "file": "areas/lake-norman",
+      "depicts": "Governors Island Lake Norman aerial",
+      "nearest_alternative": false,
+      "author": "Christopher Sheridan",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Governors-Island-Lake-Norman.jpg",
+      "title": "Governors-Island-Lake-Norman.jpg",
+      "used_for": [
+        "n-lake-norman",
+        "guide:best-things-to-do-in-lake-norman"
+      ]
+    },
+    {
+      "file": "areas/waterfront",
+      "depicts": "Governors Island Lake Norman waterfront homes aerial",
+      "nearest_alternative": false,
+      "author": "Insiderpaulmartinez",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Governors_Island,_Lake_Norman,_NC.jpg",
+      "title": "Governors Island, Lake Norman, NC.jpg",
+      "used_for": [
+        "page-waterfront"
+      ]
+    },
+    {
+      "file": "areas/matthews",
+      "depicts": "Downtown Matthews",
+      "nearest_alternative": false,
+      "author": "Jon Platek",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Downtown_Matthews_NC_1.jpg",
+      "title": "Downtown Matthews NC 1.jpg",
+      "used_for": [
+        "c-matthews"
+      ]
+    },
+    {
+      "file": "areas/mint-hill",
+      "depicts": "Mint Hill Town Hall fountain",
+      "nearest_alternative": false,
+      "author": "Algorhythms",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mint_Hill_City_Hall_%26_Fountain.jpg",
+      "title": "Mint Hill City Hall & Fountain.jpg",
+      "used_for": [
+        "c-mint-hill",
+        "n-mint-hill"
+      ]
+    },
+    {
+      "file": "areas/pineville",
+      "depicts": "President James K. Polk Birthplace State Historic Site",
+      "nearest_alternative": false,
+      "author": "Ken Lund from Reno, Nevada, USA",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:President_James_K._Polk_Birthplace,_Pineville,_North_Carolina_(33666981968).jpg",
+      "title": "President James K. Polk Birthplace, Pineville, North Carolina (33666981968).jpg",
+      "used_for": [
+        "c-pineville"
+      ]
+    },
+    {
+      "file": "areas/huntersville",
+      "depicts": "Birkdale Village",
+      "nearest_alternative": false,
+      "author": "Brett VA",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Birkdale_Village_Town_Center_Mixed_use_pan_(5488705081).jpg",
+      "title": "Birkdale Village Town Center Mixed use pan (5488705081).jpg",
+      "used_for": [
+        "c-huntersville",
+        "guide:best-things-to-do-in-huntersville"
+      ]
+    },
+    {
+      "file": "areas/cornelius",
+      "depicts": "Peninsula Yacht Club Lake Norman Cornelius",
+      "nearest_alternative": false,
+      "author": "LakeNormanMike",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lake_Norman_-_Peninsula_Yacht_Club.jpg",
+      "title": "Lake Norman - Peninsula Yacht Club.jpg",
+      "used_for": [
+        "c-cornelius"
+      ]
+    },
+    {
+      "file": "areas/belmont",
+      "depicts": "Main Street Belmont",
+      "nearest_alternative": false,
+      "author": "Indy beetle",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Main_Street,_Belmont_01.jpg",
+      "title": "Main Street, Belmont 01.jpg",
+      "used_for": [
+        "c-belmont",
+        "guide:best-things-to-do-in-belmont"
+      ]
+    },
+    {
+      "file": "areas/mount-holly",
+      "depicts": "Historic downtown Mount Holly",
+      "nearest_alternative": false,
+      "author": "RoxylovesHistory",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Historic_Downtown_Mount_Holly,_NC_-_9-20-2014.jpg",
+      "title": "Historic Downtown Mount Holly, NC - 9-20-2014.jpg",
+      "used_for": [
+        "c-mount-holly"
+      ]
+    },
+    {
+      "file": "areas/gastonia",
+      "depicts": "Downtown Gastonia aerial",
+      "nearest_alternative": false,
+      "author": "GastoniaHappening Jim Bob Willy",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Gastonia_Downtown_Aerial.jpg",
+      "title": "Gastonia Downtown Aerial.jpg",
+      "used_for": [
+        "c-gastonia"
+      ]
+    },
+    {
+      "file": "areas/fort-mill",
+      "depicts": "Main Street Fort Mill",
+      "nearest_alternative": false,
+      "author": "Photogeographer",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fort_Mill_SC_2020.jpg",
+      "title": "Fort Mill SC 2020.jpg",
+      "used_for": [
+        "c-fort-mill",
+        "guide:best-things-to-do-in-fort-mill"
+      ]
+    },
+    {
+      "file": "areas/tega-cay",
+      "depicts": "Lake Wylie shoreline near Tega Cay",
+      "nearest_alternative": false,
+      "author": "bobcapra",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lake_Wylie_(14312970898).jpg",
+      "title": "Lake Wylie (14312970898).jpg",
+      "used_for": [
+        "c-tega-cay"
+      ]
+    },
+    {
+      "file": "areas/lake-wylie",
+      "depicts": "Lake Wylie sunset",
+      "nearest_alternative": false,
+      "author": "Madhan Karthikeyan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lake_Wylie_(4626119648).jpg",
+      "title": "Lake Wylie (4626119648).jpg",
+      "used_for": [
+        "c-lake-wylie"
+      ]
+    },
+    {
+      "file": "areas/indian-trail",
+      "depicts": "Indian Trail Town Hall",
+      "nearest_alternative": false,
+      "author": "Abbeynball",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Indian_Trail_Town_Hall_copy.jpg",
+      "title": "Indian Trail Town Hall copy.jpg",
+      "used_for": [
+        "c-indian-trail"
+      ]
+    },
+    {
+      "file": "areas/weddington",
+      "depicts": "Thomas-Wrenn House (Weddington Town Hall)",
+      "nearest_alternative": false,
+      "author": "Dclemens1971",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Thomas-Wrenn_House_(Weddington_Town_Hall)_01.jpg",
+      "title": "Thomas-Wrenn House (Weddington Town Hall) 01.jpg",
+      "used_for": [
+        "c-weddington"
+      ]
+    },
+    {
+      "file": "areas/waxhaw",
+      "depicts": "Waxhaw Historic District Main Street",
+      "nearest_alternative": false,
+      "author": "Jerrye & Roy Klotz, MD",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:WAXHAW_HISTORIC_DISTRICT,_UNION_COUNTY,_NC.jpg",
+      "title": "WAXHAW HISTORIC DISTRICT, UNION COUNTY, NC.jpg",
+      "used_for": [
+        "c-waxhaw"
+      ]
+    },
+    {
+      "file": "areas/harrisburg",
+      "depicts": "Harrisburg Town Hall",
+      "nearest_alternative": false,
+      "author": "James Willamor",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Harrisburg_City_Hall_-_panoramio.jpg",
+      "title": "Harrisburg City Hall - panoramio.jpg",
+      "used_for": [
+        "c-harrisburg"
+      ]
+    },
+    {
+      "file": "areas/mooresville",
+      "depicts": "Mooresville Historic District Main Street",
+      "nearest_alternative": false,
+      "author": "Cdtew at English Wikipedia",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mooresville_Historic_District_(Main_Street).jpg",
+      "title": "Mooresville Historic District (Main Street).jpg",
+      "used_for": [
+        "c-mooresville"
+      ]
+    },
+    {
+      "file": "areas/indian-land",
+      "depicts": "US 521 corridor Indian Land",
+      "nearest_alternative": false,
+      "author": "Mx. Granger",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:US_521_in_Indian_Land.jpg",
+      "title": "US 521 in Indian Land.jpg",
+      "used_for": [
+        "c-indian-land"
+      ]
+    },
+    {
+      "file": "areas/cherry",
+      "depicts": "Cherry Neighborhood Park",
+      "nearest_alternative": false,
+      "author": "City Dweller 2",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cherry_Neighborhood_Park_along_Baldwin_Ave_Late_September_2025.jpg",
+      "title": "Cherry Neighborhood Park along Baldwin Ave Late September 2025.jpg",
+      "used_for": [
+        "n-cherry"
+      ]
+    },
+    {
+      "file": "areas/loso",
+      "depicts": "Chambray at LoSo on South Tryon",
+      "nearest_alternative": false,
+      "author": "City Dweller 2",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chambray_at_LoSo_along_South_Tryon_St_and_Blairhill_Rd_Early_May_2025.jpg",
+      "title": "Chambray at LoSo along South Tryon St and Blairhill Rd Early May 2025.jpg",
+      "used_for": [
+        "n-loso"
+      ]
+    },
+    {
+      "file": "areas/montclaire",
+      "depicts": "nearest: Archdale light rail station",
+      "nearest_alternative": true,
+      "author": "Mark Clifton",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Archdale_Station_02.jpg",
+      "title": "Archdale Station 02.jpg",
+      "used_for": [
+        "n-montclaire"
+      ]
+    },
+    {
+      "file": "areas/northlake",
+      "depicts": "Northlake Mall",
+      "nearest_alternative": false,
+      "author": "Mike Kalasnik from Charlotte, USA",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Northlake_Mall_Charlotte,_NC_(7044041397).jpg",
+      "title": "Northlake Mall Charlotte, NC (7044041397).jpg",
+      "used_for": [
+        "n-northlake"
+      ]
+    },
+    {
+      "file": "areas/oakhurst",
+      "depicts": "nearby: Monroe Road (M Station apartments)",
+      "nearest_alternative": true,
+      "author": "CLTmatt",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Meridian_Place.jpg",
+      "title": "Meridian Place.jpg",
+      "used_for": [
+        "n-oakhurst"
+      ]
+    },
+    {
+      "file": "areas/hidden-valley",
+      "depicts": "nearest: Sugar Creek library on North Tryon",
+      "nearest_alternative": true,
+      "author": "City Dweller 2",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Charlotte_Mecklenburg_Library_Sugar_Creek_branch_on_North_Tryon_St_Early_June_2025.jpg",
+      "title": "Charlotte Mecklenburg Library Sugar Creek branch on North Tryon St Early June 2025.jpg",
+      "used_for": [
+        "n-hidden-valley"
+      ]
+    },
+    {
+      "file": "areas/idlewild",
+      "depicts": "nearest: McAlpine Creek Park pond",
+      "nearest_alternative": true,
+      "author": "City Dweller 2",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:McAlpine_Park_Pond_August_2021.jpg",
+      "title": "McAlpine Park Pond August 2021.jpg",
+      "used_for": [
+        "n-idlewild"
+      ]
+    },
+    {
+      "file": "areas/davidson",
+      "depicts": "Chambers Building, Davidson College",
+      "nearest_alternative": false,
+      "author": "Dacoslett at English Wikipedia",
+      "license": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chambers_Building,_Davidson_College_(Davidson,_North_Carolina).jpg",
+      "title": "Chambers Building, Davidson College (Davidson, North Carolina).jpg",
+      "used_for": [
+        "c-davidson"
+      ]
+    },
+    {
+      "file": "areas/concord",
+      "depicts": "Downtown Concord",
+      "nearest_alternative": false,
+      "author": "AlexiusHoratius",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Downtown_Concord_NC_5.jpg",
+      "title": "Downtown Concord NC 5.jpg",
+      "used_for": [
+        "c-concord",
+        "guide:best-things-to-do-in-concord"
+      ]
+    },
+    {
+      "file": "areas/south-charlotte",
+      "depicts": "Ballantyne Hotel and Stream Park (South Charlotte)",
+      "nearest_alternative": false,
+      "author": "City Dweller 2",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ballantyne_Hotel_Stream_Park_view_Mid-April_2024.jpg",
+      "title": "Ballantyne Hotel Stream Park view Mid-April 2024.jpg",
+      "used_for": [
+        "n-south-charlotte"
+      ]
+    },
+    {
+      "file": "areas/hero-skyline",
+      "depicts": "Uptown Charlotte aerial skyline",
+      "nearest_alternative": false,
+      "author": "Precisionviews",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Uptown_Charlotte_2018_taking_by_DJI_Phantom_4_pro_-_Perspective_Corrected_Edit.jpg",
+      "title": "Uptown Charlotte 2018 taking by DJI Phantom 4 pro - Perspective Corrected Edit.jpg",
+      "used_for": [
+        "page-hero-skyline"
+      ]
+    },
+    {
+      "file": "areas/modern-skyline",
+      "depicts": "Uptown Charlotte towers",
+      "nearest_alternative": false,
+      "author": "Precisionviews",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Uptown_Charlotte_-_DJI_Phantom_4_pro.jpg",
+      "title": "Uptown Charlotte - DJI Phantom 4 pro.jpg",
+      "used_for": [
+        "page-modern-skyline"
+      ]
+    },
+    {
+      "file": "areas/parks",
+      "depicts": "Romare Bearden Park skyline",
+      "nearest_alternative": false,
+      "author": "Fortibus",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Romare_Bearden_Park_2.JPG",
+      "title": "Romare Bearden Park 2.JPG",
+      "used_for": [
+        "page-parks"
+      ]
+    },
+    {
+      "file": "areas/shopping",
+      "depicts": "SouthPark Mall",
+      "nearest_alternative": false,
+      "author": "HangingCurve",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:SouthPark_Mall_entrance.jpg",
+      "title": "SouthPark Mall entrance.jpg",
+      "used_for": [
+        "page-shopping"
+      ]
+    },
+    {
+      "file": "areas/unlock",
+      "depicts": "Aerial Uptown Charlotte",
+      "nearest_alternative": false,
+      "author": "Webwidejosh at English Wikipedia",
+      "license": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_Uptown_Charlotte_2005-Nov-13.jpg",
+      "title": "Aerial Uptown Charlotte 2005-Nov-13.jpg",
+      "used_for": [
+        "page-unlock"
+      ]
+    }
+  ]
+}

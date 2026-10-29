@@ -1,0 +1,1380 @@
+{
+  "generated": "2026-10-28",
+  "count": 16,
+  "guides": [
+    {
+      "slug": "best-things-to-do-in-uptown",
+      "title": "Best Things to Do in Uptown Charlotte",
+      "category": "neighborhood-guide",
+      "target_slug": "uptown",
+      "intro": "Uptown packs most of Charlotte's museums, theaters, and major-league venues into a few walkable blocks around Trade and Tryon Streets. The Levine Center for the Arts on South Tryon groups three museums together, Discovery Place keeps kids busy on North Tryon, and parks like Romare Bearden give you green space with skyline views. The LYNX Blue Line and CityLYNX Gold Line make it easy to visit without driving. These are long-standing Uptown stops worth building a day around, whether you live in a nearby high-rise or are just visiting.",
+      "summary": "Uptown packs most of Charlotte's museums, theaters, and major-league venues into a few walkable blocks around Trade and Tryon Streets.",
+      "items": [
+        {
+          "name": "Mint Museum Uptown",
+          "place_slug": "mint-museum-uptown",
+          "blurb": "Mint Museum Uptown is a five-story art museum in the Levine Center for the Arts on South Tryon Street. It houses collections of American, contemporary, and European art, as well as the Mint's renowned craft and design collection.",
+          "url": "https://www.mintmuseum.org/",
+          "neighborhood": "uptown"
+        },
+        {
+          "name": "Bechtler Museum of Modern Art",
+          "place_slug": "bechtler-museum-of-modern-art",
+          "blurb": "The Bechtler Museum of Modern Art, in the Levine Center for the Arts, showcases mid-20th-century modern art from the collection of the Bechtler family. Works by artists such as Picasso, Warhol, Miró, and Giacometti are displayed in a building designed by Swiss architect Mario Botta.",
+          "url": "https://www.bechtler.org/",
+          "neighborhood": "uptown"
+        },
+        {
+          "name": "Harvey B. Gantt Center for African-American Arts + Culture",
+          "place_slug": "harvey-b-gantt-center",
+          "blurb": "The Harvey B. Gantt Center in Uptown presents art, history, and culture of African Americans and the African diaspora.",
+          "url": "https://www.ganttcenter.org/",
+          "neighborhood": "uptown"
+        },
+        {
+          "name": "NASCAR Hall of Fame",
+          "place_slug": "nascar-hall-of-fame",
+          "blurb": "The NASCAR Hall of Fame in Uptown celebrates the history and heroes of stock car racing. Exhibits include historic race cars, interactive simulators, a pit-stop challenge, and the Hall of Honor, which recognizes inductees.",
+          "url": "https://www.nascarhall.com/",
+          "neighborhood": "uptown"
+        },
+        {
+          "name": "Discovery Place Science",
+          "place_slug": "discovery-place-science",
+          "blurb": "Discovery Place Science is a hands-on science museum on North Tryon Street in Uptown. Exhibits cover topics such as the human body, engineering, and the natural world, and the museum also has an immersive theater and rotating traveling exhibitions.",
+          "url": "https://discoveryplace.org/",
+          "neighborhood": "uptown"
+        },
+        {
+          "name": "Romare Bearden Park",
+          "place_slug": "romare-bearden-park",
+          "blurb": "Romare Bearden Park is a landscaped Uptown park in Third Ward named for the Charlotte-born artist Romare Bearden. Its gardens, lawns, and water features were inspired by his work, and the park offers views of the Uptown skyline.",
+          "url": "https://www.openstreetmap.org/relation/6054694",
+          "neighborhood": "third-ward"
+        }
+      ],
+      "places": [
+        {
+          "name": "Mint Museum Uptown",
+          "url": "https://www.mintmuseum.org/",
+          "neighborhood": "uptown",
+          "place_slug": "mint-museum-uptown"
+        },
+        {
+          "name": "Bechtler Museum of Modern Art",
+          "url": "https://www.bechtler.org/",
+          "neighborhood": "uptown",
+          "place_slug": "bechtler-museum-of-modern-art"
+        },
+        {
+          "name": "Harvey B. Gantt Center for African-American Arts + Culture",
+          "url": "https://www.ganttcenter.org/",
+          "neighborhood": "uptown",
+          "place_slug": "harvey-b-gantt-center"
+        },
+        {
+          "name": "NASCAR Hall of Fame",
+          "url": "https://www.nascarhall.com/",
+          "neighborhood": "uptown",
+          "place_slug": "nascar-hall-of-fame"
+        },
+        {
+          "name": "Discovery Place Science",
+          "url": "https://discoveryplace.org/",
+          "neighborhood": "uptown",
+          "place_slug": "discovery-place-science"
+        },
+        {
+          "name": "Romare Bearden Park",
+          "url": "https://www.openstreetmap.org/relation/6054694",
+          "neighborhood": "third-ward",
+          "place_slug": "romare-bearden-park"
+        }
+      ],
+      "related_neighborhoods": [
+        "uptown",
+        "first-ward",
+        "third-ward",
+        "fourth-ward"
+      ],
+      "cta_text": "Love Uptown? Explore homes for sale in Uptown.",
+      "intro_word_count": 89,
+      "img": "areas/uptown",
+      "img_credit": {
+        "author": "DaSon'e",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Charlotte,_N_Carolina.jpg",
+        "title": "Charlotte, N Carolina.jpg",
+        "depicts": "Uptown skyline"
+      }
+    },
+    {
+      "slug": "best-things-to-do-in-south-end",
+      "title": "Best Things to Do in South End",
+      "category": "neighborhood-guide",
+      "target_slug": "south-end",
+      "intro": "South End grew up along the rail line southwest of Uptown, and today the Charlotte Rail Trail and LYNX Blue Line tie the whole district together. You can walk from converted mills to new towers and from one restaurant cluster to the next without getting in a car. Game days at Bank of America Stadium are a short walk north, and LoSo's breweries are a quick ride south. Here are a few established spots that show what makes South End one of the city's most active neighborhoods.",
+      "summary": "South End grew up along the rail line southwest of Uptown, and today the Charlotte Rail Trail and LYNX Blue Line tie the whole district together.",
+      "items": [
+        {
+          "name": "Charlotte Rail Trail",
+          "place_slug": "charlotte-rail-trail",
+          "blurb": "The Charlotte Rail Trail is a walking and biking path that runs beside the LYNX Blue Line through South End and toward Uptown. Lined with public art, seating, and pocket parks, it connects light rail stations with restaurants, breweries, apartments, and offices.",
+          "url": "https://www.charlotterailtrail.org/",
+          "neighborhood": "south-end"
+        },
+        {
+          "name": "Atherton Mill",
+          "place_slug": "atherton-mill",
+          "blurb": "Atherton Mill is a converted textile mill in South End, now home to shops, restaurants, and offices. Its brick buildings sit along the Charlotte Rail Trail, near the LYNX Blue Line's East/West Boulevard station.",
+          "url": "https://www.openstreetmap.org/way/432937693",
+          "neighborhood": "south-end"
+        },
+        {
+          "name": "The Olde Mecklenburg Brewery",
+          "place_slug": "olde-mecklenburg-brewery",
+          "blurb": "The Olde Mecklenburg Brewery, founded in 2009, is known for German-style lagers brewed according to traditional methods. Its LoSo location includes a large biergarten with shaded seating, a restaurant serving German-inspired food, and a family-friendly atmosphere.",
+          "url": "https://www.ombbeer.com/",
+          "neighborhood": "loso"
+        },
+        {
+          "name": "Bank of America Stadium",
+          "place_slug": "bank-of-america-stadium",
+          "blurb": "Bank of America Stadium in Uptown's Third Ward is home to the NFL's Carolina Panthers and Major League Soccer's Charlotte FC. The stadium also hosts college football games, concerts, and other major events.",
+          "url": "https://www.bankofamericastadium.com/",
+          "neighborhood": "third-ward"
+        }
+      ],
+      "places": [
+        {
+          "name": "Charlotte Rail Trail",
+          "url": "https://www.charlotterailtrail.org/",
+          "neighborhood": "south-end",
+          "place_slug": "charlotte-rail-trail"
+        },
+        {
+          "name": "Atherton Mill",
+          "url": "https://www.openstreetmap.org/way/432937693",
+          "neighborhood": "south-end",
+          "place_slug": "atherton-mill"
+        },
+        {
+          "name": "The Olde Mecklenburg Brewery",
+          "url": "https://www.ombbeer.com/",
+          "neighborhood": "loso",
+          "place_slug": "olde-mecklenburg-brewery"
+        },
+        {
+          "name": "Bank of America Stadium",
+          "url": "https://www.bankofamericastadium.com/",
+          "neighborhood": "third-ward",
+          "place_slug": "bank-of-america-stadium"
+        }
+      ],
+      "related_neighborhoods": [
+        "south-end",
+        "dilworth",
+        "wilmore",
+        "loso"
+      ],
+      "cta_text": "Love South End? Explore homes for sale in South End.",
+      "intro_word_count": 87,
+      "img": "areas/south-end",
+      "img_credit": {
+        "author": "Patch23",
+        "license": "CC0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Southend110.jpg",
+        "title": "Southend110.jpg",
+        "depicts": "South End aerial"
+      }
+    },
+    {
+      "slug": "best-things-to-do-in-noda",
+      "title": "Best Things to Do in NoDa",
+      "category": "neighborhood-guide",
+      "target_slug": "noda",
+      "intro": "NoDa is Charlotte's arts district, set in the old North Charlotte mill village along North Davidson Street. Galleries, murals, music venues, and breweries line the main corridors, and the LYNX Blue Line's 25th Street and 36th Street stations make it easy to visit. Nearby Optimist Park and Camp North End add food halls and adaptive-reuse spaces within a short drive or bike ride. These long-running local favorites are a good starting point for exploring the neighborhood and its surroundings.",
+      "summary": "NoDa is Charlotte's arts district, set in the old North Charlotte mill village along North Davidson Street.",
+      "items": [
+        {
+          "name": "NoDa Brewing Company",
+          "place_slug": "noda-brewing-company",
+          "blurb": "NoDa Brewing Company is one of Charlotte's longest-running craft breweries, known for its award-winning beers, including the hazy IPA Hop Drop 'n Roll. Its North Tryon Street taproom offers a large indoor space and outdoor seating, with food trucks on many days.",
+          "url": "https://www.nodabrewing.com/",
+          "neighborhood": "noda"
+        },
+        {
+          "name": "Amélie's French Bakery & Café",
+          "place_slug": "amelies-french-bakery",
+          "blurb": "Amélie's French Bakery & Café is a Charlotte favorite known for its salted caramel brownies, pastries, and cozy, eclectic decor. The original location on North Davidson Street near NoDa is a popular spot for coffee, breakfast, and late-night treats.",
+          "url": "https://ameliesfrenchbakery.com/",
+          "neighborhood": "villa-heights"
+        },
+        {
+          "name": "Birdsong Brewing Company",
+          "place_slug": "birdsong-brewing",
+          "blurb": "Birdsong Brewing Company is a craft brewery in Optimist Park, known for approachable beers such as its Jalapeño Pale Ale. Its taproom on North Davidson Street has indoor and outdoor seating, regular food trucks, and community events.",
+          "url": "https://birdsongbrewing.com/",
+          "neighborhood": "optimist-park"
+        },
+        {
+          "name": "Optimist Hall",
+          "place_slug": "optimist-hall",
+          "blurb": "Optimist Hall is a food hall in a restored historic textile mill in Optimist Park, just north of Uptown. It brings together a variety of local and regional food vendors, coffee, and bars, with communal seating indoors and on patios.",
+          "url": "https://www.optimisthall.com/",
+          "neighborhood": "optimist-park"
+        },
+        {
+          "name": "Camp North End",
+          "place_slug": "camp-north-end",
+          "blurb": "Camp North End is a large mixed-use district just north of Uptown, created from a former industrial complex that once housed a Ford Model T assembly plant and later military and distribution uses.",
+          "url": "https://camp.nc/",
+          "neighborhood": "optimist-park"
+        }
+      ],
+      "places": [
+        {
+          "name": "NoDa Brewing Company",
+          "url": "https://www.nodabrewing.com/",
+          "neighborhood": "noda",
+          "place_slug": "noda-brewing-company"
+        },
+        {
+          "name": "Amélie's French Bakery & Café",
+          "url": "https://ameliesfrenchbakery.com/",
+          "neighborhood": "villa-heights",
+          "place_slug": "amelies-french-bakery"
+        },
+        {
+          "name": "Birdsong Brewing Company",
+          "url": "https://birdsongbrewing.com/",
+          "neighborhood": "optimist-park",
+          "place_slug": "birdsong-brewing"
+        },
+        {
+          "name": "Optimist Hall",
+          "url": "https://www.optimisthall.com/",
+          "neighborhood": "optimist-park",
+          "place_slug": "optimist-hall"
+        },
+        {
+          "name": "Camp North End",
+          "url": "https://camp.nc/",
+          "neighborhood": "optimist-park",
+          "place_slug": "camp-north-end"
+        }
+      ],
+      "related_neighborhoods": [
+        "noda",
+        "villa-heights",
+        "optimist-park",
+        "belmont-charlotte"
+      ],
+      "cta_text": "Love NoDa? Explore homes for sale in NoDa.",
+      "intro_word_count": 79,
+      "img": "areas/noda",
+      "img_credit": {
+        "author": "Washuotaku",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Novel_NoDa_Apartments_Mural.jpg",
+        "title": "Novel NoDa Apartments Mural.jpg",
+        "depicts": "NoDa mural 36th St station"
+      }
+    },
+    {
+      "slug": "best-things-to-do-in-plaza-midwood",
+      "title": "Best Things to Do in Plaza Midwood",
+      "category": "neighborhood-guide",
+      "target_slug": "plaza-midwood",
+      "intro": "Plaza Midwood's Central Avenue corridor is known for independent restaurants, bars, vintage shops, and music venues, all within a mile or so of Uptown. The neighborhood's tree-lined streets lead to Independence Park in neighboring Elizabeth, and Optimist Hall is a short drive north. Bojangles Coliseum, on Independence Boulevard, has hosted concerts and events since 1955. Start with these established spots and then wander Central Avenue to discover the rest.",
+      "summary": "Plaza Midwood's Central Avenue corridor is known for independent restaurants, bars, vintage shops, and music venues, all within a mile or so of Uptown.",
+      "items": [
+        {
+          "name": "Midwood Smokehouse",
+          "place_slug": "midwood-smokehouse",
+          "blurb": "Midwood Smokehouse is a barbecue restaurant on Central Avenue in Plaza Midwood, known for its smoked brisket, pulled pork, and ribs. The original location has a casual atmosphere, a bar, and outdoor seating.",
+          "url": "https://midwoodsmokehouse.com/",
+          "neighborhood": "plaza-midwood"
+        },
+        {
+          "name": "Independence Park",
+          "place_slug": "independence-park",
+          "blurb": "Independence Park in Elizabeth is Charlotte's first public park, dating to the early 20th century. It has shaded lawns, a rose garden, playgrounds, and walking paths, and it sits beside the Little Sugar Creek Greenway and near the CityLYNX Gold Line.",
+          "url": "https://www.openstreetmap.org/way/597101804",
+          "neighborhood": "elizabeth"
+        },
+        {
+          "name": "Optimist Hall",
+          "place_slug": "optimist-hall",
+          "blurb": "Optimist Hall is a food hall in a restored historic textile mill in Optimist Park, just north of Uptown. It brings together a variety of local and regional food vendors, coffee, and bars, with communal seating indoors and on patios.",
+          "url": "https://www.optimisthall.com/",
+          "neighborhood": "optimist-park"
+        },
+        {
+          "name": "Bojangles Coliseum",
+          "place_slug": "bojangles-coliseum",
+          "blurb": "Bojangles Coliseum, which opened in 1955, is a historic arena on Independence Boulevard known for its distinctive domed roof. It hosts minor league hockey, concerts, graduations, and other events.",
+          "url": "https://www.boplex.com/",
+          "neighborhood": "oakhurst"
+        }
+      ],
+      "places": [
+        {
+          "name": "Midwood Smokehouse",
+          "url": "https://midwoodsmokehouse.com/",
+          "neighborhood": "plaza-midwood",
+          "place_slug": "midwood-smokehouse"
+        },
+        {
+          "name": "Independence Park",
+          "url": "https://www.openstreetmap.org/way/597101804",
+          "neighborhood": "elizabeth",
+          "place_slug": "independence-park"
+        },
+        {
+          "name": "Optimist Hall",
+          "url": "https://www.optimisthall.com/",
+          "neighborhood": "optimist-park",
+          "place_slug": "optimist-hall"
+        },
+        {
+          "name": "Bojangles Coliseum",
+          "url": "https://www.boplex.com/",
+          "neighborhood": "oakhurst",
+          "place_slug": "bojangles-coliseum"
+        }
+      ],
+      "related_neighborhoods": [
+        "plaza-midwood",
+        "chantilly",
+        "elizabeth",
+        "oakhurst"
+      ],
+      "cta_text": "Love Plaza Midwood? Explore homes for sale in Plaza Midwood.",
+      "intro_word_count": 69,
+      "img": "areas/plaza-midwood",
+      "img_credit": {
+        "author": "City Dweller 2",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Central_Ave_at_Pecan_St_looking_east_Early_April_2025.jpg",
+        "title": "Central Ave at Pecan St looking east Early April 2025.jpg",
+        "depicts": "Central Ave at Pecan St"
+      }
+    },
+    {
+      "slug": "best-things-to-do-in-dilworth",
+      "title": "Best Things to Do in Dilworth",
+      "category": "neighborhood-guide",
+      "target_slug": "dilworth",
+      "intro": "Dilworth, Charlotte's first streetcar suburb, pairs historic bungalow-lined streets with easy access to some of the city's best outdoor spaces. Freedom Park and the Little Sugar Creek Greenway border the neighborhood, and the Rail Trail and South End's mill-turned-retail centers are a short walk west. Park Road Shopping Center, one of the city's oldest, is just south. These spots show why Dilworth residents spend so much time outside.",
+      "summary": "Dilworth, Charlotte's first streetcar suburb, pairs historic bungalow-lined streets with easy access to some of the city's best outdoor spaces.",
+      "items": [
+        {
+          "name": "Freedom Park",
+          "place_slug": "freedom-park",
+          "blurb": "Freedom Park is one of Charlotte's most popular parks, sitting between Dilworth and Myers Park along Little Sugar Creek. Its centerpiece is a pond with a loop path, surrounded by ball fields, tennis and basketball courts, playgrounds, and picnic shelters.",
+          "url": "https://www.openstreetmap.org/way/559319591",
+          "neighborhood": "myers-park"
+        },
+        {
+          "name": "Little Sugar Creek Greenway",
+          "place_slug": "little-sugar-creek-greenway",
+          "blurb": "The Little Sugar Creek Greenway is a paved trail that follows its namesake creek from near Uptown through Midtown, Freedom Park, and south Charlotte. Restored stream banks, bridges, and public art line the route, and it links several neighborhoods and parks along the way.",
+          "url": "https://www.openstreetmap.org/way/1042697655",
+          "neighborhood": "myers-park"
+        },
+        {
+          "name": "Charlotte Rail Trail",
+          "place_slug": "charlotte-rail-trail",
+          "blurb": "The Charlotte Rail Trail is a walking and biking path that runs beside the LYNX Blue Line through South End and toward Uptown. Lined with public art, seating, and pocket parks, it connects light rail stations with restaurants, breweries, apartments, and offices.",
+          "url": "https://www.charlotterailtrail.org/",
+          "neighborhood": "south-end"
+        },
+        {
+          "name": "Atherton Mill",
+          "place_slug": "atherton-mill",
+          "blurb": "Atherton Mill is a converted textile mill in South End, now home to shops, restaurants, and offices. Its brick buildings sit along the Charlotte Rail Trail, near the LYNX Blue Line's East/West Boulevard station.",
+          "url": "https://www.openstreetmap.org/way/432937693",
+          "neighborhood": "south-end"
+        },
+        {
+          "name": "Park Road Shopping Center",
+          "place_slug": "park-road-shopping-center",
+          "blurb": "Park Road Shopping Center, which opened in the 1950s, is one of Charlotte's oldest shopping centers. It includes a mix of local and national retailers, restaurants, and services.",
+          "url": "https://www.openstreetmap.org/way/1008183579",
+          "neighborhood": "madison-park"
+        }
+      ],
+      "places": [
+        {
+          "name": "Freedom Park",
+          "url": "https://www.openstreetmap.org/way/559319591",
+          "neighborhood": "myers-park",
+          "place_slug": "freedom-park"
+        },
+        {
+          "name": "Little Sugar Creek Greenway",
+          "url": "https://www.openstreetmap.org/way/1042697655",
+          "neighborhood": "myers-park",
+          "place_slug": "little-sugar-creek-greenway"
+        },
+        {
+          "name": "Charlotte Rail Trail",
+          "url": "https://www.charlotterailtrail.org/",
+          "neighborhood": "south-end",
+          "place_slug": "charlotte-rail-trail"
+        },
+        {
+          "name": "Atherton Mill",
+          "url": "https://www.openstreetmap.org/way/432937693",
+          "neighborhood": "south-end",
+          "place_slug": "atherton-mill"
+        },
+        {
+          "name": "Park Road Shopping Center",
+          "url": "https://www.openstreetmap.org/way/1008183579",
+          "neighborhood": "madison-park",
+          "place_slug": "park-road-shopping-center"
+        }
+      ],
+      "related_neighborhoods": [
+        "dilworth",
+        "south-end",
+        "myers-park",
+        "sedgefield"
+      ],
+      "cta_text": "Love Dilworth? Explore homes for sale in Dilworth.",
+      "intro_word_count": 68,
+      "img": "areas/dilworth",
+      "img_credit": {
+        "author": "Hitkiller666",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Dilworth_Historic_District,_Charlotte.jpg",
+        "title": "Dilworth Historic District, Charlotte.jpg",
+        "depicts": "Dilworth Historic District"
+      }
+    },
+    {
+      "slug": "best-things-to-do-in-myers-park",
+      "title": "Best Things to Do in Myers Park",
+      "category": "neighborhood-guide",
+      "target_slug": "myers-park",
+      "intro": "Myers Park is known for its oak-canopied streets, and many of its best destinations are green ones. Wing Haven's walled garden sits in the middle of the neighborhood, Freedom Park and the Little Sugar Creek Greenway run along its western edge, and Queens University's campus anchors Selwyn Avenue. The Mint Museum Randolph is just east in Eastover. These are some of the most established places to visit in and around Myers Park.",
+      "summary": "Myers Park is known for its oak-canopied streets, and many of its best destinations are green ones.",
+      "items": [
+        {
+          "name": "Wing Haven Gardens & Bird Sanctuary",
+          "place_slug": "wing-haven-gardens",
+          "blurb": "Wing Haven is a walled garden and bird sanctuary in Myers Park, created by Elizabeth and Edwin Clarkson beginning in the 1920s. Its brick paths, fountains, and formal and wild plantings provide habitat for birds and a quiet place for visitors.",
+          "url": "https://winghavengardens.org/",
+          "neighborhood": "myers-park"
+        },
+        {
+          "name": "Freedom Park",
+          "place_slug": "freedom-park",
+          "blurb": "Freedom Park is one of Charlotte's most popular parks, sitting between Dilworth and Myers Park along Little Sugar Creek. Its centerpiece is a pond with a loop path, surrounded by ball fields, tennis and basketball courts, playgrounds, and picnic shelters.",
+          "url": "https://www.openstreetmap.org/way/559319591",
+          "neighborhood": "myers-park"
+        },
+        {
+          "name": "Queens University of Charlotte",
+          "place_slug": "queens-university-of-charlotte",
+          "blurb": "Queens University of Charlotte is a private university in Myers Park. It offers undergraduate and graduate programs, and its campus is known for its tree-lined walkways and Georgian-style buildings.",
+          "url": "https://www.queens.edu/",
+          "neighborhood": "myers-park"
+        },
+        {
+          "name": "Mint Museum Randolph",
+          "place_slug": "mint-museum-randolph",
+          "blurb": "Mint Museum Randolph, in Eastover, is the original home of the Mint Museum and North Carolina's first art museum. The building is a reconstruction of the original U.S.",
+          "url": "https://www.mintmuseum.org/",
+          "neighborhood": "eastover"
+        },
+        {
+          "name": "Park Road Shopping Center",
+          "place_slug": "park-road-shopping-center",
+          "blurb": "Park Road Shopping Center, which opened in the 1950s, is one of Charlotte's oldest shopping centers. It includes a mix of local and national retailers, restaurants, and services.",
+          "url": "https://www.openstreetmap.org/way/1008183579",
+          "neighborhood": "madison-park"
+        }
+      ],
+      "places": [
+        {
+          "name": "Wing Haven Gardens & Bird Sanctuary",
+          "url": "https://winghavengardens.org/",
+          "neighborhood": "myers-park",
+          "place_slug": "wing-haven-gardens"
+        },
+        {
+          "name": "Freedom Park",
+          "url": "https://www.openstreetmap.org/way/559319591",
+          "neighborhood": "myers-park",
+          "place_slug": "freedom-park"
+        },
+        {
+          "name": "Queens University of Charlotte",
+          "url": "https://www.queens.edu/",
+          "neighborhood": "myers-park",
+          "place_slug": "queens-university-of-charlotte"
+        },
+        {
+          "name": "Mint Museum Randolph",
+          "url": "https://www.mintmuseum.org/",
+          "neighborhood": "eastover",
+          "place_slug": "mint-museum-randolph"
+        },
+        {
+          "name": "Park Road Shopping Center",
+          "url": "https://www.openstreetmap.org/way/1008183579",
+          "neighborhood": "madison-park",
+          "place_slug": "park-road-shopping-center"
+        }
+      ],
+      "related_neighborhoods": [
+        "myers-park",
+        "eastover",
+        "dilworth",
+        "sedgefield"
+      ],
+      "cta_text": "Love Myers Park? Explore homes for sale in Myers Park.",
+      "intro_word_count": 72,
+      "img": "areas/myers-park",
+      "img_credit": {
+        "author": "Nyttend",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Biltmore_Drive_in_Pharrsdale.jpg",
+        "title": "Biltmore Drive in Pharrsdale.jpg",
+        "depicts": "Biltmore Drive Pharrsdale Myers Park"
+      }
+    },
+    {
+      "slug": "best-things-to-do-in-elizabeth",
+      "title": "Best Things to Do in Elizabeth",
+      "category": "neighborhood-guide",
+      "target_slug": "elizabeth",
+      "intro": "Elizabeth is one of Charlotte's oldest in-town neighborhoods, and its streetcar heritage lives on with the CityLYNX Gold Line along Elizabeth Avenue and Hawthorne Lane. Independence Park, the city's first public park, is here, as is historic American Legion Memorial Stadium. Plaza Midwood's dining is a short walk away, and the Little Sugar Creek Greenway runs along the neighborhood's southern side.",
+      "summary": "Elizabeth is one of Charlotte's oldest in-town neighborhoods, and its streetcar heritage lives on with the CityLYNX Gold Line along Elizabeth Avenue and Hawthorne Lane.",
+      "items": [
+        {
+          "name": "Independence Park",
+          "place_slug": "independence-park",
+          "blurb": "Independence Park in Elizabeth is Charlotte's first public park, dating to the early 20th century. It has shaded lawns, a rose garden, playgrounds, and walking paths, and it sits beside the Little Sugar Creek Greenway and near the CityLYNX Gold Line.",
+          "url": "https://www.openstreetmap.org/way/597101804",
+          "neighborhood": "elizabeth"
+        },
+        {
+          "name": "American Legion Memorial Stadium",
+          "place_slug": "american-legion-memorial-stadium",
+          "blurb": "American Legion Memorial Stadium, on Kings Drive near Elizabeth, is a historic stadium that dates to the 1930s. It was renovated in recent years and hosts soccer, football, and other events.",
+          "url": "https://www.openstreetmap.org/relation/12495038",
+          "neighborhood": "elizabeth"
+        },
+        {
+          "name": "Little Sugar Creek Greenway",
+          "place_slug": "little-sugar-creek-greenway",
+          "blurb": "The Little Sugar Creek Greenway is a paved trail that follows its namesake creek from near Uptown through Midtown, Freedom Park, and south Charlotte. Restored stream banks, bridges, and public art line the route, and it links several neighborhoods and parks along the way.",
+          "url": "https://www.openstreetmap.org/way/1042697655",
+          "neighborhood": "myers-park"
+        },
+        {
+          "name": "Midwood Smokehouse",
+          "place_slug": "midwood-smokehouse",
+          "blurb": "Midwood Smokehouse is a barbecue restaurant on Central Avenue in Plaza Midwood, known for its smoked brisket, pulled pork, and ribs. The original location has a casual atmosphere, a bar, and outdoor seating.",
+          "url": "https://midwoodsmokehouse.com/",
+          "neighborhood": "plaza-midwood"
+        }
+      ],
+      "places": [
+        {
+          "name": "Independence Park",
+          "url": "https://www.openstreetmap.org/way/597101804",
+          "neighborhood": "elizabeth",
+          "place_slug": "independence-park"
+        },
+        {
+          "name": "American Legion Memorial Stadium",
+          "url": "https://www.openstreetmap.org/relation/12495038",
+          "neighborhood": "elizabeth",
+          "place_slug": "american-legion-memorial-stadium"
+        },
+        {
+          "name": "Little Sugar Creek Greenway",
+          "url": "https://www.openstreetmap.org/way/1042697655",
+          "neighborhood": "myers-park",
+          "place_slug": "little-sugar-creek-greenway"
+        },
+        {
+          "name": "Midwood Smokehouse",
+          "url": "https://midwoodsmokehouse.com/",
+          "neighborhood": "plaza-midwood",
+          "place_slug": "midwood-smokehouse"
+        }
+      ],
+      "related_neighborhoods": [
+        "elizabeth",
+        "chantilly",
+        "plaza-midwood",
+        "cherry"
+      ],
+      "cta_text": "Love Elizabeth? Explore homes for sale in Elizabeth.",
+      "intro_word_count": 61,
+      "img": "areas/elizabeth",
+      "img_credit": {
+        "author": "Nyttend",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Lamar_and_Eighth_in_Elizabeth.jpg",
+        "title": "Lamar and Eighth in Elizabeth.jpg",
+        "depicts": "Lamar and Eighth streetscape"
+      }
+    },
+    {
+      "slug": "best-things-to-do-in-southpark",
+      "title": "Best Things to Do in SouthPark",
+      "category": "neighborhood-guide",
+      "target_slug": "southpark",
+      "intro": "SouthPark is Charlotte's best-known shopping district, centered on SouthPark Mall, which opened in 1970. Phillips Place adds open-air dining across Fairview Road, and Cotswold Village Shops, one of the city's original suburban centers, is a short drive north. Quail Hollow Club, a regular PGA Tour host, is just south. These established spots make SouthPark a hub for shopping, dining, and events.",
+      "summary": "SouthPark is Charlotte's best-known shopping district, centered on SouthPark Mall, which opened in 1970.",
+      "items": [
+        {
+          "name": "SouthPark Mall",
+          "place_slug": "southpark-mall",
+          "blurb": "SouthPark Mall opened in 1970 and is the largest shopping mall in the Carolinas, with nearly 1.8 million square feet. It features department stores, luxury brands, restaurants, and Symphony Park, an outdoor venue used for concerts and events.",
+          "url": "https://www.simon.com/mall/southpark",
+          "neighborhood": "southpark"
+        },
+        {
+          "name": "Phillips Place",
+          "place_slug": "phillips-place",
+          "blurb": "Phillips Place is an open-air shopping and dining center across from SouthPark Mall. It features boutiques, restaurants, a movie theater, and a hotel, arranged along a walkable main street.",
+          "url": "https://www.phillipsplace.com",
+          "neighborhood": "southpark"
+        },
+        {
+          "name": "Cotswold Village Shops",
+          "place_slug": "cotswold-village-shops",
+          "blurb": "Cotswold Village Shops, at Randolph and Sharon Amity Roads, began as Cotswold Mall, one of Charlotte's early suburban shopping centers. Today it includes a grocery store, restaurants, and a range of service and specialty businesses.",
+          "url": "https://www.cotswoldvillage.com/",
+          "neighborhood": "cotswold"
+        },
+        {
+          "name": "Quail Hollow Club",
+          "place_slug": "quail-hollow-club",
+          "blurb": "Quail Hollow Club is a private golf club in south Charlotte that regularly hosts a PGA Tour event and hosted the 2017 and 2025 PGA Championships. The course is known for its challenging finishing holes, nicknamed the Green Mile.",
+          "url": "https://www.quailhollowclub.com/",
+          "neighborhood": "quail-hollow"
+        }
+      ],
+      "places": [
+        {
+          "name": "SouthPark Mall",
+          "url": "https://www.simon.com/mall/southpark",
+          "neighborhood": "southpark",
+          "place_slug": "southpark-mall"
+        },
+        {
+          "name": "Phillips Place",
+          "url": "https://www.phillipsplace.com",
+          "neighborhood": "southpark",
+          "place_slug": "phillips-place"
+        },
+        {
+          "name": "Cotswold Village Shops",
+          "url": "https://www.cotswoldvillage.com/",
+          "neighborhood": "cotswold",
+          "place_slug": "cotswold-village-shops"
+        },
+        {
+          "name": "Quail Hollow Club",
+          "url": "https://www.quailhollowclub.com/",
+          "neighborhood": "quail-hollow",
+          "place_slug": "quail-hollow-club"
+        }
+      ],
+      "related_neighborhoods": [
+        "southpark",
+        "barclay-downs",
+        "foxcroft",
+        "sharon-woods"
+      ],
+      "cta_text": "Love SouthPark? Explore homes for sale in SouthPark.",
+      "intro_word_count": 61,
+      "img": "areas/southpark",
+      "img_credit": {
+        "author": "HangingCurve",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:SouthPark_Mall_entrance.jpg",
+        "title": "SouthPark Mall entrance.jpg",
+        "depicts": "SouthPark Mall entrance"
+      }
+    },
+    {
+      "slug": "best-things-to-do-in-ballantyne",
+      "title": "Best Things to Do in Ballantyne",
+      "category": "neighborhood-guide",
+      "target_slug": "ballantyne",
+      "intro": "Ballantyne and the surrounding south Charlotte communities offer greenway trails, walkable mixed-use villages, and plenty of shopping. The Four Mile Creek Greenway runs through the area, Ballantyne Village and nearby Rea Farms and Waverly combine dining and retail, and Carolina Place mall is a short drive west in Pineville. Colonel Francis J. Beatty Park adds lake trails to the east.",
+      "summary": "Ballantyne and the surrounding south Charlotte communities offer greenway trails, walkable mixed-use villages, and plenty of shopping.",
+      "items": [
+        {
+          "name": "Ballantyne Village",
+          "place_slug": "ballantyne-village",
+          "blurb": "Ballantyne Village is a shopping and dining center in Ballantyne. It includes restaurants, shops, and services, and it is a convenient destination for residents of Ballantyne and nearby neighborhoods.",
+          "url": "https://www.ballantynevillage.com/",
+          "neighborhood": "ballantyne"
+        },
+        {
+          "name": "Four Mile Creek Greenway",
+          "place_slug": "four-mile-creek-greenway",
+          "blurb": "The Four Mile Creek Greenway is a paved trail in south Charlotte that follows Four Mile Creek through the Ballantyne and Piper Glen areas. It offers wooded scenery, bridges, and access points in several neighborhoods.",
+          "url": "https://www.openstreetmap.org/way/556389692",
+          "neighborhood": "ballantyne"
+        },
+        {
+          "name": "Rea Farms",
+          "place_slug": "rea-farms",
+          "blurb": "Rea Farms is a mixed-use village in south Charlotte, near Providence Road and Ardrey Kell Road. Built on the roughly 188-acre site of the former Charlotte Golf Links, it includes shops, restaurants, offices, apartments, townhomes, and single-family homes.",
+          "url": "https://www.reafarmsclt.com/",
+          "neighborhood": "rea-farms"
+        },
+        {
+          "name": "Waverly",
+          "place_slug": "waverly",
+          "blurb": "Waverly is a mixed-use development in south Charlotte, near Providence Road and Ardrey Kell Road. It includes shops, restaurants, a grocery store, offices, apartments, and townhomes, arranged in a walkable layout.",
+          "url": "https://www.openstreetmap.org/way/515070328",
+          "neighborhood": "rea-farms"
+        },
+        {
+          "name": "Colonel Francis J. Beatty Park",
+          "place_slug": "colonel-francis-beatty-park",
+          "blurb": "Colonel Francis J. Beatty Park is a large Mecklenburg County park in the Matthews area, off Providence Road near the Union County line.",
+          "url": "https://www.openstreetmap.org/way/511370173",
+          "neighborhood": "matthews"
+        },
+        {
+          "name": "Carolina Place",
+          "place_slug": "carolina-place",
+          "blurb": "Carolina Place is an enclosed shopping mall in Pineville, near I-485. It features department stores, national retailers, and restaurants, and the surrounding area includes many shopping centers and big-box stores.",
+          "url": "https://www.carolinaplace.com/",
+          "neighborhood": "pineville"
+        }
+      ],
+      "places": [
+        {
+          "name": "Ballantyne Village",
+          "url": "https://www.ballantynevillage.com/",
+          "neighborhood": "ballantyne",
+          "place_slug": "ballantyne-village"
+        },
+        {
+          "name": "Four Mile Creek Greenway",
+          "url": "https://www.openstreetmap.org/way/556389692",
+          "neighborhood": "ballantyne",
+          "place_slug": "four-mile-creek-greenway"
+        },
+        {
+          "name": "Rea Farms",
+          "url": "https://www.reafarmsclt.com/",
+          "neighborhood": "rea-farms",
+          "place_slug": "rea-farms"
+        },
+        {
+          "name": "Waverly",
+          "url": "https://www.openstreetmap.org/way/515070328",
+          "neighborhood": "rea-farms",
+          "place_slug": "waverly"
+        },
+        {
+          "name": "Colonel Francis J. Beatty Park",
+          "url": "https://www.openstreetmap.org/way/511370173",
+          "neighborhood": "matthews",
+          "place_slug": "colonel-francis-beatty-park"
+        },
+        {
+          "name": "Carolina Place",
+          "url": "https://www.carolinaplace.com/",
+          "neighborhood": "pineville",
+          "place_slug": "carolina-place"
+        }
+      ],
+      "related_neighborhoods": [
+        "ballantyne",
+        "ballantyne-east",
+        "piper-glen",
+        "rea-farms",
+        "blakeney"
+      ],
+      "cta_text": "Love Ballantyne? Explore homes for sale in Ballantyne.",
+      "intro_word_count": 60,
+      "img": "areas/ballantyne",
+      "img_credit": {
+        "author": "City Dweller 2",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ballantyne_Arches_at_Ballantyne_Commons_Parkway_and_Johnston_Mid-April_2024.jpg",
+        "title": "Ballantyne Arches at Ballantyne Commons Parkway and Johnston Mid-April 2024.jpg",
+        "depicts": ""
+      }
+    },
+    {
+      "slug": "best-things-to-do-in-lake-norman",
+      "title": "Best Things to Do in Lake Norman",
+      "category": "city-guide",
+      "target_slug": "lake-norman",
+      "intro": "Lake Norman is the Charlotte region's biggest playground, with more than 500 miles of shoreline spread across four counties. Jetton Park in Cornelius offers lakeside paths, Lake Norman State Park near Mooresville has beaches and trails, and Birkdale Village in Huntersville is the area's go-to spot for dining and shopping. Latta Nature Preserve, on Mountain Island Lake, adds horseback riding and trails just to the south.",
+      "summary": "Lake Norman is the Charlotte region's biggest playground, with more than 500 miles of shoreline spread across four counties.",
+      "items": [
+        {
+          "name": "Jetton Park",
+          "place_slug": "jetton-park",
+          "blurb": "Jetton Park is a Mecklenburg County park on a peninsula in Lake Norman in Cornelius. It offers paved walking and biking paths along the shoreline, picnic shelters, tennis courts, and a small beach area.",
+          "url": "https://www.openstreetmap.org/way/236843906",
+          "neighborhood": "cornelius"
+        },
+        {
+          "name": "Lake Norman State Park",
+          "place_slug": "lake-norman-state-park",
+          "blurb": "Lake Norman State Park sits on the northern shore of Lake Norman in Iredell County, near Troutman and Mooresville. It offers a swimming beach, boat launch, campgrounds, picnic areas, and a well-known network of hiking and mountain biking trails.",
+          "url": "https://www.ncparks.gov/state-parks/lake-norman-state-park",
+          "neighborhood": "mooresville"
+        },
+        {
+          "name": "Birkdale Village",
+          "place_slug": "birkdale-village",
+          "blurb": "Birkdale Village is an open-air shopping and dining center in Huntersville, near Lake Norman. Its walkable main street is lined with shops, restaurants, and a movie theater, with apartments above the storefronts.",
+          "url": "https://www.openstreetmap.org/way/833552644",
+          "neighborhood": "huntersville"
+        },
+        {
+          "name": "Latta Nature Preserve",
+          "place_slug": "latta-nature-preserve",
+          "blurb": "Latta Nature Preserve is a large county preserve along Mountain Island Lake in Huntersville. It offers trails for hiking, biking, and horseback riding, an equestrian center, and a canoe and kayak launch.",
+          "url": "https://www.openstreetmap.org/relation/8067539",
+          "neighborhood": "huntersville"
+        }
+      ],
+      "places": [
+        {
+          "name": "Jetton Park",
+          "url": "https://www.openstreetmap.org/way/236843906",
+          "neighborhood": "cornelius",
+          "place_slug": "jetton-park"
+        },
+        {
+          "name": "Lake Norman State Park",
+          "url": "https://www.ncparks.gov/state-parks/lake-norman-state-park",
+          "neighborhood": "mooresville",
+          "place_slug": "lake-norman-state-park"
+        },
+        {
+          "name": "Birkdale Village",
+          "url": "https://www.openstreetmap.org/way/833552644",
+          "neighborhood": "huntersville",
+          "place_slug": "birkdale-village"
+        },
+        {
+          "name": "Latta Nature Preserve",
+          "url": "https://www.openstreetmap.org/relation/8067539",
+          "neighborhood": "huntersville",
+          "place_slug": "latta-nature-preserve"
+        }
+      ],
+      "related_neighborhoods": [
+        "lake-norman",
+        "cornelius",
+        "huntersville",
+        "davidson",
+        "mooresville"
+      ],
+      "cta_text": "Love Lake Norman? Explore homes for sale in Lake Norman.",
+      "intro_word_count": 66,
+      "img": "areas/lake-norman",
+      "img_credit": {
+        "author": "Christopher Sheridan",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Governors-Island-Lake-Norman.jpg",
+        "title": "Governors-Island-Lake-Norman.jpg",
+        "depicts": "Governors Island Lake Norman aerial"
+      }
+    },
+    {
+      "slug": "best-things-to-do-in-concord",
+      "title": "Best Things to Do in Concord",
+      "category": "city-guide",
+      "target_slug": "concord",
+      "intro": "Concord is best known for racing and retail. Charlotte Motor Speedway hosts some of NASCAR's biggest events, and Concord Mills draws shoppers from across the region. Frank Liske Park offers sports fields, a lake, and trails, and Reedy Creek Nature Preserve is a short drive southwest in Charlotte. These established destinations make Concord a popular weekend stop.",
+      "summary": "Concord is best known for racing and retail.",
+      "items": [
+        {
+          "name": "Charlotte Motor Speedway",
+          "place_slug": "charlotte-motor-speedway",
+          "blurb": "Charlotte Motor Speedway in Concord is one of NASCAR's best-known tracks, hosting major races including the Coca-Cola 600 on Memorial Day weekend. The complex also includes a dragstrip and dirt track, and it hosts events such as car shows and holiday light displays.",
+          "url": "https://www.charlottemotorspeedway.com/",
+          "neighborhood": "concord"
+        },
+        {
+          "name": "Concord Mills",
+          "place_slug": "concord-mills",
+          "blurb": "Concord Mills is a large outlet and value shopping mall off I-85 in Concord and one of the region's best-known shopping destinations. It features outlet stores, restaurants, a movie theater, and entertainment options.",
+          "url": "https://www.simon.com/mall/concord-mills",
+          "neighborhood": "concord"
+        },
+        {
+          "name": "Frank Liske Park",
+          "place_slug": "frank-liske-park",
+          "blurb": "Frank Liske Park is a large Cabarrus County park near Concord. It offers soccer fields, ball fields, a lake, picnic shelters, playgrounds, and walking trails.",
+          "url": "https://www.openstreetmap.org/way/571039764",
+          "neighborhood": "concord"
+        },
+        {
+          "name": "Reedy Creek Nature Preserve",
+          "place_slug": "reedy-creek-nature-preserve",
+          "blurb": "Reedy Creek Nature Preserve and Park in northeast Charlotte combines a busy park with ball fields and a dog park with a quieter preserve of hardwood forest, streams, and ponds.",
+          "url": "https://www.openstreetmap.org/relation/15445939",
+          "neighborhood": "bradfield-farms"
+        }
+      ],
+      "places": [
+        {
+          "name": "Charlotte Motor Speedway",
+          "url": "https://www.charlottemotorspeedway.com/",
+          "neighborhood": "concord",
+          "place_slug": "charlotte-motor-speedway"
+        },
+        {
+          "name": "Concord Mills",
+          "url": "https://www.simon.com/mall/concord-mills",
+          "neighborhood": "concord",
+          "place_slug": "concord-mills"
+        },
+        {
+          "name": "Frank Liske Park",
+          "url": "https://www.openstreetmap.org/way/571039764",
+          "neighborhood": "concord",
+          "place_slug": "frank-liske-park"
+        },
+        {
+          "name": "Reedy Creek Nature Preserve",
+          "url": "https://www.openstreetmap.org/relation/15445939",
+          "neighborhood": "bradfield-farms",
+          "place_slug": "reedy-creek-nature-preserve"
+        }
+      ],
+      "related_neighborhoods": [
+        "concord",
+        "harrisburg",
+        "university-city",
+        "highland-creek"
+      ],
+      "cta_text": "Love Concord? Explore homes for sale in Concord.",
+      "intro_word_count": 57,
+      "img": "areas/concord",
+      "img_credit": {
+        "author": "AlexiusHoratius",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Downtown_Concord_NC_5.jpg",
+        "title": "Downtown Concord NC 5.jpg",
+        "depicts": "Downtown Concord"
+      }
+    },
+    {
+      "slug": "best-things-to-do-in-fort-mill",
+      "title": "Best Things to Do in Fort Mill",
+      "category": "city-guide",
+      "target_slug": "fort-mill",
+      "intro": "Fort Mill, just across the South Carolina line, combines a small historic downtown with big regional attractions. The Anne Springs Close Greenway offers miles of trails, Carowinds sits right at the state line, and outlet and mall shopping are minutes north. These established spots are popular with Fort Mill residents and visitors alike.",
+      "summary": "Fort Mill, just across the South Carolina line, combines a small historic downtown with big regional attractions.",
+      "items": [
+        {
+          "name": "Anne Springs Close Greenway",
+          "place_slug": "anne-springs-close-greenway",
+          "blurb": "The Anne Springs Close Greenway is a privately owned nature preserve in Fort Mill, South Carolina, covering a large expanse of forests, fields, and lakes. It offers miles of trails for hiking, biking, and horseback riding, along with historic buildings, a dairy barn, and nature programs.",
+          "url": "https://www.ascgreenway.org/",
+          "neighborhood": "fort-mill"
+        },
+        {
+          "name": "Carowinds",
+          "place_slug": "carowinds",
+          "blurb": "Carowinds is a large amusement park that straddles the North Carolina–South Carolina state line just south of Charlotte. It features roller coasters, family rides, a water park, live shows, and seasonal events, including a fall haunted event and holiday celebrations.",
+          "url": "https://www.sixflags.com/carowinds",
+          "neighborhood": "steele-creek"
+        },
+        {
+          "name": "Carolina Place",
+          "place_slug": "carolina-place",
+          "blurb": "Carolina Place is an enclosed shopping mall in Pineville, near I-485. It features department stores, national retailers, and restaurants, and the surrounding area includes many shopping centers and big-box stores.",
+          "url": "https://www.carolinaplace.com/",
+          "neighborhood": "pineville"
+        },
+        {
+          "name": "Charlotte Premium Outlets",
+          "place_slug": "charlotte-premium-outlets",
+          "blurb": "Charlotte Premium Outlets is an open-air outlet center in the Steele Creek area of southwest Charlotte, near I-485. It features outlet stores from a variety of brands, along with food options.",
+          "url": "https://www.premiumoutlets.com/outlet/charlotte",
+          "neighborhood": "steele-creek"
+        }
+      ],
+      "places": [
+        {
+          "name": "Anne Springs Close Greenway",
+          "url": "https://www.ascgreenway.org/",
+          "neighborhood": "fort-mill",
+          "place_slug": "anne-springs-close-greenway"
+        },
+        {
+          "name": "Carowinds",
+          "url": "https://www.sixflags.com/carowinds",
+          "neighborhood": "steele-creek",
+          "place_slug": "carowinds"
+        },
+        {
+          "name": "Carolina Place",
+          "url": "https://www.carolinaplace.com/",
+          "neighborhood": "pineville",
+          "place_slug": "carolina-place"
+        },
+        {
+          "name": "Charlotte Premium Outlets",
+          "url": "https://www.premiumoutlets.com/outlet/charlotte",
+          "neighborhood": "steele-creek",
+          "place_slug": "charlotte-premium-outlets"
+        }
+      ],
+      "related_neighborhoods": [
+        "fort-mill",
+        "tega-cay",
+        "indian-land",
+        "ballantyne-west"
+      ],
+      "cta_text": "Love Fort Mill? Explore homes for sale in Fort Mill.",
+      "intro_word_count": 53,
+      "img": "areas/fort-mill",
+      "img_credit": {
+        "author": "Photogeographer",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Fort_Mill_SC_2020.jpg",
+        "title": "Fort Mill SC 2020.jpg",
+        "depicts": "Main Street Fort Mill"
+      }
+    },
+    {
+      "slug": "best-things-to-do-in-steele-creek",
+      "title": "Best Things to Do in Steele Creek",
+      "category": "neighborhood-guide",
+      "target_slug": "steele-creek",
+      "intro": "Steele Creek, in southwest Charlotte, is close to the airport, Lake Wylie, and some of the region's best-known attractions. Carowinds and Charlotte Premium Outlets are minutes away, McDowell Nature Preserve offers lakeside trails and camping, and the Billy Graham Library is a short drive north. These established destinations make Steele Creek a convenient base for both errands and weekend outings.",
+      "summary": "Steele Creek, in southwest Charlotte, is close to the airport, Lake Wylie, and some of the region's best-known attractions.",
+      "items": [
+        {
+          "name": "Carowinds",
+          "place_slug": "carowinds",
+          "blurb": "Carowinds is a large amusement park that straddles the North Carolina–South Carolina state line just south of Charlotte. It features roller coasters, family rides, a water park, live shows, and seasonal events, including a fall haunted event and holiday celebrations.",
+          "url": "https://www.sixflags.com/carowinds",
+          "neighborhood": "steele-creek"
+        },
+        {
+          "name": "Charlotte Premium Outlets",
+          "place_slug": "charlotte-premium-outlets",
+          "blurb": "Charlotte Premium Outlets is an open-air outlet center in the Steele Creek area of southwest Charlotte, near I-485. It features outlet stores from a variety of brands, along with food options.",
+          "url": "https://www.premiumoutlets.com/outlet/charlotte",
+          "neighborhood": "steele-creek"
+        },
+        {
+          "name": "McDowell Nature Preserve",
+          "place_slug": "mcdowell-nature-preserve",
+          "blurb": "McDowell Nature Preserve is a Mecklenburg County nature preserve on the shores of Lake Wylie in the Steele Creek area. It offers hiking trails through hardwood forests, a nature center, picnic areas, a boat launch, and campsites.",
+          "url": "https://www.openstreetmap.org/way/38619537",
+          "neighborhood": "steele-creek"
+        },
+        {
+          "name": "Billy Graham Library",
+          "place_slug": "billy-graham-library",
+          "blurb": "The Billy Graham Library in west Charlotte tells the life story of evangelist Billy Graham, who was born in Charlotte. Visitors tour exhibits in a barn-shaped building, see his restored childhood home, and visit the prayer garden where he and his wife, Ruth, are buried.",
+          "url": "https://billygrahamlibrary.org/",
+          "neighborhood": "steele-creek"
+        }
+      ],
+      "places": [
+        {
+          "name": "Carowinds",
+          "url": "https://www.sixflags.com/carowinds",
+          "neighborhood": "steele-creek",
+          "place_slug": "carowinds"
+        },
+        {
+          "name": "Charlotte Premium Outlets",
+          "url": "https://www.premiumoutlets.com/outlet/charlotte",
+          "neighborhood": "steele-creek",
+          "place_slug": "charlotte-premium-outlets"
+        },
+        {
+          "name": "McDowell Nature Preserve",
+          "url": "https://www.openstreetmap.org/way/38619537",
+          "neighborhood": "steele-creek",
+          "place_slug": "mcdowell-nature-preserve"
+        },
+        {
+          "name": "Billy Graham Library",
+          "url": "https://billygrahamlibrary.org/",
+          "neighborhood": "steele-creek",
+          "place_slug": "billy-graham-library"
+        }
+      ],
+      "related_neighborhoods": [
+        "steele-creek",
+        "lake-wylie",
+        "fort-mill"
+      ],
+      "cta_text": "Love Steele Creek? Explore homes for sale in Steele Creek.",
+      "intro_word_count": 60,
+      "img": "areas/steele-creek",
+      "img_credit": {
+        "author": "Bagatar",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Steele_Creek_Presbyterian.jpg",
+        "title": "Steele Creek Presbyterian.jpg",
+        "depicts": "Steele Creek Presbyterian Church"
+      }
+    },
+    {
+      "slug": "best-things-to-do-in-university-city",
+      "title": "Best Things to Do in University City",
+      "category": "neighborhood-guide",
+      "target_slug": "university-city",
+      "intro": "University City, in northeast Charlotte, is home to UNC Charlotte and one of the region's largest concert venues. The LYNX Blue Line connects the area to Uptown, and nearby nature preserves and shopping round out the options. These established destinations are a good starting point for exploring University City.",
+      "summary": "University City, in northeast Charlotte, is home to UNC Charlotte and one of the region's largest concert venues.",
+      "items": [
+        {
+          "name": "UNC Charlotte",
+          "place_slug": "unc-charlotte",
+          "blurb": "The University of North Carolina at Charlotte is a public research university in University City, northeast Charlotte. It offers undergraduate, graduate, and doctoral programs and is classified as an R1 research university.",
+          "url": "https://www.charlotte.edu/",
+          "neighborhood": "university-city"
+        },
+        {
+          "name": "Truliant Amphitheater",
+          "place_slug": "truliant-amphitheater",
+          "blurb": "Truliant Amphitheater is a large outdoor concert venue in the University City area of northeast Charlotte. It hosts major touring artists in genres from rock and country to hip-hop and pop, with reserved seating under a covered pavilion and general admission lawn seating.",
+          "url": "https://www.openstreetmap.org/way/577606075",
+          "neighborhood": "university-city"
+        },
+        {
+          "name": "Reedy Creek Nature Preserve",
+          "place_slug": "reedy-creek-nature-preserve",
+          "blurb": "Reedy Creek Nature Preserve and Park in northeast Charlotte combines a busy park with ball fields and a dog park with a quieter preserve of hardwood forest, streams, and ponds.",
+          "url": "https://www.openstreetmap.org/relation/15445939",
+          "neighborhood": "bradfield-farms"
+        },
+        {
+          "name": "Concord Mills",
+          "place_slug": "concord-mills",
+          "blurb": "Concord Mills is a large outlet and value shopping mall off I-85 in Concord and one of the region's best-known shopping destinations. It features outlet stores, restaurants, a movie theater, and entertainment options.",
+          "url": "https://www.simon.com/mall/concord-mills",
+          "neighborhood": "concord"
+        }
+      ],
+      "places": [
+        {
+          "name": "UNC Charlotte",
+          "url": "https://www.charlotte.edu/",
+          "neighborhood": "university-city",
+          "place_slug": "unc-charlotte"
+        },
+        {
+          "name": "Truliant Amphitheater",
+          "url": "https://www.openstreetmap.org/way/577606075",
+          "neighborhood": "university-city",
+          "place_slug": "truliant-amphitheater"
+        },
+        {
+          "name": "Reedy Creek Nature Preserve",
+          "url": "https://www.openstreetmap.org/relation/15445939",
+          "neighborhood": "bradfield-farms",
+          "place_slug": "reedy-creek-nature-preserve"
+        },
+        {
+          "name": "Concord Mills",
+          "url": "https://www.simon.com/mall/concord-mills",
+          "neighborhood": "concord",
+          "place_slug": "concord-mills"
+        }
+      ],
+      "related_neighborhoods": [
+        "university-city",
+        "highland-creek",
+        "harrisburg",
+        "concord"
+      ],
+      "cta_text": "Love University City? Explore homes for sale in University City.",
+      "intro_word_count": 49,
+      "img": "areas/university-city",
+      "img_credit": {
+        "author": "Stanton49",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:CRI_and_JRS.jpg",
+        "title": "CRI and JRS.jpg",
+        "depicts": "UNC Charlotte campus"
+      }
+    },
+    {
+      "slug": "best-things-to-do-in-belmont",
+      "title": "Best Things to Do in Belmont",
+      "category": "city-guide",
+      "target_slug": "belmont",
+      "intro": "Belmont, in Gaston County just west of Charlotte, is a small city with a historic downtown and easy access to some of the region's best outdoor destinations. Daniel Stowe Botanical Garden is nearby, the U.S. National Whitewater Center is a short drive across the Catawba River, and Crowders Mountain State Park is a short drive west.",
+      "summary": "Belmont, in Gaston County just west of Charlotte, is a small city with a historic downtown and easy access to some of the region's best outdoor destinations.",
+      "items": [
+        {
+          "name": "Daniel Stowe Botanical Garden",
+          "place_slug": "daniel-stowe-botanical-garden",
+          "blurb": "Daniel Stowe Botanical Garden is a large botanical garden near Lake Wylie in Gaston County, just outside Belmont. It features themed gardens, fountains, a glass conservatory with orchids and tropical plants, and woodland trails.",
+          "url": "https://www.dsbg.org",
+          "neighborhood": "belmont"
+        },
+        {
+          "name": "U.S. National Whitewater Center",
+          "place_slug": "us-national-whitewater-center",
+          "blurb": "Set on a large wooded campus beside the Catawba River in west Charlotte, the Whitewater Center is a nonprofit outdoor facility built around a man-made whitewater river. Visitors come for rafting and kayaking, but the campus also offers miles of trails for hiking and mountain biking, climbing, ziplines, and seasonal events and concerts.",
+          "url": "https://usnwc.org",
+          "neighborhood": "mountain-island"
+        },
+        {
+          "name": "Crowders Mountain State Park",
+          "place_slug": "crowders-mountain-state-park",
+          "blurb": "Crowders Mountain State Park, west of Gastonia, protects two rocky peaks—Crowders Mountain and Kings Pinnacle—that rise sharply above the surrounding Piedmont. Hiking trails lead to rocky overlooks with long views, and on clear days visitors can see Charlotte's skyline.",
+          "url": "https://www.ncparks.gov/state-parks/crowders-mountain-state-park",
+          "neighborhood": "gastonia"
+        }
+      ],
+      "places": [
+        {
+          "name": "Daniel Stowe Botanical Garden",
+          "url": "https://www.dsbg.org",
+          "neighborhood": "belmont",
+          "place_slug": "daniel-stowe-botanical-garden"
+        },
+        {
+          "name": "U.S. National Whitewater Center",
+          "url": "https://usnwc.org",
+          "neighborhood": "mountain-island",
+          "place_slug": "us-national-whitewater-center"
+        },
+        {
+          "name": "Crowders Mountain State Park",
+          "url": "https://www.ncparks.gov/state-parks/crowders-mountain-state-park",
+          "neighborhood": "gastonia",
+          "place_slug": "crowders-mountain-state-park"
+        }
+      ],
+      "related_neighborhoods": [
+        "belmont",
+        "mount-holly",
+        "gastonia"
+      ],
+      "cta_text": "Love Belmont? Explore homes for sale in Belmont.",
+      "intro_word_count": 56,
+      "img": "areas/belmont",
+      "img_credit": {
+        "author": "Indy beetle",
+        "license": "CC0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Main_Street,_Belmont_01.jpg",
+        "title": "Main Street, Belmont 01.jpg",
+        "depicts": "Main Street Belmont"
+      }
+    },
+    {
+      "slug": "best-things-to-do-in-huntersville",
+      "title": "Best Things to Do in Huntersville",
+      "category": "city-guide",
+      "target_slug": "huntersville",
+      "intro": "Huntersville, in north Mecklenburg, sits between Charlotte and Lake Norman. Birkdale Village is a popular spot for dining and shopping, Latta Nature Preserve offers trails and lake access, and Jetton Park in neighboring Cornelius is a short drive north. The U.S. National Whitewater Center is a short drive south.",
+      "summary": "Huntersville, in north Mecklenburg, sits between Charlotte and Lake Norman.",
+      "items": [
+        {
+          "name": "Birkdale Village",
+          "place_slug": "birkdale-village",
+          "blurb": "Birkdale Village is an open-air shopping and dining center in Huntersville, near Lake Norman. Its walkable main street is lined with shops, restaurants, and a movie theater, with apartments above the storefronts.",
+          "url": "https://www.openstreetmap.org/way/833552644",
+          "neighborhood": "huntersville"
+        },
+        {
+          "name": "Latta Nature Preserve",
+          "place_slug": "latta-nature-preserve",
+          "blurb": "Latta Nature Preserve is a large county preserve along Mountain Island Lake in Huntersville. It offers trails for hiking, biking, and horseback riding, an equestrian center, and a canoe and kayak launch.",
+          "url": "https://www.openstreetmap.org/relation/8067539",
+          "neighborhood": "huntersville"
+        },
+        {
+          "name": "Jetton Park",
+          "place_slug": "jetton-park",
+          "blurb": "Jetton Park is a Mecklenburg County park on a peninsula in Lake Norman in Cornelius. It offers paved walking and biking paths along the shoreline, picnic shelters, tennis courts, and a small beach area.",
+          "url": "https://www.openstreetmap.org/way/236843906",
+          "neighborhood": "cornelius"
+        },
+        {
+          "name": "U.S. National Whitewater Center",
+          "place_slug": "us-national-whitewater-center",
+          "blurb": "Set on a large wooded campus beside the Catawba River in west Charlotte, the Whitewater Center is a nonprofit outdoor facility built around a man-made whitewater river. Visitors come for rafting and kayaking, but the campus also offers miles of trails for hiking and mountain biking, climbing, ziplines, and seasonal events and concerts.",
+          "url": "https://usnwc.org",
+          "neighborhood": "mountain-island"
+        }
+      ],
+      "places": [
+        {
+          "name": "Birkdale Village",
+          "url": "https://www.openstreetmap.org/way/833552644",
+          "neighborhood": "huntersville",
+          "place_slug": "birkdale-village"
+        },
+        {
+          "name": "Latta Nature Preserve",
+          "url": "https://www.openstreetmap.org/relation/8067539",
+          "neighborhood": "huntersville",
+          "place_slug": "latta-nature-preserve"
+        },
+        {
+          "name": "Jetton Park",
+          "url": "https://www.openstreetmap.org/way/236843906",
+          "neighborhood": "cornelius",
+          "place_slug": "jetton-park"
+        },
+        {
+          "name": "U.S. National Whitewater Center",
+          "url": "https://usnwc.org",
+          "neighborhood": "mountain-island",
+          "place_slug": "us-national-whitewater-center"
+        }
+      ],
+      "related_neighborhoods": [
+        "huntersville",
+        "cornelius",
+        "lake-norman",
+        "mountain-island"
+      ],
+      "cta_text": "Love Huntersville? Explore homes for sale in Huntersville.",
+      "intro_word_count": 49,
+      "img": "areas/huntersville",
+      "img_credit": {
+        "author": "Brett VA",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Birkdale_Village_Town_Center_Mixed_use_pan_(5488705081).jpg",
+        "title": "Birkdale Village Town Center Mixed use pan (5488705081).jpg",
+        "depicts": "Birkdale Village"
+      }
+    }
+  ]
+}

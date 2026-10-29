@@ -1,0 +1,130 @@
+{
+  "as_of": "2026-10-28",
+  "retrieved": "2026-10-28",
+  "region_definition": "Canopy's Charlotte Region covers 16 counties: Alexander, Anson, Cabarrus, Catawba, Cleveland, Gaston, Iredell, Lincoln, Mecklenburg, Rowan, Stanly, and Union in NC; Chester, Chesterfield, Lancaster, and York in SC.",
+  "disclaimer": "Figures as reported by Canopy Realtors / Canopy MLS; not a guarantee of individual home values. Monthly figures are revised as data updates.",
+  "metrics": [
+    {
+      "metric": "Median sales price",
+      "value": 410000,
+      "display": "$410,000",
+      "geography": "Charlotte Region (Canopy MLS 16-county region)",
+      "period": "August 2026",
+      "change": "+2.5% YoY",
+      "source": "Canopy Realtors – August 2026 market press release (Sept 29, 2026)",
+      "url": "https://www.canopyrealtors.com/9/29/2026/more-choice-stable-prices-define-charlotte-august-housing-market",
+      "retrieved": "2026-10-28"
+    },
+    {
+      "metric": "Median sales price",
+      "value": 392990,
+      "display": "$392,990",
+      "geography": "Charlotte Region (Canopy MLS 16-county region)",
+      "period": "September 2026",
+      "change": "-0.5% YoY",
+      "source": "Canopy Realtors – September 2026 market press release (Oct 23, 2026)",
+      "url": "https://www.canopyrealtors.com/press-releases/10/23/2026/charlotte-housing-activity-slows-in-September",
+      "retrieved": "2026-10-28"
+    },
+    {
+      "metric": "Median sales price",
+      "value": 427500,
+      "display": "$427,500",
+      "geography": "City of Charlotte",
+      "period": "August 2026",
+      "change": "+0.6% YoY",
+      "source": "Canopy Realtors – August 2026 market press release (Sept 29, 2026)",
+      "url": "https://www.canopyrealtors.com/9/29/2026/more-choice-stable-prices-define-charlotte-august-housing-market",
+      "retrieved": "2026-10-28"
+    },
+    {
+      "metric": "Median sales price",
+      "value": 468000,
+      "display": "$468,000",
+      "geography": "Mecklenburg County",
+      "period": "August 2026",
+      "change": "+1.8% YoY",
+      "source": "Canopy Realtors – August 2026 market press release (Sept 29, 2026)",
+      "url": "https://www.canopyrealtors.com/9/29/2026/more-choice-stable-prices-define-charlotte-august-housing-market",
+      "retrieved": "2026-10-28"
+    },
+    {
+      "metric": "Median sales price – single-family",
+      "value": 420000,
+      "display": "$420,000",
+      "geography": "Charlotte Region (Canopy MLS 16-county region)",
+      "period": "August 2026",
+      "change": "+2.4% YoY",
+      "source": "Canopy Realtors – August 2026 market press release (Sept 29, 2026)",
+      "url": "https://www.canopyrealtors.com/9/29/2026/more-choice-stable-prices-define-charlotte-august-housing-market",
+      "retrieved": "2026-10-28"
+    },
+    {
+      "metric": "Median sales price – townhome / condo",
+      "value": null,
+      "display": "$350,000 townhome / $292,000 condo",
+      "geography": "Charlotte Region (Canopy MLS 16-county region)",
+      "period": "August 2026",
+      "change": "-0.8% townhome / -4.1% condo YoY",
+      "source": "Canopy Realtors – August 2026 market press release (Sept 29, 2026)",
+      "url": "https://www.canopyrealtors.com/9/29/2026/more-choice-stable-prices-define-charlotte-august-housing-market",
+      "retrieved": "2026-10-28"
+    },
+    {
+      "metric": "Active inventory (homes for sale)",
+      "value": 14171,
+      "display": "14,171 homes",
+      "geography": "Charlotte Region (Canopy MLS 16-county region)",
+      "period": "Week ending Oct 17, 2026",
+      "change": "+9.2% YoY",
+      "source": "Canopy Realtors – Weekly Market Activity Report (week ending Oct 17, 2026; data current as of Oct 26, 2026)",
+      "url": "https://www.canopyrealtors.com/weekly-market-activity",
+      "retrieved": "2026-10-28"
+    },
+    {
+      "metric": "Months supply of inventory",
+      "value": 3.9,
+      "display": "3.9 months",
+      "geography": "Charlotte Region (Canopy MLS 16-county region)",
+      "period": "September 2026",
+      "change": "+11.4% YoY",
+      "source": "Canopy Realtors – Weekly Market Activity Report (week ending Oct 17, 2026; data current as of Oct 26, 2026)",
+      "url": "https://www.canopyrealtors.com/weekly-market-activity",
+      "retrieved": "2026-10-28"
+    },
+    {
+      "metric": "Average days on market",
+      "value": 55,
+      "display": "55 days",
+      "geography": "Charlotte Region (Canopy MLS 16-county region)",
+      "period": "August 2026",
+      "change": "up from 47 days a year earlier (+17.0%)",
+      "source": "Canopy Realtors – August 2026 market press release (Sept 29, 2026)",
+      "url": "https://www.canopyrealtors.com/9/29/2026/more-choice-stable-prices-define-charlotte-august-housing-market",
+      "retrieved": "2026-10-28"
+    },
+    {
+      "metric": "Percent of original list price received",
+      "value": 95.1,
+      "display": "95.1%",
+      "geography": "Charlotte Region (Canopy MLS 16-county region)",
+      "period": "September 2026",
+      "change": "flat YoY",
+      "source": "Canopy Realtors – Weekly Market Activity Report (week ending Oct 17, 2026; data current as of Oct 26, 2026)",
+      "url": "https://www.canopyrealtors.com/weekly-market-activity",
+      "retrieved": "2026-10-28"
+    }
+  ],
+  "supplemental": [
+    {
+      "metric": "Median sales price (rolling 12 months)",
+      "display": "$400,000",
+      "geography": "Charlotte Region (Canopy MLS 16-county region)",
+      "period": "12 months ending September 2026",
+      "change": "+1.0%",
+      "source": "Canopy Realtors / Carolina Realtors – Charlotte Region Housing Supply Overview, September 2026 (PDF)",
+      "url": "https://apps.carolinarealtors.com/files/Charlotte-Region_HSO_2026-09.pdf",
+      "retrieved": "2026-10-28"
+    }
+  ]
+}
