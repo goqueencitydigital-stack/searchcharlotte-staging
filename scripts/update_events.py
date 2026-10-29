@@ -98,6 +98,7 @@ def from_tm(seg, e):
         'category': cat,
         'genre': sub or None,
         'start': day, 'end': day,
+        'start_dt': f"{day}T{s['localTime'][:5]}" if s.get('localTime') and not s.get('timeTBA') else None,
         'time': fmt_time(s.get('localTime')) if not s.get('timeTBA') and not s.get('noSpecificTime') else 'Time TBA',
         'venue': v.get('name') or '', 'address': addr,
         'lat': lat, 'lng': lng, 'coord_precision': 'venue',
@@ -108,6 +109,45 @@ def from_tm(seg, e):
         'status': 'rescheduled' if st == 'rescheduled' else ('postponed' if st == 'postponed' else None),
         'dates_approximate': False, 'date_text': None, 'recurring': None,
     }
+
+SITE = 'https://www.searchcharlotte.com'
+STATUS = {'rescheduled': 'EventRescheduled', 'postponed': 'EventPostponed'}
+
+
+def event_ld(events, limit=60):
+    """schema.org Event list for the events page: upcoming events only, facts taken straight from the feed."""
+    out = []
+    for e in events[:limit]:
+        if not e.get('title') or not e.get('start') or not e.get('venue'):
+            continue
+        x = {"@context": "https://schema.org", "@type": "Event", "name": e['title'],
+             "startDate": e.get('start_dt') or e['start'], "endDate": e.get('end') or e['start'],
+             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+             "eventStatus": "https://schema.org/" + STATUS.get(e.get('status') or '', 'EventScheduled'),
+             "location": {"@type": "Place", "name": e['venue'], "address": e.get('address') or 'Charlotte, NC'},
+             "image": [e['img'] if e.get('img') else SITE + '/assets/img/og-default.jpg'],
+             "description": e.get('description') or e['title'],
+             "url": e.get('url') or SITE + '/events.html'}
+        if e.get('lat') and e.get('lng'):
+            x['location']['geo'] = {"@type": "GeoCoordinates", "latitude": e['lat'], "longitude": e['lng']}
+        if e.get('feed') == 'ticketmaster' and e.get('url'):
+            x['offers'] = {"@type": "Offer", "url": e['url']}
+        out.append(x)
+    return out
+
+
+def inject_ld(page_path, events):
+    """Write the Event JSON-LD block into events.html (replacing the previous one) if the page exists."""
+    p = pathlib.Path(page_path)
+    if not p.exists():
+        return False
+    s = p.read_text()
+    data = json.dumps(event_ld(events), ensure_ascii=False).replace('</', '<\\/')
+    s = re.sub(r'<script type="application/ld\+json" id="ev-ld">.*?</script>\n?', '', s, flags=re.S)
+    s = s.replace('</head>', '<script type="application/ld+json" id="ev-ld">' + data + '</script>\n</head>', 1)
+    p.write_text(s)
+    return True
+
 
 def main():
     cur = json.loads(CURATED.read_text())
@@ -155,6 +195,7 @@ def main():
         'categories': {**meta.get('categories', {}), 'concerts': 'Concerts', 'sports': 'Sports', 'theater': 'Theater & comedy'},
     })
     OUT.write_text(json.dumps({'meta': meta, 'events': merged}, ensure_ascii=False, indent=1))
+    if inject_ld(ROOT / 'events.html', merged): print('events.html structured data refreshed')
     print(f"events: {len(merged)} (curated {meta['feeds']['curated']}, ticketmaster {meta['feeds']['ticketmaster']}) status={meta['feed_status']}")
 
 if __name__ == '__main__':

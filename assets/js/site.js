@@ -186,7 +186,7 @@ $$('form[data-ai]').forEach(f=>{const out=$('[data-ai-out]',f.parentElement);
       <p class="eyebrow">I understood</p>
       <div class="chips" style="margin:8px 0 14px">${chips.length?chips.map(c=>`<span class="chip is-active">${esc(c)}</span>`).join(''):'<span class="chip">No specific filters found. Try adding a budget, bedrooms or an area</span>'}</div>
       ${unsupported.length?`<p class="form-note">“${unsupported.join(', ')}” will be applied as a Showcase IDX amenity filter on the live site; it isn't part of this preview's sample data.</p>`:''}
-      ${hoodLinks.length?`<p style="font-size:13.5px;margin:10px 0 6px">Neighborhood guides that match the lifestyle you described:</p><div class="chips">${hoodLinks.map(h=>`<a class="chip" href="neighborhood.html?n=${h.slug}">${esc(h.name)}</a>`).join('')}</div>`:''}
+      ${hoodLinks.length?`<p style="font-size:13.5px;margin:10px 0 6px">Neighborhood guides that match the lifestyle you described:</p><div class="chips">${hoodLinks.map(h=>`<a class="chip" href="neighborhoods/${h.slug}/">${esc(h.name)}</a>`).join('')}</div>`:''}
       <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px"><a class="btn" href="search.html?${qs}">See matching homes</a><a class="btn btn-outline" href="contact.html?topic=buyer">Talk to an agent</a></div>
       <p class="form-note" style="margin-top:12px">This assistant only turns your words into search filters. Every home it shows comes from the MLS search, never from the assistant.</p></div>`;});
   $$('[data-example]',f.parentElement).forEach(b=>b.addEventListener('click',()=>{$('textarea,input',f).value=b.textContent.replace(/[“”"]/g,''); f.requestSubmit();}));

@@ -20,9 +20,9 @@ jobs:
         run: python3 scripts/update_events.py
       - name: Commit if changed
         run: |
-          if git diff --quiet -- assets/data/events.json; then echo "No changes"; exit 0; fi
+          if git diff --quiet -- assets/data/events.json events.html; then echo "No changes"; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898599+github-actions[bot]@users.noreply.github.com"
-          git add assets/data/events.json
+          git add assets/data/events.json events.html
           git commit -m "Daily events refresh"
           git push

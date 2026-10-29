@@ -18,7 +18,7 @@ const ll=SC.ll={
     for(const h of [...hoods,...cities]){ if(seen.has(h.slug)) continue; seen.add(h.slug); h.lat=+h.lat; h.lng=+h.lng; if(isFinite(h.lat)&&isFinite(h.lng)) out.push(h); }
     return out;})),
   nearest:(areas,lat,lng,n=3)=>areas.map(a=>({a,mi:SC.miles([lat,lng],[a.lat,a.lng])})).sort((x,y)=>x.mi-y.mi).slice(0,n),
-  hoodUrl:slug=>'neighborhood.html?n='+encodeURIComponent(slug),
+  hoodUrl:slug=>'neighborhoods/'+encodeURIComponent(slug)+'/',
   homesUrl:slug=>'search.html?q='+encodeURIComponent(slug),
   ym:s=>{const [y,m]=s.split('-'); return MON[+m-1]+' '+y;},
   ymLong:s=>{const [y,m]=s.split('-'); return MONL[+m-1]+' '+y;},

@@ -305,7 +305,7 @@ const respond=(text)=>{const prevC=S.c, prevCount=AI.count(prevC), hadCriteria=!
   const rel=ints.includes('relocate')||(!!S.c.relocFrom&&relChanged);
   if(rel&&(S.c.budgetMax||S.c.commute)){const recs=AI.recommendHoods(S.c);
     html+=`<p>${S.c.relocFrom&&ints.includes('relocate')?`Welcome from ${esc(S.c.relocFrom)}. `:''}Here are areas worth a look, compared only on objective inputs, sample listing prices vs. your budget${S.c.commute?', estimated drive time':''}${AMEN&&S.c.lifestyle.length?', nearby place counts':''} and home types:</p>`;
-    html+=recs.length?`<ol class="sca-recs">${recs.map(r=>`<li><a href="neighborhood.html?n=${r.hood.slug}">${esc(r.hood.name)}</a><span>${r.why.map(esc).join(' · ')}</span></li>`).join('')}</ol><p class="sca-note">Based on the preview's sample listings, not market statistics. Live version uses Showcase IDX active-listing counts.</p>`
+    html+=recs.length?`<ol class="sca-recs">${recs.map(r=>`<li><a href="neighborhoods/${r.hood.slug}/">${esc(r.hood.name)}</a><span>${r.why.map(esc).join(' · ')}</span></li>`).join('')}</ol><p class="sca-note">Based on the preview's sample listings, not market statistics. Live version uses Showcase IDX active-listing counts.</p>`
       :`<p>None of the sample areas have listings within that budget yet. Try a higher budget or a different home type.</p>`;}
   /* results summary */
   const intentOnly=!changed&&ints.some(i=>['save','tour','prefs','fairhousing'].includes(i));

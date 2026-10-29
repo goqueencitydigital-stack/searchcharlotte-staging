@@ -54,7 +54,7 @@ INIT.overview=()=>{const el=$('#xp-overview');
     <h3 class="xr-h3">Facts</h3><dl class="facts-grid">${rows.map(([a,b])=>`<div><dt>${a}</dt><dd>${typeof b==='string'&&b.startsWith('<span')?b:esc(b)}</dd></div>`).join('')}</dl>
     ${!land&&x.features.length?`<h3 class="xr-h3">Listed features <small>(demo)</small></h3><div class="chips xr-feats">${x.features.map(f=>`<span class="chip">${esc(f)}</span>`).join('')}</div>`:''}
     ${sys}
-    <p class="form-note" style="margin-top:14px"><a href="neighborhood.html?n=${h.slug}" style="text-decoration:underline">Explore ${esc(h.name)}</a> · <a href="search.html?q=${h.slug}" style="text-decoration:underline">All homes for sale in ${esc(h.name)}</a></p>
+    <p class="form-note" style="margin-top:14px"><a href="neighborhoods/${h.slug}/" style="text-decoration:underline">Explore ${esc(h.name)}</a> · <a href="search.html?q=${h.slug}" style="text-decoration:underline">All homes for sale in ${esc(h.name)}</a></p>
     <p class="form-note">Sample listing for design review. Live listings display the listing brokerage, Canopy MLS number, last-updated time and the required IDX disclaimer here, supplied by Showcase IDX.</p>
     ${src(SRC_LISTING,'with each MLS feed refresh; tax estimate uses FY2027 rates (set each July 1)')}`;
   SC.costAssumptions.then(A=>{const e=$('[data-esttax]'); if(!e) return; if(!A){e.textContent='Unavailable'; return;} const j=SC.intel.jur(l,A); e.innerHTML=`${fmt(l.price*j.per100/100)}/yr <small class="xr-est">estimate · ${j.per100} per $100 of list price</small>`;});};

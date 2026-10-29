@@ -12,21 +12,20 @@ const pic=(img,alt)=>/^areas\//.test(img)?`<img src="assets/img/${img}-sm.webp" 
 const tiles=m=>window.scTiles().addTo(m);
 const merge=(json)=>{const list=(json&&(json.neighborhoods||json))||[]; const by={}; D.hoods.forEach(h=>by[h.slug]={...h,summary:h.blurb}); (Array.isArray(list)?list:[]).forEach(n=>{by[n.slug]={...(by[n.slug]||{}),...n};}); return Object.values(by);};
 const count=slug=>D.listings.filter(l=>l.hood===slug&&l.status!=='Under Contract').length;
-const hoodCard=(h,i)=>`<a class="hood-card reveal" href="neighborhood.html?n=${h.slug}" data-region="${regionOf(h)}" data-text="${esc((h.name+' '+(h.city||'')+' '+(h.zip_codes||[h.zip]).join(' ')).toLowerCase())}">${pic(h.img||imgFor(h.slug,i),'')}<div><strong>${esc(h.name)}</strong><small>${esc(h.city||'Charlotte')}${h.zip_codes?' · '+h.zip_codes.slice(0,3).join(', '):h.zip?' · '+h.zip:''}</small><p>${esc((h.summary||h.blurb||'').split('. ')[0].replace(/\.?$/,'.'))}</p>${creditTxt(h)}</div></a>`;
+const hoodCard=(h,i)=>`<a class="hood-card reveal" href="neighborhoods/${h.slug}/" data-region="${regionOf(h)}" data-text="${esc((h.name+' '+(h.city||'')+' '+(h.zip_codes||[h.zip]).join(' ')).toLowerCase())}">${pic(h.img||imgFor(h.slug,i),'')}<div><strong>${esc(h.name)}</strong><small>${esc(h.city||'Charlotte')}${h.zip_codes?' · '+h.zip_codes.slice(0,3).join(', '):h.zip?' · '+h.zip:''}</small><p>${esc((h.summary||h.blurb||'').split('. ')[0].replace(/\.?$/,'.'))}</p>${creditTxt(h)}</div></a>`;
 
 if(page==='neighborhoods'){Promise.all([get('neighborhoods.json'),get('cities.json')]).then(([nj,cj])=>{let H=merge(nj);
   const cities=((cj&&(cj.cities||cj))||[]).filter(c=>c&&c.slug&&!H.some(h=>h.slug===c.slug)).map(c=>({...c,city:c.name,_city:true}));
   H=[...H,...cities]; const g=$('#hood-grid'); g.innerHTML=H.map(hoodCard).join(''); SC.reveal();
   let region='all'; const apply=()=>{const q=$('#hood-filter').value.trim().toLowerCase(); let n=0; $$('.hood-card',g).forEach(c=>{const ok=(region==='all'||c.dataset.region===region)&&(!q||c.dataset.text.includes(q)); c.hidden=!ok; if(ok){n++; c.classList.add('in');}}); $('#hood-count').textContent=n+' areas';};
   $('#hood-filter').addEventListener('input',apply); $$('[data-region]').forEach(b=>b.addEventListener('click',()=>{region=b.dataset.region; $$('[data-region]').forEach(x=>x.setAttribute('aria-pressed',x===b)); apply();})); apply();
-  if(window.L){const m=L.map('hood-map',{scrollWheelZoom:false}); tiles(m); const pts=H.filter(h=>h.lat&&h.lng); m.getContainer().classList.add('lowzoom'); pts.forEach(h=>L.marker([h.lat,h.lng],{title:h.name,icon:L.divIcon({className:'pin',html:`<span>${esc(h.name)}</span>`,iconSize:null})}).bindTooltip(h.name,{direction:'top',offset:[0,-8]}).addTo(m).on('click',()=>location.href='neighborhood.html?n='+h.slug)); m.fitBounds(L.latLngBounds(pts.map(h=>[h.lat,h.lng])).pad(.08));}
+  if(window.L){const m=L.map('hood-map',{scrollWheelZoom:false}); tiles(m); const pts=H.filter(h=>h.lat&&h.lng); m.getContainer().classList.add('lowzoom'); pts.forEach(h=>L.marker([h.lat,h.lng],{title:h.name,icon:L.divIcon({className:'pin',html:`<span>${esc(h.name)}</span>`,iconSize:null})}).bindTooltip(h.name,{direction:'top',offset:[0,-8]}).addTo(m).on('click',()=>location.href='neighborhoods/'+h.slug+'/')); m.fitBounds(L.latLngBounds(pts.map(h=>[h.lat,h.lng])).pad(.08));}
 });}
 
-if(page==='neighborhood'){const slug=new URLSearchParams(location.search).get('n')||'southpark';
+if(page==='neighborhood'){const _qs=new URLSearchParams(location.search).get('n'); if(!document.body.dataset.hood&&_qs){location.replace('neighborhoods/'+encodeURIComponent(_qs)+'/'); return;} const slug=document.body.dataset.hood||_qs||'southpark';
  Promise.all([get('neighborhoods.json'),get('cities.json')]).then(([nj,cj])=>{const H=merge(nj); const cities=(cj&&(cj.cities||cj))||[];
   let h=H.find(x=>x.slug===slug)||cities.find(x=>x.slug===slug); if(!h){h=H.find(x=>x.slug==='southpark');}
-  const name=h.name, city=h.city||h.name; document.title=`${name} ${city==='Charlotte'||city===name?'Charlotte NC':city+' NC'} Homes for Sale & Neighborhood Guide | SearchCharlotte.com`;
-  const md=document.querySelector('meta[name=description]'); md&&md.setAttribute('content',`Homes for sale in ${name}, plus a local guide to housing, getting around and what's nearby from the Search Charlotte team.`);
+  const name=h.name, city=h.city||h.name; /* title, description and canonical are prerendered per page */
   $('#nh-crumb').textContent=name; $('#nh-h1').innerHTML=esc(name)+'<br>homes &amp; guide'; $('#nh-lede').textContent=h.tagline||h.summary||h.blurb||'';
   $('#nh-img').src='assets/img/'+(h.img||imgFor(h.slug,0))+'.webp'; $('#nh-img').alt=(h.img_credit&&h.img_credit.depicts)||h.name; {const hc=credit(h); if(hc){const d=document.createElement('div'); d.className='hero-credit'; d.innerHTML=hc; $('#nh-hero').appendChild(d);}}
   const q=encodeURIComponent(h.slug); $('#nh-all').href='search.html?q='+q; $('#nh-homes-h').textContent=`Homes for sale in ${name}`;
@@ -62,7 +61,7 @@ if(page==='explore'){Promise.all([get('explore-guides.json'),get('places.json'),
      <h3 class="xg-title">${esc(g.title)}</h3>${g.img_credit?`<div class="xg-credit">${credit(g)}</div>`:''}</div>
     <div class="xg-body"><p class="xg-sum">${esc(g.summary||g.intro||'')}</p>
      ${pl.length?`<p class="xg-h">Local favorites</p><ol class="xg-list">${pl.map((p,k)=>{const a=area(p.hood); const inner=`<span class="xg-n">${String(k+1).padStart(2,'0')}</span><span class="xg-nm"><b>${esc(p.name)}</b>${a?`<small>${esc(a.name)}</small>`:''}</span>${p.url?'<span class="xg-go" aria-hidden="true">↗</span>':''}`; return `<li>${p.url?`<a href="${esc(p.url)}" target="_blank" rel="noopener">${inner}</a>`:`<div>${inner}</div>`}</li>`}).join('')}</ol>`:''}
-     <div class="xg-cta">${ta?`<a class="xg-btn" href="search.html?q=${encodeURIComponent(ta.slug)}"><span>Homes for sale in ${esc(ta.name)}</span>${arrow}</a><a class="xg-link" href="neighborhood.html?n=${ta.slug}">Read the ${esc(ta.name)} guide</a>`:`<a class="xg-btn" href="search.html"><span>Search homes</span>${arrow}</a>`}</div></div></article>`;}).join('');
+     <div class="xg-cta">${ta?`<a class="xg-btn" href="search.html?q=${encodeURIComponent(ta.slug)}"><span>Homes for sale in ${esc(ta.name)}</span>${arrow}</a><a class="xg-link" href="neighborhoods/${ta.slug}/">Read the ${esc(ta.name)} guide</a>`:`<a class="xg-btn" href="search.html"><span>Search homes</span>${arrow}</a>`}</div></div></article>`;}).join('');
   $$('#ex-tabs button').forEach(b=>b.addEventListener('click',()=>{$$('#ex-tabs button').forEach(x=>x.setAttribute('aria-pressed',x===b)); $$('.xg',grid).forEach(c=>c.hidden=!(b.dataset.cat==='All'||c.dataset.cat===b.dataset.cat));}));
   /* Places directory grouped by category; each place links to homes in its area */
   const pg=$('#pl-grid'), pt=$('#pl-tabs'); if(pg&&P.length){const pc=[...new Set(P.map(p=>p.category))];
