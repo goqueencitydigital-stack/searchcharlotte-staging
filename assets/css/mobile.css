@@ -127,3 +127,9 @@
   .mp-quick{margin-top:26px}
   body:has(.mobile-panel.open) .ac-launch{display:none}
 }
+
+/* Map credit line: one compact line on phones */
+@media (max-width:760px){
+  .leaflet-control-attribution{font-size:9.5px;line-height:1.3;padding:1px 5px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .leaflet-control-attribution .leaflet-attribution-flag{display:none!important}
+}

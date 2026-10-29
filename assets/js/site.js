@@ -11,7 +11,7 @@ window.scTiles=function(){
     img.onerror=()=>{n++; if(n<urls.length) setTimeout(()=>{img.src=urls[n];},250*n); else done(new Error('tile unavailable'),img);};
     img.src=urls[0]; return img;}});
   const o={maxZoom:19,maxNativeZoom:16};
-  return L.layerGroup([new T('',Object.assign({sc:'Base',attribution:'Tiles &copy; Esri, HERE, Garmin &middot; &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'},o)),new T('',Object.assign({sc:'Reference',pane:'overlayPane'},o))]);
+  return L.layerGroup([new T('',Object.assign({sc:'Base',attribution:'&copy; Esri, HERE, Garmin &middot; &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'},o)),new T('',Object.assign({sc:'Reference',pane:'overlayPane'},o))]);
 };
 /* Search Charlotte, shared interactions (preview build). */
 (function(){
