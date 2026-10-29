@@ -46,7 +46,7 @@ const MINWORDS={ten:10,fifteen:15,twenty:20,'twenty-five':25,thirty:30,'forty-fi
 
 /* ---------- parser ---------- */
 AI.parse=(text,ctx={})=>{
-  const raw=String(text||''); let t=' '+raw.toLowerCase().replace(/[’‘]/g,"'").replace(/[–, ]/g,'-').replace(/\s+/g,' ')+' ';
+  const raw=String(text||''); let t=' '+raw.toLowerCase().replace(/[’‘]/g,"'").replace(/[\u2013\u2014]/g,'-').replace(/\s+/g,' ')+' ';
   const P={set:{},unset:[],add:{},reset:false,intents:[],notes:[],skip:null,raw};
   const cut=m=>{t=t.replace(m,' ');};
   if(/\b(start over|start again|reset|clear (?:all|everything|my search|the search|filters)|new search|begin again|from scratch)\b/.test(t)){P.reset=true; t=t.replace(/\b(start over|start again|reset|clear (?:all|everything|my search|the search|filters)|new search|begin again|from scratch)\b/g,' ');}
