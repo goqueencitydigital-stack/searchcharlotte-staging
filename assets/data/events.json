@@ -2,8 +2,8 @@
  "meta": {
   "title": "Charlotte events & concerts",
   "window": [
-   "2026-10-30",
-   "2027-03-29"
+   "2026-10-31",
+   "2027-03-30"
   ],
   "retrieved": "2026-10-28",
   "categories": {
@@ -46,7 +46,7 @@
    "date_text": "string|null",
    "recurring": "string|null"
   },
-  "updated": "2026-10-30T16:20:05Z",
+  "updated": "2026-10-31T15:32:07Z",
   "feeds": {
    "curated": 66,
    "ticketmaster": 0
