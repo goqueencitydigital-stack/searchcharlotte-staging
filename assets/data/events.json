@@ -2,8 +2,8 @@
  "meta": {
   "title": "Charlotte events & concerts",
   "window": [
-   "2026-11-03",
-   "2027-04-02"
+   "2026-11-04",
+   "2027-04-03"
   ],
   "retrieved": "2026-10-28",
   "categories": {
@@ -46,9 +46,9 @@
    "date_text": "string|null",
    "recurring": "string|null"
   },
-  "updated": "2026-11-03T17:25:40Z",
+  "updated": "2026-11-04T17:37:58Z",
   "feeds": {
-   "curated": 63,
+   "curated": 62,
    "ticketmaster": 0
   },
   "feed_status": "curated_only"
@@ -115,6 +115,28 @@
    "source_name": "Mint Museum",
    "verified_on": "2026-10-28",
    "description": "Exhibition at Mint Museum Uptown.",
+   "dates_approximate": false,
+   "date_text": null,
+   "recurring": null,
+   "feed": "curated"
+  },
+  {
+   "id": "dirty-dancing-2026",
+   "title": "Dirty Dancing: The Musical (Broadway at Blumenthal)",
+   "category": "theater",
+   "start": "2026-11-03",
+   "end": "2026-11-08",
+   "time": "See venue for showtimes",
+   "venue": "Belk Theater, Blumenthal Arts Center",
+   "address": "130 N Tryon St, Charlotte, NC 28202",
+   "lat": 35.227394,
+   "lng": -80.841652,
+   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
+   "coord_precision": "venue",
+   "url": "https://www.blumenthalarts.org/events",
+   "source_name": "Blumenthal Arts",
+   "verified_on": "2026-10-28",
+   "description": "Touring Broadway production.",
    "dates_approximate": false,
    "date_text": null,
    "recurring": null,
@@ -227,50 +249,6 @@
    "description": "Exhibition on view now through Jan 22, 2027.",
    "dates_approximate": false,
    "date_text": "On view now through January 22, 2027",
-   "recurring": null,
-   "feed": "curated"
-  },
-  {
-   "id": "dirty-dancing-2026",
-   "title": "Dirty Dancing: The Musical (Broadway at Blumenthal)",
-   "category": "theater",
-   "start": "2026-11-03",
-   "end": "2026-11-08",
-   "time": "See venue for showtimes",
-   "venue": "Belk Theater, Blumenthal Arts Center",
-   "address": "130 N Tryon St, Charlotte, NC 28202",
-   "lat": 35.227394,
-   "lng": -80.841652,
-   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
-   "coord_precision": "venue",
-   "url": "https://www.blumenthalarts.org/events",
-   "source_name": "Blumenthal Arts",
-   "verified_on": "2026-10-28",
-   "description": "Touring Broadway production.",
-   "dates_approximate": false,
-   "date_text": null,
-   "recurring": null,
-   "feed": "curated"
-  },
-  {
-   "id": "rod-wave-2026",
-   "title": "Rod Wave: Don't Look Down Tour",
-   "category": "concerts",
-   "start": "2026-11-03",
-   "end": "2026-11-03",
-   "time": "8:00 PM",
-   "venue": "Spectrum Center",
-   "address": "333 E Trade St, Charlotte, NC 28202",
-   "lat": 35.225098,
-   "lng": -80.839154,
-   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
-   "coord_precision": "venue",
-   "url": "https://www.spectrumcentercharlotte.com/events",
-   "source_name": "Spectrum Center",
-   "verified_on": "2026-10-28",
-   "description": "Arena concert.",
-   "dates_approximate": false,
-   "date_text": null,
    "recurring": null,
    "feed": "curated"
   },
