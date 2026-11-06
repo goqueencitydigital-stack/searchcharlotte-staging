@@ -2,8 +2,8 @@
  "meta": {
   "title": "Charlotte events & concerts",
   "window": [
-   "2026-11-05",
-   "2027-04-04"
+   "2026-11-06",
+   "2027-04-05"
   ],
   "retrieved": "2026-10-28",
   "categories": {
@@ -46,9 +46,9 @@
    "date_text": "string|null",
    "recurring": "string|null"
   },
-  "updated": "2026-11-05T17:43:27Z",
+  "updated": "2026-11-06T16:59:22Z",
   "feeds": {
-   "curated": 62,
+   "curated": 61,
    "ticketmaster": 0
   },
   "feed_status": "curated_only"
@@ -249,28 +249,6 @@
    "description": "Exhibition on view now through Jan 22, 2027.",
    "dates_approximate": false,
    "date_text": "On view now through January 22, 2027",
-   "recurring": null,
-   "feed": "curated"
-  },
-  {
-   "id": "switchfoot-2026",
-   "title": "Switchfoot with Anberlin: Forever Now Tour",
-   "category": "concerts",
-   "start": "2026-11-05",
-   "end": "2026-11-05",
-   "time": "See venue for times",
-   "venue": "The Fillmore Charlotte",
-   "address": "820 Hamilton St, Charlotte, NC 28206",
-   "lat": 35.239179,
-   "lng": -80.845042,
-   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
-   "coord_precision": "venue",
-   "url": "https://www.fillmorenc.com/shows",
-   "source_name": "The Fillmore Charlotte",
-   "verified_on": "2026-10-28",
-   "description": "Club concert in the AvidXchange Music Factory area.",
-   "dates_approximate": false,
-   "date_text": null,
    "recurring": null,
    "feed": "curated"
   },
