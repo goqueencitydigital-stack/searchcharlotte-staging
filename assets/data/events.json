@@ -2,8 +2,8 @@
  "meta": {
   "title": "Charlotte events & concerts",
   "window": [
-   "2026-11-07",
-   "2027-04-06"
+   "2026-11-08",
+   "2027-04-07"
   ],
   "retrieved": "2026-10-28",
   "categories": {
@@ -46,9 +46,9 @@
    "date_text": "string|null",
    "recurring": "string|null"
   },
-  "updated": "2026-11-07T15:57:25Z",
+  "updated": "2026-11-08T16:25:32Z",
   "feeds": {
-   "curated": 59,
+   "curated": 57,
    "ticketmaster": 0
   },
   "feed_status": "curated_only"
@@ -249,50 +249,6 @@
    "description": "Exhibition on view now through Jan 22, 2027.",
    "dates_approximate": false,
    "date_text": "On view now through January 22, 2027",
-   "recurring": null,
-   "feed": "curated"
-  },
-  {
-   "id": "joshua-bell-2026",
-   "title": "Charlotte Symphony: Joshua Bell Plays Bruch",
-   "category": "theater",
-   "start": "2026-11-07",
-   "end": "2026-11-07",
-   "time": "8:00 PM",
-   "venue": "Knight Theater",
-   "address": "430 S Tryon St, Charlotte, NC 28202",
-   "lat": 35.224903,
-   "lng": -80.847872,
-   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
-   "coord_precision": "venue",
-   "url": "https://www.charlottesymphony.org/whats-on",
-   "source_name": "Charlotte Symphony",
-   "verified_on": "2026-10-28",
-   "description": "Orchestral concert with violin soloist.",
-   "dates_approximate": false,
-   "date_text": null,
-   "recurring": null,
-   "feed": "curated"
-  },
-  {
-   "id": "little-big-town-2026",
-   "title": "Little Big Town: For The Art Of It Tour",
-   "category": "concerts",
-   "start": "2026-11-07",
-   "end": "2026-11-07",
-   "time": "7:30 PM",
-   "venue": "Ovens Auditorium",
-   "address": "2700 E Independence Blvd, Charlotte, NC 28205",
-   "lat": 35.203854,
-   "lng": -80.794267,
-   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
-   "coord_precision": "venue",
-   "url": "https://www.charlotteauditorium.com/events/",
-   "source_name": "Ovens Auditorium",
-   "verified_on": "2026-10-28",
-   "description": "Country concert.",
-   "dates_approximate": false,
-   "date_text": null,
    "recurring": null,
    "feed": "curated"
   },
