@@ -2,8 +2,8 @@
  "meta": {
   "title": "Charlotte events & concerts",
   "window": [
-   "2026-11-08",
-   "2027-04-07"
+   "2026-11-09",
+   "2027-04-08"
   ],
   "retrieved": "2026-10-28",
   "categories": {
@@ -46,9 +46,9 @@
    "date_text": "string|null",
    "recurring": "string|null"
   },
-  "updated": "2026-11-08T16:25:32Z",
+  "updated": "2026-11-09T20:14:49Z",
   "feeds": {
-   "curated": 57,
+   "curated": 55,
    "ticketmaster": 0
   },
   "feed_status": "curated_only"
@@ -115,28 +115,6 @@
    "source_name": "Mint Museum",
    "verified_on": "2026-10-28",
    "description": "Exhibition at Mint Museum Uptown.",
-   "dates_approximate": false,
-   "date_text": null,
-   "recurring": null,
-   "feed": "curated"
-  },
-  {
-   "id": "dirty-dancing-2026",
-   "title": "Dirty Dancing: The Musical (Broadway at Blumenthal)",
-   "category": "theater",
-   "start": "2026-11-03",
-   "end": "2026-11-08",
-   "time": "See venue for showtimes",
-   "venue": "Belk Theater, Blumenthal Arts Center",
-   "address": "130 N Tryon St, Charlotte, NC 28202",
-   "lat": 35.227394,
-   "lng": -80.841652,
-   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
-   "coord_precision": "venue",
-   "url": "https://www.blumenthalarts.org/events",
-   "source_name": "Blumenthal Arts",
-   "verified_on": "2026-10-28",
-   "description": "Touring Broadway production.",
    "dates_approximate": false,
    "date_text": null,
    "recurring": null,
@@ -249,28 +227,6 @@
    "description": "Exhibition on view now through Jan 22, 2027.",
    "dates_approximate": false,
    "date_text": "On view now through January 22, 2027",
-   "recurring": null,
-   "feed": "curated"
-  },
-  {
-   "id": "panthers-2026-11-08",
-   "title": "Carolina Panthers vs. Denver Broncos",
-   "category": "sports",
-   "start": "2026-11-08",
-   "end": "2026-11-08",
-   "time": "1:00 PM ET (kickoff times subject to NFL changes)",
-   "venue": "Bank of America Stadium",
-   "address": "800 S Mint St, Charlotte, NC 28202",
-   "lat": 35.225774,
-   "lng": -80.852828,
-   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
-   "coord_precision": "venue",
-   "url": "https://www.panthers.com/schedule/2026/",
-   "source_name": "Carolina Panthers",
-   "verified_on": "2026-10-28",
-   "description": "NFL home game.",
-   "dates_approximate": false,
-   "date_text": null,
    "recurring": null,
    "feed": "curated"
   },
