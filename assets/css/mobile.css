@@ -154,12 +154,8 @@ body{font-size:16px}
 .d-md{font-size:clamp(23px,2.6vw,32px)}
 @media (max-width:860px){.nav{height:66px}.brand .logo{height:40px}.brand .bhhs{height:40px;width:40px}}
 /* Larger screens: scale the whole layout up so it reads big and confident */
-@media (min-width:1280px){html{zoom:1.06}:root{--z:1.06}}
 :root{--z:1}
-@media (min-width:1400px){html{zoom:1.12}:root{--z:1.12}}
-@media (min-width:1500px){html{zoom:1.18}:root{--z:1.18}}
-@media (min-width:1700px){html{zoom:1.28}:root{--z:1.28}}
-@media (min-width:2000px){html{zoom:1.4}:root{--z:1.4}}
+@media (min-width:1280px){html{zoom:1.08}:root{--z:1.08}}
 /* viewport-height elements: divide by the zoom so they still fit the screen */
 @media (min-width:1280px){
   .results{height:calc(100vh / var(--z) - 168px)}
