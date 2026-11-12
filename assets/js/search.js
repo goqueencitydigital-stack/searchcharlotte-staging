@@ -66,7 +66,7 @@ function run(fit){const L_=filtered(); const pages=Math.max(1,Math.ceil(L_.lengt
  syncControls(); history.replaceState(null,'','search.html'+(toQS().toString()?'?'+toQS():''));
  if(map){layer.clearLayers(); markers={}; const sv=SC.saved();
   L_.forEach(l=>{const m=L.marker([l.lat,l.lng],{icon:L.divIcon({className:'pin'+(sv.includes(l.id)?' saved':''),html:`<span>${short(l.price)}</span>`,iconSize:null}),riseOnHover:true,title:l.address});
-   m.bindPopup(`<a class="pop-card" href="listing.html?id=${l.id}"><img src="assets/img/${l.img}.webp" alt=""><span><b>${fmt(l.price)}</b><small>${esc(SC.facts(l))}</small><small>${esc(l.address)}, ${esc(l.city)}</small><small style="color:#8a6d3b">Sample data</small></span></a>`,{closeButton:false});
+   m.bindPopup(`<a class="pop-card" href="listing.html?id=${l.id}"><img src="assets/img/${l.img}-sm.webp" alt=""><span><b>${fmt(l.price)}</b><small>${esc(SC.facts(l))}</small><small>${esc(l.address)}, ${esc(l.city)}</small><small style="color:#8a6d3b">Sample data</small></span></a>`,{closeButton:false});
    m.on('mouseover',()=>hl(l.id,true)); m.on('mouseout',()=>hl(l.id,false)); m.addTo(layer); markers[l.id]=m;});
   if((fit||first)&&L_.length&&!st.bounds){map.fitBounds(L.latLngBounds(L_.map(l=>[l.lat,l.lng])).pad(.15),{maxZoom:14,animate:!first});}}
  first=false; track('idx_search_results',{result_count:L_.length,filters:toQS().toString()});}

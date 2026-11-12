@@ -13,7 +13,7 @@ const hoodsFav=()=>arr('sc_hoods').map(h=>typeof h==='string'?h:(h&&(h.slug||h.i
 const hoodBy=s=>D.hoods.find(h=>h.slug===s);
 const listings=ids=>ids.map(SC.listing).filter(Boolean);
 const rel=ts=>{const m=Math.round((Date.now()-new Date(ts))/6e4); return m<1?'just now':m<60?m+' min ago':m<1440?Math.round(m/60)+' h ago':Math.round(m/1440)+' d ago';};
-const thumb=l=>`<img src="assets/img/${l.img}.webp" alt="" width="84" height="66" loading="lazy">`;
+const thumb=l=>`<img src="assets/img/${l.img}-sm.webp" alt="" width="84" height="66" loading="lazy">`;
 let amen={}; SC.amenities.then(a=>{amen=a||{};});
 let costA=null; SC.costAssumptions.then(a=>{costA=a;});
 
@@ -138,7 +138,7 @@ P.searches=()=>{const S=arr('sc_searches');
 P.neighborhoods=()=>{const F=hoodsFav(), R=db.get('sc_reloc',null);
   return `<div class="pp-h"><div><h2 class="display d-md">My Neighborhoods</h2><p>Follow areas to see similar homes and guides in your feed.</p></div></div>
    <div class="chips" role="group" aria-label="Follow neighborhoods">${D.hoods.map(h=>`<button type="button" class="chip" data-hood="${h.slug}" aria-pressed="${F.includes(h.slug)}">${esc(h.name)}</button>`).join('')}</div>
-   ${F.length?`<div class="pp-grid" style="margin-top:20px">${F.map(hoodBy).filter(Boolean).map(h=>{const n=D.listings.filter(l=>l.hood===h.slug).length; return `<article class="pp-card" style="padding:0;overflow:hidden;position:relative"><img src="assets/img/${h.img}.webp" alt="" style="width:100%;aspect-ratio:1.7;object-fit:cover" loading="lazy"><div style="padding:14px 16px 16px"><h3>${esc(h.name)}</h3><p style="font-size:12.5px;color:var(--muted);margin:0 0 10px">${esc(h.city)} · ${n} sample listing${n===1?'':'s'}</p><div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn btn-sm" href="neighborhoods/${h.slug}/">Guide</a><a class="btn btn-sm btn-outline" href="search.html?q=${h.slug}">Homes</a></div></div></article>`;}).join('')}</div>`:''}
+   ${F.length?`<div class="pp-grid" style="margin-top:20px">${F.map(hoodBy).filter(Boolean).map(h=>{const n=D.listings.filter(l=>l.hood===h.slug).length; return `<article class="pp-card" style="padding:0;overflow:hidden;position:relative"><img src="assets/img/${h.img}-sm.webp" alt="" style="width:100%;aspect-ratio:1.7;object-fit:cover" loading="lazy"><div style="padding:14px 16px 16px"><h3>${esc(h.name)}</h3><p style="font-size:12.5px;color:var(--muted);margin:0 0 10px">${esc(h.city)} · ${n} sample listing${n===1?'':'s'}</p><div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn btn-sm" href="neighborhoods/${h.slug}/">Guide</a><a class="btn btn-sm btn-outline" href="search.html?q=${h.slug}">Homes</a></div></div></article>`;}).join('')}</div>`:''}
    <div class="pp-h" style="margin-top:36px"><div><h2 class="display d-md">Relocation research</h2><p>Notes, commute targets and comparisons you build while researching a move.</p></div></div>
    ${R&&(Array.isArray(R)?R.length:Object.keys(R).length)?`<div class="pp-card">${relocHTML(R)}</div>`:empty('Nothing saved yet','Relocation research you save elsewhere on the site appears here.','<a class="btn btn-sm btn-outline" href="neighborhoods.html">Explore neighborhoods</a>')}`;};
 const relocHTML=R=>{const items=Array.isArray(R)?R:Object.entries(R).map(([k,v])=>({label:k,value:v}));

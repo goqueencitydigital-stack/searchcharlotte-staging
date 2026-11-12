@@ -25,3 +25,10 @@ if(window.L&&$('#mini-map')){const m=L.map('mini-map',{zoomControl:false,attribu
  window.scTiles().addTo(m);
  m.fitBounds(L.latLngBounds(D.listings.filter(l=>l.lat<35.3).map(l=>[l.lat,l.lng])).pad(.05)); D.listings.filter(l=>l.lat<35.3&&l.status==='Active').filter((l,i)=>i%2===0).forEach(l=>L.marker([l.lat,l.lng],{icon:L.divIcon({className:'pin',html:`<span>${short(l.price)}</span>`,iconSize:null})}).addTo(m));}
 })();
+
+/* Reels: load and play only while on screen (saves ~2 MB on first load) */
+(()=>{const vs=document.querySelectorAll('.reel video[data-src]');if(!vs.length)return;
+const start=v=>{if(v.dataset.src){v.src=v.dataset.src;v.removeAttribute('data-src');}const p=v.play();if(p&&p.catch)p.catch(()=>{});};
+if(!('IntersectionObserver' in window)){vs.forEach(start);return;}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)start(e.target);else if(!e.target.paused)e.target.pause();}),{rootMargin:'200px'});
+vs.forEach(v=>io.observe(v));})();

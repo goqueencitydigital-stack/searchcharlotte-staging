@@ -176,3 +176,9 @@ body{font-size:16px}
 #cm-az:empty{min-height:188px}
 @media (min-width:768px){#mkt-grid:empty{min-height:274px}.cm-bar #cm-kinds:empty{min-height:76px}#cm-az:empty{min-height:64px}}
 @media (min-width:1200px){#mkt-grid:empty{min-height:138px}#mkt-table tbody:empty{height:900px}.cm-bar #cm-kinds:empty{min-height:34px}#cm-az:empty{min-height:30px}}
+#nh-cards:empty,#lg-cards:empty{min-height:380px}
+@media (max-width:1040px){#nh-cards:empty,#lg-cards:empty{min-height:920px}}
+@media (max-width:540px){#nh-cards:empty,#lg-cards:empty{min-height:1980px}}
+/* lighter background images on smaller screens */
+@media (max-width:1600px){.hero-media{background-image:url(../img/areas/hero-skyline-md.webp)}.unlock-media{background-image:url(../img/areas/unlock-md.webp)}}
+@media (max-width:540px){.unlock-media{background-image:url(../img/areas/unlock-sm.webp)}}

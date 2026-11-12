@@ -35,7 +35,7 @@ const createView=()=>{const u=SC.user()||{}; const s=S();
 
 const homeCard=(p,id,rank)=>{const l=SC.listing(id); if(!l) return ''; const m=me(), mine=(p.reactions[id]||{})[m.id], R=p.reactions[id]||{}, C=p.comments[id]||[];
   const tally=RX.map(([k,lab])=>{const who=p.members.filter(x=>R[x.id]===k); return who.length?`<span title="${esc(who.map(w=>w.name).join(', '))}">${lab} · ${who.map(w=>esc(w.name.split(' ')[0])).join(', ')}</span>`:'';}).join('');
-  return `<article class="sp-home" data-home="${id}"><div class="ph"><img src="assets/img/${l.img}.webp" alt="${esc(l.address)}" loading="lazy" width="400" height="250">${rank?`<span class="rank">#${rank} · ${scoreOf(p,id)} pts</span>`:''}</div>
+  return `<article class="sp-home" data-home="${id}"><div class="ph"><img src="assets/img/${l.img}-sm.webp" alt="${esc(l.address)}" loading="lazy" width="400" height="250">${rank?`<span class="rank">#${rank} · ${scoreOf(p,id)} pts</span>`:''}</div>
    <div class="bd"><div><h3><a href="listing.html?id=${id}">${esc(l.address)}</a></h3><div class="facts">${fmt(l.price)} · ${esc(SC.facts(l))}</div></div>
     <div class="sp-react" role="group" aria-label="Your reaction as ${esc(m.name)}">${RX.map(([k,lab])=>`<button type="button" data-rx="${k}" aria-pressed="${mine===k}">${lab}</button>`).join('')}</div>
     <div class="sp-tally">${tally||'<span>No reactions yet</span>'}</div>

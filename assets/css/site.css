@@ -282,7 +282,7 @@ button{cursor:pointer}
 .socials a{width:34px;height:34px;border-radius:50%;background:#000;color:#fff;display:grid;place-items:center;transition:transform .15s}
 .socials a:hover{transform:translateY(-2px)}
 .socials svg{width:14px;height:14px}
-.foot h4{font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:17px;margin:0 0 16px;letter-spacing:-.005em}
+.foot h4,.foot .foot-h{font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:17px;margin:0 0 16px;letter-spacing:-.005em}
 .foot ul{list-style:none;padding:0;margin:0;display:grid;gap:14px;font-size:13px}
 .foot ul a:hover{text-decoration:underline}
 .foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:48px;font-size:12px}
@@ -862,3 +862,9 @@ html[data-staging] .form-ok::after{content:"Staging preview: this form isn't con
 .hero h1.hero-logo{margin:0 auto 18px;line-height:0;max-width:min(600px,86vw)}
 .hero h1.hero-logo img{display:block;width:100%;height:auto;filter:drop-shadow(0 2px 14px rgba(242,233,224,.85))}
 @media (max-width:640px){.hero h1.hero-logo{max-width:300px;margin-bottom:14px}}
+.lg-about .info{margin-top:0}.lg-facts-list{margin:12px 0 0;background:#fff}.lg-facts-list a{font-size:12px;color:#7A6A5C;text-decoration:underline;white-space:nowrap}
+.lg-faq{border-bottom:1px solid #E7E1D8;padding:14px 0}.lg-faq summary{cursor:pointer;font-weight:700;font-size:15.5px;list-style-position:outside}.lg-faq p{margin:10px 0 0;font-size:14.5px;line-height:1.6}
+.lg-src{margin-top:24px;background:#fff;border:1px solid #E7E1D8;border-radius:14px;padding:18px 20px}.lg-src h3{margin:0 0 8px;font-size:16px}.lg-src ul{margin:0;padding-left:18px;columns:2;column-gap:28px}.lg-src li{break-inside:avoid;font-size:13px;overflow-wrap:anywhere;margin:3px 0}.lg-src a{text-decoration:underline;text-underline-offset:2px}.lg-src-note{font-size:12px;color:#6b5d50;margin:10px 0 0}
+@media (max-width:860px){.lg-src ul{columns:1}}
+@media (max-width:860px){.lg-facts-list a{white-space:normal}}
+.lg-faq summary{list-style:none;position:relative;padding-right:28px}.lg-faq summary::-webkit-details-marker{display:none}.lg-faq summary::after{content:"+";position:absolute;right:4px;top:-2px;font-size:20px;font-weight:400}.lg-faq[open] summary::after{content:"\2212"}

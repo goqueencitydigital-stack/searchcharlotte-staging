@@ -136,6 +136,25 @@ def event_ld(events, limit=60):
     return out
 
 
+def static_list(events, limit=60):
+    """Plain, crawlable list of upcoming events. events.js replaces it with the interactive list on load."""
+    import html as H
+    out, cur = [], ''
+    for e in events[:limit]:
+        if not e.get('title') or not e.get('start'):
+            continue
+        d = dt.date.fromisoformat(e['start'][:10])
+        m = d.strftime('%B %Y')
+        if m != cur:
+            cur = m; out.append(f'<h2 class="ll-month-h">{m}</h2>')
+        when = d.strftime('%a, %b ') + str(d.day) + (', ' + H.escape(e['time']) if e.get('time') else '')
+        where = ' · '.join(H.escape(x) for x in (e.get('venue'), e.get('address')) if x)
+        link = f'<p class="ll-ev-links"><a href="{H.escape(e["url"])}" target="_blank" rel="noopener">Official event page</a></p>' if e.get('url') else ''
+        out.append(f'<article class="ll-ev"><div><h3>{H.escape(e["title"])}</h3><p class="ll-ev-meta"><b>{when}</b><br>{where}</p>'
+                   + (f'<p class="ll-ev-desc">{H.escape(e["description"])}</p>' if e.get('description') else '') + link + '</div></article>')
+    return ''.join(out)
+
+
 def inject_ld(page_path, events):
     """Write the Event JSON-LD block into events.html (replacing the previous one) if the page exists."""
     p = pathlib.Path(page_path)
@@ -145,6 +164,7 @@ def inject_ld(page_path, events):
     data = json.dumps(event_ld(events), ensure_ascii=False).replace('</', '<\\/')
     s = re.sub(r'<script type="application/ld\+json" id="ev-ld">.*?</script>\n?', '', s, flags=re.S)
     s = s.replace('</head>', '<script type="application/ld+json" id="ev-ld">' + data + '</script>\n</head>', 1)
+    s = re.sub(r'(<div id="ev-list" class="ll-evlist">).*?(</div><!--/ev-list-->|</div>)', lambda m: m.group(1) + static_list(events) + '</div><!--/ev-list-->', s, count=1, flags=re.S)
     p.write_text(s)
     return True
 
