@@ -15,7 +15,7 @@ SC.nearby={mount(el,o){
    <label class="nb-tog"><input type="checkbox"> Local spots only</label></div></div>
    <div class="nb-cats" role="tablist" aria-label="Place categories"></div>
    <div class="nb-body"><div class="nb-listwrap"><input class="nb-q" type="search" placeholder="Filter by name or cuisine" aria-label="Filter places"><ol class="nb-list"></ol><button class="btn btn-sm btn-outline nb-more" type="button" hidden>Show more</button></div>
-   <div class="nb-map" ${o.mapId?`id="${o.mapId}"`:''} aria-label="Map of nearby places"></div></div>
+   <div class="nb-map" role="region" ${o.mapId?`id="${o.mapId}"`:''} aria-label="Map of nearby places"></div></div>
    <p class="nb-attr">${esc(SC.poi.attribution)} Distances are straight-line from the area center; walk and drive times are estimates. <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">Data license</a> · <a href="https://www.openstreetmap.org/fixthemap" target="_blank" rel="noopener">Report a missing place</a></p>`;
   const $=s=>el.querySelector(s);
   const pool=()=>all.filter(p=>p.mi<=radius&&(!localOnly||!p.x.br));

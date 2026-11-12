@@ -169,3 +169,10 @@ body{font-size:16px}
   .td-map{height:min(560px,calc(70vh / var(--z)))}
   .ac-panel{max-height:min(720px,calc(100dvh / var(--z) - 32px));width:min(400px,calc(100vw / var(--z) - 32px))}
 }
+/* CLS: reserve space for JS-filled blocks */
+#mkt-grid:empty{min-height:409px}
+#mkt-table tbody:empty{display:table-row-group;height:2200px}
+.cm-bar #cm-kinds:empty{min-height:148px}
+#cm-az:empty{min-height:188px}
+@media (min-width:768px){#mkt-grid:empty{min-height:274px}.cm-bar #cm-kinds:empty{min-height:76px}#cm-az:empty{min-height:64px}}
+@media (min-width:1200px){#mkt-grid:empty{min-height:138px}#mkt-table tbody:empty{height:900px}.cm-bar #cm-kinds:empty{min-height:34px}#cm-az:empty{min-height:30px}}

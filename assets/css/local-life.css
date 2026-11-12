@@ -15,11 +15,11 @@
 .ll-kpi.on{border-color:#1E140D;box-shadow:0 0 0 1px #1E140D}
 .ll-kpi-l{font-size:11.5px;color:#6b5d50;font-weight:600;line-height:1.3}
 .ll-kpi b{font-family:'Inter Tight',Inter,sans-serif;font-weight:900;font-size:22px;letter-spacing:-.02em;color:#1E140D;overflow-wrap:anywhere}
-.ll-kpi b.na{font-size:15px;color:#8a7d70;font-weight:700}
+.ll-kpi b.na{font-size:15px;color:#6e6256;font-weight:700}
 .ll-yoy{font-size:12px;font-weight:600;color:#5A3D2B}
 .ll-yoy.up{color:#163B35}.ll-yoy.down{color:#8a4a12}
-.ll-yoy.na,.na{color:#8a7d70;font-weight:500}
-.ll-yoy em{font-style:normal;font-weight:500;color:#8a7d70}
+.ll-yoy.na,.na{color:#6e6256;font-weight:500}
+.ll-yoy em{font-style:normal;font-weight:500;color:#6e6256}
 .ll-chart-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;margin-top:20px}
 .ll-chart{margin:0;background:#fff;border:1px solid #E7E1D8;border-radius:14px;padding:16px;min-width:0}
 .ll-chart figcaption{display:flex;flex-direction:column;gap:2px;margin-bottom:10px}
