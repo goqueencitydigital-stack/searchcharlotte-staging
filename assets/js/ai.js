@@ -1,7 +1,7 @@
 /* Search Charlotte AI, conversational search (preview).
    Deterministic in-browser parser: words -> search filters. It never creates listings; every home shown comes
    from SC.D.listings (SAMPLE data). Production: a server-side LLM with function calling constrained to the
-   Showcase IDX search API parameters, with this parser kept as the offline/fallback path.
+   the listing search API parameters, with this parser kept as the offline/fallback path.
    Public API: SC.ai.parse(text, ctx), SC.ai.apply(criteria, parsed), SC.ai.run(criteria), SC.ai.toSearchQS(criteria),
    SC.ai.describe(criteria), SC.ai.toPrefs(criteria), SC.ai.recommendHoods(criteria), SC.ai.mountLauncher(el),
    SC.ai.voiceButton(inputId). */
@@ -305,7 +305,7 @@ const respond=(text)=>{const prevC=S.c, prevCount=AI.count(prevC), hadCriteria=!
   const rel=ints.includes('relocate')||(!!S.c.relocFrom&&relChanged);
   if(rel&&(S.c.budgetMax||S.c.commute)){const recs=AI.recommendHoods(S.c);
     html+=`<p>${S.c.relocFrom&&ints.includes('relocate')?`Welcome from ${esc(S.c.relocFrom)}. `:''}Here are areas worth a look, compared only on objective inputs, sample listing prices vs. your budget${S.c.commute?', estimated drive time':''}${AMEN&&S.c.lifestyle.length?', nearby place counts':''} and home types:</p>`;
-    html+=recs.length?`<ol class="sca-recs">${recs.map(r=>`<li><a href="neighborhoods/${r.hood.slug}/">${esc(r.hood.name)}</a><span>${r.why.map(esc).join(' · ')}</span></li>`).join('')}</ol><p class="sca-note">Based on the preview's sample listings, not market statistics. Live version uses Showcase IDX active-listing counts.</p>`
+    html+=recs.length?`<ol class="sca-recs">${recs.map(r=>`<li><a href="neighborhoods/${r.hood.slug}/">${esc(r.hood.name)}</a><span>${r.why.map(esc).join(' · ')}</span></li>`).join('')}</ol><p class="sca-note">Based on the preview's sample listings, not market statistics. Live version uses active-listing counts from Canopy MLS.</p>`
       :`<p>None of the sample areas have listings within that budget yet. Try a higher budget or a different home type.</p>`;}
   /* results summary */
   const intentOnly=!changed&&ints.some(i=>['save','tour','prefs','fairhousing'].includes(i));
@@ -375,7 +375,7 @@ $('#sv-form').addEventListener('submit',e=>{e.preventDefault(); const f=e.target
   const entry={id:'s'+Date.now().toString(36),name:$('#sv-name').value.trim()||'My AI search',criteria:S.c,qs:AI.toSearchQS(S.c),source:'search_charlotte_ai',created:new Date().toISOString(),
     alert:{email:em.checked?$('#sv-email').value.trim():false,sms:sms.checked?$('#sv-phone').value.trim():false,smsConsent:sms.checked&&$('#sv-smsc').checked,inapp:$('#sv-inapp').checked,frequency:$('#sv-freq').value}};
   SC.db.update('sc_searches',[],a=>[entry,...a].slice(0,50));
-  if(entry.alert.inapp) SC.notify('Search saved: '+entry.name,'Matching sample listings will show here. Live alerts run through Showcase IDX at launch.','ai.html');
+  if(entry.alert.inapp) SC.notify('Search saved: '+entry.name,'Matching sample listings will show here. Live email alerts start at launch.','ai.html');
   track('save_search',{source:'ai',email:!!entry.alert.email,sms:!!entry.alert.sms,inapp:entry.alert.inapp,frequency:entry.alert.frequency});
   f.classList.add('sent'); f.querySelector('[type=submit]').disabled=true; say('bot',`<p>Saved “${esc(entry.name)}”. ${entry.alert.email||entry.alert.sms||entry.alert.inapp?'Alert preferences are stored with it; you can change or turn them off in <a href="passport.html">Passport</a>.':'No alerts are on: you can add them later in Passport.'}</p>`); persist();});
 

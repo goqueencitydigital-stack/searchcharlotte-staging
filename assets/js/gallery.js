@@ -5,7 +5,7 @@
      SC.gallery.open(listing, index?)      -> opens viewer; index omitted = photo grid, number = lightbox at that photo (0-based)
      SC.gallery.close()
    URL hash state: #photos (grid) and #photo-N (1-based) so the browser Back button steps back / closes.
-   Preview photos are SAMPLE images; production uses the Showcase IDX / Canopy MLS photo array (same API). */
+   Preview photos are SAMPLE images; production uses the Canopy MLS photo array (same API). */
 (function(){'use strict';
 const SC=window.SC; const {esc,track}=SC;
 const ico={
@@ -78,7 +78,7 @@ function build(){
 }
 const syncSave=()=>{const b=V.querySelector('[data-gx-save]'), on=SC.saved().includes(L.id); b.setAttribute('aria-pressed',on); b.querySelector('span').textContent=on?'Saved':'Save'; b.setAttribute('aria-label',on?'Remove from saved homes':'Save this home');};
 function renderList(){const n=P.length;
-  V.querySelector('[data-gx-list]').innerHTML=`<p class="gx-sample-note">Sample photos: live listing photos via Showcase IDX at launch</p><div class="gx-cols">${P.map((src,i)=>`<button type="button" class="gx-li ${i%3===0?'wide':''}" data-gx-i="${i}" aria-label="View photo ${i+1} of ${n}"><img src="${src}" alt="${esc(alt(L,i,n))}" loading="lazy" decoding="async"></button>`).join('')}</div>`;
+  V.querySelector('[data-gx-list]').innerHTML=`<p class="gx-sample-note">Sample photos: live Canopy MLS listing photos at launch</p><div class="gx-cols">${P.map((src,i)=>`<button type="button" class="gx-li ${i%3===0?'wide':''}" data-gx-i="${i}" aria-label="View photo ${i+1} of ${n}"><img src="${src}" alt="${esc(alt(L,i,n))}" loading="lazy" decoding="async"></button>`).join('')}</div>`;
   V.querySelector('[data-gx-thumbs]').innerHTML=P.map((src,i)=>`<button type="button" role="listitem" data-gx-i="${i}" aria-label="Photo ${i+1}"><img src="${src}" alt="" loading="lazy"></button>`).join('');}
 function go(i){const n=P.length; idx=(i+n)%n; if(mode==='photo') history.replaceState(history.state,'','#photo-'+(idx+1)); paintPhoto();}
 function paintPhoto(){const n=P.length, img=V.querySelector('[data-gx-img]');

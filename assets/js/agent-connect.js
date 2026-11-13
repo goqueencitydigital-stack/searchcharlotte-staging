@@ -1,6 +1,6 @@
 /* Search Charlotte, Instant Agent Connection + Passport notification bell (global include).
    Preview: requests are recorded only in this browser tab (SC.db 'sc_messages'); nothing is sent.
-   Production: POST to the lead endpoint → Showcase IDX lead + Lead Routing Settings → assigned agent email/CRM. */
+   Production: POST to the lead endpoint → lead record → assigned agent email/CRM. */
 (function(){'use strict';
 const SC=window.SC; if(!SC||SC.agentConnect) return; const {$,$$,esc,track}=SC;
 
@@ -14,9 +14,9 @@ SC.TEAM=[
   {id:'294177',slug:'lauren-schwaiger',name:'Lauren Schwaiger',title:'Search Charlotte team'},
   {id:'331312',slug:'stephanie-horai',name:'Stephanie Horai',title:'Search Charlotte team'}];
 SC.agentPhoto=a=>`assets/img/team/${a.id}.webp`;
-SC.assignedAgent=()=>SC.TEAM[0]; /* production: lead.assigned_agent from Showcase IDX */
+SC.assignedAgent=()=>SC.TEAM[0]; /* production: lead.assigned_agent from the lead handler */
 SC.RESPONSE_GOAL='We reply during business hours, typically same day. This is a goal, not a guarantee, for anything urgent, call or text.';
-/* Proposed routing, shown to users; configured at launch in Showcase IDX Lead Routing Settings + the lead endpoint. */
+/* Proposed routing, shown to users; configured at launch in the lead endpoint. */
 SC.ROUTING=[
   ['Buying, showings & property questions','Your assigned agent (John Siddons by default)'],
   ['Selling & home valuation','John Siddons, Lead Broker'],
@@ -82,7 +82,7 @@ const formFor=k=>{const id='ac-'+k; const l=ctx.listingId?SC.listing(ctx.listing
     ${contactFields(id)}${body}${SC.honeypot}
     <button class="btn btn-block" type="submit">Send request</button>
     <p class="form-note">${esc(SC.RESPONSE_GOAL)}</p>
-    <div class="form-ok">Preview: your request was recorded in this browser tab only and was not sent. At launch it goes straight to ${esc(SC.assignedAgent().name)} through Showcase IDX lead routing.</div></form>`;};
+    <div class="form-ok">Preview: your request was recorded in this browser tab only and was not sent. At launch it goes straight to ${esc(SC.assignedAgent().name)} through our lead routing.</div></form>`;};
 const agentCard=()=>{const a=SC.assignedAgent(); return `<div class="ac-agent"><img src="${SC.agentPhoto(a)}" alt="${esc(a.name)}" width="56" height="56">
   <div><strong>${esc(a.name)}</strong><small>${esc(a.title)} · Your assigned agent</small><small class="ac-resp">Typical response: business hours, usually same day</small></div></div>
   <div class="ac-direct"><a class="btn btn-sm" href="tel:${SC.OFFICE.tel}">${I.phone}Call ${SC.OFFICE.phone}</a><a class="btn btn-sm btn-outline" href="sms:${SC.OFFICE.tel}">${I.sms}Text</a></div>`;};

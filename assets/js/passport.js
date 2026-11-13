@@ -1,11 +1,11 @@
 /* Search Charlotte Passport, personal dashboard (preview).
-   Preview storage: SC.db (window.name, this tab only). Production: Showcase IDX registered-user account for saved
-   listings, saved searches/subscriptions and Friends & Family; a small Passport API for everything Showcase doesn't store. */
+   Preview storage: SC.db (window.name, this tab only). Production: SearchCharlotte account for saved
+   listings, saved searches/subscriptions and Friends & Family; a small Passport API for everything else. */
 (function(){'use strict';
 const SC=window.SC; const {D,$,$$,esc,fmt,short,track}=SC;
 const hero=$('#pp-hero'), root=$('#pp-root'); if(!root) return;
 const db=SC.db, arr=k=>{const v=db.get(k,[]); return Array.isArray(v)?v:[];};
-const SAMPLE='Sample data: live MLS data via Showcase IDX at launch';
+const SAMPLE='Sample data: live Canopy MLS listings at launch';
 const NAV=[['overview','Overview'],['homes','My Homes'],['searches','Searches & Alerts'],['neighborhoods','Neighborhoods'],['tours','Tours'],['comparisons','Comparisons'],['lifestyle','Lifestyle'],['budget','Budget'],['concierge','Concierge'],['advisor','My Advisor'],null,['notifications','Notifications'],['privacy','Privacy & Data']];
 const user=()=>SC.user();
 const signedIn=()=>{const u=user(); return !!(u&&u.signedIn!==false);};
@@ -30,7 +30,7 @@ const authView=(tab='create')=>{const u=user();
   root.innerHTML=`<div class="pp-auth">
    <div><h2 class="display d-lg">What Passport keeps together</h2><p class="lede" style="margin:10px 0 20px">Everything you do on SearchCharlotte.com rolls up here, so you never lose a home you liked or a note from a showing.</p>
     <div class="pp-feat">${[['Saved homes','With Home Match scores, price changes and notes'],['Smart alerts','New matches, price cuts, open houses, instant, daily or weekly'],['Tour Day','Plan an efficient showing route and request times'],['Search Party','Search with family, react and vote on a shortlist'],['Budget','Affordability and True Cost scenarios with sources'],['Your advisor','Message John Siddons and the Search Charlotte team']].map(([a,b])=>`<div><strong>${a}</strong><span>${b}</span></div>`).join('')}</div>
-    <p class="form-note" style="margin-top:16px">At launch, Passport signs you in with your SearchCharlotte home-search account (powered by Showcase IDX. Email, Google or Facebook), so saved homes and saved searches stay in sync with the MLS search.</p></div>
+    <p class="form-note" style="margin-top:16px">At launch, Passport signs you in with your SearchCharlotte home-search account (email sign-in), so saved homes and saved searches stay in sync with the MLS search.</p></div>
    <div class="pp-auth-card"><div class="tabs" role="tablist"><button role="tab" type="button" data-auth="create" aria-selected="${tab==='create'}">Create account</button><button role="tab" type="button" data-auth="signin" aria-selected="${tab==='signin'}">Sign in</button></div>
     <div id="auth-body"></div></div></div>`;
   const body=$('#auth-body');
@@ -219,7 +219,7 @@ P.privacy=()=>{const u=user(), c=u.consent||{}, dump=db.dump();
      <p style="margin-top:12px"><button class="pp-link" type="button" data-recover>Account recovery & password reset</button></p></div></div>
    <div class="pp-card" style="margin-top:16px"><h3>Your data</h3><p>Passport currently holds ${Object.keys(dump).length} data sets in this tab: ${Object.keys(dump).map(k=>`<code style="font-size:12px">${esc(k)}</code>`).join(', ')||'none'}.</p>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px"><button class="btn btn-sm" type="button" data-dl>Download my data (JSON)</button><button class="btn btn-sm btn-outline" type="button" data-signout>Sign out</button><button class="btn btn-sm btn-plum" type="button" data-wipe>Delete my data</button></div>
-    <p class="form-note" style="margin-top:10px">Delete removes everything Passport stored in this tab, including saved homes and alerts. At launch, deletion requests also remove your Showcase IDX lead record and CRM data within the timeframe stated in our <a href="legal.html#privacy" style="text-decoration:underline">Privacy Policy</a>.</p></div>`;};
+    <p class="form-note" style="margin-top:10px">Delete removes everything Passport stored in this tab, including saved homes and alerts. At launch, deletion requests also remove your lead record and CRM data within the timeframe stated in our <a href="legal.html#privacy" style="text-decoration:underline">Privacy Policy</a>.</p></div>`;};
 
 /* ================= Render ================= */
 let tab='overview';

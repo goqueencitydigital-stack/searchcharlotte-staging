@@ -39,7 +39,7 @@ if(page==='neighborhood'){const _qs=new URLSearchParams(location.search).get('n'
   if(h.sources&&h.sources.length) body+=`<p class="src-list">Sources: ${h.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`).join(' · ')}</p>`;
   body+=`<p class="form-note">School assignments change. Verify with the district's official address lookup before you buy. We do not rank schools or neighborhoods by demographics.</p>`;
   $('#nh-body').innerHTML=body;
-  $('#m-alert-p').textContent=`Get an email when new homes list in ${name}. On the live site this saves a Showcase IDX search for you.`; $('#m-alert-area').value=h.slug; $('#nh-ask').href=`contact.html?topic=buying&area=${q}`;
+  $('#m-alert-p').textContent=`Get an email when new homes list in ${name}. On the live site you confirm this alert by email.`; $('#m-alert-area').value=h.slug; $('#nh-ask').href=`contact.html?topic=buying&area=${q}`;
   const rel=(h.related&&h.related.length?h.related.map(s=>H.find(x=>x.slug===s)).filter(Boolean):H.filter(x=>x.slug!==h.slug&&x.lat).sort((a,b)=>Math.hypot(a.lat-h.lat,a.lng-h.lng)-Math.hypot(b.lat-h.lat,b.lng-h.lng))).slice(0,4);
   $('#nh-related').innerHTML=rel.map(hoodCard).join(''); SC.reveal();
   if(h.lat&&SC.nearby){const isCity=cities.some(c=>c.slug===h.slug); SC.nearby.mount($('#nh-nearby'),{lat:h.lat,lng:h.lng,radius:isCity?3:1.5,name:name});}

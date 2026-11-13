@@ -1,5 +1,5 @@
 /* Search Party, collaborative search preview. Storage: SC.db 'sc_party' {parties:[...],active,viewingAs}.
-   Production: Showcase IDX Friends & Family (invite by email, reactions, private vs agent-visible comments) is the
+   Production: a shared-search feature (invite by email, reactions, private vs agent-visible comments) is the
    system of record; voting/shortlist/shared-tour layers come from the Passport API reading the same group. */
 (function(){'use strict';
 const SC=window.SC; const {D,$,$$,esc,fmt,short,track}=SC; const db=SC.db; const root=$('#sp-root'); if(!root) return;
@@ -24,7 +24,7 @@ const createView=()=>{const u=SC.user()||{}; const s=S();
     <button class="btn btn-block" type="submit">Create party</button><div class="form-ok">Party created.</div></form>
    ${s.parties.length?`<p class="form-note" style="margin-top:12px">You have ${s.parties.length} other part${s.parties.length>1?'ies':'y'}: ${s.parties.map(p=>`<button class="pp-link" type="button" data-open-party="${p.id}">${esc(p.name)}</button>`).join(', ')}</p>`:''}</div>
    <div><div class="pp-feat">${[['React','Love, like, maybe or not for us, one tap per home'],['Comment','Keep the conversation on the home, not in a group text'],['Vote','Reactions add up into a ranked shortlist'],['Tour & compare','Send the shortlist to Tour Day or Compare Homes'],['Invite your agent','Optional agent access, and agent-visible comments'],['Private by default','Comments stay in your party unless you share them']].map(([a,b])=>`<div><strong>${a}</strong><span>${b}</span></div>`).join('')}</div>
-    <p class="form-note" style="margin-top:14px">At launch this runs on Showcase IDX's Friends & Family search: members are invited by email and each creates their own account on SearchCharlotte.com.</p></div></div>`;
+    <p class="form-note" style="margin-top:14px">At launch this runs as a shared search: members are invited by email and each creates their own account on SearchCharlotte.com.</p></div></div>`;
   SC.leadForm($('#sp-new'),d=>{const owner={id:SC.uid('m'),name:d.me.trim(),role:'Organizer',color:COLORS[0]}; const members=[owner];
     const p={id:SC.uid('party'),name:d.pname.trim(),created:new Date().toISOString(),members,homes:[],reactions:{},comments:{},agentAccess:false};
     if(d.demo){members.push({id:SC.uid('m'),name:'Alex (simulated)',email:'alex@example.com',role:'Member',color:COLORS[1],invited:true,simulated:true},{id:SC.uid('m'),name:'Sam (simulated)',email:'sam@example.com',role:'Member',color:COLORS[2],invited:true,simulated:true});
@@ -52,7 +52,7 @@ const partyView=()=>{const p=party(), m=me(), s=S(); const R=ranked(p); const ho
    <div class="sp-bar" style="margin-bottom:22px"><span class="lbl" style="margin:0">Viewing as</span><div class="sp-members" role="group" aria-label="Switch member (preview simulation)">${p.members.map(x=>`<button type="button" class="sp-mem" data-as="${x.id}" aria-pressed="${x.id===m.id}">${av(x,28)}<span>${esc(x.name)} <small>${esc(x.role)}${x.invited?' · invite not sent (preview)':''}</small></span></button>`).join('')}</div>
     <button class="btn btn-sm btn-outline" type="button" data-modal="m-invite">Invite someone</button></div>
    <div class="sp-layout"><div>
-    <div class="pp-h"><div><h2 class="display d-md">Shared homes</h2><p>${p.homes.length} home${p.homes.length===1?'':'s'} · reacting as <strong>${esc(m.name)}</strong>. Sample data: live MLS data via Showcase IDX at launch.</p></div>
+    <div class="pp-h"><div><h2 class="display d-md">Shared homes</h2><p>${p.homes.length} home${p.homes.length===1?'':'s'} · reacting as <strong>${esc(m.name)}</strong>. Sample data: live Canopy MLS listings at launch.</p></div>
      <div class="seg" role="group" aria-label="Sort homes" style="min-width:220px"><button type="button" data-sort="votes" aria-pressed="${sort==='votes'}">Most votes</button><button type="button" data-sort="recent" aria-pressed="${sort==='recent'}">Recently added</button></div></div>
     ${pool.length?`<div class="chips" style="margin-bottom:16px" aria-label="Add from your saved homes">${pool.slice(0,8).map(id=>{const l=SC.listing(id); return `<button type="button" class="chip" data-add-home="${id}">+ ${esc(l.address)}</button>`;}).join('')}</div>`:''}
     ${p.homes.length?`<div class="sp-homes">${homes.map(id=>homeCard(p,id,sort==='votes'?R.findIndex(x=>x.id===id)+1:0)).join('')}</div>`:`<div class="empty"><h3>No homes in this party yet</h3><p>Save homes from the search and add them here, or add a few sample homes.</p><div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap"><button class="btn btn-sm" type="button" data-add-samples>Add 4 sample homes</button><a class="btn btn-sm btn-outline" href="search.html">Search homes</a></div></div>`}

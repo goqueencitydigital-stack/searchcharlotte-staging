@@ -38,9 +38,9 @@ addEventListener('scroll',onScroll,{passive:true}); onScroll();
 const tog=$('.nav-toggle'), panel=$('#mobile-panel');
 if(tog&&panel) tog.addEventListener('click',()=>{const o=panel.classList.toggle('open'); tog.setAttribute('aria-expanded',o); document.body.style.overflow=o?'hidden':'';});
 
-/* Saved homes (preview stores locally; production uses Showcase IDX consumer dashboard) */
+/* Saved homes (preview stores locally; production uses the SearchCharlotte account) */
 const KEY='sc_saved';
-/* Preview: saved homes persist for this tab session via window.name. Live site uses the Showcase IDX consumer account. */
+/* Preview: saved homes persist for this tab session via window.name. Live site uses the SearchCharlotte account. */
 const store=()=>{try{const o=JSON.parse(window.name||'{}');return o&&typeof o==='object'?o:{}}catch(e){return {}}};
 SC.saved = ()=>{const v=store()[KEY];return Array.isArray(v)?v:[]};
 const setSaved = a=>{const o=store();o[KEY]=a;try{window.name=JSON.stringify(o)}catch(e){} $$('[data-saved-count]').forEach(e=>e.textContent=a.length);};
@@ -123,13 +123,13 @@ $$('.video-frame').forEach(v=>{const vid=$('video',v), b=$('.play',v); if(!b) re
 $$('.reel video').forEach(v=>{ if(matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();}});
 
 /* Lead delivery. Set SC.LEAD.endpoint (POST, JSON) to deliver every lead; until then the site runs in
-   staging mode and every confirmation says the form was not sent. Production: Showcase IDX lead routing / sc_lead. */
+   staging mode and every confirmation says the form was not sent. Production: sc_lead. */
 SC.LEAD=Object.assign({endpoint:null},window.SC_LEAD||{});
 if(!SC.LEAD.endpoint) document.documentElement.setAttribute('data-staging','');
 SC.sendLead=(type,fields)=>{const body={type,page:location.pathname+location.search,ts:new Date().toISOString(),...fields};
   if(!SC.LEAD.endpoint) return Promise.resolve({sent:false});
   return fetch(SC.LEAD.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}).then(r=>({sent:r.ok})).catch(()=>({sent:false}));};
-/* Lead forms (preview: validates + confirms; production posts to Showcase IDX lead routing / sc_lead handler) */
+/* Lead forms (preview: validates + confirms; production posts to the sc_lead handler) */
 $$('form[data-lead]').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();
   if(!f.checkValidity()){f.reportValidity();return;}
   if(f.querySelector('[name=website]')?.value) return; // honeypot
@@ -185,7 +185,7 @@ $$('form[data-ai]').forEach(f=>{const out=$('[data-ai-out]',f.parentElement);
     out.innerHTML=`<div class="ai-result">
       <p class="eyebrow">I understood</p>
       <div class="chips" style="margin:8px 0 14px">${chips.length?chips.map(c=>`<span class="chip is-active">${esc(c)}</span>`).join(''):'<span class="chip">No specific filters found. Try adding a budget, bedrooms or an area</span>'}</div>
-      ${unsupported.length?`<p class="form-note">“${unsupported.join(', ')}” will be applied as a Showcase IDX amenity filter on the live site; it isn't part of this preview's sample data.</p>`:''}
+      ${unsupported.length?`<p class="form-note">“${unsupported.join(', ')}” will be matched against live Canopy MLS listing features on the live site; it isn't part of this preview's sample data.</p>`:''}
       ${hoodLinks.length?`<p style="font-size:13.5px;margin:10px 0 6px">Neighborhood guides that match the lifestyle you described:</p><div class="chips">${hoodLinks.map(h=>`<a class="chip" href="neighborhoods/${h.slug}/">${esc(h.name)}</a>`).join('')}</div>`:''}
       <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px"><a class="btn" href="search.html?${qs}">See matching homes</a><a class="btn btn-outline" href="contact.html?topic=buyer">Talk to an agent</a></div>
       <p class="form-note" style="margin-top:12px">This assistant only turns your words into search filters. Every home it shows comes from the MLS search, never from the assistant.</p></div>`;});

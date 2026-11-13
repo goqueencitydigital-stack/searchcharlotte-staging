@@ -64,7 +64,7 @@ function builder(el,opts={}){const p=opts.preset||{}; const u=SC.user()||{}; con
    <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
    <p class="dr-err" role="alert" data-err></p>
    <div class="dr-ab-foot"><button class="btn" type="submit">Create alert</button><span class="form-note" data-preview></span></div>
-   <p class="form-note">Preview: alerts are stored in this browser tab and in-app notifications are simulated against sample listings. At launch, alerts run on Showcase IDX saved-search data and email/SMS are sent by the alerts service with unsubscribe links.</p></form>`;
+   <p class="form-note">Preview: alerts are stored in this browser tab and in-app notifications are simulated against sample listings. At launch, alerts run on your saved-search filters and email/SMS are sent by the alerts service with unsubscribe links.</p></form>`;
   const f=$('form',el); if(p.type) $(`[data-f=type]`,f).value=p.type;
   const crit=()=>{const g=k=>$(`[data-f=${k}]`,f).value; const sig=g('sig'); return {hood:g('hood')||undefined,max:+g('max')||undefined,type:g('type')||undefined,beds:+g('beds')||undefined,signals:sig==='any'?['reduced','back','new','open','incentive']:[sig]};};
   const upd=()=>{const c=crit(); $('[data-sent]',f).innerHTML=sentence(c)+'.'; const n=matches({criteria:c}).length; $('[data-preview]',f).textContent=`${n} sample home${n===1?'':'s'} match today`;

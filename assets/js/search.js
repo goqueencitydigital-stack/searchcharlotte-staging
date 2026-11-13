@@ -1,4 +1,4 @@
-/* Search results: every control filters the data set. Production swaps this for Showcase IDX. */
+/* Search results: every control filters the data set. Production swaps this for the live MLS listing feed. */
 (function(){const {D,$,$$,card,esc,short,fmt,track}=window.SC;
 const P=new URLSearchParams(location.search);
 const PRICES=[0,200000,300000,400000,500000,600000,750000,1000000,1500000,2000000,3000000,5000000];

@@ -1,7 +1,7 @@
 /* Ask This Home, answers questions about one listing from its own fields, SC.extras (DEMO), OpenStreetMap places,
    drive-time estimates and the True Cost / payment math with visible assumptions. Never guesses: unknowns route to an agent.
    Usage: SC.askHome.mount(document.getElementById('ask-home'), listing)
-   Production: same intents served by a server-side LLM constrained to the Showcase IDX listing record + POI service. */
+   Production: same intents served by a server-side LLM constrained to the MLS listing record + POI service. */
 (function(){'use strict';
 const SC=window.SC, {D,$,$$,esc,fmt,short,track}=SC;
 const ensureCSS=()=>{if(!$('link[href$="assets/css/ai.css"]')){const k=document.createElement('link'); k.rel='stylesheet'; k.href='assets/css/ai.css'; document.head.appendChild(k);}};

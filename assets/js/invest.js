@@ -115,7 +115,7 @@ $('#iv-reset').addEventListener('click',()=>{write(defaults(home)); render();});
 
 function sources(){if(!A) return; const j=jurFor(home);
   const items=[[A.rate.source,A.rate.url,'weekly'],[A.rent.source,A.rent.url,'annually (federal fiscal year)'],...j.sources.map(s=>[s.name,s.url,'annually (fiscal-year budget)']),[A.insurance.source,A.insurance.url,'periodically'],[A.closing.source,A.closing.url,'periodically'],[A.maintenance.source,A.maintenance.url,'periodically']];
-  $('#iv-sources').innerHTML=`<h3 class="iv-h3">Reference data sources</h3><ul>${items.map(([n,u,p])=>`<li><a href="${u}" target="_blank" rel="noopener">${esc(n)}</a><small>Retrieved ${A.retrieved} · updated ${p}</small></li>`).join('')}</ul><p class="form-note">Sample listings are demo data, live MLS data via Showcase IDX at launch. Investor Mode never uses demographic or protected-class information.</p>`;}
+  $('#iv-sources').innerHTML=`<h3 class="iv-h3">Reference data sources</h3><ul>${items.map(([n,u,p])=>`<li><a href="${u}" target="_blank" rel="noopener">${esc(n)}</a><small>Retrieved ${A.retrieved} · updated ${p}</small></li>`).join('')}</ul><p class="form-note">Sample listings are demo data, live Canopy MLS listings at launch. Investor Mode never uses demographic or protected-class information.</p>`;}
 
 SC.costAssumptions.then(a=>{A=a; const id=new URLSearchParams(location.search).get('id'); pickHome(id&&homes.some(l=>l.id===id)?id:''); renderScen();});
 SC.invest={calc,defaults};

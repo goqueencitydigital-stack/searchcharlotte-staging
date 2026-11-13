@@ -3,7 +3,7 @@
 const id=new URLSearchParams(location.search).get('id'); const l=D.listings.find(x=>x.id===id)||D.listings[0];
 const h=D.hoods.find(x=>x.slug===l.hood)||{name:l.hoodName,slug:l.hood,blurb:''};
 const land=l.type==='Land'; const x=SC.extras(l); const meck=l.city!=='Waxhaw';
-const SRC_LISTING='Sample listing data (demo) · Live: Canopy MLS via Showcase IDX, refreshed with each IDX feed update';
+const SRC_LISTING='Sample listing data (demo) · Live: Canopy MLS as distributed by MLS GRID, refreshed with each feed update';
 const src=(t,period)=>`<p class="xr-src"><span>Source:</span> ${t}${period?` · <span>Updated:</span> ${period}`:''}</p>`;
 const dt=s=>new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
 document.title=`${l.address}, ${l.city}, NC ${l.zip} | ${fmt(l.price)} | SearchCharlotte.com`;
@@ -55,7 +55,7 @@ INIT.overview=()=>{const el=$('#xp-overview');
     ${!land&&x.features.length?`<h3 class="xr-h3">Listed features <small>(demo)</small></h3><div class="chips xr-feats">${x.features.map(f=>`<span class="chip">${esc(f)}</span>`).join('')}</div>`:''}
     ${sys}
     <p class="form-note" style="margin-top:14px"><a href="neighborhoods/${h.slug}/" style="text-decoration:underline">Explore ${esc(h.name)}</a> · <a href="search.html?q=${h.slug}" style="text-decoration:underline">All homes for sale in ${esc(h.name)}</a></p>
-    <p class="form-note">Sample listing for design review. Live listings display the listing brokerage, Canopy MLS number, last-updated time and the required IDX disclaimer here, supplied by Showcase IDX.</p>
+    <p class="form-note">Sample listing for design review. Live listings display the listing brokerage, Canopy MLS number, last-updated time and the required IDX disclaimer here.</p>
     ${src(SRC_LISTING,'with each MLS feed refresh; tax estimate uses FY2027 rates (set each July 1)')}`;
   SC.costAssumptions.then(A=>{const e=$('[data-esttax]'); if(!e) return; if(!A){e.textContent='Unavailable'; return;} const j=SC.intel.jur(l,A); e.innerHTML=`${fmt(l.price*j.per100/100)}/yr <small class="xr-est">estimate · ${j.per100} per $100 of list price</small>`;});};
 /* History */
@@ -68,7 +68,7 @@ INIT.history=()=>{const el=$('#xp-history'); const H=x.history; const orig=x.ori
     ${[0,1,2,3].map(i=>{const v=pmin+(pmax-pmin)*i/3; return `<line x1="${P}" x2="${W-P}" y1="${Y(v)}" y2="${Y(v)}" class="g"/><text x="${P-4}" y="${Y(v)+4}" text-anchor="end" class="ax">${short(v)}</text>`;}).join('')}
     <path d="${d}" class="ln"/>${pts.map(q=>`<circle cx="${X(q.t)}" cy="${Y(q.p)}" r="5" class="pt ${/Price/.test(q.e.event)?'cut':/Sold/.test(q.e.event)?'sold':''}"><title>${esc(q.e.event)} · ${dt(q.e.date)} · ${fmt(q.e.price)}</title></circle>`).join('')}
     <text x="${P}" y="${Ht-8}" class="ax">${new Date(t0).getFullYear()}</text><text x="${W-P}" y="${Ht-8}" text-anchor="end" class="ax">Today</text></svg>`;
-  el.innerHTML=`<div class="xr-demo">Demo price &amp; status history, generated for this sample listing. Live history from Canopy MLS via Showcase IDX at launch.</div>
+  el.innerHTML=`<div class="xr-demo">Demo price &amp; status history, generated for this sample listing. Live history from Canopy MLS at launch.</div>
    <div class="xr-stats"><div><span>Listed</span><b>${dt(x.listed)}</b></div><div><span>Days on market</span><b>${l.dom}</b></div><div><span>Original list price</span><b>${fmt(orig)}</b></div><div><span>Price changes</span><b>${x.priceCuts}</b></div><div><span>Change vs. original</span><b class="${chg<0?'neg':''}">${chg?(chg<0?'−':'+')+fmt(Math.abs(chg)).slice(1).replace(/^/,'$')+` (${(chg/orig*100).toFixed(1)}%)`:'No change'}</b></div>${x.backOnMarket?'<div><span>Status</span><b>Back on market</b></div>':''}</div>
    <div class="xr-chartwrap">${chart}<div class="xr-key"><span><i class="k1"></i>List / status</span><span><i class="k2"></i>Price change</span><span><i class="k3"></i>Prior sale</span></div></div>
    <div class="table-wrap"><table class="mkt-table xr-table"><thead><tr><th scope="col">Date</th><th scope="col">Event</th><th scope="col">Price</th><th scope="col">Change</th></tr></thead><tbody>${[...H].reverse().map(e=>`<tr><td>${dt(e.date)}</td><td>${esc(e.event)}</td><td>${fmt(e.price)}</td><td>${e.from?`<span class="neg">−${fmt(e.from-e.price).slice(1).replace(/^/,'$')}</span> from ${short(e.from)}`:'N/A'}</td></tr>`).join('')}</tbody></table></div>

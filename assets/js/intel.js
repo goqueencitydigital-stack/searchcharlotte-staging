@@ -79,7 +79,7 @@ async function mount(el,l){
       <li>PMI: ${srcLine(A.pmi)}. ${esc(A.pmi.note)}</li>
       <li>Commute: ${srcLine(A.mileage)}. ${esc(A.mileage.note)} Drive distance is an estimate (straight-line × 1.35).</li>
       <li>Utilities: ${esc(A.utilities.note)}</li>
-      <li>HOA: from the listing (sample data). Listing price and HOA are sample data, live MLS data via Showcase IDX at launch.</li></ul>
+      <li>HOA: from the listing (sample data). Listing price and HOA are sample data, live Canopy MLS listings at launch.</li></ul>
       <p class="form-note">Updated when the assumptions file is refreshed (rates weekly from Freddie Mac PMMS; tax rates each July 1). Talk to a licensed lender for a Loan Estimate.</p></details>`;
     labels();
     drawCmp(A);};

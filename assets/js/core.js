@@ -1,7 +1,7 @@
 /* Search Charlotte, shared platform core (loaded on every page after site.js).
    Everything here is deterministic and transparent. Listing "extras" (style, history, features)
    are DEMO values derived from the sample listings, flagged with demo:true, and replaced by
-   Showcase IDX / Canopy MLS fields at launch. */
+   Canopy MLS fields at launch. */
 (function(){'use strict';
 const SC=window.SC, {D,$,$$,esc,fmt,short,track}=SC;
 

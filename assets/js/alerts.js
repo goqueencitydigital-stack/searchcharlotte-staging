@@ -1,6 +1,6 @@
 /* Smart Property Alerts, shared module (Passport + alerts.html).
    Schema (agreed with Deal Radar) sc_alerts: [{id,type,label,criteria,channels:{email,sms,inapp},frequency,created,active,source,contact?}]
-   Preview: nothing is emailed or texted. Production: Showcase IDX Search Subscriptions handle email for new/price-change
+   Preview: nothing is emailed or texted. Production: saved-search email alerts (double opt-in) handle new/price-change
    listing alerts; SMS + in-app + extra types need the Passport backend (see FEATURE-EXPANSION.md). */
 (function(){'use strict';
 const SC=window.SC; if(!SC||SC.alerts) return; const {D,$,$$,esc,short,track}=SC;
@@ -16,7 +16,7 @@ const describe=a=>{const c=a.criteria||{}, p=[];
   if(c.min&&c.max) p.push(short(+c.min)+'–'+short(+c.max)); else if(c.max) p.push('up to '+short(+c.max)); else if(c.min) p.push('from '+short(+c.min));
   if(c.signals&&c.signals.length) p.push(c.signals.join(', '));
   return p.length?p.join(' · '):(a.type==='market_report'?'Charlotte market reports':'All Charlotte-area listings');};
-/* Which sample listings this alert would currently surface (demo, live alerts evaluate the MLS feed via Showcase IDX). */
+/* Which sample listings this alert would currently surface (demo, live alerts evaluate the MLS feed). */
 const matches=a=>{const c=a.criteria||{}; let L=D.listings;
   if(c.listingId) L=L.filter(l=>l.id===c.listingId);
   const h=c.hood||c.q; if(h&&D.hoods.some(x=>x.slug===h)) L=L.filter(l=>l.hood===h);
