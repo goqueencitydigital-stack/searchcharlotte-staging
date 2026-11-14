@@ -2,8 +2,8 @@
  "meta": {
   "title": "Charlotte events & concerts",
   "window": [
-   "2026-11-13",
-   "2027-04-12"
+   "2026-11-14",
+   "2027-04-13"
   ],
   "retrieved": "2026-10-28",
   "categories": {
@@ -46,7 +46,7 @@
    "date_text": "string|null",
    "recurring": "string|null"
   },
-  "updated": "2026-11-13T17:25:10Z",
+  "updated": "2026-11-14T16:12:24Z",
   "feeds": {
    "curated": 55,
    "ticketmaster": 0
@@ -137,6 +137,28 @@
    "source_name": "Mint Museum",
    "verified_on": "2026-10-28",
    "description": "Exhibition at Mint Museum Uptown.",
+   "dates_approximate": false,
+   "date_text": null,
+   "recurring": null,
+   "feed": "curated"
+  },
+  {
+   "id": "jack-white-2026",
+   "title": "Jack White Live 2026",
+   "category": "concerts",
+   "start": "2026-11-13",
+   "end": "2026-11-14",
+   "time": "See venue for times",
+   "venue": "The Fillmore Charlotte",
+   "address": "820 Hamilton St, Charlotte, NC 28206",
+   "lat": 35.239179,
+   "lng": -80.845042,
+   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
+   "coord_precision": "venue",
+   "url": "https://www.fillmorenc.com/shows",
+   "source_name": "The Fillmore Charlotte",
+   "verified_on": "2026-10-28",
+   "description": "Two-night club run.",
    "dates_approximate": false,
    "date_text": null,
    "recurring": null,
@@ -249,28 +271,6 @@
    "description": "Exhibition on view now through Jan 22, 2027.",
    "dates_approximate": false,
    "date_text": "On view now through January 22, 2027",
-   "recurring": null,
-   "feed": "curated"
-  },
-  {
-   "id": "jack-white-2026",
-   "title": "Jack White Live 2026",
-   "category": "concerts",
-   "start": "2026-11-13",
-   "end": "2026-11-14",
-   "time": "See venue for times",
-   "venue": "The Fillmore Charlotte",
-   "address": "820 Hamilton St, Charlotte, NC 28206",
-   "lat": 35.239179,
-   "lng": -80.845042,
-   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
-   "coord_precision": "venue",
-   "url": "https://www.fillmorenc.com/shows",
-   "source_name": "The Fillmore Charlotte",
-   "verified_on": "2026-10-28",
-   "description": "Two-night club run.",
-   "dates_approximate": false,
-   "date_text": null,
    "recurring": null,
    "feed": "curated"
   },
