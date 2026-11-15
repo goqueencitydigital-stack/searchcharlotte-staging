@@ -2,8 +2,8 @@
  "meta": {
   "title": "Charlotte events & concerts",
   "window": [
-   "2026-11-14",
-   "2027-04-13"
+   "2026-11-15",
+   "2027-04-14"
   ],
   "retrieved": "2026-10-28",
   "categories": {
@@ -46,9 +46,9 @@
    "date_text": "string|null",
    "recurring": "string|null"
   },
-  "updated": "2026-11-14T16:12:24Z",
+  "updated": "2026-11-15T16:40:28Z",
   "feeds": {
-   "curated": 55,
+   "curated": 52,
    "ticketmaster": 0
   },
   "feed_status": "curated_only"
@@ -137,28 +137,6 @@
    "source_name": "Mint Museum",
    "verified_on": "2026-10-28",
    "description": "Exhibition at Mint Museum Uptown.",
-   "dates_approximate": false,
-   "date_text": null,
-   "recurring": null,
-   "feed": "curated"
-  },
-  {
-   "id": "jack-white-2026",
-   "title": "Jack White Live 2026",
-   "category": "concerts",
-   "start": "2026-11-13",
-   "end": "2026-11-14",
-   "time": "See venue for times",
-   "venue": "The Fillmore Charlotte",
-   "address": "820 Hamilton St, Charlotte, NC 28206",
-   "lat": 35.239179,
-   "lng": -80.845042,
-   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
-   "coord_precision": "venue",
-   "url": "https://www.fillmorenc.com/shows",
-   "source_name": "The Fillmore Charlotte",
-   "verified_on": "2026-10-28",
-   "description": "Two-night club run.",
    "dates_approximate": false,
    "date_text": null,
    "recurring": null,
@@ -271,50 +249,6 @@
    "description": "Exhibition on view now through Jan 22, 2027.",
    "dates_approximate": false,
    "date_text": "On view now through January 22, 2027",
-   "recurring": null,
-   "feed": "curated"
-  },
-  {
-   "id": "john-summit-2026",
-   "title": "John Summit: CTRL ESCAPE Arena Tour",
-   "category": "concerts",
-   "start": "2026-11-14",
-   "end": "2026-11-14",
-   "time": "7:00 PM",
-   "venue": "Spectrum Center",
-   "address": "333 E Trade St, Charlotte, NC 28202",
-   "lat": 35.225098,
-   "lng": -80.839154,
-   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
-   "coord_precision": "venue",
-   "url": "https://www.spectrumcentercharlotte.com/events/detail/john-summit",
-   "source_name": "Spectrum Center",
-   "verified_on": "2026-10-28",
-   "description": "Arena electronic music show.",
-   "dates_approximate": false,
-   "date_text": null,
-   "recurring": null,
-   "feed": "curated"
-  },
-  {
-   "id": "charlotte-marathon-2026",
-   "title": "Novant Health Charlotte Marathon",
-   "category": "community",
-   "start": "2026-11-14",
-   "end": "2026-11-14",
-   "time": "Morning. See organizer",
-   "venue": "Uptown Charlotte (route per organizer)",
-   "address": "Uptown Charlotte, NC",
-   "lat": 35.2271,
-   "lng": -80.8431,
-   "coord_source": "Approximate area point (Trade & Tryon, Uptown). See organizer for route",
-   "coord_precision": "area",
-   "url": "https://charlottesports.org/event/charlotte-marathon/",
-   "source_name": "Charlotte Sports Foundation",
-   "verified_on": "2026-10-28",
-   "description": "Charlotte's marathon and related races; course details on the organizer site.",
-   "dates_approximate": false,
-   "date_text": null,
    "recurring": null,
    "feed": "curated"
   },
