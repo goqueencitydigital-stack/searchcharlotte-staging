@@ -2,8 +2,8 @@
  "meta": {
   "title": "Charlotte events & concerts",
   "window": [
-   "2026-11-15",
-   "2027-04-14"
+   "2026-11-16",
+   "2027-04-15"
   ],
   "retrieved": "2026-10-28",
   "categories": {
@@ -46,7 +46,7 @@
    "date_text": "string|null",
    "recurring": "string|null"
   },
-  "updated": "2026-11-15T16:40:28Z",
+  "updated": "2026-11-16T19:55:00Z",
   "feeds": {
    "curated": 52,
    "ticketmaster": 0
@@ -231,28 +231,6 @@
    "feed": "curated"
   },
   {
-   "id": "gantt-klos",
-   "title": "Yashua Klos: Cornerstones",
-   "category": "arts",
-   "start": "2026-10-28",
-   "end": "2027-01-22",
-   "time": "Center hours (closed Mondays)",
-   "venue": "Harvey B. Gantt Center",
-   "address": "551 S Tryon St, Charlotte, NC 28202",
-   "lat": 35.223237,
-   "lng": -80.84803,
-   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
-   "coord_precision": "venue",
-   "url": "https://www.ganttcenter.org/exhibitions",
-   "source_name": "Harvey B. Gantt Center",
-   "verified_on": "2026-10-28",
-   "description": "Exhibition on view now through Jan 22, 2027.",
-   "dates_approximate": false,
-   "date_text": "On view now through January 22, 2027",
-   "recurring": null,
-   "feed": "curated"
-  },
-  {
    "id": "winter-at-whitewater-2026",
    "title": "Winter at Whitewater",
    "category": "holiday",
@@ -271,6 +249,28 @@
    "description": "Seasonal programming at the Whitewater Center, including the tree lot and winter market at the Overlook Barn.",
    "dates_approximate": true,
    "date_text": "Mid-November 2026 to mid-February 2027 (organizer has not published exact dates)",
+   "recurring": null,
+   "feed": "curated"
+  },
+  {
+   "id": "gantt-klos",
+   "title": "Yashua Klos: Cornerstones",
+   "category": "arts",
+   "start": "2026-10-28",
+   "end": "2027-01-22",
+   "time": "Center hours (closed Mondays)",
+   "venue": "Harvey B. Gantt Center",
+   "address": "551 S Tryon St, Charlotte, NC 28202",
+   "lat": 35.223237,
+   "lng": -80.84803,
+   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
+   "coord_precision": "venue",
+   "url": "https://www.ganttcenter.org/exhibitions",
+   "source_name": "Harvey B. Gantt Center",
+   "verified_on": "2026-10-28",
+   "description": "Exhibition on view now through Jan 22, 2027.",
+   "dates_approximate": false,
+   "date_text": "On view now through January 22, 2027",
    "recurring": null,
    "feed": "curated"
   },
