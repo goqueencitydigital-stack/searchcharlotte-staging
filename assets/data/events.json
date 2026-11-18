@@ -2,8 +2,8 @@
  "meta": {
   "title": "Charlotte events & concerts",
   "window": [
-   "2026-11-17",
-   "2027-04-16"
+   "2026-11-18",
+   "2027-04-17"
   ],
   "retrieved": "2026-10-28",
   "categories": {
@@ -46,9 +46,9 @@
    "date_text": "string|null",
    "recurring": "string|null"
   },
-  "updated": "2026-11-17T18:50:41Z",
+  "updated": "2026-11-18T18:29:03Z",
   "feeds": {
-   "curated": 52,
+   "curated": 51,
    "ticketmaster": 0
   },
   "feed_status": "curated_only"
@@ -271,28 +271,6 @@
    "description": "Exhibition on view now through Jan 22, 2027.",
    "dates_approximate": false,
    "date_text": "On view now through January 22, 2027",
-   "recurring": null,
-   "feed": "curated"
-  },
-  {
-   "id": "blue-october-2026",
-   "title": "Blue October",
-   "category": "concerts",
-   "start": "2026-11-17",
-   "end": "2026-11-17",
-   "time": "See venue for times",
-   "venue": "The Fillmore Charlotte",
-   "address": "820 Hamilton St, Charlotte, NC 28206",
-   "lat": 35.239179,
-   "lng": -80.845042,
-   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
-   "coord_precision": "venue",
-   "url": "https://www.fillmorenc.com/shows",
-   "source_name": "The Fillmore Charlotte",
-   "verified_on": "2026-10-28",
-   "description": "Club concert.",
-   "dates_approximate": false,
-   "date_text": null,
    "recurring": null,
    "feed": "curated"
   },
