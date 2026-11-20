@@ -2,8 +2,8 @@
  "meta": {
   "title": "Charlotte events & concerts",
   "window": [
-   "2026-11-19",
-   "2027-04-18"
+   "2026-11-20",
+   "2027-04-19"
   ],
   "retrieved": "2026-10-28",
   "categories": {
@@ -46,9 +46,9 @@
    "date_text": "string|null",
    "recurring": "string|null"
   },
-  "updated": "2026-11-19T18:43:04Z",
+  "updated": "2026-11-20T18:04:24Z",
   "feeds": {
-   "curated": 50,
+   "curated": 49,
    "ticketmaster": 0
   },
   "feed_status": "curated_only"
@@ -271,28 +271,6 @@
    "description": "Exhibition on view now through Jan 22, 2027.",
    "dates_approximate": false,
    "date_text": "On view now through January 22, 2027",
-   "recurring": null,
-   "feed": "curated"
-  },
-  {
-   "id": "tamar-braxton-2026",
-   "title": "An Evening With Tamar Braxton",
-   "category": "concerts",
-   "start": "2026-11-19",
-   "end": "2026-11-19",
-   "time": "See venue for times",
-   "venue": "The Fillmore Charlotte",
-   "address": "820 Hamilton St, Charlotte, NC 28206",
-   "lat": 35.239179,
-   "lng": -80.845042,
-   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
-   "coord_precision": "venue",
-   "url": "https://www.fillmorenc.com/shows",
-   "source_name": "The Fillmore Charlotte",
-   "verified_on": "2026-10-28",
-   "description": "Club concert.",
-   "dates_approximate": false,
-   "date_text": null,
    "recurring": null,
    "feed": "curated"
   },
