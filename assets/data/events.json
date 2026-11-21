@@ -2,8 +2,8 @@
  "meta": {
   "title": "Charlotte events & concerts",
   "window": [
-   "2026-11-20",
-   "2027-04-19"
+   "2026-11-21",
+   "2027-04-20"
   ],
   "retrieved": "2026-10-28",
   "categories": {
@@ -46,7 +46,7 @@
    "date_text": "string|null",
    "recurring": "string|null"
   },
-  "updated": "2026-11-20T18:04:24Z",
+  "updated": "2026-11-21T17:00:30Z",
   "feeds": {
    "curated": 49,
    "ticketmaster": 0
@@ -165,6 +165,28 @@
    "feed": "curated"
   },
   {
+   "id": "rush-2026",
+   "title": "RUSH, Fifty Something Tour",
+   "category": "concerts",
+   "start": "2026-11-20",
+   "end": "2026-11-22",
+   "time": "Nov 20 and Nov 22, 7:30 PM",
+   "venue": "Spectrum Center",
+   "address": "333 E Trade St, Charlotte, NC 28202",
+   "lat": 35.225098,
+   "lng": -80.839154,
+   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
+   "coord_precision": "venue",
+   "url": "https://www.spectrumcentercharlotte.com/events/detail/rush",
+   "source_name": "Spectrum Center",
+   "verified_on": "2026-10-28",
+   "description": "Two arena dates (Friday and Sunday).",
+   "dates_approximate": false,
+   "date_text": null,
+   "recurring": null,
+   "feed": "curated"
+  },
+  {
    "id": "gantt-repossessions",
    "title": "Repossessions",
    "category": "arts",
@@ -231,6 +253,28 @@
    "feed": "curated"
   },
   {
+   "id": "speedway-christmas-2026",
+   "title": "Speedway Christmas",
+   "category": "holiday",
+   "start": "2026-11-20",
+   "end": "2027-01-03",
+   "time": "6:00–10:00 PM nightly",
+   "venue": "Charlotte Motor Speedway",
+   "address": "5555 Concord Pkwy S, Concord, NC 28027",
+   "lat": 35.347502,
+   "lng": -80.683274,
+   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
+   "coord_precision": "venue",
+   "url": "https://www.charlottemotorspeedway.com/events/speedway-christmas/",
+   "source_name": "Charlotte Motor Speedway",
+   "verified_on": "2026-10-28",
+   "description": "Drive-through holiday light display at the speedway, with a holiday village in the infield.",
+   "dates_approximate": false,
+   "date_text": null,
+   "recurring": null,
+   "feed": "curated"
+  },
+  {
    "id": "winter-at-whitewater-2026",
    "title": "Winter at Whitewater",
    "category": "holiday",
@@ -271,50 +315,6 @@
    "description": "Exhibition on view now through Jan 22, 2027.",
    "dates_approximate": false,
    "date_text": "On view now through January 22, 2027",
-   "recurring": null,
-   "feed": "curated"
-  },
-  {
-   "id": "rush-2026",
-   "title": "RUSH, Fifty Something Tour",
-   "category": "concerts",
-   "start": "2026-11-20",
-   "end": "2026-11-22",
-   "time": "Nov 20 and Nov 22, 7:30 PM",
-   "venue": "Spectrum Center",
-   "address": "333 E Trade St, Charlotte, NC 28202",
-   "lat": 35.225098,
-   "lng": -80.839154,
-   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
-   "coord_precision": "venue",
-   "url": "https://www.spectrumcentercharlotte.com/events/detail/rush",
-   "source_name": "Spectrum Center",
-   "verified_on": "2026-10-28",
-   "description": "Two arena dates (Friday and Sunday).",
-   "dates_approximate": false,
-   "date_text": null,
-   "recurring": null,
-   "feed": "curated"
-  },
-  {
-   "id": "speedway-christmas-2026",
-   "title": "Speedway Christmas",
-   "category": "holiday",
-   "start": "2026-11-20",
-   "end": "2027-01-03",
-   "time": "6:00–10:00 PM nightly",
-   "venue": "Charlotte Motor Speedway",
-   "address": "5555 Concord Pkwy S, Concord, NC 28027",
-   "lat": 35.347502,
-   "lng": -80.683274,
-   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
-   "coord_precision": "venue",
-   "url": "https://www.charlottemotorspeedway.com/events/speedway-christmas/",
-   "source_name": "Charlotte Motor Speedway",
-   "verified_on": "2026-10-28",
-   "description": "Drive-through holiday light display at the speedway, with a holiday village in the infield.",
-   "dates_approximate": false,
-   "date_text": null,
    "recurring": null,
    "feed": "curated"
   },
