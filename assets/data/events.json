@@ -2,8 +2,8 @@
  "meta": {
   "title": "Charlotte events & concerts",
   "window": [
-   "2026-11-21",
-   "2027-04-20"
+   "2026-11-22",
+   "2027-04-21"
   ],
   "retrieved": "2026-10-28",
   "categories": {
@@ -46,9 +46,9 @@
    "date_text": "string|null",
    "recurring": "string|null"
   },
-  "updated": "2026-11-21T17:00:30Z",
+  "updated": "2026-11-22T17:27:50Z",
   "feeds": {
-   "curated": 49,
+   "curated": 48,
    "ticketmaster": 0
   },
   "feed_status": "curated_only"
@@ -140,28 +140,6 @@
    "dates_approximate": false,
    "date_text": null,
    "recurring": null,
-   "feed": "curated"
-  },
-  {
-   "id": "mfm-main-2026",
-   "title": "Matthews Community Farmers Market: main season",
-   "category": "markets",
-   "start": "2026-11-01",
-   "end": "2026-11-21",
-   "time": "Saturdays 8 AM–12 PM",
-   "venue": "Matthews Community Farmers Market",
-   "address": "188 N Trade St, Matthews, NC 28105",
-   "lat": 35.116049,
-   "lng": -80.721763,
-   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
-   "coord_precision": "venue",
-   "url": "https://www.matthewsfarmersmarket.com/",
-   "source_name": "Matthews Community Farmers Market",
-   "verified_on": "2026-10-28",
-   "description": "Final weeks of the 2026 main season.",
-   "dates_approximate": false,
-   "date_text": null,
-   "recurring": "Saturdays",
    "feed": "curated"
   },
   {
