@@ -2,8 +2,8 @@
  "meta": {
   "title": "Charlotte events & concerts",
   "window": [
-   "2026-11-25",
-   "2027-04-24"
+   "2026-11-26",
+   "2027-04-25"
   ],
   "retrieved": "2026-10-28",
   "categories": {
@@ -46,9 +46,9 @@
    "date_text": "string|null",
    "recurring": "string|null"
   },
-  "updated": "2026-11-25T19:38:58Z",
+  "updated": "2026-11-26T19:19:55Z",
   "feeds": {
-   "curated": 44,
+   "curated": 42,
    "ticketmaster": 0
   },
   "feed_status": "curated_only"
@@ -249,50 +249,6 @@
    "description": "Exhibition on view now through Jan 22, 2027.",
    "dates_approximate": false,
    "date_text": "On view now through January 22, 2027",
-   "recurring": null,
-   "feed": "curated"
-  },
-  {
-   "id": "hornets-2026-11-25",
-   "title": "Charlotte Hornets vs. Chicago Bulls",
-   "category": "sports",
-   "start": "2026-11-25",
-   "end": "2026-11-25",
-   "time": "7:00 PM ET",
-   "venue": "Spectrum Center",
-   "address": "333 E Trade St, Charlotte, NC 28202",
-   "lat": 35.225098,
-   "lng": -80.839154,
-   "coord_source": "OpenStreetMap (Nominatim lookup of venue), retrieved 2026-10-28",
-   "coord_precision": "venue",
-   "url": "https://www.nba.com/hornets/schedule?season=2026-27",
-   "source_name": "Charlotte Hornets / NBA.com",
-   "verified_on": "2026-10-28",
-   "description": "NBA home game.",
-   "dates_approximate": false,
-   "date_text": null,
-   "recurring": null,
-   "feed": "curated"
-  },
-  {
-   "id": "thanksgiving-eve-parade-2026",
-   "title": "Novant Health Thanksgiving Eve Parade (80th annual)",
-   "category": "holiday",
-   "start": "2026-11-25",
-   "end": "2026-11-25",
-   "time": "Evening. See organizer for start time and route",
-   "venue": "Uptown Charlotte (route per organizer)",
-   "address": "Uptown Charlotte, NC",
-   "lat": 35.2271,
-   "lng": -80.8431,
-   "coord_source": "Approximate area point (Trade & Tryon, Uptown). See organizer for route",
-   "coord_precision": "area",
-   "url": "https://www.novanthealththanksgivingparade.com/",
-   "source_name": "Novant Health Thanksgiving Eve Parade",
-   "verified_on": "2026-10-28",
-   "description": "Charlotte's long-running holiday parade through Uptown, held the night before Thanksgiving.",
-   "dates_approximate": false,
-   "date_text": null,
    "recurring": null,
    "feed": "curated"
   },
